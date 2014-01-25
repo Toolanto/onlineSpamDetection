@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{ilprints646}
+Zoltan Gyongyi and Hector Garcia-Molina.
+\newblock Web spam taxonomy.
+\newblock Technical Report 2004-25, Stanford InfoLab, March 2004.
+
+\bibitem{Spirin:2012:SWS:2207243.2207252}
+Nikita Spirin and Jiawei Han.
+\newblock Survey on web spam detection: Principles and algorithms.
+\newblock {\em SIGKDD Explor. Newsl.}, 13(2):50--64, May 2012.
+
+\end{thebibliography}
