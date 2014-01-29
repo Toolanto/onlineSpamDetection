@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{amsmath}
+\usepackage{frontespizio}
 \begin{document}
 \include{inizio/introduzione}
 \bibliography{biblio}
