@@ -1,9 +1,10 @@
-\documentclass[a4paper,11pt,openright]{book}
+\documentclass[a4paper,11pt,openright,oneside]{book}
 \linespread{1.5}
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{amsmath}
-\usepackage{frontespizio}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
 \begin{document}
 \include{inizio/introduzione}
 \bibliography{biblio}

@@ -3,9 +3,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{fancyhdr}
+\usepackage {fancyhdr}
 \begin{document}
+\include{inizio/sommario}
 \include{inizio/introduzione}
 \bibliography{biblio}
 \bibliographystyle{plain}

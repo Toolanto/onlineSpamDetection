@@ -1,9 +1,30 @@
 \begin{thebibliography}{1}
 
+\bibitem{Eiron:2004:RWF:988672.988714}
+Nadav Eiron, Kevin~S. McCurley, and John~A. Tomlin.
+\newblock Ranking the web frontier.
+\newblock In {\em Proceedings of the 13th International Conference on World
+  Wide Web}, WWW '04, pages 309--318, New York, NY, USA, 2004. ACM.
+
 \bibitem{ilprints646}
 Zoltan Gyongyi and Hector Garcia-Molina.
 \newblock Web spam taxonomy.
 \newblock Technical Report 2004-25, Stanford InfoLab, March 2004.
+
+\bibitem{Nicholas:2005}
+Nicholas~R. Jennings.
+\newblock The global economic impact of spam.
+\newblock {\em Ferris Research}, 2005.
+
+\bibitem{Nicholas:2009}
+Nicholas~R. Jennings.
+\newblock Cost of spam is flattening – our 2009 predictions.
+\newblock {\em Ferris Research}, 2009.
+
+\bibitem{Manning:2008:IIR:1394399}
+Christopher~D. Manning, Prabhakar Raghavan, and Hinrich Sch\"{u}tze.
+\newblock {\em Introduction to Information Retrieval}.
+\newblock Cambridge University Press, New York, NY, USA, 2008.
 
 \bibitem{Spirin:2012:SWS:2207243.2207252}
 Nikita Spirin and Jiawei Han.
