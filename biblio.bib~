@@ -64,11 +64,56 @@
  year = {2009},
 }
 
-@book{Manning:2008:IIR:1394399,
+@book{Manning:2008:IIR:1394399p117,
  author = {Manning, Christopher D. and Raghavan, Prabhakar and Sch\"{u}tze, Hinrich},
  title = {Introduction to Information Retrieval},
  year = {2008},
+ note = {pages 117--119},
+ isbn = {0521865719, 9780521865715},
+ publisher = {Cambridge University Press},
+ address = {New York, NY, USA},
+}
+
+@book{Manning:2008:IIR:1394399p474,
+ author = {Manning, Christopher D. and Raghavan, Prabhakar and Sch\"{u}tze, Hinrich},
+ title = {Introduction to Information Retrieval},
+ year = {2008},
+ pages = {474--476},
  isbn = {0521865719, 9780521865715},
  publisher = {Cambridge University Press},
  address = {New York, NY, USA},
 } 
+
+@techreport{ilprints422,
+          number = {1999-66},
+           month = {November},
+          author = {Lawrence Page and Sergey Brin and Rajeev Motwani and Terry Winograd},
+            note = {Previous number = SIDL-WP-1999-0120},
+           title = {The PageRank Citation Ranking: Bringing Order to the Web.},
+            type = {Technical Report},
+       publisher = {Stanford InfoLab},
+            year = {1999},
+     institution = {Stanford InfoLab},
+             url = {http://ilpubs.stanford.edu:8090/422/},
+        abstract = {The importance of a Web page is an inherently subjective matter, which depends on the readers interests, knowledge and attitudes. But there is still much that can be said objectively about the relative importance of Web pages. This paper describes PageRank, a mathod for rating Web pages objectively and mechanically, effectively measuring the human interest and attention devoted to them. We compare PageRank to an idealized random Web surfer. We show how to efficiently compute PageRank for large numbers of pages. And, we show how to apply PageRank to search and to user navigation.}
+}
+
+@article{Kleinberg:1999:ASH:324133.324140,
+ author = {Kleinberg, Jon M.},
+ title = {Authoritative Sources in a Hyperlinked Environment},
+ journal = {J. ACM},
+ issue_date = {Sept. 1999},
+ volume = {46},
+ number = {5},
+ month = sep,
+ year = {1999},
+ issn = {0004-5411},
+ pages = {604--632},
+ numpages = {29},
+ url = {http://doi.acm.org/10.1145/324133.324140},
+ doi = {10.1145/324133.324140},
+ acmid = {324140},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {World Wide Web, graph algorithms, hypertext structure, link analysis},
+}

@@ -1,4 +1,5 @@
 \chapter{Introduzione}
+\lstset{basicstyle=\small\ttfamily,keywordstyle=\color{black}\bfseries,commentstyle=\color{darkgray},stringstyle=\color{black},showstringspaces=true}
 
 Con questa tesi si ha come obbiettivo di studiare e analizzare le varie tecniche di spam detection ed in particolare analizzare le tecniche online. Le tecninche verrano classificate sulla base dei segnali che utilizzano. Il fattore chiave è che non ci sono, o meglio sono poche, al momento tecniche online di spam detection, ovvero tecninche che rilevano lo spam durante la fase di crawling. Infatti quasi tutti i metodi tentano di fare il crawling dell'intero web e successivamente classificare le pagine in spam oppure buone.
 
@@ -31,7 +32,7 @@ assegna a ogni coppia formata da un’interrogazione e un documento un numero re
 
 \subsection{Metodi di ranking endogeno}
 L'algoritmo usato dai motori di ricerca per fare il rank delle pagine web basandosi sui campi di testo usa varie forme del \textit{tf-idf}. Il \textit{tf-idf} e un metodo di ranking endogeno che utilizza il contenuto di una pagina per assegnarle un punteggio. Il \textit{tf-idf} è una misura composta da due misure più semplici: la \textit{Term Frequency} e la \textit{Inverse Document Frequency}. Il primo metodo assegna a un documento \textit{d} il punteggio dato dalla somma dei conteggi dei termini \textit{t} dell'interrogazione che compaiono nel documento stesso. In questo modo documenti che hanno termini che compaiono più frequentemente avranno un punteggio più elevato. Utilizzare solo questo metodo non conviene in quanto è facilmente manipolabile. Inoltre non tiene cono del fatto che alcuni termini occorono più frequentemente non perché rilevanti, ma perché altamente frequenti all'iterno di \textit{ogni} documento. Ad esempio le congiunzioni. Il secondo metodo è definito come l'inverso del numero di 
-documenti nella collezione che contengono il termine \textit{t} \cite{Manning:2008:IIR:1394399}.
+documenti nella collezione che contengono il termine \textit{t} \cite{Manning:2008:IIR:1394399p117}.
 \begin{equation}
  idf_t=\log\frac{N}{df_t}
  \label{eq:idf}
@@ -43,6 +44,31 @@ La combinazione del \textit{TF} ed dell' \textit{IDF} produce una misura compost
 Con il \textit{TF-IDF} gli spammers possono avere due obbiettivi: o creare pagine rilevanti per un gran numero di query o creare pagine molto rilevanti per una specifica query. Il primo obbiettivo può essere finalizato includendo un gran numero di termini distinti in un documento. Il secondo attraverso la ripetizione di determinati nel documento. Ma il più delle volte i motori di ricerca non considerano l'\textit{IDF} e perciò per incrementare il \textit{TF-IDF} conviene incrementare la frequenza dei termini.
 
 Anche se il \textit{tf-idf} riesce a pesare abbastanza bene i vari termini ha molti limiti e per questo che il sistema di pesatura più attualmente usato è \textit{BM25} che è uno schema di pesatura basato sul \textit{modello probabilistico}. Questo schema è il risultato di uno studio puramente euristico.
+
+\subsection{Metodi di ranking esogeno}
+Uno dei metodi esogeni è \textit{PageRank} descritto in \cite{ilprints422}. PageRank usa le informazioni portate dai link in entrata (\textit{inlink}) per determinare un punteggio gobale di importanza di una pagina. Esso assume che esiste un legame tra numero di \textit{inlink} di una pagina \textit{p} e la popolarità della pagina \textit{p}. Il concetto fondamentale dietro \textit{PageRank} è che una pagina è importante se moltre altre pagine importanti puntano ad essa. Questo concetto è mutualmente rinforzante ovvero l'importanza di una certa pagina influenza ed è influenzata dall'importanza delle altre pagine \cite{ilprints646}. In dettaglio \textit{PageRank} è basato sulla passeggiata naturale del grafo del web \textit{G}. Più precisamente, la passeggiata viene pertubata nel seguente modo: fissato un parametro \(\alpha\) tra \(0\) e \(1\), a ogni passo con probabilità \(\alpha\) si segue un arco uscente, e con probabilità \(1- \alpha \) si sceglie un qualunque altro nodo del grafo utilizzando una qualche 
+distribuzione \(v\), detta
+vettore di preferenza (per esempio, uniforme). Assumendo che non esistano pozzi, la catena è quindi rappresentata dalla combinazione lineare:
+\begin{equation}
+ \alpha G + (1 - \alpha) 1 v^T
+\end{equation}
+dove \(G\) è la matrice della passeggiata naturale su \(G\). Il fattore \(\alpha\) è detto fattore di attenuazione di norma è impostato a unvalore di 0,85.
+
+Un altro metodo usato per il ranking delle pagine è \textit{HITS (Hyperlink-Induced Topic Distillation)} introdotto in \cite{Kleinberg:1999:ASH:324133.324140}. Differentemente da \textit{PageRank} esso assegna due punteggi di scrore a ogni pagina: uno di \textit{hubbines} e uno di \textit{autorevolezza}. L’intuizione dietro a HITS è che invece di un singolo punteggio di autorevolezza esista un concetto di pagina autorevole, cioè pagina con contenuto pertinente e interessante, e di hub, cioè pagina contenente numerosi collegamenti a pagine autorevoli. I due concetti si rinforzano \textit{mutuamente}: una pagina autorevole è puntata da molte pagine centrali, e una buona pagina centrale punta a molte pagine autorevoli.
+
+Questo approccio considera che nel web ci sono due tipi di pagine: quelle che contengono dei contenuti per un determinato argomento (\textit{authoritative}) e quelle che contengono tanti link a delle pagine \textit{authoritative} che sono chiamate pagine \textit{hub}. Le pagine \textit{hub} sono utili per scoprire le pagine \textit{authoritative} \cite{Manning:2008:IIR:1394399p474}.
+
+L'algoritmo parte da un sottografo del web ottenuto a partire da un'interrogazione. La selezione del sottografo può essere fatta in vari modi, un modo è quello di prendere un certo insieme di risultati  ottenuto da un motore di base e generare un sottografo sulla base di una query e delle pagine che puntano a quelle ottentute dalla query. Per questo sottoinsieme di pagine otteniamo un matrice di adicenza \(A\). I punteggi di \textit{hub} e \textit{authority} per tutte le pagine del sottoinsieme possono essere formalizzate dalla seguente coppia di equazioni:
+\begin{equation}
+ \left\{
+ \begin{array}{cc}
+    \stackrel{\rightarrow}{a} \: = \: A^T \stackrel{\rightarrow}{h}\\
+    \stackrel{\rightarrow}{h} \:= A \: \stackrel{\rightarrow}{a}
+ \end{array}
+ \right .
+ \label{eq:hubat}
+\end{equation}
+Può essere dimostrato che la soluzione per il sistema di equazioni \ref{eq:hubat} dopo una serie iterativa di calcoli converge rispettivamente al principale autovettore di \(AA^T\) e \(A^TA\) \cite{Manning:2008:IIR:1394399p474}\cite{Spirin:2012:SWS:2207243.2207252}.
 
 \section{Web spam}
 Con il termine web spamming si fa riferimento a tutti i metodi che tentano di manipolare gli algoritmi di ranking dei motori di ricerca per aumentare il valore di ranking di alcune pagine rispetto ad altre\cite{ilprints646}.
@@ -71,9 +97,15 @@ Le tecninche di spamming possono essere raggruppate in base ai campi di testo do
 \begin{itemize}
 \item \textit{Body Spam}. In questo caso lo spam è nel corpo del documento. Questo è lo spam più diffuso.
 \item \textit{Title Spam}. Molti motori di ricerca danno molta importanza ai termini che compaiono nel titolo.
-\item \textit{Meta Tag Sapm}. I tag che compaiono nell'header sono soggetti a spam. Per questo i motori di ricerca danno poca importanza a questi campi o non li considerano. %esempio
-\item \textit{Anchor Text Spam}. I motori di ricerca assegnano un peso maggiore al testo nelle ancore. Perciò testo di spam è incluso nel testo delle ancore dei collegamenti HTML di una pagina. In questo caso lo spamming non viene fatto sulla pagina che si vuole far avere un rank più alto ma sulle pagine che puntano ad essa. %esempio
-\item \textit{URL Spam}. Alcuni motori di ricerca dividono l'URL delle pagine in un insieme di termini che sono usati per determinare la rilevanza di una pagina. Per sfruttare questo si creano lunghi URL che includono una grande sequenza di spam di termini.
+\item \textit{Meta Tag Sapm}. I tag che compaiono nell'header sono soggetti a spam. Per questo i motori di ricerca danno poca importanza a questi campi o non li considerano. Di seguito viene mostrato un esempio di spam.
+\begin{lstlisting}[frame=trbl,postbreak=\space, breakindent=5pt, breaklines]
+ <meta name=``keyword'' content=``buy, cheap, cameras, lens, accessories, nikon, canon''>
+\end{lstlisting}
+\item \textit{Anchor Text Spam}. I motori di ricerca assegnano un peso maggiore al testo nelle ancore perché pensano esse contengano un riassunto del contenuto della pagina. Perciò testo di spam è incluso nel testo delle ancore dei collegamenti HTML di una pagina. In questo caso lo spamming non viene fatto sulla pagina che si vuole far avere un rank più alto ma sulle pagine che puntano ad essa.
+\begin{lstlisting}[frame=trbl,postbreak=\space, breakindent=5pt, breaklines]
+<a href=``target.html">free, great deals, cheap, inexpensive, cheap, free</a>
+\end{lstlisting}
+\item \textit{URL Spam}. Alcuni motori di ricerca dividono l'URL delle pagine in un insieme di termini che sono usati per determinare la rilevanza di una pagina. Per sfruttare questo si creano lunghi URL che includono una grande sequenza di spam di termini un esempio può essere: \textit{buy-canon-rebel-20d-lens-case.camerasx.com}.
 \end{itemize}
 Queste tecniche possono essere utilizzate insieme.
 
