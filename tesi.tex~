@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt,openright,oneside]{book}
+\documentclass[a4paper,1		1pt,openright,oneside]{book}
 \linespread{1.5}
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}

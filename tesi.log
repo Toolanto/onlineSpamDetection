@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.1.28)  4 FEB 2014 19:06
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.1.28)  6 FEB 2014 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -478,12 +478,12 @@ e
 
 (./inizio/introduzione.tex
 Capitolo 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 8.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
  [1
 
 
@@ -496,35 +496,56 @@ File: immagini/tassonomiaTecnicheBoost.png Graphic file (type png)
 Package pdftex.def Info: immagini/tassonomiaTecnicheBoost.png used on input lin
 e 88.
 (pdftex.def)             Requested size: 284.52756pt x 231.48486pt.
- [7] [8 <./immagini/tassonomiaTecnicheBoost.png (PNG copy)>] [9] [10] [11]) [12
-] (./tesi.bbl [13
+ [7] [8 <./immagini/tassonomiaTecnicheBoost.png (PNG copy)>] [9]
+<immagini/tipologiaPagine.png, id=43, 412.54124pt x 214.8025pt>
+File: immagini/tipologiaPagine.png Graphic file (type png)
+
+<use immagini/tipologiaPagine.png>
+Package pdftex.def Info: immagini/tipologiaPagine.png used on input line 120.
+(pdftex.def)             Requested size: 284.52756pt x 148.14833pt.
+ [10 <./immagini/tipologiaPagine.png (PNG copy)>] [11] <immagini/spamfarm.png, 
+id=50, 479.7925pt x 201.75375pt>
+File: immagini/spamfarm.png Graphic file (type png)
+
+<use immagini/spamfarm.png>
+Package pdftex.def Info: immagini/spamfarm.png used on input line 136.
+(pdftex.def)             Requested size: 284.52756pt x 119.6463pt.
+
+<immagini/tassonomiaHiding.png, id=51, 426.59375pt x 199.74625pt>
+File: immagini/tassonomiaHiding.png Graphic file (type png)
+
+<use immagini/tassonomiaHiding.png>
+Package pdftex.def Info: immagini/tassonomiaHiding.png used on input line 145.
+(pdftex.def)             Requested size: 284.52756pt x 133.23495pt.
+ [12 <./immagini/spamfarm.png (PNG copy)> <./immagini/tassonomiaHiding.png (PNG
+ copy)>]) [13] (./tesi.bbl [14
 
 
-]) [14] (./tesi.aux
-(./inizio/introduzione.aux)) ) 
+]) [15]
+(./tesi.aux (./inizio/introduzione.aux)) ) 
 Here is how much of TeX's memory you used:
- 4501 strings out of 495059
- 59319 string characters out of 3182030
- 140038 words of memory out of 3000000
- 7612 multiletter control sequences out of 15000+200000
+ 4520 strings out of 495059
+ 59830 string characters out of 3182030
+ 140076 words of memory out of 3000000
+ 7628 multiletter control sequences out of 15000+200000
  10650 words of font info for 38 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,8n,43p,1093b,1120s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (14 pages, 182564 bytes).
+ 38i,8n,43p,1238b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on tesi.pdf (15 pages, 250483 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

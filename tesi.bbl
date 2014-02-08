@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Eiron:2004:RWF:988672.988714}
 Nadav Eiron, Kevin~S. McCurley, and John~A. Tomlin.
@@ -43,6 +43,11 @@ Lawrence Page, Sergey Brin, Rajeev Motwani, and Terry Winograd.
 \newblock The pagerank citation ranking: Bringing order to the web.
 \newblock Technical Report 1999-66, Stanford InfoLab, November 1999.
 \newblock Previous number = SIDL-WP-1999-0120.
+
+\bibitem{Robertson:2009:PRF:1704809.1704810}
+Stephen Robertson and Hugo Zaragoza.
+\newblock The probabilistic relevance framework: Bm25 and beyond.
+\newblock {\em Found. Trends Inf. Retr.}, 3(4):333--389, April 2009.
 
 \bibitem{Spirin:2012:SWS:2207243.2207252}
 Nikita Spirin and Jiawei Han.
