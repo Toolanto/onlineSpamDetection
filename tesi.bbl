@@ -6,6 +6,14 @@ Nadav Eiron, Kevin~S. McCurley, and John~A. Tomlin.
 \newblock In {\em Proceedings of the 13th International Conference on World
   Wide Web}, WWW '04, pages 309--318, New York, NY, USA, 2004. ACM.
 
+\bibitem{Fetterly:2004:SDS:1017074.1017077}
+Dennis Fetterly, Mark Manasse, and Marc Najork.
+\newblock Spam, damn spam, and statistics: Using statistical analysis to locate
+  spam web pages.
+\newblock In {\em Proceedings of the 7th International Workshop on the Web and
+  Databases: Colocated with ACM SIGMOD/PODS 2004}, WebDB '04, pages 1--6, New
+  York, NY, USA, 2004. ACM.
+
 \bibitem{ilprints646}
 Zoltan Gyongyi and Hector Garcia-Molina.
 \newblock Web spam taxonomy.

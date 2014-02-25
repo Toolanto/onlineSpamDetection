@@ -1,0 +1,4 @@
+\chapter{Tecniche di spam detection basate sul contenuto}
+In questo capitolo verrano presentate varie tecniche di spam detection che fanno uso del contenuto di un pagina per determire se essa è normale o è una pagina spam.
+
+\section{Tecniche basate sul contenuto}

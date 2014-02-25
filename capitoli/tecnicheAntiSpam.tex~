@@ -1,0 +1,5 @@
+\chapter{Tecniche di spam detection}
+
+Di seguito verrano presentate le varie tecniche di spam detection divise sul tipo di segnali di cui fanno uso: contenuto, grafo del web, altri segnali.
+
+\section{Tecniche basate sul contenuto}
