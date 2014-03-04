@@ -1,0 +1,14 @@
+\select@language {italian}
+\contentsline {chapter}{\numberline {1}Introduzione}{1}
+\contentsline {section}{\numberline {1.1}Ranking dei motori di ricerca}{3}
+\contentsline {subsection}{\numberline {1.1.1}Metodi di ranking endogeno}{4}
+\contentsline {subsection}{\numberline {1.1.2}Metodi di ranking esogeno}{5}
+\contentsline {section}{\numberline {1.2}Web spam}{6}
+\contentsline {subsection}{\numberline {1.2.1}Tecniche di boost}{7}
+\contentsline {subsection}{\numberline {1.2.2}Term Spamming}{8}
+\contentsline {subsection}{\numberline {1.2.3}Link Spamming}{9}
+\contentsline {subsection}{\numberline {1.2.4}Tecniche di hiding}{11}
+\contentsline {subsection}{\numberline {1.2.5}Click Spamming}{12}
+\contentsline {chapter}{\numberline {2}Tecniche di spam detection}{14}
+\contentsline {section}{\numberline {2.1}Tecniche basate sul contenuto}{14}
+\contentsline {subsection}{\numberline {2.1.1}Periodo: 2004 - 2006}{14}

@@ -1,0 +1,12 @@
+\select@language {italian}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Tassonomia delle tecniche boost\relax }}{7}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Tipi di pagine nel web per uno spammer\relax }}{10}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Esempio di una spamfarm\relax }}{11}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Tecniche di hiding\relax }}{12}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Occorrenze dello spam classificate per dominio all'iterno del dataset descritto in \cite {Ntoulas:2006:DSW:1135777.1135794}\relax }}{16}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Occorrenze dello spam classificate per lingua all'iterno del dataset descritto in \cite {Ntoulas:2006:DSW:1135777.1135794}\relax }}{16}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Prevalenza di spam sulla base del numero di parole per pagina\relax }}{17}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Prevalenza di spam sulla base del numero di parole all'interno dei titoli delle pagine\relax }}{18}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Prevalenza di spam sulla base della lunghezza media delle parole\relax }}{19}

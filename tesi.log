@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.1.28)  20 FEB 2014 17:43
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.1.28)  3 MAR 2014 23:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -25,10 +25,55 @@ File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+\captionmargin=\dimen111
+\captionmargin@=\dimen112
+\captionwidth=\dimen113
+\caption@indent=\dimen114
+\caption@parindent=\dimen115
+\caption@hangindent=\dimen116
+)
+\c@ContinuedFloat=\count91
+)
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2008/03/30 v1.1d Input encoding file
-\inpenc@prehook=\toks14
-\inpenc@posthook=\toks15
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -250,8 +295,8 @@ Language: italian 2008/03/14 v1.2t Italian support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count88
-\U@D=\dimen103
+\babel@savecnt=\count92
+\U@D=\dimen117
 )
 
 Package babel Warning: No hyphenation patterns were loaded for
@@ -272,61 +317,57 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks16
-\ex@=\dimen104
+\@emptytoks=\toks18
+\ex@=\dimen118
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen105
+\pmbraise@=\dimen119
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count89
+\inf@bad=\count93
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count90
-\leftroot@=\count91
+\uproot@=\count94
+\leftroot@=\count95
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count92
-\DOTSCASE@=\count93
+\classnum@=\count96
+\DOTSCASE@=\count97
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen106
+\big@size=\dimen120
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count94
-\c@MaxMatrixCols=\count95
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
 \dotsspace@=\muskip10
-\c@parentequation=\count96
-\dspbrk@lvl=\count97
-\tag@help=\toks17
-\row@=\count98
-\column@=\count99
-\maxfields@=\count100
-\andhelp@=\toks18
-\eqnshift@=\dimen107
-\alignsep@=\dimen108
-\tagshift@=\dimen109
-\tagwidth@=\dimen110
-\totwidth@=\dimen111
-\lineht@=\dimen112
-\@envbody=\toks19
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
+\tag@help=\toks19
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
+\andhelp@=\toks20
+\eqnshift@=\dimen121
+\alignsep@=\dimen122
+\tagshift@=\dimen123
+\tagwidth@=\dimen124
+\totwidth@=\dimen125
+\lineht@=\dimen126
+\@envbody=\toks21
 \multlinegap=\skip44
 \multlinetaggap=\skip45
-\mathdisplay@stack=\toks20
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks21
-)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
@@ -347,10 +388,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count101
+\Gread@gobject=\count105
 ))
-\Gin@req@height=\dimen113
-\Gin@req@width=\dimen114
+\Gin@req@height=\dimen127
+\Gin@req@width=\dimen128
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip46
@@ -364,23 +405,23 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \f@ncyO@orf=\skip54
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count102
+\lst@mode=\count106
 \lst@gtempboxa=\box28
-\lst@token=\toks22
-\lst@length=\count103
-\lst@currlwidth=\dimen115
-\lst@column=\count104
-\lst@pos=\count105
-\lst@lostspace=\dimen116
-\lst@width=\dimen117
-\lst@newlines=\count106
-\lst@lineno=\count107
-\lst@maxwidth=\dimen118
+\lst@token=\toks23
+\lst@length=\count107
+\lst@currlwidth=\dimen129
+\lst@column=\count108
+\lst@pos=\count109
+\lst@lostspace=\dimen130
+\lst@width=\dimen131
+\lst@newlines=\count110
+\lst@lineno=\count111
+\lst@maxwidth=\dimen132
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count108
-\lst@skipnumbers=\count109
+\c@lstnumber=\count112
+\lst@skipnumbers=\count113
 \lst@framebox=\box29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -391,39 +432,77 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux))
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 9.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 12.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 12.
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/lgrcmr.fd
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    ... okay on input line 12.
 
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* bindingoffset: 14.22636pt
+* modes: includehead heightrounded 
+* h-part:(L,W,R)=(99.58464pt, 398.33861pt, 85.35826pt)
+* v-part:(T,H,B)=(71.13188pt, 674.33032pt, 99.58464pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=398.33861pt
+* \textheight=623.00027pt
+* \oddsidemargin=41.54102pt
+* \evensidemargin=27.31465pt
+* \topmargin=-1.1381pt
+* \headheight=12.0pt
+* \headsep=42.67912pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=53.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
-\scratchdimen=\dimen119
+\scratchcounter=\count114
+\scratchdimen=\dimen133
 \scratchbox=\box30
-\nofMPsegments=\count111
-\nofMParguments=\count112
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count113
-\MPscratchDim=\dimen120
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
-\everyMPtoPDFconversion=\toks24
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen134
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -431,10 +510,6 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -472,77 +547,134 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count116
+\c@lstlisting=\count120
+
+(./tesi.toc)
+\tf@toc=\write3
+\openout3 = `tesi.toc'.
+
+ [1
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./tesi.lof)
+\tf@lof=\write4
+\openout4 = `tesi.lof'.
+
+ [2
+
+]
 \openout2 = `inizio/introduzione.aux'.
 
-
-(./inizio/introduzione.tex
+ (./inizio/introduzione.tex
 Capitolo 1.
-[1
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 8.
-
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
- [2] [3] [4] [5]
-[6] [7] <immagini/tassonomiaTecnicheBoost.png, id=36, 414.54875pt x 337.26pt>
+ [1
+
+
+
+] [2] [3] [4]
+[5] [6]
+<immagini/tassonomiaTecnicheBoost.png, id=39, 411.86884pt x 341.00214pt>
 File: immagini/tassonomiaTecnicheBoost.png Graphic file (type png)
 
 <use immagini/tassonomiaTecnicheBoost.png>
 Package pdftex.def Info: immagini/tassonomiaTecnicheBoost.png used on input lin
-e 88.
-(pdftex.def)             Requested size: 284.52756pt x 231.48486pt.
- [8 <./immagini/tassonomiaTecnicheBoost.png (PNG copy)>] [9]
-<immagini/tipologiaPagine.png, id=44, 412.54124pt x 214.8025pt>
+e 91.
+(pdftex.def)             Requested size: 341.43306pt x 282.69868pt.
+ [7 <./immagini/tassonomiaTecnicheBoost.png (PNG copy)>] [8]
+<immagini/tipologiaPagine.png, id=47, 577.48457pt x 309.34262pt>
 File: immagini/tipologiaPagine.png Graphic file (type png)
 
 <use immagini/tipologiaPagine.png>
-Package pdftex.def Info: immagini/tipologiaPagine.png used on input line 122.
-(pdftex.def)             Requested size: 284.52756pt x 148.14833pt.
- [10] [11 <./immagini/tipologiaPagine.png (PNG copy)>] <immagini/spamfarm.png, 
-id=51, 479.7925pt x 201.75375pt>
+Package pdftex.def Info: immagini/tipologiaPagine.png used on input line 125.
+(pdftex.def)             Requested size: 284.52756pt x 152.41467pt.
+ [9] [10 <./immagini/tipologiaPagine.png (PNG copy)>] <immagini/spamfarm.png, i
+d=54, 441.16122pt x 199.84225pt>
 File: immagini/spamfarm.png Graphic file (type png)
 
 <use immagini/spamfarm.png>
-Package pdftex.def Info: immagini/spamfarm.png used on input line 138.
-(pdftex.def)             Requested size: 284.52756pt x 119.6463pt.
+Package pdftex.def Info: immagini/spamfarm.png used on input line 141.
+(pdftex.def)             Requested size: 284.52756pt x 128.88963pt.
 
-<immagini/tassonomiaHiding.png, id=52, 426.59375pt x 199.74625pt>
+<immagini/tassonomiaHiding.png, id=55, 519.97653pt x 266.41907pt>
 File: immagini/tassonomiaHiding.png Graphic file (type png)
 
 <use immagini/tassonomiaHiding.png>
-Package pdftex.def Info: immagini/tassonomiaHiding.png used on input line 147.
-(pdftex.def)             Requested size: 284.52756pt x 133.23495pt.
- [12] [13 <./immagini/spamfarm.png (PNG copy)> <./immagini/tassonomiaHiding.png
- (PNG copy)>]) [14] [15]
+Package pdftex.def Info: immagini/tassonomiaHiding.png used on input line 150.
+(pdftex.def)             Requested size: 284.52756pt x 145.78293pt.
+ [11 <./immagini/spamfarm.png (PNG copy)>]
+[12 <./immagini/tassonomiaHiding.png (PNG copy)>]) [13]
 \openout2 = `capitoli/tecnicheAntispam.aux'.
 
 
 (./capitoli/tecnicheAntispam.tex
 Capitolo 2.
-[16
+[14
 
 
 
-] [17]) [18] (./tesi.bbl [19
+] <immagini/fetterly/fetterly1.png, id=69, 597.81236pt x 361.35pt>
+File: immagini/fetterly/fetterly1.png Graphic file (type png)
+
+<use immagini/fetterly/fetterly1.png>
+Package pdftex.def Info: immagini/fetterly/fetterly1.png used on input line 19.
+
+(pdftex.def)             Requested size: 341.43306pt x 206.39069pt.
+
+<immagini/fetterly/fetterly2.png, id=70, 606.05368pt x 368.95737pt>
+File: immagini/fetterly/fetterly2.png Graphic file (type png)
+
+<use immagini/fetterly/fetterly2.png>
+Package pdftex.def Info: immagini/fetterly/fetterly2.png used on input line 22.
+
+(pdftex.def)             Requested size: 341.43306pt x 207.86453pt.
+
+<immagini/fetterly/fetterly3.png, id=71, 837.1275pt x 567.11874pt>
+File: immagini/fetterly/fetterly3.png Graphic file (type png)
+
+<use immagini/fetterly/fetterly3.png>
+Package pdftex.def Info: immagini/fetterly/fetterly3.png used on input line 30.
+
+(pdftex.def)             Requested size: 341.43306pt x 231.30003pt.
+ [15] [16 <./immagini/fetterly/fetterly1.png (PNG copy)> <./immagini/fetterly/f
+etterly2.png (PNG copy)>]
+<immagini/fetterly/fetterly4.png, id=78, 981.6675pt x 638.385pt>
+File: immagini/fetterly/fetterly4.png Graphic file (type png)
+
+<use immagini/fetterly/fetterly4.png>
+Package pdftex.def Info: immagini/fetterly/fetterly4.png used on input line 38.
+
+(pdftex.def)             Requested size: 341.43306pt x 222.03539pt.
+ [17 <./immagini/fetterly/fetterly3.png (PNG copy)>] <immagini/fetterly/fetterl
+y5.png, id=83, 951.555pt x 639.38875pt>
+File: immagini/fetterly/fetterly5.png Graphic file (type png)
+
+<use immagini/fetterly/fetterly5.png>
+Package pdftex.def Info: immagini/fetterly/fetterly5.png used on input line 46.
+
+(pdftex.def)             Requested size: 341.43306pt x 229.41878pt.
+) [18 <./immagini/fetterly/fetterly4.png (PNG copy)>] [19 <./immagini/fetterly/
+fetterly5.png (PNG copy)>] (./tesi.bbl
+[20
 
 
-]) [20] (./tesi.aux (./inizio/introduzione.aux)
+
+]) [21] (./tesi.aux (./inizio/introduzione.aux)
 (./capitoli/tecnicheAntispam.aux)) ) 
 Here is how much of TeX's memory you used:
- 4530 strings out of 495059
- 60098 string characters out of 3182030
- 141385 words of memory out of 3000000
- 7630 multiletter control sequences out of 15000+200000
- 10650 words of font info for 38 fonts, out of 3000000 for 9000
+ 6034 strings out of 495059
+ 86034 string characters out of 3182030
+ 160537 words of memory out of 3000000
+ 9107 multiletter control sequences out of 15000+200000
+ 10996 words of font info for 39 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,43p,1465b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,43p,1114b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
@@ -555,10 +687,10 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (20 pages, 265376 bytes).
+Output written on tesi.pdf (23 pages, 600878 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
