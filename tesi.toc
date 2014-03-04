@@ -11,4 +11,5 @@
 \contentsline {subsection}{\numberline {1.2.5}Click Spamming}{12}
 \contentsline {chapter}{\numberline {2}Tecniche di spam detection}{14}
 \contentsline {section}{\numberline {2.1}Tecniche basate sul contenuto}{14}
-\contentsline {subsection}{\numberline {2.1.1}Periodo: 2004 - 2006}{14}
+\contentsline {subsection}{\numberline {2.1.1}Prime feature per identidicare lo spam}{14}
+\contentsline {subsection}{\numberline {2.1.2}Utilizzo di un classificatore per combinare le feature}{22}

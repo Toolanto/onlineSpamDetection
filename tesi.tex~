@@ -13,7 +13,6 @@
 \frontmatter
 \tableofcontents
 \listoffigures
-\listoftables
 \mainmatter
 \include{inizio/introduzione}
 \include{capitoli/tecnicheAntispam}

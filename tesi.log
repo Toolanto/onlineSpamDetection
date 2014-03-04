@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.1.28)  3 MAR 2014 23:59
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.1.28)  4 MAR 2014 12:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -651,46 +651,87 @@ File: immagini/fetterly/fetterly4.png Graphic file (type png)
 Package pdftex.def Info: immagini/fetterly/fetterly4.png used on input line 38.
 
 (pdftex.def)             Requested size: 341.43306pt x 222.03539pt.
- [17 <./immagini/fetterly/fetterly3.png (PNG copy)>] <immagini/fetterly/fetterl
-y5.png, id=83, 951.555pt x 639.38875pt>
+
+<immagini/fetterly/fetterly9.png, id=79, 954.56625pt x 656.4525pt>
+File: immagini/fetterly/fetterly9.png Graphic file (type png)
+
+<use immagini/fetterly/fetterly9.png>
+Package pdftex.def Info: immagini/fetterly/fetterly9.png used on input line 45.
+
+(pdftex.def)             Requested size: 341.43306pt x 234.80019pt.
+ [17 <./immagini/fetterly/fetterly3.png (PNG copy)>] [18 <./immagini/fetterly/f
+etterly4.png (PNG copy)>]
+<immagini/fetterly/fetterly5.png, id=87, 951.555pt x 639.38875pt>
 File: immagini/fetterly/fetterly5.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly5.png>
-Package pdftex.def Info: immagini/fetterly/fetterly5.png used on input line 46.
+Package pdftex.def Info: immagini/fetterly/fetterly5.png used on input line 55.
 
 (pdftex.def)             Requested size: 341.43306pt x 229.41878pt.
-) [18 <./immagini/fetterly/fetterly4.png (PNG copy)>] [19 <./immagini/fetterly/
-fetterly5.png (PNG copy)>] (./tesi.bbl
-[20
+
+<immagini/fetterly/fetterly6.png, id=88, 948.54375pt x 639.38875pt>
+File: immagini/fetterly/fetterly6.png Graphic file (type png)
+
+<use immagini/fetterly/fetterly6.png>
+Package pdftex.def Info: immagini/fetterly/fetterly6.png used on input line 63.
+
+(pdftex.def)             Requested size: 341.43306pt x 230.1505pt.
+ [19 <./immagini/fetterly/fetterly9.png (PNG copy)>] <immagini/fetterly/fetterl
+y7.png, id=92, 969.6225pt x 641.39626pt>
+File: immagini/fetterly/fetterly7.png Graphic file (type png)
+
+<use immagini/fetterly/fetterly7.png>
+Package pdftex.def Info: immagini/fetterly/fetterly7.png used on input line 71.
+
+(pdftex.def)             Requested size: 341.43306pt x 225.85243pt.
+ [20 <./immagini/fetterly/fetterly5.png (PNG copy)>] <immagini/fetterly/fetterl
+y8.png, id=96, 952.55875pt x 635.37375pt>
+File: immagini/fetterly/fetterly8.png Graphic file (type png)
+
+<use immagini/fetterly/fetterly8.png>
+Package pdftex.def Info: immagini/fetterly/fetterly8.png used on input line 79.
+
+(pdftex.def)             Requested size: 341.43306pt x 227.74548pt.
+ [21 <./immagini/fetterly/fetterly6.png (PNG copy)>] <immagini/fetterly/fetterl
+y13.png, id=100, 499.8675pt x 425.59pt>
+File: immagini/fetterly/fetterly13.png Graphic file (type png)
+
+<use immagini/fetterly/fetterly13.png>
+Package pdftex.def Info: immagini/fetterly/fetterly13.png used on input line 88
+.
+(pdftex.def)             Requested size: 227.62204pt x 193.79959pt.
+) [22 <./immagini/fetterly/fetterly7.png (PNG copy)>] [23 <./immagini/fetterly/
+fetterly8.png (PNG copy)>] [24 <./immagini/fetterly/fetterly13.png (PNG copy)>]
+ (./tesi.bbl [25
 
 
 
-]) [21] (./tesi.aux (./inizio/introduzione.aux)
-(./capitoli/tecnicheAntispam.aux)) ) 
+]) [26] (./tesi.aux
+(./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux)) ) 
 Here is how much of TeX's memory you used:
- 6034 strings out of 495059
- 86034 string characters out of 3182030
- 160537 words of memory out of 3000000
- 9107 multiletter control sequences out of 15000+200000
+ 6065 strings out of 495059
+ 86930 string characters out of 3182030
+ 160599 words of memory out of 3000000
+ 9133 multiletter control sequences out of 15000+200000
  10996 words of font info for 39 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,43p,1114b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (23 pages, 600878 bytes).
+ 38i,9n,43p,1772b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on tesi.pdf (28 pages, 912729 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 156 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

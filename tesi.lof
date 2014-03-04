@@ -9,4 +9,9 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Occorrenze dello spam classificate per lingua all'iterno del dataset descritto in \cite {Ntoulas:2006:DSW:1135777.1135794}\relax }}{16}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Prevalenza di spam sulla base del numero di parole per pagina\relax }}{17}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Prevalenza di spam sulla base del numero di parole all'interno dei titoli delle pagine\relax }}{18}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Prevalenza di spam sulla base della lunghezza media delle parole\relax }}{19}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Prevalenza di spam sulla base della frazione di parole di una pagina che sono tra le 200 piu frequenti parole nel corpus\relax }}{19}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Prevalenza di spam sulla base della lunghezza media delle parole per pagina\relax }}{20}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Prevalenza di spam sulla base della quantit\IeC {\`a} di testo delle ancore delle pagine\relax }}{21}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Prevalenza di spam sulla base della frazione di contenuto visibile\relax }}{22}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Prevalenza di spam sulla base del rapporto di compressione\relax }}{23}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Esempio di classificatore\relax }}{24}

@@ -14,6 +14,13 @@ Dennis Fetterly, Mark Manasse, and Marc Najork.
   Databases: Colocated with ACM SIGMOD/PODS 2004}, WebDB '04, pages 1--6, New
   York, NY, USA, 2004. ACM.
 
+\bibitem{Fetterly:2005:DPD:1076034.1076066}
+Dennis Fetterly, Mark Manasse, and Marc Najork.
+\newblock Detecting phrase-level duplication on the world wide web.
+\newblock In {\em Proceedings of the 28th Annual International ACM SIGIR
+  Conference on Research and Development in Information Retrieval}, SIGIR '05,
+  pages 170--177, New York, NY, USA, 2005. ACM.
+
 \bibitem{ilprints646}
 Zoltan Gyongyi and Hector Garcia-Molina.
 \newblock Web spam taxonomy.

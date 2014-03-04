@@ -2,7 +2,7 @@
 Il capitolo illustra alcune tecniche di spam detection presenti in letteratura. Le tecniche verranno suddivise sulla base del tipo di segnali che vengono utilizzati, come: il contenuto, il grafo ottenuto dalla fase di crawling ed altri segnali (es. header delle richieste HTTP). Nella prima parte del capitolo verranno illustrate le tecniche basate sul contenuto, nella seconda parte le tecniche che fanno uso di grafi ed infine le tecniche che fanno uso di altri tipi di segnali.
 
 \section{Tecniche basate sul contenuto}
-\subsection{Periodo: 2004 - 2006}
+\subsection{Prime feature per identidicare lo spam}
 Uno dei primi studi sul web spam è descritto in \cite{Fetterly:2004:SDS:1017074.1017077}, in questo articolo vengono eseguite delle analisi per confrontare alcune proprietà delle pagine spam e con contenuti in modo tale da estrarre dei valori tramite cui si può stimare se una pagina sia spam. Bisogna precisare che questi valori sono il risultato di studi empirici effettuati su alcuni dataset. Le proprietà vengono classificate come segue:
 \begin{itemize}
  \item 	Proprietà degli URL. Come descritto in precedenza il \textit{link spam} è una forma di spam dove gli spammer cercano di aumentare il rank derivato dagli algoritmi basati sulla struttura dei link.Quindi uno spammer cerca di creare automaticamente tante pagine spam di bassa qualità che puntano a una pagina target \textit{p}. Alcune analisi sulle proprietà dei link mostrano che gli URL di un HOST sono buone feature per identificare lo spam. In particolare il nome di un HOST con molti caratteri, punti, barre e numeri è un buon indicatore di spam. Perciò un modo semplice per classificare le pagine sarebbe quello di usare un valore di soglia tale per cui superata tale soglia la pagina venga classificata come spam. 
@@ -39,11 +39,53 @@ La tecnica ``Keyword stuffing'' viene utilizzata anche per la costruzione dei ti
 \caption{Prevalenza di spam sulla base del numero di parole all'interno dei titoli delle pagine}
 \label{fig:fetterly4}
 \end{figure}
+Le parole che vengono utilizzate nel processo di ``keyword stuffing'' vengono selezionate casualmente o da un ristretto gruppo di query comuni. Per tentare di esaminare il comportamento con cui vengono selezionate e costruite le frasi vengono esaminate le pagine per  determinare se sono costituite da un eccesso di parole molto comuni. Prima vengono identificate le \textit{n} parole più comuni all'interno del corpus poi viene calcolata, per ogni pagina, la frazione delle parole comuni contenute in ogni pagina. Questo processo viene ripetuto per ogni scelta di \textit{n}. In figura \ref{fig:fetterly9} viene mostrato il grafico per \textit{n=200}. Il grafico è basato sulla frazione di parole di una pagina che sono contenute nell'insime delle 200 parole più comuni nella porzione delle pagine inglesi del data set utilizzato in \cite{Ntoulas:2006:DSW:1135777.1135794}. Il grafico ha una caratteristica gaussiana e suggerisce che la maggior parte delle pagine di spam sono generate tessendo parole da un dizionare con una scelta casuale.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=12cm]{immagini/fetterly/fetterly9}
+\caption{Prevalenza di spam sulla base della frazione di parole di una pagina che sono tra le 200 piu frequenti parole nel corpus}
+\label{fig:fetterly9}
+\end{figure}
+
+Un metodo per identificare pagine spam che sono generate automaticamente è descritto in \cite{Fetterly:2005:DPD:1076034.1076066}. Queste pagine spam sono  costruite dinamicamente legando insieme frasi grammaticali ben formate. Le pagine create secondo questo metodo vengono generate al volo e cambiano completamente a ogni download. Queste pagine vengono create per essere indicizzate dalla maggior parte dei motori di ricerca. I link di queste pagine puntano ad altre pagine che sembrano essere su un altro host ma vengono risolte da uno stesso IP. Apparte l'uso di differenti host name ma che in realta corrispondono ad unico host per non creare l'illusione di una struttura nepostica questo meccanismo viene usato anche per eludere le politiche di politeness di un web crawler volte al non sovraccarico di qualsiasi host se tali politiche sono basate sul nome dell'host. Infine generando pagine con frasi formate in modo corretto impediscono agli utenti di individuare l'inganno.
 
 Un altro dato trovato dagli autori per determinare se una pagina è spam riguarda la lunghezza media delle parole delle pagine. Dal dataset preso in considerazione in \cite{Ntoulas:2006:DSW:1135777.1135794} si nota che la distribuzione risultante della lunghezza media delle parole è simile a una gaussiana con moda e mediana corrispondenti a una media di 5.0. La maggior parte delle parole hanno una lunghezza media compresa tra 4.0 e 6.0. Come si nota dal grafico in figura \ref{fig:fetterly5} le parole con lunghezza media 10 sono certamente spam.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/fetterly/fetterly5}
-\caption{Prevalenza di spam sulla base della lunghezza media delle parole}
+\caption{Prevalenza di spam sulla base della lunghezza media delle parole per pagina}
 \label{fig:fetterly5}
+\end{figure}
+
+Un'altra proprietà delle pagine web che consente di stimare se una pagina è spam oppure no è la quantita di testo che è contenuta all'interno delle ancore (il tag ``<a>'' delle pagine web). Infatti una pratica comune dei motori di ricerca è considerare il testo delle ancore dei link in una pagina come annotazioni che descrivono il contenuto della pagina che viene puntata dal link. L'idea prinicipale è che se la pagina \textit{a} ha un link alla pagina \textit{b} con testo dell'ancora, ad esempio, ``computer'' allora potremmo concludere che \textit{b} parli di computer, anche se questa keyword non compare all'interno della pagina \textit{b}. Alcuni motori di ricerca tengono conto di questo durante il ranking e potrebbero considerare la pagina \textit{b} come risultato di una query contenente la keyword ``computer''. Sfruttando questo meccanismo alcune pagine di spam vengono create solo per contenere del testo all'interno delle  ancore per valorizzare il ranking di altre pagine. Queste pagine di norma sono solo cataloghi di link ad altre pagine. Per capire meglio il fenomeno è stato calcolato la frazione di tutte le parole del testo delle ancore all'interno di una pagina esclusi i markup rispetto al contenuto della pagina. In figura \ref{fig:fetterly6} viene visualizzato il grafico risultante. Si nota che un'alta frazione di testo delle ancore aumenta la probabilita che la pagina sia spam ma usare questa euristica da sola potrebbe portare un alto numero di falsi positivi.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=12cm]{immagini/fetterly/fetterly6}
+\caption{Prevalenza di spam sulla base della quantità di testo delle ancore delle pagine}
+\label{fig:fetterly6}
+\end{figure}
+
+Oltre a queste proprietà anche la quantità di contenuto visibile è utile per capire se una pagina è spam. Infatti calcolando la frazione di contentuto visibile all'interno di una pagina: definita come a lunghezza in termini di byte di tutte le parole non di markup diviso l'interna dimensione della pagina, si nota dal grafico in figura \ref{fig:fetterly7} della distribuzione delle frazioni di contenuto visibile che le pagine di spam hanno meno markup delle pagine normali. Questo fa intendere che molte pagine spam hanno il solo scopo di dover essere indicizzate dai motori di ricerca  e non di essere fruite da un utente.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=12cm]{immagini/fetterly/fetterly7}
+\caption{Prevalenza di spam sulla base della frazione di contenuto visibile}
+\label{fig:fetterly7}
+\end{figure}
+
+Come detto in precendenza i  motori di ricerca possono dare un maggiore peso a pagine che contengono le keyword contenute nella query più volte all'interno della pagina ad esempio utilizzano come metodo di ranking il ``term-frequency''. Alcune pagine spam per trarre vantaggio da questo meccanismo replicano i contenuti molte volte per aumentare il rank. Per rilevare la rilevare la ridondanza di contenuti (ottenuta dal processo di replica) e perciò stimare se la pagina sia spam, viene calcolato il rapporto di compressione ovvero la dimensione della pagina non compressa divisa per la dimensione della pagina compressa. In figura \ref{fig:fetterly8} viene visualizzato la distribuzione del rapporto di compressione e la likelihood che la pagina sia spam. Dal grafico si nota che quanto più il valore di compressione è elevato molto più probabilmente la pagina può essere considerata spam in particolare  la probabilità che una pagina sia spam risiede sulla parte destra del grafico, il 70 per cento delle pagine con un rapporto di compressione maggiore di 4.0 sono giudicate spam. Questo è dovuto al fatto che una compressione su una pagina piena di contenuti ridondanti (spam) sarà più efficace che su una pagina caratterizza da conenuti casuali (non spam). E perciò il rapporto tenderà a crescere quanto più la pagina sarà caratterizzata da contenuti ridondanti.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=12cm]{immagini/fetterly/fetterly8}
+\caption{Prevalenza di spam sulla base del rapporto di compressione}
+\label{fig:fetterly8}
+\end{figure}
+
+\subsection{Utilizzo di un classificatore per combinare le feature}
+Sempre in \cite{Ntoulas:2006:DSW:1135777.1135794} le euristiche vengono combinate considerando il problema di rilevamento dello spam come un problema di classificazione. In questo caso  viene creato un modello di classificazione il quale data una pagina web userà le caratteristiche della pagina in modo tale di classificarla in una delle due classi: spam o non spam. Costruire un classificatore precede una fase di traning durante la quale i parametri del classificatore sono determinati e una fase di testing durante la quale le perfomance del classificatore sono valutate. Per ogni pagina all'interno del dataset viene calcolato il valore di ogni feature (le varie euristiche) e usiamo questi valori per istruire il classificatore. VUsando  un classificatore di tipo ``decision-tree'', l'algoritmo di classificazione funziona come segue: dato un insieme di dati da traning e un insieme di feature l'algoritmo crea un diagramma di flusso come una struttura ad albero. Ogni nodo dell'albero corrisponde al test da valutare per una particolare feature mentre ogni arco è un valore di uscita del test ed infine le foglie corrispondono alle classi.  Per applicare l'albero alle pagine viene controllato il valore della proprietà  definita nel nodo radice dell'albero per quella pagina e confrontato con la soglia indicata dai lati uscenti poi si seguono i lati sulla base dei valori ottenuti finche non si arriva ad assegnare la classe per quella pagina. Un esempio del classificatore è rappresentato in figura \ref{fig:fetterly13} Per migliorare il classificatore si possono usare tecniche come bagging o boosting. Le tecninche creano un insieme di classificatori  che vengono combinati.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=8cm]{immagini/fetterly/fetterly13}
+\caption{Esempio di classificatore}
+\label{fig:fetterly13}
 \end{figure}
