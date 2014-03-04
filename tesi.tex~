@@ -6,6 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
 \usepackage{amsmath}
+\usepackage{url}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{listings}

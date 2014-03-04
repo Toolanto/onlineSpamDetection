@@ -1,5 +1,12 @@
 \begin{thebibliography}{10}
 
+\bibitem{Abernethy:2008:WSI:1451983.1451994}
+Jacob Abernethy, Olivier Chapelle, and Carlos Castillo.
+\newblock Web spam identification through content and hyperlinks.
+\newblock In {\em Proceedings of the 4th International Workshop on Adversarial
+  Information Retrieval on the Web}, AIRWeb '08, pages 41--44, New York, NY,
+  USA, 2008. ACM.
+
 \bibitem{Eiron:2004:RWF:988672.988714}
 Nadav Eiron, Kevin~S. McCurley, and John~A. Tomlin.
 \newblock Ranking the web frontier.
@@ -52,6 +59,13 @@ Christopher~D. Manning, Prabhakar Raghavan, and Hinrich Sch\"{u}tze.
 \newblock {\em Introduction to Information Retrieval}.
 \newblock Cambridge University Press, New York, NY, USA, 2008.
 \newblock Pages 474--476.
+
+\bibitem{Martinez-Romo:2009:WSI:1531914.1531920}
+Juan Martinez-Romo and Lourdes Araujo.
+\newblock Web spam identification through language model analysis.
+\newblock In {\em Proceedings of the 5th International Workshop on Adversarial
+  Information Retrieval on the Web}, AIRWeb '09, pages 21--28, New York, NY,
+  USA, 2009. ACM.
 
 \bibitem{Ntoulas:2006:DSW:1135777.1135794}
 Alexandros Ntoulas, Marc Najork, Mark Manasse, and Dennis Fetterly.

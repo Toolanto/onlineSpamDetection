@@ -15,3 +15,11 @@
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Prevalenza di spam sulla base della frazione di contenuto visibile\relax }}{22}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Prevalenza di spam sulla base del rapporto di compressione\relax }}{23}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Esempio di classificatore\relax }}{24}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Istogramma della divergenza KL tra testo delle ancore e il contenuto della pagina puntata basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{26}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Istogramma della divergenza KL tra testo intorno alle ancore e il contenuto della pagina puntata basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{26}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Istogramma della divergenza KL tra termini degli URL e il contenuto della pagina puntata basato sul dataset WEBSPAM-UK2007 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{27}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Istogramma della divergenza KL tra testo delle ancore e titolo della pagina puntata basato sul dataset WEBSPAM-UK2007 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{28}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Istogramma della divergenza KL tra testo intorno alle ancore e titolo della pagina puntata basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{28}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Istogramma della divergenza KL tra termini nell'URL e titolo della pagina puntata basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{29}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Istogramma della divergenza KL tra titolo e contenuto della pagina basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{29}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Istogramma della divergenza KL tra testo delle ancore e i meta tag della pagina basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{30}

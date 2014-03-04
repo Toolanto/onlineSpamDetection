@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.1.28)  4 MAR 2014 12:09
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.1.28)  4 MAR 2014 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -365,6 +365,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -432,25 +436,25 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux))
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 12.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 13.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/lgrcmr.fd
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    ... okay on input line 13.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -557,13 +561,13 @@ e
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./tesi.lof)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./tesi.lof [2
+
+])
 \tf@lof=\write4
 \openout4 = `tesi.lof'.
 
- [2
-
-]
+ [3]
 \openout2 = `inizio/introduzione.aux'.
 
  (./inizio/introduzione.tex
@@ -580,7 +584,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 
 ] [2] [3] [4]
 [5] [6]
-<immagini/tassonomiaTecnicheBoost.png, id=39, 411.86884pt x 341.00214pt>
+<immagini/tassonomiaTecnicheBoost.png, id=42, 411.86884pt x 341.00214pt>
 File: immagini/tassonomiaTecnicheBoost.png Graphic file (type png)
 
 <use immagini/tassonomiaTecnicheBoost.png>
@@ -588,21 +592,21 @@ Package pdftex.def Info: immagini/tassonomiaTecnicheBoost.png used on input lin
 e 91.
 (pdftex.def)             Requested size: 341.43306pt x 282.69868pt.
  [7 <./immagini/tassonomiaTecnicheBoost.png (PNG copy)>] [8]
-<immagini/tipologiaPagine.png, id=47, 577.48457pt x 309.34262pt>
+<immagini/tipologiaPagine.png, id=50, 577.48457pt x 309.34262pt>
 File: immagini/tipologiaPagine.png Graphic file (type png)
 
 <use immagini/tipologiaPagine.png>
 Package pdftex.def Info: immagini/tipologiaPagine.png used on input line 125.
 (pdftex.def)             Requested size: 284.52756pt x 152.41467pt.
  [9] [10 <./immagini/tipologiaPagine.png (PNG copy)>] <immagini/spamfarm.png, i
-d=54, 441.16122pt x 199.84225pt>
+d=58, 441.16122pt x 199.84225pt>
 File: immagini/spamfarm.png Graphic file (type png)
 
 <use immagini/spamfarm.png>
 Package pdftex.def Info: immagini/spamfarm.png used on input line 141.
 (pdftex.def)             Requested size: 284.52756pt x 128.88963pt.
 
-<immagini/tassonomiaHiding.png, id=55, 519.97653pt x 266.41907pt>
+<immagini/tassonomiaHiding.png, id=59, 519.97653pt x 266.41907pt>
 File: immagini/tassonomiaHiding.png Graphic file (type png)
 
 <use immagini/tassonomiaHiding.png>
@@ -619,103 +623,170 @@ Capitolo 2.
 
 
 
-] <immagini/fetterly/fetterly1.png, id=69, 597.81236pt x 361.35pt>
+] <immagini/fetterly/fetterly1.png, id=72, 597.81236pt x 361.35pt>
 File: immagini/fetterly/fetterly1.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly1.png>
-Package pdftex.def Info: immagini/fetterly/fetterly1.png used on input line 19.
+Package pdftex.def Info: immagini/fetterly/fetterly1.png used on input line 22.
 
 (pdftex.def)             Requested size: 341.43306pt x 206.39069pt.
 
-<immagini/fetterly/fetterly2.png, id=70, 606.05368pt x 368.95737pt>
+<immagini/fetterly/fetterly2.png, id=73, 606.05368pt x 368.95737pt>
 File: immagini/fetterly/fetterly2.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly2.png>
-Package pdftex.def Info: immagini/fetterly/fetterly2.png used on input line 22.
+Package pdftex.def Info: immagini/fetterly/fetterly2.png used on input line 25.
 
 (pdftex.def)             Requested size: 341.43306pt x 207.86453pt.
 
-<immagini/fetterly/fetterly3.png, id=71, 837.1275pt x 567.11874pt>
+<immagini/fetterly/fetterly3.png, id=74, 837.1275pt x 567.11874pt>
 File: immagini/fetterly/fetterly3.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly3.png>
-Package pdftex.def Info: immagini/fetterly/fetterly3.png used on input line 30.
+Package pdftex.def Info: immagini/fetterly/fetterly3.png used on input line 33.
 
 (pdftex.def)             Requested size: 341.43306pt x 231.30003pt.
  [15] [16 <./immagini/fetterly/fetterly1.png (PNG copy)> <./immagini/fetterly/f
 etterly2.png (PNG copy)>]
-<immagini/fetterly/fetterly4.png, id=78, 981.6675pt x 638.385pt>
+<immagini/fetterly/fetterly4.png, id=82, 981.6675pt x 638.385pt>
 File: immagini/fetterly/fetterly4.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly4.png>
-Package pdftex.def Info: immagini/fetterly/fetterly4.png used on input line 38.
+Package pdftex.def Info: immagini/fetterly/fetterly4.png used on input line 41.
 
 (pdftex.def)             Requested size: 341.43306pt x 222.03539pt.
 
-<immagini/fetterly/fetterly9.png, id=79, 954.56625pt x 656.4525pt>
+<immagini/fetterly/fetterly9.png, id=83, 954.56625pt x 656.4525pt>
 File: immagini/fetterly/fetterly9.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly9.png>
-Package pdftex.def Info: immagini/fetterly/fetterly9.png used on input line 45.
+Package pdftex.def Info: immagini/fetterly/fetterly9.png used on input line 49.
 
 (pdftex.def)             Requested size: 341.43306pt x 234.80019pt.
  [17 <./immagini/fetterly/fetterly3.png (PNG copy)>] [18 <./immagini/fetterly/f
 etterly4.png (PNG copy)>]
-<immagini/fetterly/fetterly5.png, id=87, 951.555pt x 639.38875pt>
+<immagini/fetterly/fetterly5.png, id=90, 951.555pt x 639.38875pt>
 File: immagini/fetterly/fetterly5.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly5.png>
-Package pdftex.def Info: immagini/fetterly/fetterly5.png used on input line 55.
+Package pdftex.def Info: immagini/fetterly/fetterly5.png used on input line 59.
 
 (pdftex.def)             Requested size: 341.43306pt x 229.41878pt.
 
-<immagini/fetterly/fetterly6.png, id=88, 948.54375pt x 639.38875pt>
+<immagini/fetterly/fetterly6.png, id=91, 948.54375pt x 639.38875pt>
 File: immagini/fetterly/fetterly6.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly6.png>
-Package pdftex.def Info: immagini/fetterly/fetterly6.png used on input line 63.
+Package pdftex.def Info: immagini/fetterly/fetterly6.png used on input line 68.
 
 (pdftex.def)             Requested size: 341.43306pt x 230.1505pt.
  [19 <./immagini/fetterly/fetterly9.png (PNG copy)>] <immagini/fetterly/fetterl
-y7.png, id=92, 969.6225pt x 641.39626pt>
+y7.png, id=95, 969.6225pt x 641.39626pt>
 File: immagini/fetterly/fetterly7.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly7.png>
-Package pdftex.def Info: immagini/fetterly/fetterly7.png used on input line 71.
+Package pdftex.def Info: immagini/fetterly/fetterly7.png used on input line 76.
 
 (pdftex.def)             Requested size: 341.43306pt x 225.85243pt.
  [20 <./immagini/fetterly/fetterly5.png (PNG copy)>] <immagini/fetterly/fetterl
-y8.png, id=96, 952.55875pt x 635.37375pt>
+y8.png, id=99, 952.55875pt x 635.37375pt>
 File: immagini/fetterly/fetterly8.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly8.png>
-Package pdftex.def Info: immagini/fetterly/fetterly8.png used on input line 79.
+Package pdftex.def Info: immagini/fetterly/fetterly8.png used on input line 85.
 
 (pdftex.def)             Requested size: 341.43306pt x 227.74548pt.
  [21 <./immagini/fetterly/fetterly6.png (PNG copy)>] <immagini/fetterly/fetterl
-y13.png, id=100, 499.8675pt x 425.59pt>
+y13.png, id=103, 499.8675pt x 425.59pt>
 File: immagini/fetterly/fetterly13.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly13.png>
-Package pdftex.def Info: immagini/fetterly/fetterly13.png used on input line 88
+Package pdftex.def Info: immagini/fetterly/fetterly13.png used on input line 95
 .
 (pdftex.def)             Requested size: 227.62204pt x 193.79959pt.
-) [22 <./immagini/fetterly/fetterly7.png (PNG copy)>] [23 <./immagini/fetterly/
-fetterly8.png (PNG copy)>] [24 <./immagini/fetterly/fetterly13.png (PNG copy)>]
- (./tesi.bbl [25
+ [22 <./immagini/fetterly/fetterly7.png (PNG copy)>] [23 <./immagini/fetterly/f
+etterly8.png (PNG copy)>] [24 <./immagini/fetterly/fetterly13.png (PNG copy)>]
+<immagini/martinez/martinez1.png, id=115, 901.3675pt x 319.1925pt>
+File: immagini/martinez/martinez1.png Graphic file (type png)
+
+<use immagini/martinez/martinez1.png>
+Package pdftex.def Info: immagini/martinez/martinez1.png used on input line 122
+.
+(pdftex.def)             Requested size: 341.43306pt x 120.90964pt.
+
+<immagini/martinez/martinez2.png, id=116, 867.24pt x 338.26375pt>
+File: immagini/martinez/martinez2.png Graphic file (type png)
+
+<use immagini/martinez/martinez2.png>
+Package pdftex.def Info: immagini/martinez/martinez2.png used on input line 130
+.
+(pdftex.def)             Requested size: 341.43306pt x 133.17656pt.
+
+<immagini/martinez/martinez3.png, id=117, 887.315pt x 339.2675pt>
+File: immagini/martinez/martinez3.png Graphic file (type png)
+
+<use immagini/martinez/martinez3.png>
+Package pdftex.def Info: immagini/martinez/martinez3.png used on input line 138
+.
+(pdftex.def)             Requested size: 341.43306pt x 130.54332pt.
+ [25] [26 <./immagini/martinez/martinez1.png (PNG copy)> <./immagini/martinez/m
+artinez2.png (PNG copy)>]
+<immagini/martinez/martinez4.png, id=124, 872.25874pt x 338.26375pt>
+File: immagini/martinez/martinez4.png Graphic file (type png)
+
+<use immagini/martinez/martinez4.png>
+Package pdftex.def Info: immagini/martinez/martinez4.png used on input line 146
+.
+(pdftex.def)             Requested size: 341.43306pt x 132.4075pt.
+
+<immagini/martinez/martinez5.png, id=125, 888.31876pt x 328.22626pt>
+File: immagini/martinez/martinez5.png Graphic file (type png)
+
+<use immagini/martinez/martinez5.png>
+Package pdftex.def Info: immagini/martinez/martinez5.png used on input line 154
+.
+(pdftex.def)             Requested size: 341.43306pt x 126.15463pt.
+
+<immagini/martinez/martinez6.png, id=126, 885.3075pt x 319.1925pt>
+File: immagini/martinez/martinez6.png Graphic file (type png)
+
+<use immagini/martinez/martinez6.png>
+Package pdftex.def Info: immagini/martinez/martinez6.png used on input line 162
+.
+(pdftex.def)             Requested size: 341.43306pt x 123.10135pt.
+ [27 <./immagini/martinez/martinez3.png (PNG copy)>] [28 <./immagini/martinez/m
+artinez4.png (PNG copy)> <./immagini/martinez/martinez5.png (PNG copy)>]
+<immagini/martinez/martinez7.png, id=134, 873.2625pt x 322.20375pt>
+File: immagini/martinez/martinez7.png Graphic file (type png)
+
+<use immagini/martinez/martinez7.png>
+Package pdftex.def Info: immagini/martinez/martinez7.png used on input line 170
+.
+(pdftex.def)             Requested size: 341.43306pt x 125.9736pt.
+
+<immagini/martinez/martinez8.png, id=135, 893.3375pt x 335.2525pt>
+File: immagini/martinez/martinez8.png Graphic file (type png)
+
+<use immagini/martinez/martinez8.png>
+Package pdftex.def Info: immagini/martinez/martinez8.png used on input line 179
+.
+(pdftex.def)             Requested size: 341.43306pt x 128.13391pt.
+ [29 <./immagini/martinez/martinez6.png (PNG copy)> <./immagini/martinez/martin
+ez7.png (PNG copy)>] [30 <./immagini/martinez/martinez8.png (PNG copy)>]) [31] 
+(./tesi.bbl [32
 
 
 
-]) [26] (./tesi.aux
+]) [33] (./tesi.aux
 (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux)) ) 
 Here is how much of TeX's memory you used:
- 6065 strings out of 495059
- 86930 string characters out of 3182030
- 160599 words of memory out of 3000000
- 9133 multiletter control sequences out of 15000+200000
- 10996 words of font info for 39 fonts, out of 3000000 for 9000
+ 6193 strings out of 495059
+ 89327 string characters out of 3182030
+ 168814 words of memory out of 3000000
+ 9248 multiletter control sequences out of 15000+200000
+ 11164 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,43p,1772b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,43p,1218b,1687s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-d
@@ -723,15 +794,16 @@ ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (28 pages, 912729 bytes).
+fonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on tesi.pdf (36 pages, 1133866 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
+ 194 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
