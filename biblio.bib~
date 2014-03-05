@@ -190,6 +190,40 @@
  keywords = {content duplication, data mining, web characterization, web pages, web spam},
 } 
 
+@inproceedings{Martinez-Romo:2009:WSI:1531914.1531920,
+ author = {Martinez-Romo, Juan and Araujo, Lourdes},
+ title = {Web Spam Identification Through Language Model Analysis},
+ booktitle = {Proceedings of the 5th International Workshop on Adversarial Information Retrieval on the Web},
+ series = {AIRWeb '09},
+ year = {2009},
+ isbn = {978-1-60558-438-6},
+ location = {Madrid, Spain},
+ pages = {21--28},
+ numpages = {8},
+ url = {http://doi.acm.org/10.1145/1531914.1531920},
+ doi = {10.1145/1531914.1531920},
+ acmid = {1531920},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {content spam, language model approach, web spam},
+}
+
+@inproceedings{Dong:2012:EDC:2457524.2457693,
+ author = {Dong, Cailing and Zhou, Bin},
+ title = {Effectively Detecting Content Spam on the Web Using Topical Diversity Measures},
+ booktitle = {Proceedings of the The 2012 IEEE/WIC/ACM International Joint Conferences on Web Intelligence and Intelligent Agent Technology - Volume 01},
+ series = {WI-IAT '12},
+ year = {2012},
+ isbn = {978-0-7695-4880-7},
+ pages = {266--273},
+ numpages = {8},
+ url = {http://dl.acm.org/citation.cfm?id=2457524.2457693},
+ acmid = {2457693},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ keywords = {web spam, topic model, classification, personalization},
+} 
+
 @inproceedings{Abernethy:2008:WSI:1451983.1451994,
  author = {Abernethy, Jacob and Chapelle, Olivier and Castillo, Carlos},
  title = {Web Spam Identification Through Content and Hyperlinks},
@@ -206,4 +240,33 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {graph regularization, support vector machines, web spam},
+} 
+
+
+@inproceedings{DBLP:conf:airweb:UrvoyLF06,
+  author    = {Tanguy Urvoy and
+               Thomas Lavergne and
+               Pascal Filoche},
+  title     = {Tracking Web Spam with Hidden Style Similarity},
+  booktitle = {AIRWeb},
+  year      = {2006},
+  pages     = {25-31},
+}
+
+@inproceedings{Erdelyi:2011:WSC:1964114.1964121,
+ author = {Erd{\'e}lyi, Mikl\'{o}s and Garz\'{o}, Andr\'{a}s and Bencz\'{u}r, Andr\'{a}s A.},
+ title = {Web Spam Classification: A Few Features Worth More},
+ booktitle = {Proceedings of the 2011 Joint WICOW/AIRWeb Workshop on Web Quality},
+ series = {WebQuality '11},
+ year = {2011},
+ isbn = {978-1-4503-0706-2},
+ location = {Hyderabad, India},
+ pages = {27--34},
+ numpages = {8},
+ url = {http://doi.acm.org/10.1145/1964114.1964121},
+ doi = {10.1145/1964114.1964121},
+ acmid = {1964121},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {document classification, ensemble classification, feature selection, hyperlink analysis, information retrieval, machine learning, web quality, web spam},
 } 

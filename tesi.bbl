@@ -7,6 +7,15 @@ Jacob Abernethy, Olivier Chapelle, and Carlos Castillo.
   Information Retrieval on the Web}, AIRWeb '08, pages 41--44, New York, NY,
   USA, 2008. ACM.
 
+\bibitem{Dong:2012:EDC:2457524.2457693}
+Cailing Dong and Bin Zhou.
+\newblock Effectively detecting content spam on the web using topical diversity
+  measures.
+\newblock In {\em Proceedings of the The 2012 IEEE/WIC/ACM International Joint
+  Conferences on Web Intelligence and Intelligent Agent Technology - Volume
+  01}, WI-IAT '12, pages 266--273, Washington, DC, USA, 2012. IEEE Computer
+  Society.
+
 \bibitem{Eiron:2004:RWF:988672.988714}
 Nadav Eiron, Kevin~S. McCurley, and John~A. Tomlin.
 \newblock Ranking the web frontier.
@@ -88,5 +97,10 @@ Stephen Robertson and Hugo Zaragoza.
 Nikita Spirin and Jiawei Han.
 \newblock Survey on web spam detection: Principles and algorithms.
 \newblock {\em SIGKDD Explor. Newsl.}, 13(2):50--64, May 2012.
+
+\bibitem{DBLP:conf:airweb:UrvoyLF06}
+Tanguy Urvoy, Thomas Lavergne, and Pascal Filoche.
+\newblock Tracking web spam with hidden style similarity.
+\newblock In {\em AIRWeb}, pages 25--31, 2006.
 
 \end{thebibliography}

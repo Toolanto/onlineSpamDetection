@@ -98,7 +98,7 @@ per una particolare feature mentre ogni arco è un valore di uscita del test ed 
 \end{figure}
 
 \subsection{Modelli dei linguaggi per rilevare lo spam}
-In \cite{Martinez-Romo:2009:WSI:1531914.1531920} vengono proposte nuovi tipi di feature per rilevare lo spam e vengono definiti dei modelli dei linguaggi per analizzare le sorgenti estratte da ogni sito in un dataset.  Questo metodo di rilevamento delle pagine web spam fa uso di feauture basate su contenuto e struttura dei link in modo combinato per rilevare differenti tipi di web spam. Viene creato un modello del linguaggio per ogni sorgente e calcolato quanto sono differenti i due modelli  da ogni altro modello. Le sorgenti di informazioni usate sono: 
+In \cite{Martinez-Romo:2009:WSI:1531914.1531920} vengono proposte nuovi tipi di feature per rilevare lo spam e vengono definiti dei modelli dei linguaggi per analizzare le sorgenti estratte da ogni sito in un dataset.  Questo metodo di rilevamento delle pagine web spam fa uso di feauture basate su contenuto e struttura dei link in modo combinato per rilevare differenti tipi di web spam. Viene definito un modello per ogni sorgente e calcolato quanto sono differenti i due modelli  da ogni altro modello. Le sorgenti di informazioni usate sono: 
 \begin{itemize}
 \item testi delle ancore e testo vicino alle ancore della pagine sorgente
 \item titolo e contenuto della pagina obbiettivo dello spam
@@ -108,13 +108,13 @@ Viene utilizzata la Kullback-Leibler Divergence (KLD) per misurare la divergenze
 KLD(T_1||T_2) = \sum_{t \in T_1} P_{T_1}(t) \log \frac{P_{T_1}(t)}{P_{T_2}(t)}
 \label{eqn:kld}
 \end{equation}
-dove in \ref{eqn:kld} \(P_{T_1}(t)\) è la probabilità del termine \textit{t} nella prima unità di testo e \(P_{t_2}(t)\) è la probabilità del termine texit{t} nella seconda unità di testo. In basso sono rappresentati due esempi di KLD applicata tra il testo delle ancore della pagina sorgente e i titoli delle pagine puntate dai i link (esempio preso da WEBSPAM-UK2006).
+dove in \ref{eqn:kld} \(P_{T_1}(t)\) è la probabilità del termine \textit{t} nella prima unità di testo e \(P_{t_2}(t)\) è la probabilità del termine texit{t} nella seconda unità di testo. In basso sono rappresentati due esempi di KLD applicata tra il testo delle ancore della pagina sorgente e i titoli delle pagine puntate dai link (esempio preso da WEBSPAM-UK2006).
 \begin{lstlisting}[frame=trbl,postbreak=\space, breakindent=5pt, breaklines]
 KLD(Free Ringtones || Free Ringtones for Your Mobile Phone from PremieRingtones.com) = 0.25
 
 KLD(Best UK Reviews || Findabmw.co.uk - BMW Information Resource) = 3.89
 \end{lstlisting}
-Per la determinazione determinare se una pagina è spam viene provato a trovare una relazione tra due pagine collegate sulla base del loro valore di divergenza. I valori sono ottenuti calcolando le divergenze con KLD tra una o più sorgenti di informazioni da ogni pagina. In particolare si usano tre tipi di informazione di una pagina sorgente: testo delle ancore, testo intorno alle ancore, termini nell'URL. Sono utilizzate tre tipi di informazione per la pagina che viene linkata dalla pagina sorgente: titolo, contenuto della pagina, meta tag. La combinazione di queste feature possono essere usate per determinare la divergenza tra due pagine. Le feature sono descritte di seguito:
+Per determinare se una pagina è spam viene provato a trovare una relazione tra due pagine collegate sulla base del loro valore di divergenza. I valori sono ottenuti calcolando le divergenze con KLD tra una o più sorgenti di informazioni da ogni pagina. In particolare si usano tre tipi di informazione di una pagina sorgente: testo delle ancore, testo intorno alle ancore, termini nell'URL. Sono utilizzate tre tipi di informazione per la pagina che viene linkata dalla pagina sorgente: titolo, contenuto della pagina, meta tag. La combinazione di queste feature possono essere usate per determinare la divergenza tra due pagine. Le feature sono descritte di seguito:
 \begin{itemize}
 \item testo delle ancore - contenuto. Quando una pagina collega un'altra pagina questa ha solo un modo per convincere l'utente di visitare la pagina collegata, mostrare in maniera concisa le informazione relative alla pagina collegata. Perciò una grande divergenza tra questi due pezzi di testo mostra una chiara evidenza di spam. In figura \ref{fig:martinez1} è mostrato la divergenza KL tra le sorgenti di informazione, come si vede la curva delle pagine normali è più compatta delle spam. Ma da sola questa feature non è una buona misura.
 \begin{figure}[htbp]
@@ -172,19 +172,81 @@ Per la determinazione determinare se una pagina è spam viene provato a trovare 
 \label{fig:martinez7}
 \end{figure}
 
-%correggere
-\item meta tag. Sono stati usati per calcolare la divergenza con altre sorgenti di informazioni della pagina sorgente come il testo delle ancore e il testo intorno alle ancore e per calcolare la divergenza con sorgenti della pagina destinazione come il contenuto o i temini dell'URL. In figura \ref{fig:martinez8} viene visualizzata la differenza tra le due distribuzioni.
+
+\item metatag. Sono stati usati per calcolare la divergenza con altre sorgenti di informazioni della pagina sorgente come il testo delle ancore e il testo intorno alle ancore e per calcolare la divergenza con sorgenti della pagina destinazione come il contenuto o i temini dell'URL. In figura \ref{fig:martinez8} viene visualizzata la divergenza tra il testo delle ancore e i metatag.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/martinez/martinez8}
 \caption{Istogramma della divergenza KL tra testo delle ancore  e i meta tag della pagina basato sul dataset WEBSPAM-UK2006 utilizzato in \cite{Martinez-Romo:2009:WSI:1531914.1531920}}
 \label{fig:martinez8}
 \end{figure}
-
-
 \end{itemize}
+Oltre alle feature descritte: testo delle ancore (A), termini nell'URL (U), testo intorno alle ancore (A), per le pagine sorgenti possono essere definite altre feature combinandole tra di loro: testo delle ancore e termini nell'URL (AU), testo intorno alle ancore e URL (SU) mentre per quanto riguarda le pagine destinazione possono essere usate le stesse sorgenti cioè contenuto della pagina (P), titolo (T), metatag (M). Per maggiori dettagli \cite{Martinez-Romo:2009:WSI:1531914.1531920}.
 
+Queste feature possono essere usate per istruire un classificatore e identificare le pagine spam.
+
+\subsection{Spam detection sulla base degli argomenti di una pagina web}
+In \cite{Dong:2012:EDC:2457524.2457693} viene fatta un'analisi sul contenuto spam usando dei modelli specifici e sono state proposte delle misure specifiche di diversità per identificare le pagine spam. Il metodo  è basato su statistiche sulla base di argomenti delle pagine. Non utilizza statistiche basate sulle parole della pagina le quali ignorano la semantica tra le parole, ma si basa su statistiche degli argomenti in modo tale da catturare le feature linguistiche nascoste nel testo per capire se la pagina è spam o non spam. Le analisi vengono fatte usando dei modelli degli argomenti (topic model) come la \textit{Latent Dirichlet Allocation (LDA)} che sono modelli statistici dei linguaggi per scoprire argomenti nascosti che compaiono in una collezione di documenti.
+
+Un topic model è un modello statistico che scopre gli argomenti latenti presenti in una collezione di documenti. In generale LDA modella ogni argomento latente come una distribuzione probabilistica su un vocabolario e ogni documento come una distribuzione probabilistica sugli argomenti latenti.
+
+Se analizziamo le feature nascoste di una pagina spam, possiamo notare che i contenuti di queste pagine, generati automaticamente, sono differenti nelle pagine che non sono spam. Da questa intuizione è stato proposto  di analizzare il contenuto delle pagine web usanso i topic models e vengono definiti tre tipi di misure.
+
+Una prima misura per determinare le pagine spam utilizzando LDA sfrutta il fatto che le pagine spam sono molto topic-centric, ovvero loro hanno uno specifico insieme di argomenti. In figura \ref{fig:zhou1} vengono rappresentate quattro distribuioni degli argomenti di quattro pagine (due spam e due non spam) prese casualmente da un dataset. Si nota che le pagine spam hanno una distribuzione esponenziale, questo supporta la tesi degli autori che le pagine spam sono topic-centric in quanto queste pagine sono sviluppate per avere un alto ranking per un insieme di  specifiche query di ricerca per simili argomenti. Secondo le pagine normali tendono a coprire un insieme di argomenti aventi tutti lo stesso peso all'interno della pagina. Infatti gli autori sostengono che le pagine non spam come ad esmepio una homepage contengono vari argomenti come ad esempio i contatti, di che cosa si occupa la societa, altre informazioni.
+\begin{figure}
+\centering
+\includegraphics[width=10cm]{immagini/zhou/immagine1.png}
+\caption{Distribuzione degli argomenti pesati per pagine spam e normali}
+\label{fig:zhou1}
+\end{figure}
+Per catturare questa caratteristica sulle distribuzioni dei pesi degli argomenti per le pagine spam e normali, è stato proposto una misura della  diversità degli argomenti basata sulla varianza. Data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)=\{t_1,t_2,......,t_m\}\), dove ogni argomento \(t_i (1 \leq i \leq m)\) è associato con un peso \(\delta_{t_i}\). La misura della diversità degli argomenti basata sulla varianza per \(d\), denotata con \(TopicVar(d)\), è calcolata come:
+\begin{equation}
+TopicVar(d)=\frac{\sum_{i=1}^m (\delta_{t_i}-u)^2}{m}
+\end{equation}
+dove \(u=\frac{\sum_{i=1}^m\delta{t_i}}{m}=\frac{1}{m}\). Questa misura è stata calcolata per ogni pagina all'interno del dataset.
+In figura \ref{fig:zhou2} viene illustrata la distribuzione. Dalla distribuzione si nota che le pagine spam sono più topic-centric, la varianza dei pesi degli argomenti è relativamente larga rispetto alle pagine non spam. Tra queste la percentuale di spam è piccola. Quando la misura incrementa la percentuale di spam incrementa. Questa misura è un ottimo indicatore per rilevare lo spam.
+\begin{figure}
+\centering
+\includegraphics[width=10cm]{immagini/zhou/immagine2.png}
+\caption{Prevalenza di spam relativa alla misura della  diversità degli argomenti basata sulla varianza }
+\label{fig:zhou2}
+\end{figure}
+
+La seconda misura per identificare le pagine spam utilizzando LDA permette di misurare la relazione semantica tra gli argomenti è  la semantica tra le parole. Data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)=\{t_1,t_2,........,t_m\}\). La probabilità che un parola \(w\) appartiene a un argomento \(t_i (1 \leq i \leq m )\) è definita come \(\phi(w|t_i)\). Ongi argomento \(t_i\) è rappresentato come un insieme di parole denotate come \(W(t_i)\). Intuitivamente due argomenti \(t_i, t_j (1 \leq i, j \leq m)\) sono semanticamente relativi se le parole \(W(t_i)\) e \(W(t_j)\) sono semanticamente relative. Viene utilizzata una funzione di similarità \(Sim(w_i,w_j)\) per ottenere le relazioni semantiche tra le due parole. La funzione di similarità usata è quella di Wordnet. Per misurare la relazione semantica tra due argomenti \(t_i,t_j\), possiamo ottenere le similarità tra ogni coppia di parole dei due argomenti moltiplicate con le loro probabilità rispetto agli argomenti, per ottenere la 
+media delle similiratà.
+\begin{equation}
+\label{eqn:1}
+Sim(t_i,t_j) = \frac{\sum_{w_k \in W(t_i),w_l \in W(t_j)}Sim(w_k,w_l) X \phi(w_k|t_i) X \phi(w_l|t_j)}{\frac{|W(t_i)| X |W(t_j)|}{2}}	
+\end{equation}
+Usando un modello degli argomenti otteniamo \(m\) argomenti latenti. Ora basandoci sull'equazione \ref{eqn:1} possiamo derivare una misura della diversità degli argomenti basata sulla semantica per gli \(m\) argomenti latenti di una collezione: data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)\) allora la misura della diversità degli argomenti basata sulla semantica per un documento \(d\) è:
+\begin{equation}
+TopicSim(d)=\frac{\sum_{1 \leq i \leq j \leq m} Sim(t_i,t_j)}{\frac{1}{2} m(m-1)}
+\end{equation}
+In figura \ref{fig:zhou3} mostra la distribuzione della misura di diversità degli argomenti basata sulla semantica.
+\begin{figure}
+\centering
+\includegraphics[width=10cm]{immagini/zhou/immagine3}
+\caption{Prevalenza di spam relativa alla misura di diversità degli argomenti basata sulla semantica}
+\label{fig:zhou3}
+\end{figure}
+Dalla distribuzione si nota che quando la misura cresce la percentuale di spam aumenta, ovvero le pagine di spam hanno argomenti che sono molto in relazione semanticamente tra loro. Questo significa che sono icnentrate su pochi argomenti. Questo è un ottimo indicatore di spam.
+
+L'ulitmi misura è basata sulla massima semantica ed è definita come:
+\begin{equation}
+TopicSimMax(d)= max\{Sim(t_i,t_j)|1 \leq i \leq j \leq m \}
+\end{equation}
+La distribuzione della misura di diversità basata sulla massima semantica mostra che questa è più alta per le pagine che contengono spam. Quando le pagine spam sono create l'insieme degli argomenti è determinato. La distribuzione è rappresentata in figura \ref{fig:zhou4}. Possiamo utilizzare questa misura per rilevare lo spam del contentuto.
+\begin{figure}	
+\centering
+\includegraphics[width=10cm]{immagini/zhou/immagine3}
+\caption{Prevalenza di spam relativa alla misura di diversità sulla massima semantica}
+\label{fig:zhou4}
+\end{figure}
+
+Per determinare se una pagina è spam oppure non spam, utilizzando questo metodo, vengono utilizzati algoritmi supervisionati di apprendimento per istruire un modello di classifizione di pagine spam usando misure di diversità di argomenti. In LDA noi possiamo impostare parametri come il numero di argomenti e il numero di parole per ogni argomento. Cambiando i parametri cambiano le prestazioni della classificazione.
 
 \subsection{L'algoritmo WITCH}
-Nel 2008 in \cite{Abernethy:2008:WSI:1451983.1451994} viene presentato  l'algoritmo WITCH (Web Spam Identification Through Content and Hyperlinks), un'algoritmo ibrido che utilizza sia il contenuto della pagina che la struttura dei link per identificare le pagine spam. Come descritto in precedenza nel sotto capitolo \ref{subsec:Feature} e in particolare in \cite{Ntoulas:2006:DSW:1135777.1135794}, le pagine spam e non spam hanno differenti proprieta le quali possono essere sfruttate per costruire un classificatore. L'algoritmo WITCH oltre alle feature standard descritte in precedenza (vedi il sotto capitolo: \ref{subsec:Feature})per identificare lo spam analizza la struttura dei collegameti tra le pagine. In particolare viene istruit un classificatore lineare nello spazio delle feature usando la SVM (Support Vector Machine) come funzione obbiettivo. I collegamenti tra le pagine sono utilizzati in modo da regolarizzare il grafo che produce una predizione che varia leggermente tra le pagine dei link. Il risultato è che il metodo SVM associato alla regolarizzazione del grafo è efficiente per il rilevamento di web spam. 
+Nel 2008 in \cite{Abernethy:2008:WSI:1451983.1451994} viene presentato  l'algoritmo WITCH (Web Spam Identification Through Content and Hyperlinks), un'algoritmo ibrido che utilizza sia il contenuto della pagina che la struttura dei link per identificare le pagine spam. Come descritto in precedenza nel sotto capitolo \ref{subsec:Feature} e in particolare in \cite{Ntoulas:2006:DSW:1135777.1135794}, le pagine spam e non spam hanno differenti proprieta le quali possono essere sfruttate per costruire un classificatore. L'algoritmo WITCH oltre alle feature standard descritte in precedenza (vedi il sotto capitolo: \ref{subsec:Feature})per identificare lo spam analizza la struttura dei collegameti tra le pagine. In particolare viene istruit un classificatore lineare nello spazio delle feature usando la SVM (Support Vector Machine) come funzione obbiettivo. I collegamenti tra le pagine sono utilizzati in modo da regolarizzare il grafo che produce una predizione che varia leggermente tra le pagine dei link. Il 
+risultato è che il metodo SVM associato alla regolarizzazione del grafo è efficiente per il rilevamento di web spam. 
+
 

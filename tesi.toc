@@ -9,9 +9,10 @@
 \contentsline {subsection}{\numberline {1.2.3}Link Spamming}{9}
 \contentsline {subsection}{\numberline {1.2.4}Tecniche di hiding}{11}
 \contentsline {subsection}{\numberline {1.2.5}Click Spamming}{12}
-\contentsline {chapter}{\numberline {2}Tecniche di spam detection}{14}
+\contentsline {chapter}{\numberline {2}Survaey sulle tecniche di spam detection}{14}
 \contentsline {section}{\numberline {2.1}Tecniche basate sul contenuto}{14}
 \contentsline {subsection}{\numberline {2.1.1}Prime feature per identidicare lo spam}{14}
-\contentsline {subsection}{\numberline {2.1.2}Utilizzo di un classificatore per combinare le feature}{22}
-\contentsline {subsection}{\numberline {2.1.3}Modelli dei linguaggi per rilevare lo spam}{23}
-\contentsline {subsection}{\numberline {2.1.4}L'algoritmo WITCH}{30}
+\contentsline {subsection}{\numberline {2.1.2}Utilizzo di un classificatore per combinare le feature}{23}
+\contentsline {subsection}{\numberline {2.1.3}Modelli dei linguaggi per rilevare lo spam}{24}
+\contentsline {subsection}{\numberline {2.1.4}Spam detection sulla base degli argomenti di una pagina web}{30}
+\contentsline {subsection}{\numberline {2.1.5}Altre tecniche}{34}
