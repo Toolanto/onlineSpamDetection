@@ -1,33 +1,32 @@
-\chapter{Survaey sulle tecniche di spam detection}
+\chapter{Survey sulle tecniche di spam detection}
 \lstset{basicstyle=\small\ttfamily,keywordstyle=\color{black}\bfseries,commentstyle=\color{darkgray},stringstyle=\color{black},showstringspaces=true}
 
-Il capitolo illustra alcune tecniche di spam detection presenti in letteratura. Le tecniche verranno suddivise sulla base del tipo di segnali che vengono utilizzati, come: il contenuto, il grafo ottenuto dalla fase di crawling ed altri segnali (es. header delle richieste HTTP). Nella prima parte del capitolo verranno illustrate le tecniche basate sul contenuto, nella seconda parte le tecniche che fanno uso di grafi ed infine le tecniche che fanno uso di altri tipi di segnali.
+Il capitolo illustra alcune tecniche di spam detection presenti in letteratura. Le tecniche verranno suddivise sulla base del tipo di segnali che vengono utilizzati: il contenuto, il grafo ottenuto dalla fase di crawling ed altri segnali (come l'header delle richieste HTTP). Nella prima parte del capitolo verranno illustrate le tecniche basate sul contenuto, nella seconda parte le tecniche che fanno uso di grafi ed infine le tecniche che fanno uso di altri tipi di segnali.
 
 \section{Tecniche basate sul contenuto}
-\subsection{Prime feature per identidicare lo spam}
+\subsection{Prime feature per identificare lo spam}
 \label{subsec:Feature}
-Uno dei primi studi sul web spam è descritto in \cite{Fetterly:2004:SDS:1017074.1017077}, in questo articolo vengono eseguite delle analisi per confrontare alcune proprietà delle pagine spam e con contenuti in modo tale da estrarre dei valori tramite cui si può stimare se una pagina sia spam. Bisogna precisare che questi valori sono il risultato di studi empirici effettuati su alcuni dataset. Le proprietà vengono classificate come segue:
+Un metodo per identificare lo spam basandosi sul contenuto di una pagina web è quello di analizzare alcune proprietà delle pagine spam e confrontarle  con le medesime proprietà di quelle non spam al fine di ottenere dei valori con cui stimare la natura della pagina web (spam o non spam). Alcune di queste proprietà, come descritto in \cite{Fetterly:2004:SDS:1017074.1017077}, sono le seguenti:
 \begin{itemize}
- \item 	Proprietà degli URL. Come descritto in precedenza il \textit{link spam} è una forma di spam dove gli spammer cercano di aumentare il rank derivato dagli algoritmi basati sulla struttura dei link.Quindi uno spammer cerca di creare automaticamente tante pagine spam di bassa qualità che puntano a una pagina target \textit{p}. Alcune analisi sulle proprietà dei link mostrano che gli URL di un HOST sono buone feature per identificare lo spam. In particolare il nome di un HOST con molti caratteri, punti, barre e numeri è un buon indicatore di spam. Perciò un modo semplice per classificare le pagine sarebbe quello di usare un valore di soglia tale per cui superata tale soglia la pagina venga classificata come spam. 
+ \item 	\textit{Proprietà degli URL}: alcune analisi sulle proprietà dei link mostrano che gli URL di un host sono delle buone feature per identificare lo spam. In particolare il nome di un host con molti caratteri, punti, barre e numeri è un buon indicatore di spam. Un modo semplice per classificare le pagine è quindi quello di usare un valore di soglia che definisca il numero massimo di tali caratteri per identificare una pagina come spam. 
  
- \item Host name resolution. Alcuni motori di ricerca (es. Google) data una query \textit{q}, calcolano un rank più alto a un URL \textit{u} se i termini che compongono  il nome dell'host di \textit{u} combaciano con i termini della query. Gli spammer per sfruttare questo meccanismo popolano gli URL delle pagine spam con termini contenuti in query molto frequentu che sono rilevanti per un certo settore.
+ \item \textit{Host name resolution}: gli spammer possono popolare gli URL delle pagine spam con termini contenuti in query molto frequenti, che sono rilevanti per un certo settore,  e impostare un DNS per risolvere questi host name. Gli spammer cercano di manipolare il meccanismo  usato da alcuni motori di ricerca (ad esempio Google) che data una query \textit{q}, assegnano un rank più alto a un URL \textit{u} se i termini che compongono  il nome dell'host di \textit{u} combaciano con i termini della query. Perciò gli spammer creano tanti URL rilevanti per le diverse query in modo tale da far risultare la pagina di web spam tra i primi risultati di ricerca per molte query. Per determinare tale forma di spam, uno spam detector dovrebbe controllare quanti URL vengono risolti da uno stesso indirizzo IP.
  
- \item Proprietà del contenuto: le pagine generate automaticamente hanno tutte lo stesso template, ad esempio ci sono numerosi siti di spam che dinamicamente generano pagine che hanno uno stesso numero di parole. Una tecninca per determinare lo spam è quella di clusterizzare le pagine in base alla somiglianza dei template. Visto che le pagine di spam sono molto simili tra loro, identiicando molte pagine con la stessa struttura è probabile che siano di spam.
+ \item \textit{Proprietà del contenuto}: le pagine generate automaticamente hanno tutte lo stesso template, ad esempio numerosi siti di spam dinamicamente generano pagine con uno stesso numero di parole. Una tecnica per determinare lo spam è quella di clusterizzare le pagine in base alla somiglianza dei template. Visto che le pagine di spam sono molto simili tra loro se si identificano molte pagine con la stessa struttura è probabile che esse siano spam.
 \end{itemize}
 
-Oltre a queste proprietà base che servono per identificare lo spam in \cite{Ntoulas:2006:DSW:1135777.1135794}, un lavoro del 2006, vengono descritti una serie di metodi per l'indivuduazione dello spam. Ogni metodo è altamente parallelizabile, può essere eseguito in un tempo proporzionale alla dimensione della pagina e identifica lo spam di ogni pagina scaricata. Inolte questi metodi possono essere combinati con tecniche di machine learning per creare un algoritmo di rilevazione di spam più efficiente. Questo lavoro è un proseguio del lavoro precedentemente descitto \cite{Fetterly:2004:SDS:1017074.1017077}. In primis sono stati identificati quali domini e pagine (classidficate sulla base della lingua) contenesserò più spam. Il risultato ha evidenziato che i domini ``.biz, .us, e .com'' sono quelli con maggiore contenuto di spam mentre per quanto riguarda le pagine contententi più spam sono le francesi, tedesche e inglesi. I risultati sono rappresentati nei due grafici in figura \ref{fig:fetterly1} e in figura 
-\ref{fig:fetterly2}. Questi risultati si basano sul dataset messo a disposizione degli autori che è stato ricavato utilizzando MSN Search crawler nell'agosto del 2004, per maggiori informazioni \cite{Ntoulas:2006:DSW:1135777.1135794}.
+Oltre a queste proprietà base, in \cite{Ntoulas:2006:DSW:1135777.1135794} vengono descritti ulteriori metodi e proprietà per l'individuazione dello spam. In tale studio i metodi e le proprietà descritti  sono il frutto di analisi effettuate dagli autori su un dataset di pagine HTML , che è stato ricavato utilizzando MSN Search crawler nell'agosto del 2004. Dalle analisi sul tale dataset risulta che i domini con maggiore contenuto di spam sono: ``.biz'', ``.us'' e ``.com'' mentre le pagine contenenti più spam sono: francesi, tedesche e inglesi. I risultati sono rappresentati nei due grafici in figura \ref{fig:fetterly1} e in figura \ref{fig:fetterly2}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/fetterly/fetterly1}
-\caption{Occorrenze dello spam classificate per dominio all'iterno del dataset descritto in \cite{Ntoulas:2006:DSW:1135777.1135794}}
+\caption{Occorrenze dello spam classificate per dominio all'interno del dataset descritto in \cite{Ntoulas:2006:DSW:1135777.1135794}}
 \label{fig:fetterly1}
 \includegraphics[width=12cm]{immagini/fetterly/fetterly2}
-\caption{Occorrenze dello spam classificate per lingua all'iterno del dataset descritto in \cite{Ntoulas:2006:DSW:1135777.1135794}}
+\caption{Occorrenze dello spam classificate per lingua all'interno del dataset descritto in \cite{Ntoulas:2006:DSW:1135777.1135794}}
 \label{fig:fetterly2}
 \end{figure}
 
-Una pratica molto comune nel costruire pagine spam è la cosidetta ``Keyword stuffing''. Durante questo processo il contentuto della pagina aumenta con un numero di parole popolari che sono irrilevanti con il resto della pagina. In molti casi per poter aumentare le probabilità di essere messa in cima al rank di molte query, il contenuto di una pagina spam viene aumentato con tante parole estrane all'argomento della pagina. In figura \ref{fig:fetterly3} viene plottato la distribuzione delle parole per ogni pagina del data set. Oltre alla distribuzione delle parole viene raffigurata la percentuale di pagine per ogni range di parole che sono considerate spam. Dal grafico viene notato che la prevalenza di spam è più alta nelle pagine con pmolte parole. Perciò c'è una correlazione tra prevalenza di spam e numero di parole. Il conteggio delle parole da solo non è una buona euristica visto che porta un alto tasso falsi positivi.
+Una proprietà che consente di identificare una pagina spam è il numero di parole all'interno della pagine stessa. Infatti una pratica molto comune nel costruire pagine spam è la cosiddetta ``Keyword stuffing'', un processo per cui al contenuto della pagina vengono aggiunte molte parole popolari che sono, tuttavia, irrilevanti  rispetto ai contenuti al fine di incrementare le probabilità della pagina di essere in cima ai risultati di molteplici query. In figura \ref{fig:fetterly3} viene plottato la distribuzione del numero di parole per ogni pagina del dataset (rappresentata dall'istogramma blu) correlata con la probabilità che una pagina sia spam (rappresentata dalla linea viola). Dal grafico si nota che la prevalenza di spam è più alta per le pagine contenenti molte parole. Perciò c'è una correlazione tra prevalenza di spam e numero di parole. Ma si può notare anche che il conteggio delle parole da solo non è una buona euristica visto che porta un alto tasso di falsi positivi.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/fetterly/fetterly3}
@@ -35,25 +34,23 @@ Una pratica molto comune nel costruire pagine spam è la cosidetta ``Keyword stu
 \label{fig:fetterly3}
 \end{figure}
 
-La tecnica ``Keyword stuffing'' viene utilizzata anche per la costruzione dei titoli delle pagine spam dal momento che alcuni motori di ricerca assegnano un peso maggiore ai termini della query presenti all'interno del titolo della pagina. Il grafico in fugura \ref{fig:fetterly4} rappresenta la distribuzione del numero di parole all'interno dei titoli delle pagine. Come per gli altri grafici viene plottata la rispettiva percentuale di pagine spam. Dal grafico si vede che un'eccesso di parole all'interno del titolo è un indicatore (come per il contenuto della pagina) che una pagina è spam.
+La tecnica ``Keyword stuffing'' viene utilizzata anche per la scelta dei titoli, tenendo in considerazione che alcuni motori di ricerca assegnano un peso maggiore ai termini della query presenti all'interno del titolo della pagina. Il grafico in figura \ref{fig:fetterly4} rappresenta la distribuzione del numero di parole all'interno dei titoli delle pagine correlata con la probabilità che una pagina sia spam. Dal grafico si evince che un eccesso di parole all'interno del titolo è un indicatore di spam.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/fetterly/fetterly4}
 \caption{Prevalenza di spam sulla base del numero di parole all'interno dei titoli delle pagine}
 \label{fig:fetterly4}
 \end{figure}
-Le parole che vengono utilizzate nel processo di ``keyword stuffing'' vengono selezionate casualmente o da un ristretto gruppo di query comuni. Per tentare di esaminare il comportamento con cui vengono selezionate e costruite le frasi vengono esaminate le pagine per  determinare se sono costituite da un eccesso di parole molto comuni. Prima vengono identificate le \textit{n} parole più comuni all'interno del corpus poi viene calcolata, per ogni pagina, la frazione delle parole comuni contenute in ogni pagina. Questo processo viene ripetuto per ogni scelta di \textit{n}. In figura \ref{fig:fetterly9} viene mostrato il grafico per \textit{n=200}. Il grafico è basato sulla frazione di parole di una pagina che sono contenute nell'insime delle 200 parole più comuni nella porzione delle pagine inglesi del data set utilizzato in \cite{Ntoulas:2006:DSW:1135777.1135794}. Il grafico ha una caratteristica gaussiana e suggerisce che la maggior parte delle pagine di spam sono generate tessendo parole da un dizionare con 
-una scelta casuale.
+Le parole che vengono utilizzate nel processo di ``keyword stuffing'' vengono selezionate casualmente o da un ristretto gruppo di query comuni. Per esaminare il comportamento con cui sono selezionate e costruite le frasi innanzitutto vengono identificate le \textit{n} parole più comuni all'interno del corpus; successivamente viene calcolata, per ogni pagina, la frazione delle parole comuni. Tale processo viene ripetuto per ogni scelta di \textit{n} (in figura \ref{fig:fetterly9} \textit{n=200}). Il grafico rappresenta la frazione di parole comuni per ogni pagina; esso ha una caratteristica gaussiana e suggerisce che la maggior parte delle pagine di spam sono generate tessendo parole da un dizionario con una scelta casuale.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/fetterly/fetterly9}
-\caption{Prevalenza di spam sulla base della frazione di parole di una pagina che sono tra le 200 piu frequenti parole nel corpus}
+\caption{Prevalenza di spam sulla base della frazione di parole di una pagina che sono tra le 200 più frequenti parole nel corpus}
 \label{fig:fetterly9}
 \end{figure}
+Un metodo che può essere adottato per identificare le pagine spam che sono generate automaticamente è descritto in \cite{Fetterly:2005:DPD:1076034.1076066}. 
 
-Un metodo per identificare pagine spam che sono generate automaticamente è descritto in \cite{Fetterly:2005:DPD:1076034.1076066}. Queste pagine spam sono  costruite dinamicamente legando insieme frasi grammaticali ben formate. Le pagine create secondo questo metodo vengono generate al volo e cambiano completamente a ogni download. Queste pagine vengono create per essere indicizzate dalla maggior parte dei motori di ricerca. I link di queste pagine puntano ad altre pagine che sembrano essere su un altro host ma vengono risolte da uno stesso IP. Apparte l'uso di differenti host name ma che in realta corrispondono ad unico host per non creare l'illusione di una struttura nepostica questo meccanismo viene usato anche per eludere le politiche di politeness di un web crawler volte al non sovraccarico di qualsiasi host se tali politiche sono basate sul nome dell'host. Infine generando pagine con frasi formate in modo corretto impediscono agli utenti di individuare l'inganno.
-
-Un altro dato trovato dagli autori per determinare se una pagina è spam riguarda la lunghezza media delle parole delle pagine. Dal dataset preso in considerazione in \cite{Ntoulas:2006:DSW:1135777.1135794} si nota che la distribuzione risultante della lunghezza media delle parole è simile a una gaussiana con moda e mediana corrispondenti a una media di 5.0. La maggior parte delle parole hanno una lunghezza media compresa tra 4.0 e 6.0. Come si nota dal grafico in figura \ref{fig:fetterly5} le parole con lunghezza media 10 sono certamente spam.
+Un altro dato utilizzato per determinare se una pagina è spam è la lunghezza media delle parole delle pagine. Dal dataset preso in considerazione in \cite{Ntoulas:2006:DSW:1135777.1135794} (grafico in figura \ref{fig:fetterly5}) si nota che la distribuzione della lunghezza media delle parole è simile a una gaussiana con moda e mediana corrispondenti a 5.0 e le parole con lunghezza media uguale a 10 sono certamente spam.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/fetterly/fetterly5}
@@ -61,8 +58,8 @@ Un altro dato trovato dagli autori per determinare se una pagina è spam riguard
 \label{fig:fetterly5}
 \end{figure}
 
-Un'altra proprietà delle pagine web che consente di stimare se una pagina è spam oppure no è la quantita di testo che è contenuta all'interno delle ancore (il tag ``<a>'' delle pagine web). Infatti una pratica comune dei motori di ricerca è considerare il testo delle ancore dei link in una pagina come annotazioni che descrivono il contenuto della pagina che viene puntata dal link. L'idea prinicipale è che se la pagina \textit{a} ha un link alla pagina \textit{b} con testo dell'ancora, ad esempio, ``computer'' allora potremmo concludere che \textit{b} parli di computer, anche se questa keyword non compare all'interno della pagina \textit{b}. Alcuni motori di ricerca tengono conto di questo durante il ranking e potrebbero considerare la pagina \textit{b} come risultato di una query contenente la keyword ``computer''. Sfruttando questo meccanismo alcune pagine di spam vengono create solo per contenere del testo all'interno delle  ancore per valorizzare il ranking di altre pagine. Queste pagine di norma sono 
-solo cataloghi di link ad altre pagine. Per capire meglio il fenomeno è stato calcolato la frazione di tutte le parole del testo delle ancore all'interno di una pagina esclusi i markup rispetto al contenuto della pagina. In figura \ref{fig:fetterly6} viene visualizzato il grafico risultante. Si nota che un'alta frazione di testo delle ancore aumenta la probabilita che la pagina sia spam ma usare questa euristica da sola potrebbe portare un alto numero di falsi positivi.
+Un'altra proprietà delle pagine web che consente di stimare se una pagina è spam è la quantità di testo che è contenuta all'interno delle ancore (il tag ``\(<a>\)'' delle pagine web). Infatti una pratica comune dei motori di ricerca è considerare il testo delle ancore dei link in una pagina come annotazioni che descrivono il contenuto della pagina che viene puntata. L'idea principale è che se la pagina \textit{a} ha un link alla pagina \textit{b} con testo dell'ancora, ad esempio, ``computer'' allora potremmo concludere che \textit{b} parli di computer, anche se questa keyword non compare all'interno della pagina \textit{b}. Pertanto durante il ranking tali motori di ricerca potrebbero considerare la pagina \textit{b} come risultato di una query contenente la keyword ``computer''. Sfruttando questo meccanismo si creano pagine di spam contenenti solo del testo all'interno delle  ancore per valorizzare il ranking di altre pagine.; queste pagine di norma sono solo cataloghi di link ad altre pagine. Per 
+capire meglio il fenomeno è stato calcolata la frazione di tutte le parole del testo delle ancore all'interno di una pagina, escludendo i markup rispetto al contenuto della pagina. In figura \ref{fig:fetterly6} viene visualizzato il grafico risultante. Si nota che un'alta frazione di testo delle ancore aumenta la probabilità che la pagina sia spam ma usare questa euristica da sola potrebbe portare un alto numero di falsi positivi \cite{Ntoulas:2006:DSW:1135777.1135794}.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/fetterly/fetterly6}
@@ -70,7 +67,7 @@ solo cataloghi di link ad altre pagine. Per capire meglio il fenomeno è stato c
 \label{fig:fetterly6}
 \end{figure}
 
-Oltre a queste proprietà anche la quantità di contenuto visibile è utile per capire se una pagina è spam. Infatti calcolando la frazione di contentuto visibile all'interno di una pagina: definita come a lunghezza in termini di byte di tutte le parole non di markup diviso l'interna dimensione della pagina, si nota dal grafico in figura \ref{fig:fetterly7} della distribuzione delle frazioni di contenuto visibile che le pagine di spam hanno meno markup delle pagine normali. Questo fa intendere che molte pagine spam hanno il solo scopo di dover essere indicizzate dai motori di ricerca  e non di essere fruite da un utente.
+Calcolando la frazione di contenuto visibile all'interno di una pagina (definita come la lunghezza in termini di byte di tutte le parole non di markup) rispetto all'interna dimensione della pagina si nota dal grafico, in figura \ref{fig:fetterly7}, che la distribuzione (delle frazioni di contenuto visibile) evidenzia che le pagine di spam hanno meno markup delle pagine normali. Questo fa intendere che molte pagine spam hanno il solo scopo di dover essere indicizzate dai motori di ricerca  e non di essere fruite da un utente.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/fetterly/fetterly7}
@@ -78,8 +75,8 @@ Oltre a queste proprietà anche la quantità di contenuto visibile è utile per 
 \label{fig:fetterly7}
 \end{figure}
 
-Come detto in precendenza i  motori di ricerca possono dare un maggiore peso a pagine che contengono le keyword contenute nella query più volte all'interno della pagina ad esempio utilizzano come metodo di ranking il ``term-frequency''. Alcune pagine spam per trarre vantaggio da questo meccanismo replicano i contenuti molte volte per aumentare il rank. Per rilevare la rilevare la ridondanza di contenuti (ottenuta dal processo di replica) e perciò stimare se la pagina sia spam, viene calcolato il rapporto di compressione ovvero la dimensione della pagina non compressa divisa per la dimensione della pagina compressa. In figura \ref{fig:fetterly8} viene visualizzato la distribuzione del rapporto di compressione e la likelihood che la pagina sia spam. Dal grafico si nota che quanto più il valore di compressione è elevato molto più probabilmente la pagina può essere considerata spam in particolare  la probabilità che una pagina sia spam risiede sulla parte destra del grafico, il 70 per cento delle pagine con un 
-rapporto di compressione maggiore di 4.0 sono giudicate spam. Questo è dovuto al fatto che una compressione su una pagina piena di contenuti ridondanti (spam) sarà più efficace che su una pagina caratterizza da conenuti casuali (non spam). E perciò il rapporto tenderà a crescere quanto più la pagina sarà caratterizzata da contenuti ridondanti.
+Come detto in precedenza i  motori di ricerca possono dare un peso maggiore a pagine che contengono ripetutamente le keyword contenute nella query (ad esempio utilizzano come metodo di ranking il ``term-frequency''). Le pagine spam hanno, quindi,  contenuti replicati molte volte per aumentare il rank. Per rilevare la ridondanza di contenuti (ottenuta dal processo di replica), viene calcolato il rapporto di compressione ovvero la dimensione della pagina non compressa divisa per la dimensione della pagina compressa. In figura \ref{fig:fetterly8} è rappresentata la distribuzione del rapporto di compressione e la likelihood che la pagina sia spam. Dal grafico si nota che quanto più il valore di compressione è elevato molto più probabilmente la pagina può essere considerata spam; il 70 per cento delle pagine con un rapporto di compressione maggiore di 4.0 sono giudicate spam. Questo è dovuto al fatto che una compressione su una pagina piena di contenuti ridondanti (spam) sarà più efficace che su una pagina 
+caratterizza da contenuti casuali (non spam). E perciò il rapporto tenderà a crescere quanto più la pagina sarà caratterizzata da contenuti ridondanti.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/fetterly/fetterly8}
@@ -88,8 +85,9 @@ rapporto di compressione maggiore di 4.0 sono giudicate spam. Questo è dovuto a
 \end{figure}
 
 \subsection{Utilizzo di un classificatore per combinare le feature}
-Sempre in \cite{Ntoulas:2006:DSW:1135777.1135794} le euristiche vengono combinate considerando il problema di rilevamento dello spam come un problema di classificazione. In questo caso  viene creato un modello di classificazione il quale data una pagina web userà le caratteristiche della pagina in modo tale di classificarla in una delle due classi: spam o non spam. Costruire un classificatore precede una fase di traning durante la quale i parametri del classificatore sono determinati e una fase di testing durante la quale le perfomance del classificatore sono valutate. Per ogni pagina all'interno del dataset viene calcolato il valore di ogni feature (le varie euristiche) e usiamo questi valori per istruire il classificatore. VUsando  un classificatore di tipo ``decision-tree'', l'algoritmo di classificazione funziona come segue: dato un insieme di dati da traning e un insieme di feature l'algoritmo crea un diagramma di flusso come una struttura ad albero. Ogni nodo dell'albero corrisponde al test da valutare 
-per una particolare feature mentre ogni arco è un valore di uscita del test ed infine le foglie corrispondono alle classi.  Per applicare l'albero alle pagine viene controllato il valore della proprietà  definita nel nodo radice dell'albero per quella pagina e confrontato con la soglia indicata dai lati uscenti poi si seguono i lati sulla base dei valori ottenuti finche non si arriva ad assegnare la classe per quella pagina. Un esempio del classificatore è rappresentato in figura \ref{fig:fetterly13} Per migliorare il classificatore si possono usare tecniche come bagging o boosting. Le tecninche creano un insieme di classificatori  che vengono combinati.
+Sempre in \cite{Ntoulas:2006:DSW:1135777.1135794} le euristiche descritte fino a questo pungo, sono combinate considerando il problema di rilevamento dello spam come un problema di classificazione. Quindi  viene creato un classificatore, che usando le caratteristiche di una  pagina web la classificherà in una delle due classi: spam o non spam. Costruire un classificatore precede una fase di training durante la quale i parametri del classificatore sono determinati e una fase di testing durante la quale le performance del classificatore sono valutate. Per ogni pagina all'interno del dataset viene calcolato il valore di ogni feature (le varie euristiche) e usiamo questi valori per istruire il classificatore. Il classificatore usato è ``decision-tree'' che dato un insieme di dati da traning e un insieme di feature l'algoritmo crea un diagramma di flusso come una struttura ad albero. Ogni nodo dell'albero corrisponde al test da valutare per una particolare feature mentre ogni arco è un valore di uscita del test 
+ed 
+infine le foglie corrispondono alle classi che verrano assegnate alle pagine. Un esempio del classificatore è rappresentato in figura \ref{fig:fetterly13}. Per migliorare il classificatore si possono usare tecniche come bagging o boosting. Le tecniche creano un insieme di classificatori  che vengono combinati.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=8cm]{immagini/fetterly/fetterly13}
@@ -97,26 +95,21 @@ per una particolare feature mentre ogni arco è un valore di uscita del test ed 
 \label{fig:fetterly13}
 \end{figure}
 
-\subsection{Modelli dei linguaggi per rilevare lo spam}
-In \cite{Martinez-Romo:2009:WSI:1531914.1531920} vengono proposte nuovi tipi di feature per rilevare lo spam e vengono definiti dei modelli dei linguaggi per analizzare le sorgenti estratte da ogni sito in un dataset.  Questo metodo di rilevamento delle pagine web spam fa uso di feauture basate su contenuto e struttura dei link in modo combinato per rilevare differenti tipi di web spam. Viene definito un modello per ogni sorgente e calcolato quanto sono differenti i due modelli  da ogni altro modello. Le sorgenti di informazioni usate sono: 
-\begin{itemize}
-\item testi delle ancore e testo vicino alle ancore della pagine sorgente
-\item titolo e contenuto della pagina obbiettivo dello spam
-\end{itemize}
-Viene utilizzata la Kullback-Leibler Divergence (KLD) per misurare la divergenze tra le distribuzioni di probabilità dei termini di due documenti. La KLD viene applicata a unità di testo della pagina sorgente e di quella linkata. Infatti a Kullback-Leibler (KL), una misura  asimmetrica della divergenza la quale misura quanto male una distribuzione di probabilità \(M_q\) riesce a modellare \(M_d\).
+\subsection{Language model per rilevare lo spam}
+Oltre alle feature presentate in precedenza, in \cite{Martinez-Romo:2009:WSI:1531914.1531920} sono descritte nuove tipologie di feature e metodi per rilevare lo spam che fanno uso dei \textit{language model}  per analizzare le sorgenti estratte da ogni sito in un dataset . Le sorgenti sono dei pezzi di contenuto presenti all'interno delle pagine web di partenza (quelle che contengono i link ad altre pagine) e all'interno delle pagine web di destinazione (quelle che sono linkate dalle pagine di partenza). Per ogni sorgente si definisce un modello e si calcola quanto siano differenti i modelli individuati; viene utilizzata la \textit{Kullback-Leibler Divergence (KLD)} per misurare la divergenze tra le distribuzioni di probabilità dei termini di pagine web, applicandola a unità di testo della pagina di partenza e di quella linkata. La Kullback-Leibler (KL) è una misura  asimmetrica della divergenza che misura quanto male una distribuzione di probabilità \(M_q\) riesce a modellare \(M_d\):
 \begin{equation}
 KLD(T_1||T_2) = \sum_{t \in T_1} P_{T_1}(t) \log \frac{P_{T_1}(t)}{P_{T_2}(t)}
 \label{eqn:kld}
 \end{equation}
-dove in \ref{eqn:kld} \(P_{T_1}(t)\) è la probabilità del termine \textit{t} nella prima unità di testo e \(P_{t_2}(t)\) è la probabilità del termine texit{t} nella seconda unità di testo. In basso sono rappresentati due esempi di KLD applicata tra il testo delle ancore della pagina sorgente e i titoli delle pagine puntate dai link (esempio preso da WEBSPAM-UK2006).
+dove in \ref{eqn:kld} \(P_{T_1}(t)\) è la probabilità del termine \textit{t} nella prima unità di testo e \(P_{t_2}(t)\) è la probabilità del termine \textit{t} nella seconda unità di testo. In basso sono rappresentati due esempi di KLD applicata tra il testo delle ancore della pagina sorgente e i titoli delle pagine puntate dai link (esempio preso da WEBSPAM-UK2006).
 \begin{lstlisting}[frame=trbl,postbreak=\space, breakindent=5pt, breaklines]
 KLD(Free Ringtones || Free Ringtones for Your Mobile Phone from PremieRingtones.com) = 0.25
 
 KLD(Best UK Reviews || Findabmw.co.uk - BMW Information Resource) = 3.89
 \end{lstlisting}
-Per determinare se una pagina è spam viene provato a trovare una relazione tra due pagine collegate sulla base del loro valore di divergenza. I valori sono ottenuti calcolando le divergenze con KLD tra una o più sorgenti di informazioni da ogni pagina. In particolare si usano tre tipi di informazione di una pagina sorgente: testo delle ancore, testo intorno alle ancore, termini nell'URL. Sono utilizzate tre tipi di informazione per la pagina che viene linkata dalla pagina sorgente: titolo, contenuto della pagina, meta tag. La combinazione di queste feature possono essere usate per determinare la divergenza tra due pagine. Le feature sono descritte di seguito:
+Per determinare se una pagina è spam si cerca di identificare una relazione tra due pagine collegate sulla base del valore di divergenza. I valori sono ottenuti calcolando le divergenze con KLD tra una o più sorgenti di informazioni da ogni pagina. In particolare si usano tre tipi di informazione di una pagina sorgente: testo delle ancore, testo intorno alle ancore, termini nell'URL mentre per la pagina che viene linkata dalla pagina sorgente: titolo, contenuto della pagina e meta tag. Combinando queste sorgenti di informazione si determinare la divergenza tra due pagine, di seguito vengono descritte alcune combinazioni base:
 \begin{itemize}
-\item testo delle ancore - contenuto. Quando una pagina collega un'altra pagina questa ha solo un modo per convincere l'utente di visitare la pagina collegata, mostrare in maniera concisa le informazione relative alla pagina collegata. Perciò una grande divergenza tra questi due pezzi di testo mostra una chiara evidenza di spam. In figura \ref{fig:martinez1} è mostrato la divergenza KL tra le sorgenti di informazione, come si vede la curva delle pagine normali è più compatta delle spam. Ma da sola questa feature non è una buona misura.
+\item testo delle ancore - contenuto. Una pagina che ha un link verso un'altra pagina ha solo un modo per convincere l'utente di visitare la pagina collegata: mostrare in maniera concisa le informazione relative alla pagina collegata. Perciò una grande divergenza tra questi due pezzi di testo indica che la pagina è spam. In figura \ref{fig:martinez1} è illustrata la divergenza KL tra le due sorgenti di informazione, come si vede la curva delle pagine normali è più compatta di quella delle pagine spam.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/martinez/martinez1}
@@ -124,7 +117,7 @@ Per determinare se una pagina è spam viene provato a trovare una relazione tra 
 \label{fig:martinez1}
 \end{figure}
 
-\item testo vicino alle ancore - contenuto. Alcune volte il testo delle ancore è un valore poco descrittivo per ovviare al problema viene usato il testo che circonda le ancore. Nell'esperimento vengono utilizzate 7 parole per lato. Il risultato è che questa feature riesce meglio a rilevare lo spam. In figura \ref{fig:martinez2} viene mostrato che le pagine spam hanno alti valori di divergenza mentre le normali sono concentrate intorno \(KL \approx  2.5\).
+\item testo vicino alle ancore - contenuto. Il testo delle ancore, a volte, è un valore poco descrittivo e per ovviare al problema viene usato il testo che circonda le ancore. Nell'esperimento vengono utilizzate 7 parole per lato. In figura \ref{fig:martinez2} viene mostrato che le pagine spam hanno alti valori di divergenza mentre le normali sono concentrate intorno \(KL \approx  2.5\), .
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/martinez/martinez2}
@@ -132,7 +125,7 @@ Per determinare se una pagina è spam viene provato a trovare una relazione tra 
 \label{fig:martinez2}
 \end{figure}
 
-\item termini nell'URL - contenuto. Negli URL ci possono essere informazioni che descrivono bene la pagina di destinazione. I motori di ricerca danno molta importanza agli URL per questo un metodo di spam è creare URL come \url{www.domain.com/viagra-youtube-free-download-poker-online.html} e se visitiamo la pagina questa è magari uno store online. Questa è una delle tecniche per fare spamming. Perciò vengono prelevati i termini più rilevanti da un URL in modo tale da calcolarne la divegenza col contenuto della pagina di destinazione. La misura finale si vede in figura \ref{fig:martinez3} che mostra una grande differenza tra l'istogramma delle pagine normali con quello delle pagine spam.
+\item termini nell'URL - contenuto. I motori di ricerca danno molta importanza agli URL perché i termini che  li compongono  possono dare un'idea del contenuto della pagina a cui l'URL fa riferimento.  Un metodo di spam che sfrutta questo meccanismo consiste nella creazione di URL contenenti molti termini comuni (ad esempio: \url{www.domain.com/viagra-youtube-free-download-poker-online.html} che in realtà è solo uno store online e non ha alcuna attinenza con i nessuno dei termini utilizzati nell'URL). Al fine di identificare questo tipo di spam, vengono prelevati i termini più rilevanti da un URL e calcolata la divergenza col contenuto della pagina di destinazione. La distribuzione finale, rappresentata in figura \ref{fig:martinez3}, dimostra una grande differenza tra l'istogramma delle pagine normali con quello delle pagine spam.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/martinez/martinez3}
@@ -140,7 +133,7 @@ Per determinare se una pagina è spam viene provato a trovare una relazione tra 
 \label{fig:martinez3}
 \end{figure}
 
-\item testo delle ancore - titolo. Queste due feature sono molto simili inquanto descrivono la pagina con poche parole. Ma la prima può essere scritta anche da chi non è il proprietario della pagina destinazione.  In figura \ref{fig:martinez4} notiamo che questa feature da sola non descrimina bene i due tipi di pagine ma è abbastanza efficace utilizzata in congiunzione con altre feature.
+\item testo delle ancore - titolo. Questa feature si compone di due sorgenti sono molto simili in quanto descrivono la pagina con poche parole. Tuttavia la prima sorgente può essere scritta anche da chi non è il proprietario della pagina di destinazione.  In figura \ref{fig:martinez4} notiamo che questa feature da sola non discrimina bene le pagine spam ma è abbastanza efficace se utilizzata in congiunzione con altre feature.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/martinez/martinez4}
@@ -148,7 +141,7 @@ Per determinare se una pagina è spam viene provato a trovare una relazione tra 
 \label{fig:martinez4}
 \end{figure}
 
-\item testo intorno alle ancore - titolo. Dal grafico in figura \ref{fig:martinez5} vediamo che rispetto alla feature precedente questa rileva meglio lo spam infatti molti valori di spam sono concentrati per valori di \(KL > 3\).
+\item testo intorno alle ancore - titolo. Dal grafico in figura \ref{fig:martinez5} si può notare come tale feature rileva meglio lo spam rispetto alla precedente, infatti molti valori di spam sono concentrati per valori di \(KL > 3\).
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/martinez/martinez5}
@@ -156,7 +149,7 @@ Per determinare se una pagina è spam viene provato a trovare una relazione tra 
 \label{fig:martinez5}
 \end{figure}
 
-\item termini nell'URL - titolo. Se bene nella precendente feature la sorgente di informazione della pagina sorgente poteva essere generata da un'altra persona in questo caso entrambe le sorgenti sono generate dal proprietario della pagina. Questo dovrebbe fornire coerenza tra le due sorgenti. In figura \ref{fig:martinez6} è evidente che la curva delle pagine spam è più compatta della della curva dell'istogramma delle pagine normali.
+\item termini nell'URL - titolo. In questa feature entrambe le sorgenti sono generate dal proprietario della pagina, a differenza della precedente in cui la sorgente di  informazione della pagina di partenza poteva essere generata da un'altra persona. In questo vi dovrebbe essere maggiore coerenza tra le due sorgenti. In figura \ref{fig:martinez6} sono rappresentate le distribuzioni per le pagine spam e non spam.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/martinez/martinez6}
@@ -164,7 +157,7 @@ Per determinare se una pagina è spam viene provato a trovare una relazione tra 
 \label{fig:martinez6}
 \end{figure}
 
-\item titolo - contenuto. I motori di ricerca danno un peso maggiora ai termini dell'URL di una pagina e del titolo. GLi spammer perfezionano i loro processi in modo tale da impostare termini chiave in queste sorgenti che vengono create. In figura \ref{fig:martinez7} è rappresentata la divergenza tra le due distribuzioni. Questa misura consente di rilevare i casi di spam quando non vi è nessuna relazione tra il titolo e il contenuro della pagina dello stesso sito.
+\item titolo - contenuto. I motori di ricerca danno un peso maggiore ai termini della query se presenti nel titolo della pagina. Sfruttando tale meccanismo gli spammer perfezionano i loro processi in modo tale da impostare termini chiave nel titolo anche creando però una divergenza tra titolo e contenuto della pagina. La feature titolo - contenuto consente la rilevazione di spam quando non vi è alcuna relazione tra il titolo e il contenuto della pagina. In figura \ref{fig:martinez7} è rappresentata la divergenza tra le due distribuzioni spam e non spam. 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/martinez/martinez7}
@@ -172,8 +165,7 @@ Per determinare se una pagina è spam viene provato a trovare una relazione tra 
 \label{fig:martinez7}
 \end{figure}
 
-
-\item metatag. Sono stati usati per calcolare la divergenza con altre sorgenti di informazioni della pagina sorgente come il testo delle ancore e il testo intorno alle ancore e per calcolare la divergenza con sorgenti della pagina destinazione come il contenuto o i temini dell'URL. In figura \ref{fig:martinez8} viene visualizzata la divergenza tra il testo delle ancore e i metatag.
+\item metatag. Vengono usati per calcolarne la divergenza con altre sorgenti di informazioni della pagina di partenza (come il testo delle ancore e il testo intorno alle ancore) e della pagina destinazione (come il contenuto o i temini dell'URL). In figura \ref{fig:martinez8} viene visualizzata la divergenza tra il testo delle ancore e i metatag.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/martinez/martinez8}
@@ -181,30 +173,27 @@ Per determinare se una pagina è spam viene provato a trovare una relazione tra 
 \label{fig:martinez8}
 \end{figure}
 \end{itemize}
-Oltre alle feature descritte: testo delle ancore (A), termini nell'URL (U), testo intorno alle ancore (A), per le pagine sorgenti possono essere definite altre feature combinandole tra di loro: testo delle ancore e termini nell'URL (AU), testo intorno alle ancore e URL (SU) mentre per quanto riguarda le pagine destinazione possono essere usate le stesse sorgenti cioè contenuto della pagina (P), titolo (T), metatag (M). Per maggiori dettagli \cite{Martinez-Romo:2009:WSI:1531914.1531920}.
+Oltre alle feature descritte si possono ottenere delle feature più articolate combinando le feature base tra di loro; ad esempio per le pagine sorgenti si possono definire: testo delle ancore e termini nell'URL , testo intorno alle ancore e URL (per maggiori dettagli \cite{Martinez-Romo:2009:WSI:1531914.1531920}).
 
-Queste feature possono essere usate per istruire un classificatore e identificare le pagine spam.
+Infine tali feature possono essere usate per istruire un classificatore.
 
 \subsection{Spam detection sulla base degli argomenti di una pagina web}
-In \cite{Dong:2012:EDC:2457524.2457693} viene fatta un'analisi sul contenuto spam usando dei modelli specifici e sono state proposte delle misure specifiche di diversità per identificare le pagine spam. Il metodo  è basato su statistiche sulla base di argomenti delle pagine. Non utilizza statistiche basate sulle parole della pagina le quali ignorano la semantica tra le parole, ma si basa su statistiche degli argomenti in modo tale da catturare le feature linguistiche nascoste nel testo per capire se la pagina è spam o non spam. Le analisi vengono fatte usando dei modelli degli argomenti (topic model) come la \textit{Latent Dirichlet Allocation (LDA)} che sono modelli statistici dei linguaggi per scoprire argomenti nascosti che compaiono in una collezione di documenti.
+Dong et al. \cite{Dong:2012:EDC:2457524.2457693} propongono un metodo basato su statistiche effettuate sugli argomenti delle pagine. Le statistiche non si basano sulle parole della pagina ma sugli argomenti, in modo da non ignorare la semantica tra le parole e di catturare le feature linguistiche nascoste nel testo per capire se la pagina è spam. Le analisi vengono fatte usando i topic model, modelli statistici che scoprono gli argomenti latenti presenti in una collezione di documenti. Un topic model utilizzato è la \textit{Latent Dirichlet Allocation (LDA)} che modella ogni argomento latente come una distribuzione probabilistica su un vocabolario e ogni documento come una distribuzione probabilistica sugli argomenti latenti. L'intuizione di usare i topic model per analizzare il contenuto  delle pagine web nasce dal fatto che analizzando le feature nascoste di una pagina spam, gli autori hanno notato che i contenuti di queste pagine, generati automaticamente, sono differenti dai contenuti delle pagine non 
+spam. Vengono definiti tre tipi di misure.
 
-Un topic model è un modello statistico che scopre gli argomenti latenti presenti in una collezione di documenti. In generale LDA modella ogni argomento latente come una distribuzione probabilistica su un vocabolario e ogni documento come una distribuzione probabilistica sugli argomenti latenti.
-
-Se analizziamo le feature nascoste di una pagina spam, possiamo notare che i contenuti di queste pagine, generati automaticamente, sono differenti nelle pagine che non sono spam. Da questa intuizione è stato proposto  di analizzare il contenuto delle pagine web usanso i topic models e vengono definiti tre tipi di misure.
-
-Una prima misura per determinare le pagine spam utilizzando LDA sfrutta il fatto che le pagine spam sono molto topic-centric, ovvero loro hanno uno specifico insieme di argomenti. In figura \ref{fig:zhou1} vengono rappresentate quattro distribuioni degli argomenti di quattro pagine (due spam e due non spam) prese casualmente da un dataset. Si nota che le pagine spam hanno una distribuzione esponenziale, questo supporta la tesi degli autori che le pagine spam sono topic-centric in quanto queste pagine sono sviluppate per avere un alto ranking per un insieme di  specifiche query di ricerca per simili argomenti. Secondo le pagine normali tendono a coprire un insieme di argomenti aventi tutti lo stesso peso all'interno della pagina. Infatti gli autori sostengono che le pagine non spam come ad esmepio una homepage contengono vari argomenti come ad esempio i contatti, di che cosa si occupa la societa, altre informazioni.
+La prima misura per determinare le pagine spam utilizzando LDA sfrutta la caratteristica che tali pagine sono molto topic-centric, ovvero hanno uno specifico insieme di argomenti. In figura \ref{fig:zhou1} sono rappresentate quattro distribuzioni degli argomenti presenti in quattro pagine (due spam e due non spam) scelte casualmente da un dataset. A supporto della tesi degli autori che le pagine spam sono topic center si può notare che presentano una distribuzione esponenziale, in quanto esse vengono sviluppate per avere un alto ranking per un insieme di  specifiche query di ricerca, al contrario delle pagine non spam che presentano una distribuzione uniforme (nell'articolo gli autori sostengono che le pagine non spam come una homepage contengono vari argomenti come ad esempio: i contatti, chi e cosa fa, altre informazioni).
 \begin{figure}
 \centering
 \includegraphics[width=10cm]{immagini/zhou/immagine1.png}
 \caption{Distribuzione degli argomenti pesati per pagine spam e normali}
 \label{fig:zhou1}
 \end{figure}
-Per catturare questa caratteristica sulle distribuzioni dei pesi degli argomenti per le pagine spam e normali, è stato proposto una misura della  diversità degli argomenti basata sulla varianza. Data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)=\{t_1,t_2,......,t_m\}\), dove ogni argomento \(t_i (1 \leq i \leq m)\) è associato con un peso \(\delta_{t_i}\). La misura della diversità degli argomenti basata sulla varianza per \(d\), denotata con \(TopicVar(d)\), è calcolata come:
+Per classificare le pagine sulla base di questa caratteristica, basata sulle distribuzioni degli argomenti, è stato proposto una misura della  diversità degli argomenti basata sulla varianza. Data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)=\{t_1,t_2,......,t_m\}\), dove ogni argomento \(t_i (1 \leq i \leq m)\) è associato con un peso \(\delta_{t_i}\). La misura della diversità degli argomenti basata sulla varianza per \(d\), denotata con \(TopicVar(d)\), è calcolata come:
 \begin{equation}
 TopicVar(d)=\frac{\sum_{i=1}^m (\delta_{t_i}-u)^2}{m}
 \end{equation}
-dove \(u=\frac{\sum_{i=1}^m\delta{t_i}}{m}=\frac{1}{m}\). Questa misura è stata calcolata per ogni pagina all'interno del dataset.
-In figura \ref{fig:zhou2} viene illustrata la distribuzione. Dalla distribuzione si nota che le pagine spam sono più topic-centric, la varianza dei pesi degli argomenti è relativamente larga rispetto alle pagine non spam. Tra queste la percentuale di spam è piccola. Quando la misura incrementa la percentuale di spam incrementa. Questa misura è un ottimo indicatore per rilevare lo spam.
+dove \(u=\frac{\sum_{i=1}^m\delta{t_i}}{m}=\frac{1}{m}\).
+In figura \ref{fig:zhou2} è illustrata la distribuzione risultante. Dalla distribuzione si nota che le pagine spam sono più topic-centric ovvero la varianza dei pesi degli argomenti è piu grande rispetto alle pagine non spam. Questo è dovuto al fatto che le pagine non spam avendo una distribuzione quasi uniforme hanno una la varianza che è più piccola rispetto alle pagine spam che hanno una distribuzione diversa dalla uniforme come quella esponenziale. Quando la \textit{TopicVar} incrementa la probabilità che una pagina sia spam incrementa. Questa misura è un ottimo indicatore per rilevare lo spam.
 \begin{figure}
 \centering
 \includegraphics[width=10cm]{immagini/zhou/immagine2.png}
@@ -212,44 +201,42 @@ In figura \ref{fig:zhou2} viene illustrata la distribuzione. Dalla distribuzione
 \label{fig:zhou2}
 \end{figure}
 
-La seconda misura per identificare le pagine spam utilizzando LDA permette di misurare la relazione semantica tra gli argomenti è  la semantica tra le parole. Data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)=\{t_1,t_2,........,t_m\}\). La probabilità che un parola \(w\) appartiene a un argomento \(t_i (1 \leq i \leq m )\) è definita come \(\phi(w|t_i)\). Ongi argomento \(t_i\) è rappresentato come un insieme di parole denotate come \(W(t_i)\). Intuitivamente due argomenti \(t_i, t_j (1 \leq i, j \leq m)\) sono semanticamente relativi se le parole \(W(t_i)\) e \(W(t_j)\) sono semanticamente relative. Viene utilizzata una funzione di similarità \(Sim(w_i,w_j)\) per ottenere le relazioni semantiche tra le due parole. La funzione di similarità usata è quella di Wordnet. Per misurare la relazione semantica tra due argomenti \(t_i,t_j\), possiamo ottenere le similarità tra ogni coppia di parole dei due argomenti moltiplicate con le loro probabilità rispetto agli argomenti, per ottenere la 
-media delle similiratà.
+La seconda misura per identificare le pagine spam utilizzando LDA che permette di misurare la relazione semantica tra gli argomenti è  la semantica tra le parole. Gli autori definiscono che: data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)=\{t_1,t_2,........,t_m\}\). La probabilità che un parola \(w\) appartiene a un argomento \(t_i (1 \leq i \leq m )\) è definita come \(\phi(w|t_i)\). Ogni argomento \(t_i\) è rappresentato come un insieme di parole denotate come \(W(t_i)\). Intuitivamente due argomenti \(t_i, t_j (1 \leq i, j \leq m)\) sono semanticamente relativi se le parole \(W(t_i)\) e \(W(t_j)\) sono semanticamente relative. In \cite{Dong:2012:EDC:2457524.2457693} per ottenere le relazioni semantiche tra le due parole è utilizzata una funzione di similarità \(Sim(w_i,w_j)\) che è quella di Wordnet. Quindi per misurare la relazione semantica tra due argomenti \(t_i,t_j\), si calcolano le similarità tra ogni coppia di parole dei due argomenti moltiplicate con le loro probabilità rispetto agli argomenti.
 \begin{equation}
 \label{eqn:1}
 Sim(t_i,t_j) = \frac{\sum_{w_k \in W(t_i),w_l \in W(t_j)}Sim(w_k,w_l) X \phi(w_k|t_i) X \phi(w_l|t_j)}{\frac{|W(t_i)| X |W(t_j)|}{2}}	
 \end{equation}
-Usando un modello degli argomenti otteniamo \(m\) argomenti latenti. Ora basandoci sull'equazione \ref{eqn:1} possiamo derivare una misura della diversità degli argomenti basata sulla semantica per gli \(m\) argomenti latenti di una collezione: data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)\) allora la misura della diversità degli argomenti basata sulla semantica per un documento \(d\) è:
+Usando quindi un modello degli argomenti otteniamo \(m\) argomenti latenti. Dall'equazione \ref{eqn:1} si deriva una misura della diversità degli argomenti basata sulla semantica per gli \(m\) argomenti latenti di una collezione \cite{Dong:2012:EDC:2457524.2457693}: data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)\) e quindi la misura della diversità degli argomenti basata sulla semantica per tale pagina \(d\) è:
 \begin{equation}
 TopicSim(d)=\frac{\sum_{1 \leq i \leq j \leq m} Sim(t_i,t_j)}{\frac{1}{2} m(m-1)}
 \end{equation}
-In figura \ref{fig:zhou3} mostra la distribuzione della misura di diversità degli argomenti basata sulla semantica.
+In figura \ref{fig:zhou3} è illustrata la distribuzione della misura di diversità degli argomenti basata sulla semantica.
 \begin{figure}
 \centering
 \includegraphics[width=10cm]{immagini/zhou/immagine3}
 \caption{Prevalenza di spam relativa alla misura di diversità degli argomenti basata sulla semantica}
 \label{fig:zhou3}
 \end{figure}
-Dalla distribuzione si nota che quando la misura cresce la percentuale di spam aumenta, ovvero le pagine di spam hanno argomenti che sono molto in relazione semanticamente tra loro. Questo significa che sono icnentrate su pochi argomenti. Questo è un ottimo indicatore di spam.
+Dalla distribuzione si nota che quando la misura cresce la probabilità che una pagina sia spam aumenta, ovvero le pagine spam hanno argomenti che sono molto in relazione semanticamente tra loro e cioè sono icnentrate su pochi argomenti.
 
-L'ulitmi misura è basata sulla massima semantica ed è definita come:
+L'ultima misura è basata sulla massima semantica ed è definita come:
 \begin{equation}
 TopicSimMax(d)= max\{Sim(t_i,t_j)|1 \leq i \leq j \leq m \}
 \end{equation}
-La distribuzione della misura di diversità basata sulla massima semantica mostra che questa è più alta per le pagine che contengono spam. Quando le pagine spam sono create l'insieme degli argomenti è determinato. La distribuzione è rappresentata in figura \ref{fig:zhou4}. Possiamo utilizzare questa misura per rilevare lo spam del contentuto.
+La distribuzione della misura di diversità basata sulla massima semantica mostra che questa è più alta per le pagine che contengono spam. La distribuzione è rappresentata in figura \ref{fig:zhou4}.
 \begin{figure}	
 \centering
-\includegraphics[width=10cm]{immagini/zhou/immagine3}
+\includegraphics[width=10cm]{immagini/zhou/immagine4}
 \caption{Prevalenza di spam relativa alla misura di diversità sulla massima semantica}
 \label{fig:zhou4}
 \end{figure}
 
-Per determinare se una pagina è spam oppure non spam, utilizzando questo metodo, vengono utilizzati algoritmi supervisionati di apprendimento per istruire un modello di classifizione di pagine spam usando misure di diversità di argomenti. In LDA noi possiamo impostare parametri come il numero di argomenti e il numero di parole per ogni argomento. Cambiando i parametri cambiano le prestazioni della classificazione.
+Anche in questo caso per determinare se una pagina è spam oppure non spam, vengono utilizzati algoritmi supervisionati di apprendimento per istruire un classificatore di pagine spam usando misure di diversità degli argomenti. In LDA noi possiamo impostare parametri come il numero di argomenti e il numero di parole per ogni argomento che incidono sulle le prestazioni della classificazione.
 
 \subsection{Altre tecniche}
-In \cite{Abernethy:2008:WSI:1451983.1451994} viene presentato  l'algoritmo WITCH (Web Spam Identification Through Content and Hyperlinks), un'algoritmo ibrido che utilizza sia il contenuto della pagina che la struttura dei link per identificare le pagine spam. Come descritto in precedenza nel sotto capitolo \ref{subsec:Feature} e in particolare in \cite{Ntoulas:2006:DSW:1135777.1135794}, le pagine spam e non spam hanno differenti proprieta le quali possono essere sfruttate per costruire un classificatore. L'algoritmo WITCH oltre alle feature standard descritte in precedenza (vedi il sotto capitolo: \ref{subsec:Feature})per identificare lo spam analizza la struttura dei collegameti tra le pagine. In particolare viene istruit un classificatore lineare nello spazio delle feature usando la SVM (Support Vector Machine) come funzione obbiettivo. I collegamenti tra le pagine sono utilizzati in modo da regolarizzare il grafo che produce una predizione che varia leggermente tra le pagine dei link. Il 
-risultato è che il metodo SVM associato alla regolarizzazione del grafo è efficiente per il rilevamento di web spam. 
+Nello studio in \cite{Abernethy:2008:WSI:1451983.1451994} viene presentato  l'algoritmo WITCH (Web Spam Identification Through Content and Hyperlinks), un' algoritmo ibrido che utilizza sia il contenuto della pagina che la struttura dei link per identificare le pagine spam. Come descritto in precedenza nel sotto capitolo \ref{subsec:Feature}, le differenti proprietà tra le pagine spam e non spam possono essere sfruttate per costruire un classificatore. Per identificare lo spam l'algoritmo WITCH  utilizza le feature descritte in precedenza e analizza la struttura dei collegamenti tra le pagine. In particolare viene istruito un classificatore lineare nello spazio delle feature usando la SVM (Support Vector Machine) come funzione obbiettivo. I collegamenti tra le pagine sono utilizzati in modo da regolarizzare il grafo, che produce una predizione che varia leggermente tra le pagine dei link. Il metodo SVM associato alla regolarizzazione del grafo è efficiente per il rilevamento di web spam. 
 
-Ci sono tanti tipi di tecniche che sono applicate per il rilevamento dello spam nel web in \cite{DBLP:conf:airweb:UrvoyLF06} viene proposto un metodo di spam detection denominato ``Hidden style similaruìty measure'' basato su feature extra testualei appartenenti alle pagina HTML. La tesi che sostengono gli autori è che le pagine spam che sono generato automaticamente non sono facili da rilevare utilizzando metodi classici di classificazione solamente basati sul conenuto. Il metodo invece di identificare lo spam  attraverso l'uso di feature basate sul contenuto  utilizza la struttura HTML di una pagina per classificare le pagine simili.
+Un altro metodo, proposto in \cite{DBLP:conf:airweb:UrvoyLF06}, è denominato ``Hidden style similarìty measure'' ed è basato su feature extra testuali appartenenti alle pagina HTML. Infatti gli autori sostengono che le pagine spam generate automaticamente non sono facili da rilevare utilizzando metodi classici di classificazione basati solamente sul contenuto; gli autori quindi utilizzano la struttura HTML di una pagina per classificare le pagine simili.
 
 
 

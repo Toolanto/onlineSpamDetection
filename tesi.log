@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.1.28)  5 MAR 2014 11:16
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  10 MAR 2014 09:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **tesi.tex
 (./tesi.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
-aded.
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, it
+alian, loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
@@ -298,16 +298,11 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count92
 \U@D=\dimen117
 )
-
-Package babel Warning: No hyphenation patterns were loaded for
-(babel)                the language `Italian'
-(babel)                I will use the patterns loaded for \language=0 instead.
-
-\l@italian = a dialect from \language0
 Package babel Info: Making " an active character on input line 94.
 Now handling font encoding LGR ...
 ... no UTF-8 mapping file for font encoding LGR
-)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip43
 
@@ -572,12 +567,12 @@ e
 
  (./inizio/introduzione.tex
 Capitolo 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 8.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
  [1
 
 
@@ -589,28 +584,28 @@ File: immagini/tassonomiaTecnicheBoost.png Graphic file (type png)
 
 <use immagini/tassonomiaTecnicheBoost.png>
 Package pdftex.def Info: immagini/tassonomiaTecnicheBoost.png used on input lin
-e 91.
+e 100.
 (pdftex.def)             Requested size: 341.43306pt x 282.69868pt.
  [7 <./immagini/tassonomiaTecnicheBoost.png (PNG copy)>] [8]
 <immagini/tipologiaPagine.png, id=50, 577.48457pt x 309.34262pt>
 File: immagini/tipologiaPagine.png Graphic file (type png)
 
 <use immagini/tipologiaPagine.png>
-Package pdftex.def Info: immagini/tipologiaPagine.png used on input line 125.
+Package pdftex.def Info: immagini/tipologiaPagine.png used on input line 134.
 (pdftex.def)             Requested size: 284.52756pt x 152.41467pt.
  [9] [10 <./immagini/tipologiaPagine.png (PNG copy)>] <immagini/spamfarm.png, i
 d=58, 441.16122pt x 199.84225pt>
 File: immagini/spamfarm.png Graphic file (type png)
 
 <use immagini/spamfarm.png>
-Package pdftex.def Info: immagini/spamfarm.png used on input line 141.
+Package pdftex.def Info: immagini/spamfarm.png used on input line 150.
 (pdftex.def)             Requested size: 284.52756pt x 128.88963pt.
 
 <immagini/tassonomiaHiding.png, id=59, 519.97653pt x 266.41907pt>
 File: immagini/tassonomiaHiding.png Graphic file (type png)
 
 <use immagini/tassonomiaHiding.png>
-Package pdftex.def Info: immagini/tassonomiaHiding.png used on input line 150.
+Package pdftex.def Info: immagini/tassonomiaHiding.png used on input line 159.
 (pdftex.def)             Requested size: 284.52756pt x 145.78293pt.
  [11 <./immagini/spamfarm.png (PNG copy)>]
 [12 <./immagini/tassonomiaHiding.png (PNG copy)>]) [13]
@@ -627,7 +622,7 @@ Capitolo 2.
 File: immagini/fetterly/fetterly1.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly1.png>
-Package pdftex.def Info: immagini/fetterly/fetterly1.png used on input line 22.
+Package pdftex.def Info: immagini/fetterly/fetterly1.png used on input line 21.
 
 (pdftex.def)             Requested size: 341.43306pt x 206.39069pt.
 
@@ -635,203 +630,205 @@ Package pdftex.def Info: immagini/fetterly/fetterly1.png used on input line 22.
 File: immagini/fetterly/fetterly2.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly2.png>
-Package pdftex.def Info: immagini/fetterly/fetterly2.png used on input line 25.
+Package pdftex.def Info: immagini/fetterly/fetterly2.png used on input line 24.
 
 (pdftex.def)             Requested size: 341.43306pt x 207.86453pt.
- [15]
-<immagini/fetterly/fetterly3.png, id=77, 670.505pt x 453.695pt>
+
+<immagini/fetterly/fetterly3.png, id=74, 670.505pt x 453.695pt>
 File: immagini/fetterly/fetterly3.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly3.png>
-Package pdftex.def Info: immagini/fetterly/fetterly3.png used on input line 33.
+Package pdftex.def Info: immagini/fetterly/fetterly3.png used on input line 32.
 
 (pdftex.def)             Requested size: 341.43306pt x 231.02832pt.
-
-<immagini/fetterly/fetterly4.png, id=78, 669.50125pt x 445.665pt>
+ [15] [16 <./immagini/fetterly/fetterly1.png (PNG copy)> <./immagini/fetterly/f
+etterly2.png (PNG copy)>]
+<immagini/fetterly/fetterly4.png, id=82, 669.50125pt x 445.665pt>
 File: immagini/fetterly/fetterly4.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly4.png>
-Package pdftex.def Info: immagini/fetterly/fetterly4.png used on input line 41.
+Package pdftex.def Info: immagini/fetterly/fetterly4.png used on input line 40.
 
 (pdftex.def)             Requested size: 341.43306pt x 227.28613pt.
 
-<immagini/fetterly/fetterly9.png, id=79, 656.4525pt x 469.755pt>
+<immagini/fetterly/fetterly9.png, id=83, 656.4525pt x 469.755pt>
 File: immagini/fetterly/fetterly9.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly9.png>
-Package pdftex.def Info: immagini/fetterly/fetterly9.png used on input line 49.
+Package pdftex.def Info: immagini/fetterly/fetterly9.png used on input line 47.
 
 (pdftex.def)             Requested size: 341.43306pt x 244.33134pt.
- [16] [17 <./immagini/fetterly/fetterly1.png (PNG copy)> <./immagini/fetterly/f
-etterly2.png (PNG copy)>] [18 <./immagini/fetterly/fetterly3.png (PNG copy)> <.
-/immagini/fetterly/fetterly4.png (PNG copy)>] <immagini/fetterly/fetterly5.png,
- id=90, 661.47125pt x 454.69875pt>
+ [17 <./immagini/fetterly/fetterly3.png (PNG copy)>] <immagini/fetterly/fetterl
+y5.png, id=87, 661.47125pt x 454.69875pt>
 File: immagini/fetterly/fetterly5.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly5.png>
-Package pdftex.def Info: immagini/fetterly/fetterly5.png used on input line 59.
+Package pdftex.def Info: immagini/fetterly/fetterly5.png used on input line 56.
 
 (pdftex.def)             Requested size: 341.43306pt x 234.69629pt.
- [19 <./immagini/fetterly/fetterly9.png (PNG copy)>] <immagini/fetterly/fetterl
-y6.png, id=94, 669.50125pt x 458.71375pt>
+
+<immagini/fetterly/fetterly6.png, id=88, 669.50125pt x 458.71375pt>
 File: immagini/fetterly/fetterly6.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly6.png>
-Package pdftex.def Info: immagini/fetterly/fetterly6.png used on input line 68.
+Package pdftex.def Info: immagini/fetterly/fetterly6.png used on input line 65.
 
 (pdftex.def)             Requested size: 341.43306pt x 233.94092pt.
- [20 <./immagini/fetterly/fetterly5.png (PNG copy)>] <immagini/fetterly/fetterl
-y7.png, id=98, 685.56125pt x 464.73625pt>
+ [18 <./immagini/fetterly/fetterly4.png (PNG copy)>] [19 <./immagini/fetterly/f
+etterly9.png (PNG copy)> <./immagini/fetterly/fetterly5.png (PNG copy)>]
+<immagini/fetterly/fetterly7.png, id=95, 685.56125pt x 464.73625pt>
 File: immagini/fetterly/fetterly7.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly7.png>
-Package pdftex.def Info: immagini/fetterly/fetterly7.png used on input line 76.
+Package pdftex.def Info: immagini/fetterly/fetterly7.png used on input line 73.
 
 (pdftex.def)             Requested size: 341.43306pt x 231.45985pt.
-
+ [20 <./immagini/fetterly/fetterly6.png>]
 <immagini/fetterly/fetterly8.png, id=99, 662.475pt x 459.7175pt>
 File: immagini/fetterly/fetterly8.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly8.png>
-Package pdftex.def Info: immagini/fetterly/fetterly8.png used on input line 85.
+Package pdftex.def Info: immagini/fetterly/fetterly8.png used on input line 82.
 
 (pdftex.def)             Requested size: 341.43306pt x 236.92902pt.
- [21 <./immagini/fetterly/fetterly6.png (PNG copy)>] <immagini/fetterly/fetterl
-y13.png, id=103, 499.8675pt x 425.59pt>
+ [21 <./immagini/fetterly/fetterly7.png>]
+<immagini/fetterly/fetterly13.png, id=103, 499.8675pt x 425.59pt>
 File: immagini/fetterly/fetterly13.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly13.png>
-Package pdftex.def Info: immagini/fetterly/fetterly13.png used on input line 95
+Package pdftex.def Info: immagini/fetterly/fetterly13.png used on input line 93
 .
 (pdftex.def)             Requested size: 227.62204pt x 193.79959pt.
- [22 <./immagini/fetterly/fetterly7.png (PNG copy)>] [23 <./immagini/fetterly/f
-etterly8.png (PNG copy)>] [24 <./immagini/fetterly/fetterly13.png (PNG copy)>]
-<immagini/martinez/martinez1.png, id=114, 901.3675pt x 319.1925pt>
+ [22 <./immagini/fetterly/fetterly8.png (PNG copy)>] [23 <./immagini/fetterly/f
+etterly13.png (PNG copy)>]
+<immagini/martinez/martinez1.png, id=112, 901.3675pt x 319.1925pt>
 File: immagini/martinez/martinez1.png Graphic file (type png)
 
 <use immagini/martinez/martinez1.png>
-Package pdftex.def Info: immagini/martinez/martinez1.png used on input line 122
+Package pdftex.def Info: immagini/martinez/martinez1.png used on input line 115
 .
 (pdftex.def)             Requested size: 341.43306pt x 120.90964pt.
 
-<immagini/martinez/martinez2.png, id=115, 867.24pt x 338.26375pt>
+<immagini/martinez/martinez2.png, id=113, 867.24pt x 338.26375pt>
 File: immagini/martinez/martinez2.png Graphic file (type png)
 
 <use immagini/martinez/martinez2.png>
-Package pdftex.def Info: immagini/martinez/martinez2.png used on input line 130
+Package pdftex.def Info: immagini/martinez/martinez2.png used on input line 123
 .
 (pdftex.def)             Requested size: 341.43306pt x 133.17656pt.
- [25]
-<immagini/martinez/martinez3.png, id=120, 887.315pt x 339.2675pt>
+
+<immagini/martinez/martinez3.png, id=114, 887.315pt x 339.2675pt>
 File: immagini/martinez/martinez3.png Graphic file (type png)
 
 <use immagini/martinez/martinez3.png>
-Package pdftex.def Info: immagini/martinez/martinez3.png used on input line 138
+Package pdftex.def Info: immagini/martinez/martinez3.png used on input line 131
 .
 (pdftex.def)             Requested size: 341.43306pt x 130.54332pt.
- [26 <./immagini/martinez/martinez1.png (PNG copy)> <./immagini/martinez/martin
-ez2.png (PNG copy)>]
-<immagini/martinez/martinez4.png, id=124, 872.25874pt x 338.26375pt>
+ [24] [25 <./immagini/martinez/martinez1.png (PNG copy)> <./immagini/martinez/m
+artinez2.png (PNG copy)>]
+<immagini/martinez/martinez4.png, id=121, 872.25874pt x 338.26375pt>
 File: immagini/martinez/martinez4.png Graphic file (type png)
 
 <use immagini/martinez/martinez4.png>
-Package pdftex.def Info: immagini/martinez/martinez4.png used on input line 146
+Package pdftex.def Info: immagini/martinez/martinez4.png used on input line 139
 .
 (pdftex.def)             Requested size: 341.43306pt x 132.4075pt.
 
-<immagini/martinez/martinez5.png, id=125, 888.31876pt x 328.22626pt>
+<immagini/martinez/martinez5.png, id=122, 888.31876pt x 328.22626pt>
 File: immagini/martinez/martinez5.png Graphic file (type png)
 
 <use immagini/martinez/martinez5.png>
-Package pdftex.def Info: immagini/martinez/martinez5.png used on input line 154
+Package pdftex.def Info: immagini/martinez/martinez5.png used on input line 147
 .
 (pdftex.def)             Requested size: 341.43306pt x 126.15463pt.
 
-<immagini/martinez/martinez6.png, id=126, 885.3075pt x 319.1925pt>
+<immagini/martinez/martinez6.png, id=123, 885.3075pt x 319.1925pt>
 File: immagini/martinez/martinez6.png Graphic file (type png)
 
 <use immagini/martinez/martinez6.png>
-Package pdftex.def Info: immagini/martinez/martinez6.png used on input line 162
+Package pdftex.def Info: immagini/martinez/martinez6.png used on input line 155
 .
 (pdftex.def)             Requested size: 341.43306pt x 123.10135pt.
- [27 <./immagini/martinez/martinez3.png (PNG copy)> <./immagini/martinez/martin
-ez4.png (PNG copy)>]
+ [26 <./immagini/martinez/martinez3.png (PNG copy)>] [27 <./immagini/martinez/m
+artinez4.png (PNG copy)> <./immagini/martinez/martinez5.png (PNG copy)>]
 <immagini/martinez/martinez7.png, id=130, 873.2625pt x 322.20375pt>
 File: immagini/martinez/martinez7.png Graphic file (type png)
 
 <use immagini/martinez/martinez7.png>
-Package pdftex.def Info: immagini/martinez/martinez7.png used on input line 170
+Package pdftex.def Info: immagini/martinez/martinez7.png used on input line 163
 .
 (pdftex.def)             Requested size: 341.43306pt x 125.9736pt.
- [28 <./immagini/martinez/martinez5.png (PNG copy)> <./immagini/martinez/martin
-ez6.png (PNG copy)>]
-<immagini/martinez/martinez8.png, id=135, 893.3375pt x 335.2525pt>
+
+<immagini/martinez/martinez8.png, id=131, 893.3375pt x 335.2525pt>
 File: immagini/martinez/martinez8.png Graphic file (type png)
 
 <use immagini/martinez/martinez8.png>
-Package pdftex.def Info: immagini/martinez/martinez8.png used on input line 179
+Package pdftex.def Info: immagini/martinez/martinez8.png used on input line 171
 .
 (pdftex.def)             Requested size: 341.43306pt x 128.13391pt.
- [29 <./immagini/martinez/martinez7.png (PNG copy)> <./immagini/martinez/martin
-ez8.png (PNG copy)>]
+ [28 <./immagini/martinez/martinez6.png (PNG copy)>] [29 <./immagini/martinez/m
+artinez7.png (PNG copy)> <./immagini/martinez/martinez8.png (PNG copy)>]
 <immagini/zhou/immagine1.png, id=139, 554.07pt x 289.08pt>
 File: immagini/zhou/immagine1.png Graphic file (type png)
 
 <use immagini/zhou/immagine1.png>
-Package pdftex.def Info: immagini/zhou/immagine1.png used on input line 198.
+Package pdftex.def Info: immagini/zhou/immagine1.png used on input line 187.
 (pdftex.def)             Requested size: 284.52756pt x 148.44778pt.
  [30]
 <immagini/zhou/immagine2.png, id=143, 544.0325pt x 411.5375pt>
 File: immagini/zhou/immagine2.png Graphic file (type png)
 
 <use immagini/zhou/immagine2.png>
-Package pdftex.def Info: immagini/zhou/immagine2.png used on input line 210.
+Package pdftex.def Info: immagini/zhou/immagine2.png used on input line 199.
 (pdftex.def)             Requested size: 284.52756pt x 215.24408pt.
  [31 <./immagini/zhou/immagine1.png (PNG copy)>] <immagini/zhou/immagine3.png, 
 id=149, 681.54625pt x 475.7775pt>
 File: immagini/zhou/immagine3.png Graphic file (type png)
 
 <use immagini/zhou/immagine3.png>
-Package pdftex.def Info: immagini/zhou/immagine3.png used on input line 228.
+Package pdftex.def Info: immagini/zhou/immagine3.png used on input line 216.
 (pdftex.def)             Requested size: 284.52756pt x 198.62732pt.
- [32 <./immagini/zhou/immagine2.png (PNG copy)>]
-File: immagini/zhou/immagine3.png Graphic file (type png)
- <use immagini/zhou/immagine3.png>
-Package pdftex.def Info: immagini/zhou/immagine3.png used on input line 241.
-(pdftex.def)             Requested size: 284.52756pt x 198.62732pt.
- [33 <./immagini/zhou/immagine3.png (PNG copy)>] [34]) [35] (./tesi.bbl [36
+ [32 <./immagini/zhou/immagine2.png (PNG copy)>] <immagini/zhou/immagine4.png, 
+id=153, 665.48625pt x 457.71pt>
+File: immagini/zhou/immagine4.png Graphic file (type png)
+
+<use immagini/zhou/immagine4.png>
+Package pdftex.def Info: immagini/zhou/immagine4.png used on input line 229.
+(pdftex.def)             Requested size: 284.52756pt x 195.69402pt.
+ [33 <./immagini/zhou/immagine3.png (PNG copy)>]) [34 <./immagini/zhou/immagine
+4.png (PNG copy)>] (./tesi.bbl [35
 
 
 
-] [37]) [38] (./tesi.aux
-(./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux)) ) 
+] [36])
+[37] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux))
+ ) 
 Here is how much of TeX's memory you used:
- 6217 strings out of 495059
- 89880 string characters out of 3182030
- 167883 words of memory out of 3000000
- 9268 multiletter control sequences out of 15000+200000
+ 6221 strings out of 495048
+ 90011 string characters out of 3181555
+ 169892 words of memory out of 3000000
+ 9274 multiletter control sequences out of 15000+200000
  11164 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,43p,1114b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (41 pages, 1186409 bytes).
+ 38i,9n,43p,1177b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on tesi.pdf (40 pages, 1261438 bytes).
 PDF statistics:
- 223 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
+ 221 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

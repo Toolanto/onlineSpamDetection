@@ -4,7 +4,7 @@
 \geometry{a4paper,top=2.5cm,bottom=3.5cm,left=3.5cm,right=3cm,heightrounded,bindingoffset=5mm,headsep=1.5cm,includehead}
 \usepackage[font={small,it}]{caption}	
 \usepackage[utf8]{inputenc}
-\usepackage[italian]{babel}
+\usepackage[italian]{babel} 
 \usepackage{amsmath}
 \usepackage{url}
 \usepackage{graphicx}
