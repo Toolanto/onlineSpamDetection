@@ -1,29 +1,30 @@
 \select@language {italian}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Tassonomia delle tecniche boost\relax }}{7}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Tassonomia delle tecniche boost\relax }}{8}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Tipi di pagine nel web per uno spammer\relax }}{10}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Esempio di una spamfarm\relax }}{11}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Tecniche di hiding\relax }}{12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Occorrenze dello spam classificate per dominio all'interno del dataset descritto in \cite {Ntoulas:2006:DSW:1135777.1135794}\relax }}{16}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Occorrenze dello spam classificate per lingua all'interno del dataset descritto in \cite {Ntoulas:2006:DSW:1135777.1135794}\relax }}{16}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Prevalenza di spam sulla base del numero di parole per pagina\relax }}{17}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Occorrenze dello spam classificate per dominio all'interno del dataset descritto in \cite {Ntoulas:2006:DSW:1135777.1135794}\relax }}{17}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Occorrenze dello spam classificate per lingua all'interno del dataset descritto in \cite {Ntoulas:2006:DSW:1135777.1135794}\relax }}{17}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Prevalenza di spam sulla base del numero di parole per pagina\relax }}{18}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Prevalenza di spam sulla base del numero di parole all'interno dei titoli delle pagine\relax }}{18}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Prevalenza di spam sulla base della frazione di parole di una pagina che sono tra le 200 pi\IeC {\`u} frequenti parole nel corpus\relax }}{19}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Prevalenza di spam sulla base della lunghezza media delle parole per pagina\relax }}{19}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Prevalenza di spam sulla base della quantit\IeC {\`a} di testo delle ancore delle pagine\relax }}{20}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Prevalenza di spam sulla base della lunghezza media delle parole per pagina\relax }}{20}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Prevalenza di spam sulla base della quantit\IeC {\`a} di testo delle ancore delle pagine\relax }}{21}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Prevalenza di spam sulla base della frazione di contenuto visibile\relax }}{21}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Prevalenza di spam sulla base del rapporto di compressione\relax }}{22}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Esempio di classificatore\relax }}{23}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Istogramma della divergenza KL tra testo delle ancore e il contenuto della pagina puntata basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{25}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Istogramma della divergenza KL tra testo intorno alle ancore e il contenuto della pagina puntata basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{25}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Istogramma della divergenza KL tra testo intorno alle ancore e il contenuto della pagina puntata basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{26}
 \contentsline {figure}{\numberline {2.13}{\ignorespaces Istogramma della divergenza KL tra termini degli URL e il contenuto della pagina puntata basato sul dataset WEBSPAM-UK2007 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{26}
 \contentsline {figure}{\numberline {2.14}{\ignorespaces Istogramma della divergenza KL tra testo delle ancore e titolo della pagina puntata basato sul dataset WEBSPAM-UK2007 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{27}
 \contentsline {figure}{\numberline {2.15}{\ignorespaces Istogramma della divergenza KL tra testo intorno alle ancore e titolo della pagina puntata basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{27}
 \contentsline {figure}{\numberline {2.16}{\ignorespaces Istogramma della divergenza KL tra termini nell'URL e titolo della pagina puntata basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{28}
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Istogramma della divergenza KL tra titolo e contenuto della pagina basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{29}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Istogramma della divergenza KL tra titolo e contenuto della pagina basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{28}
 \contentsline {figure}{\numberline {2.18}{\ignorespaces Istogramma della divergenza KL tra testo delle ancore e i meta tag della pagina basato sul dataset WEBSPAM-UK2006 utilizzato in \cite {Martinez-Romo:2009:WSI:1531914.1531920}\relax }}{29}
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Distribuzione degli argomenti pesati per pagine spam e normali\relax }}{31}
-\contentsline {figure}{\numberline {2.20}{\ignorespaces Prevalenza di spam relativa alla misura della diversit\IeC {\`a} degli argomenti basata sulla varianza \relax }}{32}
-\contentsline {figure}{\numberline {2.21}{\ignorespaces Prevalenza di spam relativa alla misura di diversit\IeC {\`a} degli argomenti basata sulla semantica\relax }}{33}
-\contentsline {figure}{\numberline {2.22}{\ignorespaces Prevalenza di spam relativa alla misura di diversit\IeC {\`a} sulla massima semantica\relax }}{34}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Distribuzione degli argomenti pesati per pagine spam e normali\relax }}{30}
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Prevalenza di spam relativa alla misura della diversit\IeC {\`a} degli argomenti basata sulla varianza \relax }}{31}
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Prevalenza di spam relativa alla misura di diversit\IeC {\`a} degli argomenti basata sulla semantica\relax }}{32}
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Prevalenza di spam relativa alla misura di diversit\IeC {\`a} sulla massima semantica\relax }}{33}
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Algoritmo trustrank\relax }}{36}

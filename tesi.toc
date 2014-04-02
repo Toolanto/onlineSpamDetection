@@ -5,14 +5,16 @@
 \contentsline {subsection}{\numberline {1.1.2}Metodi di ranking esogeno}{5}
 \contentsline {section}{\numberline {1.2}Web spam}{6}
 \contentsline {subsection}{\numberline {1.2.1}Tecniche di boost}{7}
-\contentsline {subsection}{\numberline {1.2.2}Term Spamming}{8}
+\contentsline {subsection}{\numberline {1.2.2}Term Spamming}{7}
 \contentsline {subsection}{\numberline {1.2.3}Link Spamming}{9}
 \contentsline {subsection}{\numberline {1.2.4}Tecniche di hiding}{11}
 \contentsline {subsection}{\numberline {1.2.5}Click Spamming}{12}
 \contentsline {chapter}{\numberline {2}Survey sulle tecniche di spam detection}{14}
 \contentsline {section}{\numberline {2.1}Tecniche basate sul contenuto}{14}
 \contentsline {subsection}{\numberline {2.1.1}Prime feature per identificare lo spam}{14}
-\contentsline {subsection}{\numberline {2.1.2}Utilizzo di un classificatore per combinare le feature}{22}
-\contentsline {subsection}{\numberline {2.1.3}Language model per rilevare lo spam}{23}
-\contentsline {subsection}{\numberline {2.1.4}Spam detection sulla base degli argomenti di una pagina web}{30}
+\contentsline {subsection}{\numberline {2.1.2}Utilizzo di un classificatore per combinare le feature}{23}
+\contentsline {subsection}{\numberline {2.1.3}Language model per rilevare lo spam}{24}
+\contentsline {subsection}{\numberline {2.1.4}Spam detection sulla base degli argomenti di una pagina web}{29}
 \contentsline {subsection}{\numberline {2.1.5}Altre tecniche}{33}
+\contentsline {section}{\numberline {2.2}Tecniche basate sul grafo}{34}
+\contentsline {subsection}{\numberline {2.2.1}Metodi classici per identificare lo spam web usando il grafo}{34}

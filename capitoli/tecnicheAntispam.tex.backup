@@ -1,21 +1,21 @@
 \chapter{Survey sulle tecniche di spam detection}
 \lstset{basicstyle=\small\ttfamily,keywordstyle=\color{black}\bfseries,commentstyle=\color{darkgray},stringstyle=\color{black},showstringspaces=true}
 
-Il capitolo illustra alcune tecniche di spam detection presenti in letteratura. Le tecniche verranno suddivise sulla base del tipo di segnali che vengono utilizzati: il contenuto, il grafo ottenuto dalla fase di crawling ed altri segnali (come l'header delle richieste HTTP). Nella prima parte del capitolo verranno illustrate le tecniche basate sul contenuto, nella seconda parte le tecniche che fanno uso di grafi ed infine le tecniche che fanno uso di altri tipi di segnali.
+Il capitolo illustra alcune tecniche di spam detection presenti in letteratura. Le tecniche verranno suddivise sulla base del tipo di segnali che vengono utilizzati: il contenuto, il grafo ed altri segnali (come ad esempio l'header delle richieste HTTP). Nella prima parte del capitolo verranno illustrate le tecniche basate sul contenuto, nella seconda parte le tecniche che fanno uso di grafi ed infine le tecniche che fanno uso di altri tipi di segnali.
 
 \section{Tecniche basate sul contenuto}
 \subsection{Prime feature per identificare lo spam}
 \label{subsec:Feature}
-Un metodo per identificare lo spam basandosi sul contenuto di una pagina web è quello di analizzare alcune proprietà delle pagine spam e confrontarle  con le medesime proprietà di quelle non spam al fine di ottenere dei valori con cui stimare la natura della pagina web (spam o non spam). Alcune di queste proprietà, come descritto in \cite{Fetterly:2004:SDS:1017074.1017077}, sono le seguenti:
+Un metodo per identificare lo spam basandosi sul contenuto di una pagina web è quello di analizzare alcune proprietà (feature) delle pagine spam e confrontarle  con le medesime proprietà di quelle non spam al fine di ottenere dei valori con cui stimare la natura della pagina web (spam o non spam). Alcune di queste proprietà, come descritto in \cite{Fetterly:2004:SDS:1017074.1017077}, sono le seguenti:
 \begin{itemize}
- \item 	\textit{Proprietà degli URL}: alcune analisi sulle proprietà dei link mostrano che gli URL di un host sono delle buone feature per identificare lo spam. In particolare il nome di un host con molti caratteri, punti, barre e numeri è un buon indicatore di spam. Un modo semplice per classificare le pagine è quindi quello di usare un valore di soglia che definisca il numero massimo di tali caratteri per identificare una pagina come spam. 
+ \item 	\textit{Proprietà degli URL}: alcune analisi sulle proprietà dei link mostrano che gli URL di un host sono delle buone feature per identificare lo spam. In particolare l'URL di un host con molti caratteri, punti, slash e numeri è un buon indicatore di spam. Un modo semplice per classificare le pagine è quindi quello di usare un valore di soglia che definisca il numero massimo di tali caratteri per identificare una pagina come spam. 
  
  \item \textit{Host name resolution}: gli spammer possono popolare gli URL delle pagine spam con termini contenuti in query molto frequenti, che sono rilevanti per un certo settore,  e impostare un DNS per risolvere questi host name. Gli spammer cercano di manipolare il meccanismo  usato da alcuni motori di ricerca (ad esempio Google) che data una query \textit{q}, assegnano un rank più alto a un URL \textit{u} se i termini che compongono  il nome dell'host di \textit{u} combaciano con i termini della query. Perciò gli spammer creano tanti URL rilevanti per le diverse query in modo tale da far risultare la pagina di web spam tra i primi risultati di ricerca per molte query. Per determinare tale forma di spam, uno spam detector dovrebbe controllare quanti URL vengono risolti da uno stesso indirizzo IP.
  
- \item \textit{Proprietà del contenuto}: le pagine generate automaticamente hanno tutte lo stesso template, ad esempio numerosi siti di spam dinamicamente generano pagine con uno stesso numero di parole. Una tecnica per determinare lo spam è quella di clusterizzare le pagine in base alla somiglianza dei template. Visto che le pagine di spam sono molto simili tra loro se si identificano molte pagine con la stessa struttura è probabile che esse siano spam.
+ \item \textit{Proprietà del contenuto}: le pagine generate automaticamente hanno tutte lo stesso template, ad esempio numerosi siti di spam generano dinamicamente pagine con uno stesso numero di parole. Una tecnica per determinare lo spam è quella di clusterizzare le pagine in base alla somiglianza dei template. Visto che le pagine di spam sono molto simili tra loro (per lo meno a gruppi) se si identificano molte pagine con la stessa struttura è probabile che esse siano spam.
 \end{itemize}
 
-Oltre a queste proprietà base, in \cite{Ntoulas:2006:DSW:1135777.1135794} vengono descritti ulteriori metodi e proprietà per l'individuazione dello spam. In tale studio i metodi e le proprietà descritti  sono il frutto di analisi effettuate dagli autori su un dataset di pagine HTML , che è stato ricavato utilizzando MSN Search crawler nell'agosto del 2004. Dalle analisi sul tale dataset risulta che i domini con maggiore contenuto di spam sono: ``.biz'', ``.us'' e ``.com'' mentre le pagine contenenti più spam sono: francesi, tedesche e inglesi. I risultati sono rappresentati nei due grafici in figura \ref{fig:fetterly1} e in figura \ref{fig:fetterly2}.
+Oltre a queste proprietà base, in \cite{Ntoulas:2006:DSW:1135777.1135794} vengono descritti ulteriori metodi e proprietà per l'individuazione dello spam. In tale studio i metodi e le proprietà descritti  sono il frutto di analisi effettuate dagli autori su un dataset di pagine HTML , che è stato ricavato utilizzando MSN Search crawler nell'agosto del 2004. Dalle analisi su tale dataset risulta che i domini con maggiore contenuto di spam sono: ``.biz'', ``.us'' e ``.com'' mentre le pagine contenenti più spam sono: francesi, tedesche e inglesi. I risultati sono rappresentati nei due grafici in figura \ref{fig:fetterly1} e in figura \ref{fig:fetterly2}. Nel primo grafico l'asse orizzontale rappresenta i domini e l'asse verticale mostra la frazione di spam all'interno di un dominio. I valori nel grafico sono riportati con un intervallo di confidenza del 95\% rappresentato dalla linea verticale sopra ogni barra. L'intervallo di confidenza varia in dimensione a causa del numero differente di campioni raffigurati nei deiversi domini.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=12cm]{immagini/fetterly/fetterly1}
@@ -201,12 +201,13 @@ In figura \ref{fig:zhou2} è illustrata la distribuzione risultante. Dalla distr
 \label{fig:zhou2}
 \end{figure}
 
-La seconda misura per identificare le pagine spam utilizzando LDA che permette di misurare la relazione semantica tra gli argomenti è  la semantica tra le parole. Gli autori definiscono che: data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)=\{t_1,t_2,........,t_m\}\). La probabilità che un parola \(w\) appartiene a un argomento \(t_i (1 \leq i \leq m )\) è definita come \(\phi(w|t_i)\). Ogni argomento \(t_i\) è rappresentato come un insieme di parole denotate come \(W(t_i)\). Intuitivamente due argomenti \(t_i, t_j (1 \leq i, j \leq m)\) sono semanticamente relativi se le parole \(W(t_i)\) e \(W(t_j)\) sono semanticamente relative. In \cite{Dong:2012:EDC:2457524.2457693} per ottenere le relazioni semantiche tra le due parole è utilizzata una funzione di similarità \(Sim(w_i,w_j)\) che è quella di Wordnet. Quindi per misurare la relazione semantica tra due argomenti \(t_i,t_j\), si calcolano le similarità tra ogni coppia di parole dei due argomenti moltiplicate con le loro probabilità rispetto agli argomenti.
+La seconda misura per identificare le pagine spam utilizzando LDA che permette di misurare la relazione semantica tra gli argomenti è  la semantica tra le parole. Gli autori definiscono che: data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)=\{t_1,t_2,........,t_m\}\). La probabilità che un parola \(w\) appartiene a un argomento \(t_i (1 \leq i \leq m )\) è definita come \(\phi(w|t_i)\). Ogni argomento \(t_i\) è rappresentato come un insieme di parole denotate come \(W(t_i)\). Intuitivamente due argomenti \(t_i, t_j (1 \leq i, j \leq m)\) sono semanticamente relativi se le parole \(W(t_i)\) e \(W(t_j)\) sono semanticamente relative. In \cite{Dong:2012:EDC:2457524.2457693} per ottenere le relazioni semantiche tra le due parole è utilizzata una funzione di similarità \(Sim(w_i,w_j)\) che è quella di Wordnet. Quindi per misurare la relazione semantica tra due argomenti \(t_i,t_j\), si calcolano le similarità tra ogni coppia di parole dei due argomenti moltiplicate con le loro probabilità 
+rispetto agli argomenti.
 \begin{equation}
 \label{eqn:1}
 Sim(t_i,t_j) = \frac{\sum_{w_k \in W(t_i),w_l \in W(t_j)}Sim(w_k,w_l) X \phi(w_k|t_i) X \phi(w_l|t_j)}{\frac{|W(t_i)| X |W(t_j)|}{2}}	
 \end{equation}
-Usando un modello degli argomenti otteniamo \(m\) argomenti latenti. Ora basandoci sull'equazione \ref{eqn:1} possiamo derivare una misura della diversità degli argomenti basata sulla semantica per gli \(m\) argomenti latenti di una collezione: data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)\) allora la misura della diversità degli argomenti basata sulla semantica per un documento \(d\) è:
+Usando quindi un modello degli argomenti otteniamo \(m\) argomenti latenti. Dall'equazione \ref{eqn:1} si deriva una misura della diversità degli argomenti basata sulla semantica per gli \(m\) argomenti latenti di una collezione \cite{Dong:2012:EDC:2457524.2457693}: data una pagina web \(d\), la sua distribuzione degli argomenti è \(T(d)\) e quindi la misura della diversità degli argomenti basata sulla semantica per tale pagina \(d\) è:
 \begin{equation}
 TopicSim(d)=\frac{\sum_{1 \leq i \leq j \leq m} Sim(t_i,t_j)}{\frac{1}{2} m(m-1)}
 \end{equation}
@@ -238,6 +239,56 @@ Nello studio in \cite{Abernethy:2008:WSI:1451983.1451994} viene presentato  l'al
 
 Un altro metodo, proposto in \cite{DBLP:conf:airweb:UrvoyLF06}, è denominato ``Hidden style similarìty measure'' ed è basato su feature extra testuali appartenenti alle pagina HTML. Infatti gli autori sostengono che le pagine spam generate automaticamente non sono facili da rilevare utilizzando metodi classici di classificazione basati solamente sul contenuto; gli autori quindi utilizzano la struttura HTML di una pagina per classificare le pagine simili.
 
+\section{Tecniche basate sul grafo}
+Tali tecniche fanno uso di segnali, per classificare le pagine web, del grafo del web ricavato dai collegamenti tra le pagine. In questo modo il web può essere rappresentato come un grafo diretto \textit{G = (V,E)}, dove \textit{V} è l'insieme delle pagine e rappresentano i nodi del grafo mentre \textit{E} è l'insieme dei link diretti. Questo grafo può essere astratto e rappresentato da una matrice di transizione cosi formata:
+\begin{equation}
+T(p,q)=\left \{
+\begin{array}{cc}
+0 & if(q,p) \in E\\
+1/\omega(q) & if(q,p) \in E
+\end{array}
+\right .
+\end{equation}
+dove \(\omega(p)\) è il grado di link in uscita della pagina \(p\).
+Possiamo anche definire la matrice di transizione inversa U:
+\begin{equation}
+U(p,q)=\left \{
+\begin{array}{cc}
+0 & if(p,q) \in E\\
+1/l(q) & if(p,q) \in E
+\end{array}
+\right .
+\end{equation}
+dove \(l(q)\) è il grado di link in ingresso della pagina \(q\).
+\subsection{Metodi classici per identificare lo spam web usando il grafo}
+Uno dei primi metodi adottati per identifiare lo spam web usando il grafo è \textit{Trustrank} \cite{Gyongyi:2004:CWS:1316689.1316740}. Il metodo fa uso di un insieme di pagine di partenza \(S\) che sono valutate da degli esperti e che vengono classificate in due sottoinsiemi: pagine non spam \(S^+\) e pagine spam \(S^-\); questo preocesso è chiamato funzione \textit{Oracle}. Per determinare le pagine non spam senza invocare la funzione \textit{Oracle} su tutto il grafo derivato dalla fase di crawling, viene fatta un'assunzione empirica chiamata \textit{isolazione approssimata dell'insieme delle pagine buone} ovvero le pagine non spam raramente punteranno a quelle spam perché gli sviluppatori di pagine non spam hanno poco interesse nel linkare pagine spam almeno che non vengano ingannati tramite ad esempio l'uso di tecniche come l'\textit{honeypot}. Dato un numerto limitato di chiamate della funzione \textit{Oracle} sul seed set di partenza, sfuttando l'assunzione fatta precendentemente viene definita una \
+textit{funzione di verità ignorante \(T_0\)} per ogni pagina pagina \(p\) del grafo:
+\begin{equation}
+T_0(p)=\left\{
+\begin{array}{ccc}
+O(p) & if & p\in S \\
+1/2 & altrimenti
+\end{array}
+\right .
+\end{equation}
+dove la funzione \(O\) è la funzione \textit{Oracle}. Dal momento che le pagine buone dovrebbero puntare ad altre pagine buone assegnamo 1 a tutte le pagine che possono essere raggiunte da una pagina in \(S^+\) in \(M\) step. La funzione di verità \(T_M\) è definita:
+\begin{equation}
+T_M(p)=\left\{
+\begin{array}{ccccc}
+O(p) & if & p\in S \\
+1 & if & p \not\in S & and & \exists q\in S^+:q\rightarrow_M p \\
+1/2 & altrimenti
+\end{array}
+\right .
+\end{equation}
+Il percorso  dalla pagina \(q\) a \(p\) nell'equazione non comprende pagine spam.
 
+L'algoritmo in dettaglio è rappresentato in figura \ref{fig:trustrank1}.
+\begin{figure}	
+\centering
+\includegraphics[height=10cm]{immagini/trustrank/trustrank}
+\caption{Algoritmo trustrank}
+\label{fig:trustrank1}
+\end{figure}
 
 

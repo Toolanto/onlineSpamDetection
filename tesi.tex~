@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel} 
 \usepackage{amsmath}
-\usepackage{url}
+\usepackage[hyphens]{url}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{listings}
@@ -19,5 +19,6 @@
 \include{capitoli/tecnicheAntispam}
 \backmatter
 \bibliographystyle{plain}
-\bibliography{biblio}
+\bibliography{biblio,biblio2}
+
 \end{document}

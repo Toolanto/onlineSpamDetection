@@ -42,6 +42,13 @@ Zoltan Gyongyi and Hector Garcia-Molina.
 \newblock Web spam taxonomy.
 \newblock Technical Report 2004-25, Stanford InfoLab, March 2004.
 
+\bibitem{Gyongyi:2004:CWS:1316689.1316740}
+Zolt\'{a}n Gy\"{o}ngyi, Hector Garcia-Molina, and Jan Pedersen.
+\newblock Combating web spam with trustrank.
+\newblock In {\em Proceedings of the Thirtieth International Conference on Very
+  Large Data Bases - Volume 30}, VLDB '04, pages 576--587. VLDB Endowment,
+  2004.
+
 \bibitem{Nicholas:2005}
 Nicholas~R. Jennings.
 \newblock The global economic impact of spam.
