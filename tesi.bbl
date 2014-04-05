@@ -7,6 +7,13 @@ Jacob Abernethy, Olivier Chapelle, and Carlos Castillo.
   Information Retrieval on the Web}, AIRWeb '08, pages 41--44, New York, NY,
   USA, 2008. ACM.
 
+\bibitem{Caverlee:2007:CWS:1281100.1281124}
+James Caverlee and Ling Liu.
+\newblock Countering web spam with credibility-based link analysis.
+\newblock In {\em Proceedings of the Twenty-sixth Annual ACM Symposium on
+  Principles of Distributed Computing}, PODC '07, pages 157--166, New York, NY,
+  USA, 2007. ACM.
+
 \bibitem{Dong:2012:EDC:2457524.2457693}
 Cailing Dong and Bin Zhou.
 \newblock Effectively detecting content spam on the web using topical diversity
@@ -37,6 +44,12 @@ Dennis Fetterly, Mark Manasse, and Marc Najork.
   Conference on Research and Development in Information Retrieval}, SIGIR '05,
   pages 170--177, New York, NY, USA, 2005. ACM.
 
+\bibitem{Gyongyi:2006:LSD:1182635.1164166}
+Zoltan Gyongyi, Pavel Berkhin, Hector Garcia-Molina, and Jan Pedersen.
+\newblock Link spam detection based on mass estimation.
+\newblock In {\em Proceedings of the 32Nd International Conference on Very
+  Large Data Bases}, VLDB '06, pages 439--450. VLDB Endowment, 2006.
+
 \bibitem{ilprints646}
 Zoltan Gyongyi and Hector Garcia-Molina.
 \newblock Web spam taxonomy.
@@ -63,6 +76,11 @@ Nicholas~R. Jennings.
 Jon~M. Kleinberg.
 \newblock Authoritative sources in a hyperlinked environment.
 \newblock {\em J. ACM}, 46(5):604--632, September 1999.
+
+\bibitem{Krishnan06webspam}
+Vijay Krishnan.
+\newblock Web spam detection with anti-trust rank.
+\newblock In {\em In AIRWEB}, pages 37--40, 2006.
 
 \bibitem{Manning:2008:IIR:1394399p117}
 Christopher~D. Manning, Prabhakar Raghavan, and Hinrich Sch\"{u}tze.
@@ -109,5 +127,11 @@ Nikita Spirin and Jiawei Han.
 Tanguy Urvoy, Thomas Lavergne, and Pascal Filoche.
 \newblock Tracking web spam with hidden style similarity.
 \newblock In {\em AIRWeb}, pages 25--31, 2006.
+
+\bibitem{Wu:2006:TTU:1135777.1135792}
+Baoning Wu, Vinay Goel, and Brian~D. Davison.
+\newblock Topical trustrank: Using topicality to combat web spam.
+\newblock In {\em Proceedings of the 15th International Conference on World
+  Wide Web}, WWW '06, pages 63--72, New York, NY, USA, 2006. ACM.
 
 \end{thebibliography}

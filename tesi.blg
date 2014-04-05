@@ -6,44 +6,44 @@ A level-1 auxiliary file: capitoli/tecnicheAntispam.aux
 The style file: plain.bst
 Database file #1: biblio.bib
 Database file #2: biblio2.bib
-You've used 18 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            624 strings with 7798 characters,
-and the built_in function-call counts, 6734 in all, are:
-= -- 709
-> -- 276
-< -- 11
-+ -- 111
-- -- 90
-* -- 436
-:= -- 1075
-add.period$ -- 65
-call.type$ -- 18
-change.case$ -- 97
+            650 strings with 8600 characters,
+and the built_in function-call counts, 8571 in all, are:
+= -- 910
+> -- 337
+< -- 15
++ -- 135
+- -- 110
+* -- 546
+:= -- 1339
+add.period$ -- 80
+call.type$ -- 22
+change.case$ -- 119
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 290
-empty$ -- 525
-format.name$ -- 90
-if$ -- 1479
+cite$ -- 22
+duplicate$ -- 378
+empty$ -- 679
+format.name$ -- 110
+if$ -- 1907
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 18
-newline$ -- 96
-num.names$ -- 36
-pop$ -- 97
+int.to.str$ -- 22
+missing$ -- 22
+newline$ -- 116
+num.names$ -- 44
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 81
+purify$ -- 99
 quote$ -- 0
-skip$ -- 216
+skip$ -- 289
 stack$ -- 0
-substring$ -- 398
-swap$ -- 89
-text.length$ -- 11
+substring$ -- 530
+swap$ -- 127
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
+type$ -- 84
 warning$ -- 0
-while$ -- 68
-width$ -- 20
-write$ -- 227
+while$ -- 88
+width$ -- 24
+write$ -- 279

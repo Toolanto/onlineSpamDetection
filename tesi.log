@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  2 APR 2014 12:06
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  5 APR 2014 18:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -688,7 +688,7 @@ Package pdftex.def Info: immagini/fetterly/fetterly7.png used on input line 74.
 File: immagini/fetterly/fetterly8.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly8.png>
-Package pdftex.def Info: immagini/fetterly/fetterly8.png used on input line 82.
+Package pdftex.def Info: immagini/fetterly/fetterly8.png used on input line 83.
 
 (pdftex.def)             Requested size: 341.43306pt x 236.92902pt.
  [20 <./immagini/fetterly/fetterly5.png (PNG copy)>] [21 <./immagini/fetterly/f
@@ -697,7 +697,7 @@ etterly6.png> <./immagini/fetterly/fetterly7.png>] <immagini/fetterly/fetterly1
 File: immagini/fetterly/fetterly13.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly13.png>
-Package pdftex.def Info: immagini/fetterly/fetterly13.png used on input line 93
+Package pdftex.def Info: immagini/fetterly/fetterly13.png used on input line 95
 .
 (pdftex.def)             Requested size: 227.62204pt x 193.79959pt.
  [22 <./immagini/fetterly/fetterly8.png (PNG copy)>] [23 <./immagini/fetterly/f
@@ -706,7 +706,7 @@ etterly13.png (PNG copy)>] [24]
 File: immagini/martinez/martinez1.png Graphic file (type png)
 
 <use immagini/martinez/martinez1.png>
-Package pdftex.def Info: immagini/martinez/martinez1.png used on input line 115
+Package pdftex.def Info: immagini/martinez/martinez1.png used on input line 117
 .
 (pdftex.def)             Requested size: 341.43306pt x 120.90964pt.
 
@@ -714,7 +714,7 @@ Package pdftex.def Info: immagini/martinez/martinez1.png used on input line 115
 File: immagini/martinez/martinez2.png Graphic file (type png)
 
 <use immagini/martinez/martinez2.png>
-Package pdftex.def Info: immagini/martinez/martinez2.png used on input line 123
+Package pdftex.def Info: immagini/martinez/martinez2.png used on input line 125
 .
 (pdftex.def)             Requested size: 341.43306pt x 133.17656pt.
 
@@ -722,7 +722,7 @@ Package pdftex.def Info: immagini/martinez/martinez2.png used on input line 123
 File: immagini/martinez/martinez3.png Graphic file (type png)
 
 <use immagini/martinez/martinez3.png>
-Package pdftex.def Info: immagini/martinez/martinez3.png used on input line 131
+Package pdftex.def Info: immagini/martinez/martinez3.png used on input line 133
 .
 (pdftex.def)             Requested size: 341.43306pt x 130.54332pt.
  [25 <./immagini/martinez/martinez1.png (PNG copy)>]
@@ -730,7 +730,7 @@ Package pdftex.def Info: immagini/martinez/martinez3.png used on input line 131
 File: immagini/martinez/martinez4.png Graphic file (type png)
 
 <use immagini/martinez/martinez4.png>
-Package pdftex.def Info: immagini/martinez/martinez4.png used on input line 139
+Package pdftex.def Info: immagini/martinez/martinez4.png used on input line 141
 .
 (pdftex.def)             Requested size: 341.43306pt x 132.4075pt.
  [26 <./immagini/martinez/martinez2.png (PNG copy)> <./immagini/martinez/martin
@@ -739,7 +739,7 @@ ez3.png (PNG copy)>]
 File: immagini/martinez/martinez5.png Graphic file (type png)
 
 <use immagini/martinez/martinez5.png>
-Package pdftex.def Info: immagini/martinez/martinez5.png used on input line 147
+Package pdftex.def Info: immagini/martinez/martinez5.png used on input line 149
 .
 (pdftex.def)             Requested size: 341.43306pt x 126.15463pt.
 
@@ -747,7 +747,7 @@ Package pdftex.def Info: immagini/martinez/martinez5.png used on input line 147
 File: immagini/martinez/martinez6.png Graphic file (type png)
 
 <use immagini/martinez/martinez6.png>
-Package pdftex.def Info: immagini/martinez/martinez6.png used on input line 155
+Package pdftex.def Info: immagini/martinez/martinez6.png used on input line 157
 .
 (pdftex.def)             Requested size: 341.43306pt x 123.10135pt.
 
@@ -755,7 +755,7 @@ Package pdftex.def Info: immagini/martinez/martinez6.png used on input line 155
 File: immagini/martinez/martinez7.png Graphic file (type png)
 
 <use immagini/martinez/martinez7.png>
-Package pdftex.def Info: immagini/martinez/martinez7.png used on input line 163
+Package pdftex.def Info: immagini/martinez/martinez7.png used on input line 165
 .
 (pdftex.def)             Requested size: 341.43306pt x 125.9736pt.
  [27 <./immagini/martinez/martinez4.png (PNG copy)> <./immagini/martinez/martin
@@ -764,7 +764,7 @@ ez5.png (PNG copy)>]
 File: immagini/martinez/martinez8.png Graphic file (type png)
 
 <use immagini/martinez/martinez8.png>
-Package pdftex.def Info: immagini/martinez/martinez8.png used on input line 171
+Package pdftex.def Info: immagini/martinez/martinez8.png used on input line 173
 .
 (pdftex.def)             Requested size: 341.43306pt x 128.13391pt.
  [28 <./immagini/martinez/martinez6.png (PNG copy)> <./immagini/martinez/martin
@@ -773,14 +773,14 @@ ez7.png (PNG copy)>] [29 <./immagini/martinez/martinez8.png (PNG copy)>]
 File: immagini/zhou/immagine1.png Graphic file (type png)
 
 <use immagini/zhou/immagine1.png>
-Package pdftex.def Info: immagini/zhou/immagine1.png used on input line 187.
+Package pdftex.def Info: immagini/zhou/immagine1.png used on input line 189.
 (pdftex.def)             Requested size: 284.52756pt x 148.44778pt.
 
 <immagini/zhou/immagine2.png, id=140, 544.0325pt x 411.5375pt>
 File: immagini/zhou/immagine2.png Graphic file (type png)
 
 <use immagini/zhou/immagine2.png>
-Package pdftex.def Info: immagini/zhou/immagine2.png used on input line 199.
+Package pdftex.def Info: immagini/zhou/immagine2.png used on input line 201.
 (pdftex.def)             Requested size: 284.52756pt x 215.24408pt.
  [30 <./immagini/zhou/immagine1.png (PNG copy)>] [31 <./immagini/zhou/immagine2
 .png (PNG copy)>]
@@ -788,37 +788,38 @@ Package pdftex.def Info: immagini/zhou/immagine2.png used on input line 199.
 File: immagini/zhou/immagine3.png Graphic file (type png)
 
 <use immagini/zhou/immagine3.png>
-Package pdftex.def Info: immagini/zhou/immagine3.png used on input line 217.
+Package pdftex.def Info: immagini/zhou/immagine3.png used on input line 219.
 (pdftex.def)             Requested size: 284.52756pt x 198.62732pt.
  [32 <./immagini/zhou/immagine3.png (PNG copy)>] <immagini/zhou/immagine4.png, 
 id=153, 665.48625pt x 457.71pt>
 File: immagini/zhou/immagine4.png Graphic file (type png)
 
 <use immagini/zhou/immagine4.png>
-Package pdftex.def Info: immagini/zhou/immagine4.png used on input line 230.
+Package pdftex.def Info: immagini/zhou/immagine4.png used on input line 232.
 (pdftex.def)             Requested size: 284.52756pt x 195.69402pt.
  [33 <./immagini/zhou/immagine4.png (PNG copy)>] [34] <immagini/trustrank/trust
 rank.png, id=161, 399.4925pt x 575.14874pt>
 File: immagini/trustrank/trustrank.png Graphic file (type png)
 
 <use immagini/trustrank/trustrank.png>
-Package pdftex.def Info: immagini/trustrank/trustrank.png used on input line 28
-9.
-(pdftex.def)             Requested size: 197.63661pt x 284.52756pt.
-) [35] [36 <./immagini/trustrank/trustrank.png (PNG copy)>] (./tesi.bbl [37
+Package pdftex.def Info: immagini/trustrank/trustrank.png used on input line 29
+4.
+(pdftex.def)             Requested size: 227.62204pt x 327.70654pt.
+ [35] [36 <./immagini/trustrank/trustrank.png (PNG copy)>] [37] [38] [39]) [40]
+ (./tesi.bbl [41
 
 
 
-] [38]) [39] (./tesi.aux
+] [42]) [43] (./tesi.aux
 (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux)) ) 
 Here is how much of TeX's memory you used:
- 6230 strings out of 495048
- 90248 string characters out of 3181555
- 166909 words of memory out of 3000000
- 9281 multiletter control sequences out of 15000+200000
+ 6234 strings out of 495048
+ 90365 string characters out of 3181555
+ 166930 words of memory out of 3000000
+ 9285 multiletter control sequences out of 15000+200000
  11164 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,43p,1284b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,43p,1563b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-d
@@ -831,13 +832,14 @@ nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (42 pages, 1310778 bytes).
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on tesi.pdf (46 pages, 1336275 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
+ 245 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -39,24 +39,6 @@
  keywords = {PageRank, TrustRank, spam, web search engine},
 }
 
-@inproceedings{Caverlee:2007:CWS:1281100.1281124,
- author = {Caverlee, James and Liu, Ling},
- title = {Countering Web Spam with Credibility-based Link Analysis},
- booktitle = {Proceedings of the Twenty-sixth Annual ACM Symposium on Principles of Distributed Computing},
- series = {PODC '07},
- year = {2007},
- isbn = {978-1-59593-616-5},
- location = {Portland, Oregon, USA},
- pages = {157--166},
- numpages = {10},
- url = {http://doi.acm.org/10.1145/1281100.1281124},
- doi = {10.1145/1281100.1281124},
- acmid = {1281124},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {PageRank, credibility, link analysis, spam, web algorithms},
-}
-
 @inproceedings{Gyongyi:2006:LSD:1182635.1164166,
  author = {Gyongyi, Zoltan and Berkhin, Pavel and Garcia-Molina, Hector and Pedersen, Jan},
  title = {Link Spam Detection Based on Mass Estimation},

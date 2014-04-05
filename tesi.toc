@@ -18,3 +18,4 @@
 \contentsline {subsection}{\numberline {2.1.5}Altre tecniche}{33}
 \contentsline {section}{\numberline {2.2}Tecniche basate sul grafo}{34}
 \contentsline {subsection}{\numberline {2.2.1}Metodi classici per identificare lo spam web usando il grafo}{34}
+\contentsline {subsection}{\numberline {2.2.2}Metodi per identificare spam farm}{39}
