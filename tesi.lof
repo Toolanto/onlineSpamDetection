@@ -28,3 +28,8 @@
 \contentsline {figure}{\numberline {2.21}{\ignorespaces Prevalenza di spam relativa alla misura di diversit\IeC {\`a} degli argomenti basata sulla semantica\relax }}{32}
 \contentsline {figure}{\numberline {2.22}{\ignorespaces Prevalenza di spam relativa alla misura di diversit\IeC {\`a} sulla massima semantica\relax }}{33}
 \contentsline {figure}{\numberline {2.23}{\ignorespaces Algoritmo di trustrank\relax }}{36}
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Algoritmo di ricerca dei seed set\relax }}{42}
+\contentsline {figure}{\numberline {2.25}{\ignorespaces Algoritmo per aumentare il seedset\relax }}{43}
+\contentsline {figure}{\numberline {2.26}{\ignorespaces Distribuzione dello spam in entrata\relax }}{43}
+\contentsline {figure}{\numberline {2.27}{\ignorespaces Distribuzione dello spam in uscita\relax }}{44}
+\contentsline {figure}{\numberline {2.28}{\ignorespaces Distribuzione entrante pesata\relax }}{44}

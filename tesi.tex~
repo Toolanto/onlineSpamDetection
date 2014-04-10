@@ -19,6 +19,5 @@
 \include{capitoli/tecnicheAntispam}
 \backmatter
 \bibliographystyle{plain}
-\bibliography{biblio,biblio2}
-
+\bibliography{biblio,biblio2,biblio3}
 \end{document}

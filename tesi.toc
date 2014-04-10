@@ -18,4 +18,8 @@
 \contentsline {subsection}{\numberline {2.1.5}Altre tecniche}{33}
 \contentsline {section}{\numberline {2.2}Tecniche basate sul grafo}{34}
 \contentsline {subsection}{\numberline {2.2.1}Metodi classici per identificare lo spam web usando il grafo}{34}
-\contentsline {subsection}{\numberline {2.2.2}Metodi per identificare spam farm}{39}
+\contentsline {subsection}{\numberline {2.2.2}Metodi per identificare spam farm}{40}
+\contentsline {subsection}{\numberline {2.2.3}Metodi per migliorare la classificazione}{42}
+\contentsline {section}{\numberline {2.3}Tecniche che fanno uso di altri segnali}{47}
+\contentsline {subsection}{\numberline {2.3.1}Link dai forum}{47}
+\contentsline {subsection}{\numberline {2.3.2}Rilevamento dello spam di tipo cloacking}{48}
