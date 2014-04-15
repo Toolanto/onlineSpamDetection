@@ -9,17 +9,18 @@
 \contentsline {subsection}{\numberline {1.2.3}Link Spamming}{9}
 \contentsline {subsection}{\numberline {1.2.4}Tecniche di hiding}{11}
 \contentsline {subsection}{\numberline {1.2.5}Click Spamming}{12}
-\contentsline {chapter}{\numberline {2}Survey sulle tecniche di spam detection}{14}
-\contentsline {section}{\numberline {2.1}Tecniche basate sul contenuto}{14}
-\contentsline {subsection}{\numberline {2.1.1}Prime feature per identificare lo spam}{14}
-\contentsline {subsection}{\numberline {2.1.2}Utilizzo di un classificatore per combinare le feature}{23}
-\contentsline {subsection}{\numberline {2.1.3}Language model per rilevare lo spam}{24}
-\contentsline {subsection}{\numberline {2.1.4}Spam detection sulla base degli argomenti di una pagina web}{29}
-\contentsline {subsection}{\numberline {2.1.5}Altre tecniche}{33}
-\contentsline {section}{\numberline {2.2}Tecniche basate sul grafo}{34}
-\contentsline {subsection}{\numberline {2.2.1}Metodi classici per identificare lo spam web usando il grafo}{34}
-\contentsline {subsection}{\numberline {2.2.2}Metodi per identificare spam farm}{40}
-\contentsline {subsection}{\numberline {2.2.3}Metodi per migliorare la classificazione}{42}
-\contentsline {section}{\numberline {2.3}Tecniche che fanno uso di altri segnali}{47}
-\contentsline {subsection}{\numberline {2.3.1}Link dai forum}{47}
-\contentsline {subsection}{\numberline {2.3.2}Rilevamento dello spam di tipo cloacking}{48}
+\contentsline {chapter}{\numberline {2}Tecniche basate sul contenuto}{14}
+\contentsline {section}{\numberline {2.1}Prime feature per identificare lo spam}{14}
+\contentsline {subsection}{\numberline {2.1.1}Utilizzo di un classificatore per combinare le feature}{22}
+\contentsline {section}{\numberline {2.2}Language model per rilevare lo spam}{23}
+\contentsline {section}{\numberline {2.3}Spam detection sulla base degli argomenti di una pagina web}{29}
+\contentsline {section}{\numberline {2.4}Altre tecniche}{33}
+\contentsline {chapter}{\numberline {3}Tecniche basate sul grafo}{35}
+\contentsline {section}{\numberline {3.1}Metodi classici per identificare lo spam web usando il grafo}{35}
+\contentsline {section}{\numberline {3.2}Metodi per identificare spam farm}{41}
+\contentsline {section}{\numberline {3.3}Metodi per migliorare la classificazione}{43}
+\contentsline {chapter}{\numberline {4}Tecniche che fanno uso di altri segnali}{48}
+\contentsline {section}{\numberline {4.1}Link dai forum}{48}
+\contentsline {section}{\numberline {4.2}Rilevamento dello spam di tipo cloacking}{49}
+\contentsline {section}{\numberline {4.3}Rilevare lo spam tramite l'header HTTP}{52}
+\contentsline {section}{\numberline {4.4}Altri metodi}{53}

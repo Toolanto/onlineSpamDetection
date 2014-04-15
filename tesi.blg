@@ -3,48 +3,50 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tesi.aux
 A level-1 auxiliary file: inizio/introduzione.aux
 A level-1 auxiliary file: capitoli/tecnicheAntispam.aux
+A level-1 auxiliary file: capitoli/tecnicheGrafo.aux
+A level-1 auxiliary file: capitoli/tecnicheAltre.aux
 The style file: ieeetr.bst
 Database file #1: biblio.bib
 Database file #2: biblio2.bib
 Database file #3: biblio3.bib
-You've used 30 entries,
+You've used 34 entries,
             1876 wiz_defined-function locations,
-            692 strings with 10239 characters,
-and the built_in function-call counts, 9348 in all, are:
-= -- 956
-> -- 299
+            720 strings with 11398 characters,
+and the built_in function-call counts, 10982 in all, are:
+= -- 1117
+> -- 367
 < -- 2
-+ -- 111
-- -- 81
-* -- 671
-:= -- 1243
-add.period$ -- 35
-call.type$ -- 30
-change.case$ -- 28
++ -- 135
+- -- 101
+* -- 801
+:= -- 1458
+add.period$ -- 39
+call.type$ -- 34
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 521
-empty$ -- 933
-format.name$ -- 81
-if$ -- 2310
+cite$ -- 34
+duplicate$ -- 607
+empty$ -- 1084
+format.name$ -- 101
+if$ -- 2708
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 30
-newline$ -- 98
-num.names$ -- 30
-pop$ -- 101
+int.to.str$ -- 34
+missing$ -- 34
+newline$ -- 110
+num.names$ -- 34
+pop$ -- 113
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 365
+skip$ -- 432
 stack$ -- 0
-substring$ -- 692
-swap$ -- 204
+substring$ -- 828
+swap$ -- 242
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 101
-width$ -- 32
-write$ -- 331
+while$ -- 117
+width$ -- 36
+write$ -- 379

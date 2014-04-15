@@ -10,6 +10,8 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{listings}
+\usepackage{garamond}
+\renewcommand{\familydefault}{\sfdefault}
 \begin{document}
 \frontmatter
 \tableofcontents
@@ -17,7 +19,9 @@
 \mainmatter
 \include{inizio/introduzione}
 \include{capitoli/tecnicheAntispam}
+\include{capitoli/tecnicheGrafo}
+\include{capitoli/tecnicheAltre}
 \backmatter
-\bibliographystyle{plain}
+\bibliographystyle{ieeetr}
 \bibliography{biblio,biblio2,biblio3}
 \end{document}

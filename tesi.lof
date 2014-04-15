@@ -27,9 +27,14 @@
 \contentsline {figure}{\numberline {2.20}{\ignorespaces Prevalenza di spam relativa alla misura della diversit\IeC {\`a} degli argomenti basata sulla varianza \relax }}{31}
 \contentsline {figure}{\numberline {2.21}{\ignorespaces Prevalenza di spam relativa alla misura di diversit\IeC {\`a} degli argomenti basata sulla semantica\relax }}{32}
 \contentsline {figure}{\numberline {2.22}{\ignorespaces Prevalenza di spam relativa alla misura di diversit\IeC {\`a} sulla massima semantica\relax }}{33}
-\contentsline {figure}{\numberline {2.23}{\ignorespaces Algoritmo di trustrank\relax }}{36}
-\contentsline {figure}{\numberline {2.24}{\ignorespaces Algoritmo di ricerca dei seed set\relax }}{42}
-\contentsline {figure}{\numberline {2.25}{\ignorespaces Algoritmo per aumentare il seedset\relax }}{43}
-\contentsline {figure}{\numberline {2.26}{\ignorespaces Distribuzione dello spam in entrata\relax }}{43}
-\contentsline {figure}{\numberline {2.27}{\ignorespaces Distribuzione dello spam in uscita\relax }}{44}
-\contentsline {figure}{\numberline {2.28}{\ignorespaces Distribuzione entrante pesata\relax }}{44}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Algoritmo di trustrank\relax }}{37}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Algoritmo di ricerca dei seed set\relax }}{43}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Algoritmo per aumentare il seedset\relax }}{44}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Distribuzione dello spam in entrata\relax }}{44}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Distribuzione dello spam in uscita\relax }}{45}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Distribuzione entrante pesata\relax }}{45}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribuzione degli indirizzi IP di due dataset: WebSpam che contiene pagine spam e WebBase che contiene pagine non spam.\relax }}{53}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Distribuizione delle pagine sulla base della feature SEOV.\relax }}{54}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Dal comportamento dell'utente al grafo.\relax }}{56}

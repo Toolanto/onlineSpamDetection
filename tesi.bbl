@@ -161,4 +161,29 @@ S.~Ghiam and A.~N. Pour, ``Detecting cloaking web spam using hash function,''
   in {\em Computer Science and Information Technology}, vol. 1, pp.~33--40,
   Horizon Research, 2013.
 
+\bibitem{Webb:2008:PWS:1458082.1458129}
+S.~Webb, J.~Caverlee, and C.~Pu, ``Predicting web spam with http session
+  information,'' in {\em Proceedings of the 17th ACM Conference on Information
+  and Knowledge Management}, CIKM '08, (New York, NY, USA), pp.~339--348, ACM,
+  2008.
+
+\bibitem{Liu:2008:UBO:1367497.1367645}
+Y.~Liu, M.~Zhang, S.~Ma, and L.~Ru, ``User behavior oriented web spam
+  detection,'' in {\em Proceedings of the 17th International Conference on
+  World Wide Web}, WWW '08, (New York, NY, USA), pp.~1039--1040, ACM, 2008.
+
+\bibitem{Liu:2008:BLW:1390334.1390412}
+Y.~Liu, B.~Gao, T.-Y. Liu, Y.~Zhang, Z.~Ma, S.~He, and H.~Li, ``Browserank:
+  Letting web users vote for page importance,'' in {\em Proceedings of the 31st
+  Annual International ACM SIGIR Conference on Research and Development in
+  Information Retrieval}, SIGIR '08, (New York, NY, USA), pp.~451--458, ACM,
+  2008.
+
+\bibitem{Wei:2012:FAW:2348283.2348338}
+C.~Wei, Y.~Liu, M.~Zhang, S.~Ma, L.~Ru, and K.~Zhang, ``Fighting against web
+  spam: A novel propagation method based on click-through data,'' in {\em
+  Proceedings of the 35th International ACM SIGIR Conference on Research and
+  Development in Information Retrieval}, SIGIR '12, (New York, NY, USA),
+  pp.~395--404, ACM, 2012.
+
 \end{thebibliography}
