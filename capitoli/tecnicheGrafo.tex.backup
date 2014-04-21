@@ -197,7 +197,7 @@ dove \(t\) è il numero di iterazioni, \(pf(h)^{(0)}=spamicity(h)\) e \(weigth(h
 \begin{equation}
  nf(H)=\frac{\sum_{h\in N(H)}(sapmicity(h)\times weight(H,h))}{|N(H)|}
 \end{equation}
-dove \(N(H)\) rappresenta l'insieme delle relazioni con i nodi vicini del nodo\ \(H\) e \(N(H) \in {inlink(H),outlink(H), outlink(outlink(H)), inlink(inlink(H)),inlink(outlink(H)),outlink(inlink(H))}\). Il metodo in dettaglio è suddiviso in quattro fasi:
+dove \(N(H)\) rappresenta l'insieme delle relazioni con i nodi vicini del nodo \(H\) e \(N(H) \in {inlink(H),outlink(H),outlink(\outlink(H)),inlink(\inlink(H)),inlink(\outlink(H)),outlink(inlink(H))}\). Il metodo in dettaglio è suddiviso in quattro fasi:
 \begin{itemize}
  \item vengoono estratte delle feature base per ogni nodo;
  \item viene eseguita una prima classificazione;

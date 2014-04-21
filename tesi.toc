@@ -16,11 +16,11 @@
 \contentsline {section}{\numberline {2.3}Spam detection sulla base degli argomenti di una pagina web}{29}
 \contentsline {section}{\numberline {2.4}Altre tecniche}{33}
 \contentsline {chapter}{\numberline {3}Tecniche basate sul grafo}{35}
-\contentsline {section}{\numberline {3.1}Metodi classici per identificare lo spam web usando il grafo}{35}
-\contentsline {section}{\numberline {3.2}Metodi per identificare spam farm}{41}
-\contentsline {section}{\numberline {3.3}Metodi per migliorare la classificazione}{43}
-\contentsline {chapter}{\numberline {4}Tecniche che fanno uso di altri segnali}{48}
-\contentsline {section}{\numberline {4.1}Link dai forum}{48}
-\contentsline {section}{\numberline {4.2}Rilevamento dello spam di tipo cloacking}{49}
-\contentsline {section}{\numberline {4.3}Rilevare lo spam tramite l'header HTTP}{52}
-\contentsline {section}{\numberline {4.4}Altri metodi}{53}
+\contentsline {section}{\numberline {3.1}Metodi classici per identificare lo spam web usando il grafo}{36}
+\contentsline {section}{\numberline {3.2}Metodi per identificare spam farm}{43}
+\contentsline {section}{\numberline {3.3}Metodi per migliorare la classificazione}{46}
+\contentsline {chapter}{\numberline {4}Tecniche che fanno uso di altri segnali}{51}
+\contentsline {section}{\numberline {4.1}Link dai forum}{51}
+\contentsline {section}{\numberline {4.2}Rilevamento dello spam di tipo cloacking}{52}
+\contentsline {section}{\numberline {4.3}Rilevare lo spam tramite l'header HTTP}{55}
+\contentsline {section}{\numberline {4.4}Altri metodi}{56}

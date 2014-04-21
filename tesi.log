@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  15 APR 2014 18:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  19 APR 2014 17:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -810,94 +810,99 @@ Capitolo 3.
 
 
 
-] <immagini/trustrank/trustrank.png, id=170, 399.4925pt x 575.14874pt>
+] [36] <immagini/trustrank/trustrank.png, id=173, 399.4925pt x 575.14874pt>
 File: immagini/trustrank/trustrank.png Graphic file (type png)
 
 <use immagini/trustrank/trustrank.png>
-Package pdftex.def Info: immagini/trustrank/trustrank.png used on input line 52
+Package pdftex.def Info: immagini/trustrank/trustrank.png used on input line 50
 .
 (pdftex.def)             Requested size: 227.62204pt x 327.70654pt.
- [36] [37 <./immagini/trustrank/trustrank.png (PNG copy)>] [38] [39] [40] [41]
-<immagini/linkfarm/immagine1.png, id=191, 484.81125pt x 463.7325pt>
+ [37 <./immagini/trustrank/trustrank.png (PNG copy)>] [38] [39] [40]
+<immagini/sub/sub.png, id=187, 984.67876pt x 569.12625pt>
+File: immagini/sub/sub.png Graphic file (type png)
+
+<use immagini/sub/sub.png>
+Package pdftex.def Info: immagini/sub/sub.png used on input line 97.
+(pdftex.def)             Requested size: 344.59764pt x 199.16928pt.
+ [41] [42 <./immagini/sub/sub.png>] [43]
+<immagini/linkfarm/immagine1.png, id=199, 484.81125pt x 463.7325pt>
 File: immagini/linkfarm/immagine1.png Graphic file (type png)
 
 <use immagini/linkfarm/immagine1.png>
-Package pdftex.def Info: immagini/linkfarm/immagine1.png used on input line 120
+Package pdftex.def Info: immagini/linkfarm/immagine1.png used on input line 145
 .
 (pdftex.def)             Requested size: 227.62204pt x 217.72786pt.
 
-<immagini/linkfarm/immagine2.png, id=192, 475.7775pt x 333.245pt>
+<immagini/linkfarm/immagine2.png, id=200, 475.7775pt x 333.245pt>
 File: immagini/linkfarm/immagine2.png Graphic file (type png)
 
 <use immagini/linkfarm/immagine2.png>
-Package pdftex.def Info: immagini/linkfarm/immagine2.png used on input line 127
+Package pdftex.def Info: immagini/linkfarm/immagine2.png used on input line 152
 .
-(pdftex.def)             Requested size: 227.62204pt x 159.43202pt.
- [42] [43 <./immagini/linkfarm/immagine1.png (PNG copy)>] <immagini/gan/immagin
-e1.png, id=199, 343.2825pt x 212.795pt>
+(pdftex.def)             Requested size: 284.35794pt x 199.16928pt.
+ [44] [45 <./immagini/linkfarm/immagine1.png (PNG copy)>] <immagini/gan/immagin
+e1.png, id=210, 343.2825pt x 212.795pt>
 File: immagini/gan/immagine1.png Graphic file (type png)
 
 <use immagini/gan/immagine1.png>
-Package pdftex.def Info: immagini/gan/immagine1.png used on input line 141.
+Package pdftex.def Info: immagini/gan/immagine1.png used on input line 164.
 (pdftex.def)             Requested size: 227.62204pt x 141.09776pt.
-
-<immagini/gan/immagine2.png, id=200, 367.3725pt x 221.82875pt>
+ [46 <./immagini/linkfarm/immagine2.png (PNG copy)>] <immagini/gan/immagine2.pn
+g, id=214, 367.3725pt x 221.82875pt>
 File: immagini/gan/immagine2.png Graphic file (type png)
 
 <use immagini/gan/immagine2.png>
-Package pdftex.def Info: immagini/gan/immagine2.png used on input line 148.
+Package pdftex.def Info: immagini/gan/immagine2.png used on input line 171.
 (pdftex.def)             Requested size: 227.62204pt x 137.44777pt.
 
-<immagini/gan/immagine3.png, id=201, 372.39125pt x 204.765pt>
+<immagini/gan/immagine3.png, id=215, 372.39125pt x 204.765pt>
 File: immagini/gan/immagine3.png Graphic file (type png)
 
 <use immagini/gan/immagine3.png>
-Package pdftex.def Info: immagini/gan/immagine3.png used on input line 155.
+Package pdftex.def Info: immagini/gan/immagine3.png used on input line 178.
 (pdftex.def)             Requested size: 227.62204pt x 125.16579pt.
- [44 <./immagini/linkfarm/immagine2.png (PNG copy)> <./immagini/gan/immagine1.p
-ng (PNG copy)>] [45 <./immagini/gan/immagine2.png (PNG copy)> <./immagini/gan/i
-mmagine3.png (PNG copy)>] [46]) [47]
+ [47 <./immagini/gan/immagine1.png (PNG copy)> <./immagini/gan/immagine2.png (P
+NG copy)>] [48 <./immagini/gan/immagine3.png (PNG copy)>] [49]) [50]
 \openout2 = `capitoli/tecnicheAltre.aux'.
 
-
-(./capitoli/tecnicheAltre.tex
+ (./capitoli/tecnicheAltre.tex
 Capitolo 4.
-[48
+[51
 
 
 
-] [49] [50] [51] <immagini/altre/webb.png, id=229, 811.03pt x 587.19376pt>
+] [52] [53] [54] <immagini/altre/webb.png, id=241, 811.03pt x 587.19376pt>
 File: immagini/altre/webb.png Graphic file (type png)
 
 <use immagini/altre/webb.png>
 Package pdftex.def Info: immagini/altre/webb.png used on input line 38.
 (pdftex.def)             Requested size: 284.52756pt x 206.00471pt.
- [52] [53 <./immagini/altre/webb.png (PNG copy)>]
-<immagini/altre/seov.png, id=236, 772.8875pt x 440.64626pt>
+ [55] [56 <./immagini/altre/webb.png (PNG copy)>]
+<immagini/altre/seov.png, id=249, 772.8875pt x 440.64626pt>
 File: immagini/altre/seov.png Graphic file (type png)
 
 <use immagini/altre/seov.png>
 Package pdftex.def Info: immagini/altre/seov.png used on input line 54.
 (pdftex.def)             Requested size: 284.52756pt x 162.21626pt.
- [54 <./immagini/altre/seov.png (PNG copy)>]
-<immagini/altre/browser.png, id=240, 1039.885pt x 462.72874pt>
+ [57 <./immagini/altre/seov.png (PNG copy)>]
+<immagini/altre/browser.png, id=253, 1039.885pt x 462.72874pt>
 File: immagini/altre/browser.png Graphic file (type png)
 
 <use immagini/altre/browser.png>
 Package pdftex.def Info: immagini/altre/browser.png used on input line 74.
 (pdftex.def)             Requested size: 284.52756pt x 126.60474pt.
- [55]) [56 <./immagini/altre/browser.png (PNG copy)>] [57] (./tesi.bbl [58
+ [58]) [59 <./immagini/altre/browser.png (PNG copy)>] [60] (./tesi.bbl [61
 
 
 
-] [59] [60] [61]) [62] (./tesi.aux
+] [62] [63] [64]) [65] (./tesi.aux
 (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux)
 (./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux)) ) 
 Here is how much of TeX's memory you used:
- 6307 strings out of 495048
- 92305 string characters out of 3181555
- 168725 words of memory out of 3000000
- 9338 multiletter control sequences out of 15000+200000
+ 6314 strings out of 495048
+ 92433 string characters out of 3181555
+ 168736 words of memory out of 3000000
+ 9343 multiletter control sequences out of 15000+200000
  11164 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,9n,43p,1274b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -917,10 +922,10 @@ cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (67 pages, 1613608 bytes).
+Output written on tesi.pdf (70 pages, 1720898 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
+ 333 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
