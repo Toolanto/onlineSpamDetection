@@ -110,7 +110,7 @@ Il metodo elabora il grafo del web a due livelli di granularità, uno a livello 
 
 Un altro metodo per rilevare lo spam utilizza combina  un classificatore automatico che combina un insieme di feature basate su link e contenuto \cite{Castillo:2007:KYN:1277741.1277814}. Dato che i link tra le pagine non sono piazzati in modo casuale ovvero pagine simili tendono a linkarsi tra di loro più frequentemente di pagini diverse, si può sfruttare tale meccanismo per rilevare le pagine spam, perché tali pagine tendono a raggrupparsi in cluster. Una spiegazione per questo fenomeno è che le pagine spam utilizzano delle tecniche per aumenteare il rank basato sui link attraverso le link farm. Gli autori assumono che gli host che sono ben collegati tra di loro sono molto probabilmente della stessa classe: spam o non spam.
 
-\section{Metodi per identificare spam farm}
+\section{Metodi per identificare link farm}
 Per riconoscere una spam farm (o link farm) si parte dal presupposto che i nodi della spam farm avranno dei link uscenti verso delle pagine target \textit{t} per aumentarne il rank. In \cite{Gyongyi:2006:LSD:1182635.1164166} per identificare le spam farm viene introdotta una misura, denominata \textit{spam mass}, dell'impatto dello spam (basandosi sulla struttura del grafo) sul rank di una pagina. Usando questa misura tutte le pagine web avranno assegnate due valori: quello di \textit{pagerank} e quello relativo alla \textit{spam mass}, in particolare le pagine target delle spam farm ricevono  un alto valore di \textit{pagerank} e un alto valore di \textit{spam mass} mentre le pagine non spam anche possono avere un alto valore di \textit{pagerank} ma un basso valore di \textit{spam mass}. Partendo dal presupposto che le il web può essere partizionato in nodi non spam \(V^+\) e nodi spam \(V^-\) dove la loro unione forma il grafo del web, per una data partizione \(\{V^+,V^-\}\) di \(V\) e per dei nodi \(x\) 
 il pagerank di \(x\) è la somma dei contribbuti di nodi non spam e dei nodi spam. Quindi per stimare la \textit{spam mass} per ogni nodo del grafo si utilizzano due misure di \textit{spam mass}:
 \begin{itemize}
@@ -161,21 +161,21 @@ Invece di cercare di migliorare la rilevazione delle pagine spam utilizzando nuo
  \item la distribuzione dello spam in entrata:  in figura \ref{img:gan1} viene rappresentata la distribuzione dello spam in entrata: ogni sito andrà a finire in uno dei settori sull'asse \(x\) in base alla frazione di nodi spam tra i sui vicini in entrata. L'asse \(y\) rappresenta la percentuale di spam/non spam all'interno del settore. Una grande porzione di siti spam ha molti vicini che sono spam. 
  \begin{figure}
  \centering
-\includegraphics[width=8cm]{immagini/gan/immagine1.png}
+\includegraphics[width=10cm]{immagini/gan/immagine1.png}
 \caption{Distribuzione dello spam in entrata}
 \label{img:gan1}
 \end{figure}
 \item la distribuzione dello spam in uscita: in figura \ref{img:gan2} viene osservato una distribuzione simile a quella per lo spam in entrata.
  \begin{figure}
  \centering
-\includegraphics[width=8cm]{immagini/gan/immagine2.png}
+\includegraphics[width=10cm]{immagini/gan/immagine2.png}
 \caption{Distribuzione dello spam in uscita}
 \label{img:gan2}
 \end{figure}
 \item distribuzione entrante pesata:vegono esaminati gli in-lin  pesati con pagerank (figura \ref{img:gan3}).
  \begin{figure}
  \centering
-\includegraphics[width=8cm]{immagini/gan/immagine3.png}
+\includegraphics[width=10cm]{immagini/gan/immagine3.png}
 \caption{Distribuzione entrante pesata}
 \label{img:gan3}
 \end{figure}
@@ -189,7 +189,7 @@ Le analisi leate ai cluster vengono eseguite nel seguente modo: dato \(G=(V,E,w)
 \begin{equation}
  cf(H)=\frac{\sum_{h\in C(H)}spamicity(H)}{|C(H)|}
 \end{equation}
-dove \(C(H)\) è il cluster al quale l'host \(H\) appartiene e la \(spamicity(h)\) è la spammicita rilevata durante la prima classificazione. Mentre la feature di propagazione si ottiene nel seguente modo:
+dove \(C(H)\) è il cluster al quale l'host \(H\) appartiene e la \(spamicity(h)\) è il valore di spam rilevato durante la prima classificazione. Mentre la feature di propagazione si ottiene nel seguente modo:
 \begin{equation}
  pf(H)^{(t)}=\sum_{h:h->H}\frac{pf(h)^{t-1}\times weight(h,H)}{\sum_{g:h->g}weight(h,g)}
 \end{equation}
@@ -197,7 +197,7 @@ dove \(t\) è il numero di iterazioni, \(pf(h)^{(0)}=spamicity(h)\) e \(weigth(h
 \begin{equation}
  nf(H)=\frac{\sum_{h\in N(H)}(sapmicity(h)\times weight(H,h))}{|N(H)|}
 \end{equation}
-dove \(N(H)\) rappresenta l'insieme delle relazioni con i nodi vicini del nodo\ \(H\) e \(N(H) \in {inlink(H),outlink(H), outlink(outlink(H)), inlink(inlink(H)),inlink(outlink(H)),outlink(inlink(H))}\). Il metodo in dettaglio è suddiviso in quattro fasi:
+dove \(N(H) \in \{inlink(H), outlink(H), outlink(outlink(H)), inlink(inlink(H)),\\ inlink(outlink(H)), outlink(inlink(H))\}\) e quindi rappresenta l'insieme delle relazioni con i nodi vicini del nodo\ \(H\) . L'algoritmo è suddiviso in quattro fasi:
 \begin{itemize}
  \item vengoono estratte delle feature base per ogni nodo;
  \item viene eseguita una prima classificazione;

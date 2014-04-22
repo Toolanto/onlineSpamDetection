@@ -134,6 +134,12 @@ B.~Wu and B.~D. Davison, ``Identifying link farm spam pages,'' in {\em
   Proceedings of the 14th International World Wide Web Conference},
   pp.~820--829, ACM Press, 2005.
 
+\bibitem{Cheng:2011:LWS:1935826.1935902}
+Z.~Cheng, B.~Gao, C.~Sun, Y.~Jiang, and T.-Y. Liu, ``Let web spammers expose
+  themselves,'' in {\em Proceedings of the Fourth ACM International Conference
+  on Web Search and Data Mining}, WSDM '11, (New York, NY, USA), pp.~525--534,
+  ACM, 2011.
+
 \bibitem{Gan:2007:IWS:1244408.1244412}
 Q.~Gan and T.~Suel, ``Improving web spam classifiers using link structure,'' in
   {\em Proceedings of the 3rd International Workshop on Adversarial Information
@@ -149,12 +155,6 @@ G.~Geng, C.~Wang, and Q.~Li, ``Improving web spam detection with re-extracted
 G.-G. Geng, Q.~Li, and X.~Zhang, ``Link based small sample learning for web
   spam detection,'' in {\em Proceedings of the 18th International Conference on
   World Wide Web}, WWW '09, (New York, NY, USA), pp.~1185--1186, ACM, 2009.
-
-\bibitem{Cheng:2011:LWS:1935826.1935902}
-Z.~Cheng, B.~Gao, C.~Sun, Y.~Jiang, and T.-Y. Liu, ``Let web spammers expose
-  themselves,'' in {\em Proceedings of the Fourth ACM International Conference
-  on Web Search and Data Mining}, WSDM '11, (New York, NY, USA), pp.~525--534,
-  ACM, 2011.
 
 \bibitem{Ghiam:2013cloaking}
 S.~Ghiam and A.~N. Pour, ``Detecting cloaking web spam using hash function,''

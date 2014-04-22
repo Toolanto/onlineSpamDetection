@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  19 APR 2014 17:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  22 APR 2014 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -840,64 +840,67 @@ File: immagini/linkfarm/immagine2.png Graphic file (type png)
 Package pdftex.def Info: immagini/linkfarm/immagine2.png used on input line 152
 .
 (pdftex.def)             Requested size: 284.35794pt x 199.16928pt.
- [44] [45 <./immagini/linkfarm/immagine1.png (PNG copy)>] <immagini/gan/immagin
-e1.png, id=210, 343.2825pt x 212.795pt>
+ [44] [45 <./immagini/linkfarm/immagine1.png (PNG copy)>] [46 <./immagini/linkf
+arm/immagine2.png (PNG copy)>]
+<immagini/gan/immagine1.png, id=213, 343.2825pt x 212.795pt>
 File: immagini/gan/immagine1.png Graphic file (type png)
 
 <use immagini/gan/immagine1.png>
-Package pdftex.def Info: immagini/gan/immagine1.png used on input line 164.
-(pdftex.def)             Requested size: 227.62204pt x 141.09776pt.
- [46 <./immagini/linkfarm/immagine2.png (PNG copy)>] <immagini/gan/immagine2.pn
-g, id=214, 367.3725pt x 221.82875pt>
+Package pdftex.def Info: immagini/gan/immagine1.png used on input line 174.
+(pdftex.def)             Requested size: 284.52756pt x 176.37302pt.
+ [47]
+<immagini/gan/immagine2.png, id=217, 367.3725pt x 221.82875pt>
 File: immagini/gan/immagine2.png Graphic file (type png)
 
 <use immagini/gan/immagine2.png>
-Package pdftex.def Info: immagini/gan/immagine2.png used on input line 171.
-(pdftex.def)             Requested size: 227.62204pt x 137.44777pt.
+Package pdftex.def Info: immagini/gan/immagine2.png used on input line 181.
+(pdftex.def)             Requested size: 284.52756pt x 171.81732pt.
 
-<immagini/gan/immagine3.png, id=215, 372.39125pt x 204.765pt>
+<immagini/gan/immagine3.png, id=218, 372.39125pt x 204.765pt>
 File: immagini/gan/immagine3.png Graphic file (type png)
 
 <use immagini/gan/immagine3.png>
-Package pdftex.def Info: immagini/gan/immagine3.png used on input line 178.
-(pdftex.def)             Requested size: 227.62204pt x 125.16579pt.
- [47 <./immagini/gan/immagine1.png (PNG copy)> <./immagini/gan/immagine2.png (P
-NG copy)>] [48 <./immagini/gan/immagine3.png (PNG copy)>] [49]) [50]
+Package pdftex.def Info: immagini/gan/immagine3.png used on input line 188.
+(pdftex.def)             Requested size: 284.52756pt x 156.45723pt.
+ [48 <./immagini/gan/immagine1.png (PNG copy)> <./immagini/gan/immagine2.png (P
+NG copy)>] [49 <./immagini/gan/immagine3.png (PNG copy)>] [50]) [51]
 \openout2 = `capitoli/tecnicheAltre.aux'.
 
  (./capitoli/tecnicheAltre.tex
 Capitolo 4.
-[51
+[52
 
 
 
-] [52] [53] [54] <immagini/altre/webb.png, id=241, 811.03pt x 587.19376pt>
+] [53] [54] <immagini/altre/webb.png, id=241, 811.03pt x 587.19376pt>
 File: immagini/altre/webb.png Graphic file (type png)
 
 <use immagini/altre/webb.png>
-Package pdftex.def Info: immagini/altre/webb.png used on input line 38.
+Package pdftex.def Info: immagini/altre/webb.png used on input line 29.
 (pdftex.def)             Requested size: 284.52756pt x 206.00471pt.
  [55] [56 <./immagini/altre/webb.png (PNG copy)>]
 <immagini/altre/seov.png, id=249, 772.8875pt x 440.64626pt>
 File: immagini/altre/seov.png Graphic file (type png)
 
 <use immagini/altre/seov.png>
-Package pdftex.def Info: immagini/altre/seov.png used on input line 54.
+Package pdftex.def Info: immagini/altre/seov.png used on input line 45.
 (pdftex.def)             Requested size: 284.52756pt x 162.21626pt.
- [57 <./immagini/altre/seov.png (PNG copy)>]
+ [57]
 <immagini/altre/browser.png, id=253, 1039.885pt x 462.72874pt>
 File: immagini/altre/browser.png Graphic file (type png)
 
 <use immagini/altre/browser.png>
-Package pdftex.def Info: immagini/altre/browser.png used on input line 74.
+Package pdftex.def Info: immagini/altre/browser.png used on input line 66.
 (pdftex.def)             Requested size: 284.52756pt x 126.60474pt.
- [58]) [59 <./immagini/altre/browser.png (PNG copy)>] [60] (./tesi.bbl [61
+ [58 <./immagini/altre/seov.png (PNG copy)>]
+[59 <./immagini/altre/browser.png (PNG copy)>]) [60] (./tesi.bbl [61
 
 
 
-] [62] [63] [64]) [65] (./tesi.aux
-(./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux)
-(./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux)) ) 
+] [62]
+[63] [64]) [65] (./tesi.aux (./inizio/introduzione.aux)
+(./capitoli/tecnicheAntispam.aux) (./capitoli/tecnicheGrafo.aux)
+(./capitoli/tecnicheAltre.aux)) ) 
 Here is how much of TeX's memory you used:
  6314 strings out of 495048
  92433 string characters out of 3181555
@@ -905,24 +908,24 @@ Here is how much of TeX's memory you used:
  9343 multiletter control sequences out of 15000+200000
  11164 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,43p,1274b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (70 pages, 1720898 bytes).
+ 38i,9n,43p,1177b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmext
+ra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb>
+Output written on tesi.pdf (70 pages, 1721506 bytes).
 PDF statistics:
  333 PDF objects out of 1000 (max. 8388607)
  205 compressed objects within 3 object streams

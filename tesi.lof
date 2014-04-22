@@ -32,10 +32,10 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Struttura bow-tie.\relax }}{42}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Algoritmo di ricerca dei seed set\relax }}{45}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Algoritmo per aumentare il seedset\relax }}{46}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Distribuzione dello spam in entrata\relax }}{47}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Distribuzione dello spam in uscita\relax }}{47}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Distribuzione entrante pesata\relax }}{48}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Distribuzione dello spam in entrata\relax }}{48}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Distribuzione dello spam in uscita\relax }}{48}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Distribuzione entrante pesata\relax }}{49}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Distribuzione degli indirizzi IP di due dataset: WebSpam che contiene pagine spam e WebBase che contiene pagine non spam.\relax }}{56}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Distribuizione delle pagine sulla base della feature SEOV.\relax }}{57}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Distribuizione delle pagine sulla base della feature SEOV.\relax }}{58}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Dal comportamento dell'utente al grafo.\relax }}{59}
