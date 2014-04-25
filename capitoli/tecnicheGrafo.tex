@@ -1,29 +1,36 @@
 \chapter{Tecniche basate sul grafo}
 \lstset{basicstyle=\small\ttfamily,keywordstyle=\color{black}\bfseries,commentstyle=\color{darkgray},stringstyle=\color{black},showstringspaces=true}
-In questo capitolo verrano presentate le tecniche presenti in letteratura che si avvalgono del grafo derivato dalla fase di crawling per rilevare lo spam. In particolare tali tecniche fanno uso del grafo del web ricavato dai collegamenti ipertesuali tra le pagine. Il web, quindi, può essere rappresentato come un grafo diretto \textit{G = (V,E)}, dove \textit{V} è l'insieme dei nodi del grafo e rappresenta le pagine web mentre \textit{E} è l'insieme degli archi  diretti tra i nodi e rappresenta l'insieme dei link diretti tra le pagine: assumendo che ci siano due pagine web \(a_p\) e \(b_p\) queste saranno rappresentate da due nodi del grafo \(a\) e \(b\); se esiste un collegamento ipertestuale  dalla pagina \(a_p\) alla pagina \(b_p\) allora sarà associato un arco diretto dal nodo \(a\) al nodo \(b\). Ogni pagina può avere link in uscita (detti anche outlink)  che sono i link presenti nella pagina che referenziano altre pagine, link in entrata (inlink) ovvero tutti i riferimenti della pagina fatti da altre 
-pagine. Inoltre il grafo può essere astratto e rappresentato da una matrice di transizione cosi formata:
+In questo capitolo verrano presentate le tecniche di spam detection presenti in letteratura  (denominate anche \textit{linked base}) che si avvalgono del grafo del web  derivato dalla fase di crawling, che si ricava dai collegamenti ipertesuali tra le pagine. Il web, infatti, può essere rappresentato come un grafo diretto \textit{G = (V,E)} dove \textit{V} è l'insieme dei nodi del grafo e rappresenta le pagine web, ed \textit{E} è l'insieme degli archi  diretti tra i nodi e rappresenta l'insieme dei link diretti tra le pagine; assumendo che ci siano due pagine web \(a_p\) e \(b_p\) queste saranno rappresentate da due nodi del grafo \(a\) e \(b\); se esiste un collegamento ipertestuale  dalla pagina \(a_p\) alla pagina \(b_p\) allora vi sarà un arco diretto dal nodo \(a\) al nodo \(b\). 
+
+Ogni pagina può avere:
+\begin{itemize}
+ \item \textit{outlink}: link in uscita ovvero i link presenti nella pagina che referenziano altre pagine web;
+ \item \textit{inlink}: link in entrata ovvero tutti i riferimenti della pagina fatti da altre pagine.
+\end{itemize}
+
+Il grafo del web può essere astratto e rappresentato da una matrice di transizione cosi formata:
 \begin{equation}
 T(p,q)=\left \{
 \begin{array}{cc}
-0 & if(q,p) \in E\\
+0 & if(q,p) \not\in E\\
 1/\omega(q) & if(q,p) \in E
 \end{array}
 \right .
 \end{equation}
-dove \(\omega(q)\) è il grado di link in uscita della pagina \(q\). 
+dove \(q\) e \(p\) sono delle pagine web appartenenti al grafo e \(\omega(q)\) è il grado di link in uscita della pagina \(q\). 
 Possiamo anche definire la matrice di transizione inversa U:
 \begin{equation}
 U(p,q)=\left \{
 \begin{array}{cc}
-0 & if(p,q) \in E\\
+0 & if(p,q) \not\in E\\
 1/l(q) & if(p,q) \in E
 \end{array}
 \right .
 \end{equation}
 dove \(l(q)\) è il grado di link in ingresso della pagina \(q\). Bisogna notare che \(U \not = T^T\), ovvero la matrice di transizione inversa \(U\) non è uguale alla matrice di transizione trasposta.
 \section{Metodi classici per identificare lo spam web usando il grafo}
-Uno dei primi metodi adottati per identifiare lo spam web usando il grafo è \textit{Trustrank} \cite{Gyongyi:2004:CWS:1316689.1316740}. \textit{Trustrank} fa uso di un insieme di pagine di partenza \(S\) (detto anche seedset) che sono valutate da degli esperti e che vengono classificate in due sottoinsiemi: pagine non spam \(S^+\) e pagine spam \(S^-\); questo fase è chiamata funzione \textit{Oracle}. Per determinare le pagine non spam senza invocare la funzione \textit{Oracle} su tutto il grafo derivato dalla fase di crawling, viene fatta un'assunzione empirica chiamata \textit{isolazione approssimata dell'insieme delle pagine buone} la quale afferma che le pagine non spam raramente punteranno a delle pagine spam dato che gli sviluppatori di pagine non spam hanno poco interesse nel linkare pagine spam.  A quest'ultima affermazione ci sono delle eccezioni che riguardano il caso in cui gli sviluppatori web sonoingannati tramite ad esempio l'uso di tecniche come l'\textit{honeypot}. Quindi fissato un numero 
-limitato di chiamate della funzione \textit{Oracle} sul seedset di partenza e sfuttando l'assunzione fatta precendentemente viene definita una funzione, denominata \textit{funzione di verità ignorante \(T_0\)}, per ogni pagina pagina \(p\) del grafo:
+Uno dei primi metodi adottati di spam detection utilizzando il grafo del web è \textit{Trustrank} \cite{Gyongyi:2004:CWS:1316689.1316740}. \textit{Trustrank} applica a un insieme di pagine di partenza \(S\) (detto anche seedset) una funzione \textit{Oracle} per classificare il seedset in due sottoinsiemi, pagine non spam \(S^+\) e pagine spam \(S^-\); tale classificazione è effettuata manualmente da esperti. Per determinare le pagine non spam senza invocare la funzione \textit{Oracle} su tutto il grafo derivato dalla fase di crawling, viene fatta un'assunzione empirica chiamata \textit{isolazione approssimata dell'insieme delle pagine buone}, la quale afferma che le pagine non spam raramente punteranno a delle pagine spam. Razionale di tale assunzione è che gli sviluppatori di pagine web non spam non hanno interesse nel linkare pagine spam (a meno che  tramite l'uso di tecniche come l'\textit{honeypot} vengano ``ingannati''). Quindi fissato un numero limitato di chiamate della funzione \textit{Oracle} sul 
+seedset di partenza e sfruttando l'assunzione fatta precendentemente viene definita una funzione, denominata \textit{funzione di verità ignorante \(T_0\)}, per ogni pagina pagina \(p\) del grafo:
 \begin{equation}
 T_0(p)=\left\{
 \begin{array}{ccc}
@@ -32,7 +39,7 @@ O(p) & if & p\in S \\
 \end{array}
 \right .
 \end{equation}
-dove la funzione \(O\) è la funzione \textit{Oracle}. Dal momento che le pagine buone dovrebbero puntare ad altre pagine buone assegnamo 1 a tutte le pagine che possono essere raggiunte da una pagina in \(S^+\) in \(M\) step. La funzione di verità \(T_M\) è definita come:
+dove la funzione \(O\) è la funzione \textit{Oracle}. Presupponendo che le pagine non spam puntino ad altre pagine non spam viene assegnato il valore 1 a tutte le pagine che possono essere raggiunte da una pagina in \(S^+\) in \(M\) step. La funzione di verità \(T_M\) è definita come:
 \begin{equation}
 T_M(p)=\left\{
 \begin{array}{ccccc}
@@ -43,72 +50,93 @@ O(p) & if & p\in S \\
 \right .
 \end{equation}
 Il percorso  dalla pagina \(q\) a \(p\) nell'equazione non comprende pagine spam incluse nell'insieme \(S^-\).
-
-Il problema della funzione di verità \(T_M\) è che non esiste la sicurezza che le pagine raggiungibili da pagine buone siano effetivamente della stessa carattesistica. Infatti più lontana una pagina \(p\) si trova dal seedset \(S^+\) minore è la certezza che quella pagina sia buona. Un modo per non incorrere in questo errore è ridurre il valore della funzione di verità ogni qual volta ci si allontana dal seedset \(S^+\). In figura \ref{fig:trustrank1} è possibile vedere in dettaglio l'algoritmo. 
 \begin{figure}
 \centering
 \includegraphics[width=8cm]{immagini/trustrank/trustrank}
 \caption{Algoritmo di trustrank}
 \label{fig:trustrank1}
 \end{figure}
-L'algoritmo calcola il valore di verità di ogni pagina dell'intero grafo. I valori di input sono il grafo descritto dalla matrice di transizione \(T\) e il numero di pagine \(N\) e i parametri di controllo dell'esecuzione dove: \(L\) è il numero di chiamate della funzione \(Oracle\), \(\alpha_b\) è il fattore di decadimento per il calcolo di \textit{Pagerank} ed infine \(M_b\) è il numero di iterazioni per il calcolo di \textit{Pagerank}. Al primo passo viene invocata la funzione \textit{SelectSeed()} che calcola l'insieme delle pagine con un relativo punteggio di pertinenza per essere incluse nel seedset di partenza. 
+Limite della funzione di verità \(T_M\) è che si basa su un'assunzione, quindi non esiste la sicurezza che le pagine raggiungibili da pagine non spam siano effetivamente della pagine non spam; tale sicurezza si riduce quanto più lontana dal seedset \(S^+\) è una pagina \(p\). Per non incorrere in tale errore si può ridurre il valore della funzione di verità in maniera proporzionale alla distanza dal seedset \(S^+\).
 
-Gli autori consigianto due metodi per implementare questa funzione tenenendo conto che il risultato, ovvero il seedset, deve essere il migliore è il più piccolo possibile. Il primo approccio, molto simile a PageRank con la differenza che si è  interessati ai link in uscita e non a quelli in ingresso, è dare una preferenza alle pagine dalle quali si possono raggiungere molte altre pagine. Perciò per calcolare la desideribilità di una pagina viene calcolato il PageRank sul grafo \(G'=(V,E')\), dove
-\begin{equation}
- (p,q)\in E'\leftrightarrow(q,p)\in E
-\end{equation}
-Questo approccio è chiamato \textit{Inverse PageRank}. Il secondo metodo detto \textit{High PageRank}, da una alto valore di pertinenza per fare parte del seedset di partenza dell'altgoritmo di \textit{Trustrank} a pagineche hanno un alto valore di pagerank.
+In figura \ref{fig:trustrank1} è illustrato lo pseudo-codice dell'algoritmo di \textit{Trustrank}; sarà descritto in dettaglio come funziona. 
 
-Ritornando all'algoritmo di \textit{Trustrank} in figura \ref{fig:trustrank1} nel secondo punto  la funzione \(Rank(x,s)\) ordina gli elementi di \(x\) in modo decrescente sulla base dello score di \(s\). Il punto tre invoca la funzione \textit{Oracle} su \(L\) pagine. I valori del vettore \(d\) che corrispondono alle pagine buone del seed sono imposate a 1. Nel punto (4) il vettore viene normalizzato in modo tale che la somma faccia 1. Infine al punto (5) viene calcolato \textit{Trustrank} usando \textit{Pagerank} personalizzato dal vettore \(d\) che rimpiazza la distribuzione uniforme. Dall'algoritmo si nota che \textit{Trustrank} è una versione modificata di \textit{Pagerank} dove il vettore di teletrasporto è il seed set \(S^+\) calcolato al punto 3 e 4.
+I valori di input dell'algoritmo sono:
+\begin{itemize}
+ \item il grafo descritto dalla matrice di transizione \(T\);
+ \item il numero di pagine \(N\);
+ \item i parametri di controllo dell'esecuzione: \(L\) è il numero di chiamate della funzione \(Oracle\), \(\alpha_b\) è il fattore di decadimento per il calcolo di \textit{Pagerank} ed infine \(M_b\) è il numero di iterazioni per il calcolo di \textit{Pagerank}.
+\end{itemize}
+
+Al primo passo viene invocata la funzione \textit{SelectSeed()} che calcola l'insieme delle pagine con un relativo punteggio di pertinenza per essere incluse nel seedset di partenza. Gli autori consigliano due metodi per implementare questa funzione : 
+\begin{itemize}
+ \item il primo metodo, chiamato \textit{Inverse PageRank}, attribuisce una preferenza alle pagine dalle quali si possono raggiungere molte altre pagine,  applicando l'algoritmo di PageRank sul grafo trasposto;
+\item il secondo metodo, detto \textit{High PageRank}, assegna un alto valore di pertinenza a pagine che hanno un alto valore di pagerank.
+\end{itemize}
+
+Nel secondo punto  la funzione \(Rank(x,s)\) ordina gli elementi di \(x\) in modo decrescente sulla base dello score di \(s\). 
+
+Il punto tre invoca la funzione \textit{Oracle} su \(L\) pagine, impostando a 1 i valori del vettore \(d\) che rappresenta l'insieme delle pagine del seedset.
+
+Nel punto quattro, ai valori del vettore \(d\), viene applicata una normalizzazione in modo tale che la somma faccia 1. 
+
+Infine al punto cinque viene calcolato \textit{Trustrank} usando \textit{Pagerank} dove il vettore di teletrasporto è rimpiazzato dal vettore \(d\). Dall'algoritmo si nota che \textit{Trustrank} è una versione personalizzata di \textit{Pagerank} dove il vettore di teletrasporto è il seedset \(S^+\) calcolato al punto 3 e 4. L'obbiettivo è quindi assegnare un valore di verità alto alle pagine non spam e basso per le pagine spam.
 
 
-Un altro algoritmo che è stato progettato per identificare lo spam usando come input il grafo delle pagine web è \textit{Anti-Trust Rank} \cite{Krishnan06webspam}. Partendo dalla stessa intuizione di \textit{Trustrank} dell'isolamento approssimato ovvero che pagine non spam molto raramente punteranno a pagine malevoli, \textit{Anti-trust rank}  popola un seedset formato da pagine spam e propaga la funzione Anti Trust (che sarebbe la funzione di verità di Trustrank) sul grafo trasposto con l’obbiettivo di rilevare le pagine spam, le quali successivamente potranno essere filtrate da un motore di ricerca. Più precisamente a differenza di quanto avviene in \textit{Trustrank} dove la funzione \textit{Trust} è propagata dal seedset composto da pagine non spam lungo tutto il grafo, in \textit{Anti-Trust Rank} la funzione (in questo caso la funzione \textit{Anti Trust}) è propagata nella direzione inversa ai link in entrata ad ogni pagina del grafo, partendo da un insieme di pagine del seed set composto da pagine 
-spam. L'obbiettivo è assegnare un rank maggiore alle pagine spam e successivamente eliminarle dalle ricerche usando un valore di soglia traminte cui le pagine sono considerate spam oppure ritornando le \(n\) pagine che hanno valore di \textit{Anti-Trust Rank} più alto.
+Un altro algoritmo progettato per identificare lo spam usando come input il grafo delle pagine web è \textit{Anti-Trust Rank} \cite{Krishnan06webspam}. Partendo dalla stessa intuizione dell'isolamento approssimato ovvero che pagine non spam molto raramente puntino a pagine malevoli, \textit{Anti-trust rank}  popola un seedset formato da pagine spam e propaga la funzione Antitrust (corrispondente alla funzione di verità di Trustrank) sul grafo trasposto con l’obbiettivo di rilevare le pagine spam, che potranno quindi essere filtrate da un motore di ricerca. Più precisamente, a differenza di quanto avviene in \textit{Trustrank} dove la funzione \textit{Trust} è propagata dal seedset composto da pagine non spam lungo tutto il grafo, in \textit{Anti-Trust Rank} la funzione \textit{Anti Trust} è propagata nella direzione inversa ai link in entrata ad ogni pagina del grafo, partendo da un insieme di pagine del seed set composto da pagine spam. L'obbiettivo è assegnare un rank maggiore alle pagine spam e 
+successivamente eliminarle dalle ricerche impostando un valore soglia traminte escluderle oppure ritornando le \(n\) pagine che hanno valore di \textit{Anti-Trust Rank} più alto.
  
-\textit{Trustrank} e \textit{Anti-Trust rank} sono ottimi algoritmi per identificare lo spam, ma hanno il problema relativo alla dimensione dell’insieme  seed perché potrebbe non essere sufficientemente rappresentativo per coprire bene tutti gli argomenti del web. Per tentare di risolvere questo problema è stato implementato un metodo \cite{Wu:2006:TTU:1135777.1135792}  che per ottenere una vasta copertara delle pagine web fa uso degli argomenti delle pagine come segnale di ingresso ovvero invece di usare un singolo valore di \textit{trustrank} per un sito, vengono estrapolati per ogni pagina gli argomenti che essa contiene e successivamente viene calcolato \textit{trustrank} per tutti gli argomenti di ogni pagina. L'algoritmo consiste nel partizonare il seedset sulla base dei vari argomenti che esso contiene e usare ognuna di queste partizioni come seedset per calcolare il valore di \textit{trustrank} per ogni pagina.
+\textit{Trustrank} e \textit{Anti-Trust rank} sono ottimi algoritmi per identificare lo spam ma hanno il problema relativo alla dimensione dell’insieme  seedset, in quanto tale seedset potrebbe non essere sufficientemente rappresentativo per campionare tutti gli argomenti del web. Per tentare di risolvere questo problema è stato implementato un metodo \cite{Wu:2006:TTU:1135777.1135792}  che fa uso degli argomenti delle pagine come segnale di ingresso;  invece di usare un singolo valore di \textit{trustrank} per un nodo, vengono estrapolati per ogni pagina gli argomenti contenuti. L'algoritmo partizona il seedset sulla base dei vari argomenti che esso contiene e usa ognuna di queste partizioni come seedset di partenza per calcolare il valore di \textit{trustrank} per ogni pagina.
 
-Un altro metodo per l'identificazione di pagine spam è descritto in \cite{Caverlee:2007:CWS:1281100.1281124}. Questo metodo separa la credibilità di una pagina dalla credibilità del link per quella pagina. Al contrario di \textit{pagerank} tale metodo è difficilmente manipolabile tramite tecniche come \textit{hoenypot}. La credibilità viene definita in termini di credibilità \textit{k-scope}. Data una funzione \(C\) essere una funzione di credibilità che istantaneamente valuta la qualità di un link di un pagina \(p\) al tempo \(t\), un valore di \(C(p,t)=0\) indica che \(p\) non è credibile mentre \(C(p,t)=1\) indica che \(p\) è credibile. Dato  un percorso in un grafo diretto \(G\) dalla pagina \(p\) alla pagina \(q\) essere la sequenza di nodi: \(path(p,q)=(n_0,n_1,...,n_j)\) dove \(p=n_0, q=n_j\) tale che esiste un arco diretto tra nodi successivi nel percorso \(n_i,n_{i+1}\in L\) per \(0\leq i \leq j-1\), diciamo che un percorso  in un grafo diretto \(G\) dalla pagina \(p\) alla pagina \(q\) è un \textit{
-bad path} se la pagina 
-di destinazione è una pagina spam \(q\in P_b\) (dove \(P_b\) è l'insieme delle pagine spam) e nessuna altra pagina nel percorso è una pagina spam. \(path(p,q)=(n_0,n_1,...,n_j)\) e \(q\in P_b\) e \(n_i\not\in P_b (0\leq i\leq j-1)\). La probabilità che una camminata casuale passi, lungo un percorso di lunghezza \(k\), da una pagina \(p\) è denotata con \(Pr(path_k(p))\) ed è determinata con i pesi degli archi per ogni hop nel percorso:
+ In letteratura viene descritto un metodo di spam detection  \cite{Caverlee:2007:CWS:1281100.1281124} \textit{linked base} che è difficilmente manipolabile tramite tecniche come \textit{honeypot}, a differenza dei precedendi metodi illustrati in questo capitolo . Infatti tale metodo separa la credibilità di una pagina dalla credibilità del link per quella pagina. La credibilità viene definita in termini di credibilità \textit{k-scope}. Sia una funzione \(C\) una funzione di credibilità che istantaneamente valuta la qualità di un link di un pagina \(p\) al tempo \(t\), per valori di \(C(p,t)=0\) la funzione indica che \(p\) non è credibile mentre per  \(C(p,t)=1\) la funzione indica che \(p\) è credibile. Sia un percorso in un grafo diretto \(G\) dalla pagina \(p\) alla pagina \(q\) la sequenza di nodi: \(path(p,q)=(n_0,n_1,...,n_j)\) dove \(p=n_0, q=n_j\) tale che esista un arco diretto tra nodi successivi nel percorso \(n_i,n_{i+1}\in L\) per \(0\leq i \leq j-1\), si definisce \textit{bad path} quel percorso  in un grafo  diretto \(G\)  dalla pagina \(p\) alla pagina \(q\) se la pagina di destinazione è una pagina spam \(q\in P_b\) (dove \(P_b\) è l'insieme delle pagine spam) e nessuna altra pagina nel percorso è una pagina spam ovvero \(path(p,q)=(n_0,n_1,...,n_j)\) e \(q\in P_b\) e \(n_i\not\in P_b (0\leq i\leq j-1)\). La probabilità che una camminata casuale passi attraverso un percorso di lunghezza \(k\) da una pagina \(p\) è denotata con \(Pr(path_k(p))\) ed è determinata con i pesi degli archi per ogni hop nel percorso:
 \begin{equation}
  PR(path_k(p))=\prod_{i=0}^{k-1}w(n,n_{i+1})
 \end{equation}
-Quindi credibilità \textit{k-scope} di una pagina  è definita in termini di probabilità che una camminata casuale eviti le pagine spam dopo aver superato \(k\) hop dalla pagina di origine. La credibilità \textit{k-scope} di una pagina \(p\) al tempo \(t\), denotata con \(C_k(p,t)\) è definita come segue:
+Quindi la credibilità \textit{k-scope} di una pagina  è definita in termini di probabilità che una camminata casuale eviti le pagine spam dopo aver superato \(k\) hop dalla pagina di origine. La credibilità \textit{k-scope} di una pagina \(p\) al tempo \(t\), denotata con \(C_k(p,t)\), è definita come segue:
 \begin{equation}
  C_k(p,t)=1-\sum_{l=1}^k\left (\sum_{path_l(p)\in BPath_l(p)}Pr(path_l(p))\right )
 \end{equation}
-Nel caso \(p\in P_b\) allora \(C_k(p,t)=0\). Nel caso in cui non ci siano pagine spam all'interno di \(k\) hop di pagine allora \(p\) è credibile con un valore \(C_k(p,t)=1\) se lei è un pagina spam o nel caso in cui tutti i percorsi originati da \(p\) colpiscono una pagina \(p\) all'intenro di \(k\) hop, allora \(p\) no è credibile \(C_k(p,t)=0\). Ma dato che non che non è possibile avere tutto il grafo e non c'è nessuna sicurezza sulla conoscenza totale dei nodi spam è stato introdotto il concetto di cerdibilità tunable k-Scope, la quale aumenta il calcolo della credibilità k-scope includendo un fattore di penalità di credibilità. GLi obbiettivi sono approssimare al meglio la credibilità k-scope sotto limiti reali e capire come parametri differenti protrebbero influire sulla qualità delle varie funzioni usate. Sia \(G=(P,L)\) essere un grafo diretto, k il raggio massimo di camminata e \(\gamma(p)\) il fattore di penalità di credibilità di una pagina \(p\in P\) dove \(0\leq \gamma(p)\leq 1\). Definiamo la 
-credibilità tunable k-scope di una pagina \(p\), denotata con \(C_k(p)\), in due fasi, quando \(p \not \in P_b\):
+Dove \(BPath_l(p)\) è l'insieme di tutti i \textit{bad path} di lunghezza \(l\) che hanno origine dalla pagine \(p\). Appare chiaro che nel caso in cui \(p\in P_b\) allora la credibilità \textit{k-scope} è uguale a \(C_k(p,t)=0\). Se non ci siano pagine spam all'interno di \(k\) hop  allora la pagina \(p\) è credibile con un valore \(C_k(p,t)=1\). Il metodo ivi descritto presenta tuttavia due criticità:
+\begin{itemize}
+ \item è difficile costruire un grafo che rappresenti interamente tutto il web;
+ \item non si conoscono tutti i nodi spam.
+\end{itemize}
+ Per risolvere tali criticità è stato introdotto il concetto di cerdibilità \textit{tunable k-scope}, la quale aumenta il calcolo della credibilità k-scope includendo un fattore di penalità di credibilità. Gli obbiettivi sono approssimare al meglio la credibilità \textit{k-scope} sotto limiti reali e capire come parametri differenti protrebbero influire sulla qualità delle varie funzioni usate. \\Sia \(G=(P,L)\) un grafo diretto, \(k\) il raggio massimo di camminata e \(\gamma(p)\) il fattore di penalità di credibilità di una pagina \(p\in P\) dove \(0\leq \gamma(p)\leq 1\), si definisce la credibilità \textit{tunable k-scope} di una pagina \(p\), denotata con \(C_k(p)\), in due fasi, quando \(p \not \in P_b\):
 \begin{equation} 
 C_k(p)=\left ( 1 -\sum_{l=1}^k \left ( \sum_{path_l(p)\in BPath_l(p)} Pr(path_l(p)) \right ) \right ) \cdot\gamma(p)
 \end{equation}
 e quando \(p\in P_b\) allora: \(C_k(p)=0\).
 
-Oltre al metodo per definire la credibilità di un link gli autori in \cite{Caverlee:2007:CWS:1281100.1281124} propongono un algoritmo, denominato \textit{CredibleRank} di ranking basato sulla credibilità. \textit{CredibleRank} definisce che la qualità di una pagina è determinata da due criteri: la qualità delle pagine che puntano ad essa e la credibilità di ogni pagina puntata. Un link da un alta-qualità/alta-credibilità conta più di un link da alta-qualità/bassa-credibilità. Definendo con \(In(p)\) l'insieme di pagine che puntano a \(p\). Calcoliamo \textit{CredibleRank} \(r_c(p)\) per una pagina \(p\)
+Oltre a tale metodo per definire la credibilità di un link, gli autori in \cite{Caverlee:2007:CWS:1281100.1281124} propongono un algoritmo di ranking  basato sulla credibilità denominato \textit{CredibleRank}. \textit{CredibleRank} definisce che la qualità di una pagina è determinata da due criteri: la qualità delle pagine che puntano ad essa e la credibilità di ogni pagina puntata. Definendo con \(In(p)\) l'insieme di pagine che puntano a \(p\), si calcola \textit{CredibleRank} \(r_c(p)\) per una pagina \(p\):
 \begin{equation}
 r_c(p)=\sum_{q\in In(p)}C(q)\cdot r_c(q)\cdot w(q,p)
 \end{equation}
-Questa formula dice che il valore di \textit{CredibleRank} di una pagina \(p\) è determinato dalla qualità \(r_c(q)\) e dalla credibilità dei link \(C(q)\) delle pagine che la puntano cosi come la forza del link \(w(q,p)\).
+Dalla formula si evince che il valore di \textit{CredibleRank} di una pagina \(p\) è determinato dalla qualità delle pagine che la puntano \(r_c(q)\) e dalla credibilità dei link \(C(q)\) delle pagine che la puntano cosi come la forza del link \(w(q,p)\).
 
-Alcuni metodi si avvalgono dei sottografi ricavati a partire dal grafo ottenuto dalla fase di crawling per rilevare lo spam. Ad esempio in \cite{Leon-Suematsu:2011:WSD:2052138.2052339} lo spam viene neutralizzato tramite l'identificazione dei sottografi composti da pagine spam e i sottografi composti da pagine non spam. In particolare per rilevare i sottografi spam si analizza la struttura \textit{bow-tie} del grafo del web, che si ottiene identificando le componenti fortemente connesse. In figura \ref{fig:sub} si nota che la struttura \textit{bow-tie} è composta da 5 elementi: il \textit{Core} che è la componente fortemente connessa più che contiene la maggior parte di siti non spam che sono facilemte accessibili agli utenti; la componente \textit{IN} è formata da pagine che puntano al \textit{Core}  e \textit{OUT} da pagine che che sono puntate dal \textit{Core}, quindi le pagine più facilemente accessibili sono quelle che si trovano all'intenroo della componente \textit{OUT}; infine ci 
-sono le componenti \textit{Tendrils} che sono connesse alle componenti \textit{IN} o \textit{OUT} e la componente \textit{Tube}. Alcuni studi riportano che dense componenti fortemente connesse vicino al \textit{Core} del grafo del web, sono potenziali indicatori di spam quindi un modo di identificare i sottografi composti da pagine spam è analizzare le componenti fortemente connesse lungo \textit{In}, \textit{Out}, \textit{tendrils} e \textit{tube}. Tutte le componenti saranno valutate da un classificatore per identificare gli host di spam.
+Altri metodi di spam detection usano dei sottografi ricavati a partire dal grafo ottenuto dalla fase di crawling per rilevare lo spam. Ad esempio in \cite{Leon-Suematsu:2011:WSD:2052138.2052339} lo spam viene neutralizzato tramite l'identificazione di sottografi composti da pagine spam e i sottografi composti da pagine non spam.  
 \begin{figure}
 \centering
 \includegraphics[height=7cm]{immagini/sub/sub}
 \caption{Struttura bow-tie.}
 \label{fig:sub}
 \end{figure}
-L'identificazione dei sottografi non spam avviene all'interno della sezione \textit{Core} del grafo del web. Dato il massimo sottografo dove ogni nodo è connesso ad almeno \textit{k} altri nodi nel sottografo definto come \textit{k-core} e dato il valore di \textit{coreness} di un nodo essere il massimo parametro \textit{k} in modo che il nodo faccia parte del sottografo con un dato \textit{k-core} allora impostando un certo valore di \textit{coreness} si possono identificare i sottografi con una certa robustezza. Host importanti, ovvero quelli che hanno molti inlink, sono connessi a altri host altamente connessi, formando sottografi robusti con alta \textit{coreness}, mentre gli host spam hanno una bassa \textit{coreness}. Quindi per identificare gli host non-spam può impostare una valore di  soglia di \textit{coreness} per gli host che fanno parte della sezione \textit{Core} del grafo del web usando una variante di \textit{k-core} dove ogni nodo ha almeno \textit{k} inlink.
+Il metodo elabora il grafo del web a due livelli di granularità, uno a livello di pagine web  e l'altro a livello di host. 
 
-Il metodo elabora il grafo del web a due livelli di granularità, uno a livello di pagine web  e l'altro a livello di host ed è composto dalle segueni fasi: 
+Il primo passo consiste nel rilevare gli host e le pagine spam partizionando il grafo in sottografi densi e calcolando delle feature per ogni sottografo sia sulla base degli URL (statistiche basate sulla lunghezza, statistiche basate sulla posizione della pagina rispetto all'homepage e statistiche basate sulla lunghezza del nome dell'host) e feature basate sul grafo. In particolare per rilevare i sottografi spam si analizza la struttura \textit{bow-tie} del grafo del web che si ottiene identificando le componenti fortemente connesse. In figura \ref{fig:sub} si nota che la struttura \textit{bow-tie} è composta da 5 elementi:
 \begin{itemize}
- \item vengono rilevati gli host e le pagine spam partizionando il grafo in sottografi densi e calcolando delle feature, per ogni sottografo, sia sulla base degli URL quali: statistiche basate sulla lunghezza, statistiche basate sulla posizione della pagina rispetto all'homepage e statistiche basate sulla lunghezza del nome dell'host; e feature basate sul grafo come ad esempio la struttura all'interno dell grafo;
- \item i valori di spam sia a livello di pagine e di host vengono ricondotti ad un unico livello che è quello di host;
- \item vengono identificate le strutture fortemente connesse all'interno del textit{Core} del grafo del web per rilevare gli host non-spam;
- \item infine per aumentare il numero di host spam e non spam vengono propagati simultaneamente \textit{trustrank} e \textit{anti-trust rank}, dagli host che siamo sicuri siano non spam e spam agli host vicini in modo da valorizzare gli host non spam e penalizzare quelli di spam.
+ \item il \textit{Core} che è la componente fortemente connessa che contiene la maggior parte di siti non spam che sono facilemte accessibili agli utenti;
+ \item la componente \textit{IN} è formata da pagine che puntano al \textit{Core};
+ \item la componente \textit{OUT} è formata da pagine che sono puntate dal \textit{Core};
+ \item le componenti \textit{Tendrils} che sono connesse alle componenti \textit{IN} o \textit{OUT} e la componente \textit{Tube}.
 \end{itemize}
+Quindi le pagine più facilmente accessibili sono quelle che si trovano all'interno della componente \textit{OUT}. Alcuni studi asseriscono che la presenza di dense componenti fortemente connesse vicino al \textit{Core} del grafo del web sia un indicatore potenziale di spam quindi per identificare i sottografi composti da pagine spam occorre analizzare ed individuare componenti fortemente connesse lungo \textit{In}, \textit{Out}, \textit{tendrils} e \textit{tube}.
 
-Un altro metodo per rilevare lo spam utilizza combina  un classificatore automatico che combina un insieme di feature basate su link e contenuto \cite{Castillo:2007:KYN:1277741.1277814}. Dato che i link tra le pagine non sono piazzati in modo casuale ovvero pagine simili tendono a linkarsi tra di loro più frequentemente di pagini diverse, si può sfruttare tale meccanismo per rilevare le pagine spam, perché tali pagine tendono a raggrupparsi in cluster. Una spiegazione per questo fenomeno è che le pagine spam utilizzano delle tecniche per aumenteare il rank basato sui link attraverso le link farm. Gli autori assumono che gli host che sono ben collegati tra di loro sono molto probabilmente della stessa classe: spam o non spam.
+Il secondo passo consiste nel ricondurre  a livello di host i valori di spam sia a livello di pagine e di host.
+
+Successivamente vengono identificate le strutture fortemente connesse all'interno del \textit{Core} del grafo del web per rilevare gli host non-spam. L'identificazione dei sottografi non spam avviene all'interno della sezione \textit{Core} del grafo del web. Si definise \textit{k-core} il massimo sottografo dove ogni nodo è connesso ad almeno \textit{k} altri nodi nel sottografo e il valore di \textit{coreness} di un nodo il massimo parametro \textit{k} in modo che il nodo venga classificato nel sottografo con il medesimo \textit{k-core}. Host molto importanti, ovvero quelli che hanno molti \textit{inlink}, sono connessi a altri host altamente connessi formando sottografi robusti con alta \textit{coreness}, mentre gli host spam hanno una bassa \textit{coreness}. Quindi impostando un certo valore di \textit{coreness} si possono identificare i sottografi con una certa robustezza e identificare soli i sottofgrafi non spam.
+
+Infine per aumentare il numero di host spam e non spam vengono propagati simultaneamente \textit{trustrank} e \textit{anti-trust rank}, dagli host che siamo sicuri siano non spam e spam agli host vicini in modo da valorizzare gli host non spam e penalizzare quelli di spam.
+
+Un altro metodo per rilevare lo spam utilizza un classificatore automatico che combina un insieme di feature basate su link e contenuto \cite{Castillo:2007:KYN:1277741.1277814}. Considerando che i link tra le pagine non sono disposti in modo casuale ovvero pagine simili tendono a linkarsi tra di loro più frequentemente di pagine diverse, si può sfruttare tale meccanismo per rilevare le pagine spam che tendono a raggrupparsi in cluster. Infatti le pagine spam per aumenteare il rank basato sui link utilizzano le link farm che costituiscono dei cluster all'interno del grafo. Da queste considerazioni gli autori assumono che gli host ben collegati tra di loro appartengano molto probabilmente alla stessa classe: spam o non spam.
 
 \section{Metodi per identificare link farm}
 Per riconoscere una spam farm (o link farm) si parte dal presupposto che i nodi della spam farm avranno dei link uscenti verso delle pagine target \textit{t} per aumentarne il rank. In \cite{Gyongyi:2006:LSD:1182635.1164166} per identificare le spam farm viene introdotta una misura, denominata \textit{spam mass}, dell'impatto dello spam (basandosi sulla struttura del grafo) sul rank di una pagina. Usando questa misura tutte le pagine web avranno assegnate due valori: quello di \textit{pagerank} e quello relativo alla \textit{spam mass}, in particolare le pagine target delle spam farm ricevono  un alto valore di \textit{pagerank} e un alto valore di \textit{spam mass} mentre le pagine non spam anche possono avere un alto valore di \textit{pagerank} ma un basso valore di \textit{spam mass}. Partendo dal presupposto che le il web può essere partizionato in nodi non spam \(V^+\) e nodi spam \(V^-\) dove la loro unione forma il grafo del web, per una data partizione \(\{V^+,V^-\}\) di \(V\) e per dei nodi \(x\) 
