@@ -20,7 +20,7 @@
 \contentsline {section}{\numberline {3.2}Metodi per identificare link farm}{43}
 \contentsline {section}{\numberline {3.3}Link dai forum}{46}
 \contentsline {section}{\numberline {3.4}Metodi per migliorare la classificazione}{47}
-\contentsline {chapter}{\numberline {4}Tecniche che fanno uso di altri segnali}{53}
-\contentsline {section}{\numberline {4.1}Rilevamento dello spam di tipo cloacking}{53}
-\contentsline {section}{\numberline {4.2}Rilevare lo spam tramite l'header HTTP}{56}
-\contentsline {section}{\numberline {4.3}Altri metodi}{58}
+\contentsline {chapter}{\numberline {4}Tecniche che fanno uso di altri segnali}{52}
+\contentsline {section}{\numberline {4.1}Rilevamento dello spam di tipo cloacking}{52}
+\contentsline {section}{\numberline {4.2}Rilevare lo spam tramite l'header HTTP}{55}
+\contentsline {section}{\numberline {4.3}Altri metodi}{57}
