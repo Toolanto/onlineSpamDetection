@@ -9,44 +9,44 @@ The style file: ieeetr.bst
 Database file #1: biblio.bib
 Database file #2: biblio2.bib
 Database file #3: biblio3.bib
-You've used 34 entries,
+You've used 33 entries,
             1876 wiz_defined-function locations,
-            720 strings with 11398 characters,
-and the built_in function-call counts, 10982 in all, are:
-= -- 1117
-> -- 367
+            713 strings with 11048 characters,
+and the built_in function-call counts, 10570 in all, are:
+= -- 1078
+> -- 347
 < -- 2
-+ -- 135
-- -- 101
-* -- 801
-:= -- 1458
-add.period$ -- 39
-call.type$ -- 34
-change.case$ -- 32
++ -- 128
+- -- 95
+* -- 767
+:= -- 1402
+add.period$ -- 38
+call.type$ -- 33
+change.case$ -- 31
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 607
-empty$ -- 1084
-format.name$ -- 101
-if$ -- 2708
+cite$ -- 33
+duplicate$ -- 586
+empty$ -- 1047
+format.name$ -- 95
+if$ -- 2609
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 34
-newline$ -- 110
-num.names$ -- 34
-pop$ -- 113
+int.to.str$ -- 33
+missing$ -- 33
+newline$ -- 107
+num.names$ -- 33
+pop$ -- 110
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 432
+skip$ -- 416
 stack$ -- 0
-substring$ -- 828
-swap$ -- 242
+substring$ -- 796
+swap$ -- 233
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 117
-width$ -- 36
-write$ -- 379
+while$ -- 113
+width$ -- 35
+write$ -- 367

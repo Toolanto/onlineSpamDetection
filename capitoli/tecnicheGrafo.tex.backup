@@ -164,52 +164,46 @@ Dal momento che non è sempre possibile discernere la caratteristica (spam o non
  \tilde{m}_x=(p_x-p'_x)/p_x=1-p'_x/px
 \end{equation}
 \end{itemize}
-dove \(p=PR(v)\) è il \textit{pagerank} dei nodi basato su una distribuzione uniforme mentre \(p'=PR(v^{\tilde{V}^+})\) è \textit{pagerank} basato sull'insieme \(\tilde{(V)}^+\)  con una distribuzione di salto \(v^{\tilde{V}^+}\). Perciò è possibile utilizzare un valore soglia tramite il quale una pagina è considerata facente parte di una spam farm se il valore della stima assoluta o relativa di \textit{spam mass} supera la soglia, perché usando \(p'\) basato sull'insieme \(\tilde{(V)}^+\) il valore di \textit{spam mass} sarà maggiore per le pagine spam. Infatti nel caso della stima assoluta di \textit{spam mass} dove \(p_x-p'_x\), \(p_x\) è maggiore rispetto a \(p'_x\) per le pagine spam in quanto avranno difficilmente una relazione con il seedset \(\tilde{(V)}^+\) e quindi la sottrazione tendera ad avere un risultato maggiore per le pagine spam. Lo stesso ragionamento vale per la stima relativa di \textit{spam mass}.\\ 
+dove \(p=PR(v)\) è il \textit{pagerank} dei nodi basato su una distribuzione uniforme mentre \(p'=PR(v^{\tilde{V}^+})\) è \textit{pagerank} basato sull'insieme \(\tilde{(V)}^+\)  con una distribuzione di salto \(v^{\tilde{V}^+}\). Perciò è possibile utilizzare un valore soglia tramite il quale una pagina è considerata facente parte di una spam farm se il valore della stima assoluta o relativa di \textit{spam mass} supera la soglia, perché usando \(p'\) basato sull'insieme \(\tilde{(V)}^+\) il valore di \textit{spam mass} sarà maggiore per le pagine spam. Infatti nel caso della stima assoluta di \textit{spam mass} dove \(p_x-p'_x\), \(p_x\) è maggiore rispetto a \(p'_x\) per le pagine spam in quanto avranno difficilmente una relazione con il seedset \(\tilde{(V)}^+\) e quindi la sottrazione tendera ad avere un risultato maggiore per le pagine spam. Lo stesso ragionamento vale per la stima relativa di \textit{spam mass}.
 
-Le pagine all'interno delle spam farm sono densamente connesse tra loro e hanno molti link in entrata e uscita. Se utiliziamo come seedset pagine note che fanno parte di una spam farm, possiamo catalogare una qualsias pagina coem appartenente a tale spam farm se ha molti link in entrata e uscita rispettivamente da e per il seedset; in questo modo si può allargare il seedset di partenza aggiungendo la nuova pagina individuata. Tale processo è iterato fino a che nessuna altra pagina può essere aggiunta al seedset. Un metodo che applica questo principio per identificare le spam farm è descritto  in \cite{Wu05identifyinglink}. Per decidere se una pagina deve fare parte di un seedset, si parte dall'assunzione che le pagine all'interno della link farm normalmente hanno molti nodi in comune tra l'insieme dei link in entrata e quello dei link in uscita. Qualora  sono presenti pochi nodi in comune tra la pagina e il seedset questa non sarà catalogata come facente parte di una link farm viceversa la pagina sarà catalogata facente parte della link farm. L'algoritmo è presentato in dettaglio in figura \ref{fig:linkfarm1}. 
+Le pagine all'interno delle spam farm sono densamente connesse tra loro e hanno molti link in entrata e uscita. Se utiliziamo come seedset pagine note che fanno parte di una spam farm, possiamo catalogare una qualsias pagina coem appartenente a tale spam farm se ha molti link in entrata e uscita rispettivamente da e per il seedset; in questo modo si può allargare il seedset di partenza aggiungendo la nuova pagina individuata. Tale processo è iterato fino a che nessuna altra pagina può essere aggiunta al seedset. Un metodo che applica questo principio per identificare le spam farm è descritto  in \cite{Wu05identifyinglink}. Per decidere se una pagina deve fare parte di un seedset, si parte dall'assunzione che le pagine all'interno della link farm normalmente hanno molti nodi in comune tra l'insieme dei link in entrata e quello dei link in uscita. Qualora  sono presenti pochi nodi in comune tra l'insieme dei nodi in entrata e in uscita da una pagina questa non sarà catalogata come facente parte di una link 
+farm viceversa la pagina sarà catalogata facente parte della link farm. Ad esempio in figura \ref{fig:linkfarm} è rappresentata una link farm; il nodo \(A\) ha come insieme di nodi in uscita \(B\) e \(C\)  e come insieme di nodi in entrata \(B\) e \(C\), l'intersezione dei due insiemi crea un insieme di cardinalità uguale a 2, in questo caso dato le dimensioni dell'esempio il nodo \(A\) può essere considerato facente parte di una link farm.\\
+Dopo avere eseguito la verifica per tutte le pagine di un dataset si può ampliare la link farm con delle nuove pagine, del grafo del web, sfruttando il fatto che se una pagina punta a un insieme di pagine spam è probabile che anche essa sia spam. Quindi se il numero di outlink di una pagina \(p\) verso la link farm è uguale o supera una soglia, la pagina sarà giudicata spam e perciò facente parte del seedset della spam farm. Una volta trovate le pagine spam bisogna utilizzare queste informazioni per il ranking. Un modo è quello di eliminare queste pagine direttamente dal grafo del web, un altro modo può essere quello di penalizzare i link invece che le pagine, facenti parte della spam farm, con un fattore di decadimento o infine potrebbe essere utile eliminare direttamente i link che fanno parte della spam farm.
 \begin{figure}
 \centering
-\includegraphics[height=8cm]{immagini/linkfarm/immagine1.png}
-\caption{Algoritmo di ricerca dei seed set}
-\label{fig:linkfarm1}
+\includegraphics[width=8cm]{immagini/linkfarm/linkfarm}
+\caption{Struttura di una link farm.}
+\label{fig:linkfarm}
 \end{figure}
-Se il numero di incoming link in comune o outgoing link in comune è  uguale o maggiore a una soglia \(T_{IO}\) allora le pagine sono etichettate come spam.  Dall'intuizione che se una pagina punta a un insieme di pagine cattive è probabile che anche essa sia cattiva viene allargato il seed set usando un altra soglia \(T_{PP}\) per giudicare una pagina: se il numero di outgoing link a pagine spam è uguale o supera la soglia, la pagina sarà giudicata spam e perciò facente parte del seed set della spam farm. Il metodo descritto è formalizzato nell'algoritmo di \textit{ParentPenality} in figura \ref{fig:linkfarm2}.
-\begin{figure}
-\centering
-\includegraphics[height=7cm]{immagini/linkfarm/immagine2.png}
-\caption{Algoritmo per aumentare il seedset}
-\label{fig:linkfarm2}
-\end{figure}
-Una volta trovate le pagine spam bisogna utilizzare queste informazioni per il ranking. Un modo è quello di eliminare queste pagine direttamente dal grafo del web, un altro modo può essere quello di penalizzare i link invece che le pagine, facenti parte della spam farm, con un fattore di decadimento o infine potrebbe essere utile eliminare direttamente i link che fanno parte della spam farm.
 
 \section{Link dai forum}
-Un metodo utilizzato dagli spammer per creare delle grandi link farm è lo scambio di link che molto spesso avviene attraverso l'utilizzo di forum SEO (Search Engine Optimization). Questi forum contengo varie tipologie di discussioni, come ad esempio siegazioni su come manipolare gli algoritmi dei motori di ricerca per incrementare il rank delle pagine e sezioni dedicate anche allo scambio dei link. Un modo utile sarebbe quello di utilizzare le informazioni contenute in questi forum per identificare i siti spam e qundi azzerare o attenuare i loro valore di rilevanza delle ricerche in un motore di ricerca. Tale processo non è semplice in quanto nei post dei forum ci sono altre informazioni che producono rumore nel rilevamento dei link. Un modo efficace per implementare questa tecnica consiste nel seguire le seguenti fasi \cite{Cheng:2011:LWS:1935826.1935902}: 
+Un metodo utilizzato dagli spammer per creare delle grandi link farm è lo scambio di link che molto spesso avviene attraverso l'utilizzo di forum SEO (Search Engine Optimization). Questi forum contengo varie tipologie di discussioni  (ad esempio siegazioni su come manipolare gli algoritmi dei motori di ricerca per incrementare il rank delle pagine e sezioni dedicate anche allo scambio dei link). Utilizzando tali informazioni si potrebbe costruire un algoritmo per identificare i siti spam e qundi azzerare o attenuare il loro valore di rilevanza delle ricerche in un motore di ricerca. Tale processo non è semplice in quanto la presenza di numerose e diversificate informazioni producono rumore nel rilevamento dei link. Un modo efficace per implementare questa tecnica consiste nel  \cite{Cheng:2011:LWS:1935826.1935902}: 
 \begin{itemize}
- \item si estrggono tutti i link contenuti nei post.
- \item vengono estratte le feature dai link sulla base delle loro relazioni con gli utenti del forum e della struttura dei loro link nel grafo del web. Le feature vengono catalogate in tre tipi: feature del forum SEO (quali la frequenza di URL nel forum, numero di thread che il proprietario dell'URL ha discusso, numero di post autorizzati dal proprietario dell'URL, numero di URL inseriti dal proprietario dell'URL, media degli URL per post di un utente, numero di post che contengono l'URL del proprietario), feature del grafo (fanno parte il numero di link in ingresso, numero di link in uscita, media dei link in uscita dei vicini in ingresso, media dei link in entrata dei vicini in uscita) e feature del sito (la lunghezza dell'URL). 
- \item viene utilizzato un framework per calcolare il valore di spam dei siti.
+ \item Estrarre tutti i link contenuti nei post.
+ \item Dal momento che non tutti i link presenti nei post sono spam vengono estratte le feature dai link sulla base delle loro relazioni con gli utenti del forum e della struttura dei loro link nel grafo del web. Le feature vengono catalogate in tre tipi: feature del forum SEO (quali la frequenza di URL nel forum, numero di thread che il proprietario dell'URL ha discusso, numero di post autorizzati dal proprietario dell'URL, numero di URL inseriti dal proprietario dell'URL, media degli URL per post di un utente, numero di post che contengono l'URL del proprietario), feature del grafo (fanno parte il numero di link in ingresso, numero di link in uscita, media dei link in uscita dei vicini in ingresso, media dei link in entrata dei vicini in uscita) e feature del sito (la lunghezza dell'URL). 
+ \item Infine viene utilizzato un framework per calcolare il valore di spam dei siti.
 \end{itemize}
 Questi metodi sono di particolare aiuto nell'incrementare il numero di pagine spam che i metodi convenzionali (sia basati sul contenuto che sulla struttura del grafo) non riescono a identificare  e perciò è possibile usarlo come metodo complementare ai metodi classici. 
 
 
 \section{Metodi per migliorare la classificazione}
-Invece di cercare di migliorare la rilevazione delle pagine spam utilizzando nuove feature, o nuove tecniche altri metodi sono stati sviluppati con l'obbiettivo di migliorare la fase di classificazione . In \cite{Gan:2007:IWS:1244408.1244412} viene presentato un metodo per migliorare la classificazione  utilizzando un classificatore di base per etichettare le pagine e delle euristiche, basate sulla tipologia dei nodi vicini a un nodo \(v\), in modo da determinare se tale nodo \(v\) dovrebbe essere rietichettato basandosi sulla basa della prima classificazione o sull'infromazione portata dai nodi vicini. Gli autori di tale metodo ipotizzano che per un sito  la struttura dei vicini è un buon indicatore  per classificarlo in  spam o non spam. In particolare vengono analizzate alcune distribuzioni delle proprietà dei vicini:
+Oltre alla rilevazione delle pagine di spam utilizzando le tecniche e le feature descitte in precedenza, nodo focale risulta il miglioramento della fase di classificazione; in \cite{Gan:2007:IWS:1244408.1244412} viene presentato un metodo per migliorare la classificazione  utilizzando un classificatore di base, per etichettare le pagine, e delle euristiche basate sulla tipologia dei nodi vicini a un nodo \(v\). Tali euristiche determinano se il nodo \(v\) dovrebbe essere rietichettato basandosi sul risultato della prima classificazione o sull'informazione tratta dalle euristiche. Gli autori di tale metodo affermano che  la struttura dei vicini di un nodo è un buon indicatore  per classificarlo in  spam o non spam. In particolare vengono analizzate alcune distribuzioni delle proprietà dei vicini:
 \begin{itemize}
- \item la distribuzione dello spam in entrata:  in figura \ref{img:gan1} viene rappresentata la distribuzione dello spam in entrata: ogni sito andrà a finire in uno dei settori sull'asse \(x\) in base alla frazione di nodi spam tra i sui vicini in entrata. L'asse \(y\) rappresenta la percentuale di spam/non spam all'interno del settore. Una grande porzione di siti spam ha molti vicini che sono spam. 
+ \item la distribuzione dello spam in entrata: tale distribuzione è rappresentata  tramite il grafico in figura \ref{img:gan1}  dove ogni sito (dove si consce se esso è spam o non spam) andrà a finire in uno dei settori sull'asse \(x\) in base alla frazione di nodi spam tra i sui vicini in entrata. L'asse \(y\) rappresenta la percentuale di spam/non spam all'interno del settore. Dal grafico si nota che quanto più è alta la frazione di vicini spam in entrata di un sito tanto la probabilità che tale sito sia spam cresce.  
  \begin{figure}
  \centering
 \includegraphics[width=10cm]{immagini/gan/immagine1.png}
 \caption{Distribuzione dello spam in entrata}
 \label{img:gan1}
 \end{figure}
-\item la distribuzione dello spam in uscita: in figura \ref{img:gan2} viene osservato una distribuzione simile a quella per lo spam in entrata.
+\item la distribuzione dello spam in uscita: tale distribuzione è rappresentata  tramite il grafico in figura \ref{img:gan2}; si osserva che tale una distribuzione simile a quella per lo spam in entrata.
  \begin{figure}
  \centering
 \includegraphics[width=10cm]{immagini/gan/immagine2.png}
 \caption{Distribuzione dello spam in uscita}
 \label{img:gan2}
 \end{figure}
-\item distribuzione entrante pesata:vegono esaminati gli in-lin  pesati con pagerank (figura \ref{img:gan3}).
+\item distribuzione entrante pesata: tale distribuzione è rappresentata  tramite il grafico in figura \ref{img:gan3}); in tale distribuzione vegono esaminati gli inlink pesati con pagerank.
  \begin{figure}
  \centering
 \includegraphics[width=10cm]{immagini/gan/immagine3.png}
@@ -217,35 +211,34 @@ Invece di cercare di migliorare la rilevazione delle pagine spam utilizzando nuo
 \label{img:gan3}
 \end{figure}
 \end{itemize}
-Per rietichettare i nodi vengono cambiate le etichette che sono assegnate dal primo classificatore  sulla base dei nodi vicini, in particolare
-prima viene definita un etichetta per i nodi vicini di un sito, con un certo livello di confidenza, dopo viene confrontata questa etichetta con la prima (assegnata dal classificatore) se le due etichette sono molto diverse tra loro e l'etichette dei vicini sono moltoo affidabili in termini di confidenza 
-allora l’etichetta del sito viene cambiata ooppure si può usare un altro classificatore che usa le euristiche definite prima.
+Vi sono due approcci per rietichettare i nodi dopo la prima classificazione. Nel primo modo a ogni nodo viene assegnata un etichetta dal primo classificatore e successivamente viene definita un'altra etichetta per un nodo vicino, sulla base di una delle euristiche definite in precedenza, a cui viene associato un livello di confidenza; quindi l'etichetta del nodo determinata attraverso la classificazione di base viene confrontata con quella di un nodo vicino, se le due etichette sono molto difformi tra loro e l'etichetta del nodo vicino è molto affidabile in termini di confidenza allora l’etichetta del sito viene cambiata da spam a non spam (o viceversa). Il secondo modo consiste nel applicare, dopo la classificazione di base, un secondo classificatore che utilizza altre feature ( le etichette assegnate dal primo classificatore, la percentuale di inlink corrispondenti a siti spam, la percentuale di outlink che puntano a siti spam, ecc...).
 
-Un altro metodo che fa uso della riassegnazione delle etichette associate a ogni nodo dopo una prima fase di classificazione è descritto in \cite{Geng:2008:IWS:1367497.1367685}. Tale metodo fa uso di una strategia di riestrazione delle feature facendo delle analisi basate sui clustering dei nodi, analisi sulla propagazione e analisi basate sulla struttura del grafo dei nodi vicini. 
-Le analisi leate ai cluster vengono eseguite nel seguente modo: dato \(G=(V,E,w)\) essere un grafo non diretto dove \(V\) è l'insieme degli host, \(w=f(n)\) la funzione di pesatura dove \(n\) è il numero di link tra le pagine dell'host e \(E\) è l'insieme degli archi con peso non zero. Il grafo dopo essere stato clusterizzato in \(k\) cluster, la feature basata sul clustering può essere calcolata.
-\begin{equation}
- cf(H)=\frac{\sum_{h\in C(H)}spamicity(H)}{|C(H)|}
-\end{equation}
-dove \(C(H)\) è il cluster al quale l'host \(H\) appartiene e la \(spamicity(h)\) è il valore di spam rilevato durante la prima classificazione. Mentre la feature di propagazione si ottiene nel seguente modo:
-\begin{equation}
- pf(H)^{(t)}=\sum_{h:h->H}\frac{pf(h)^{t-1}\times weight(h,H)}{\sum_{g:h->g}weight(h,g)}
-\end{equation}
-dove \(t\) è il numero di iterazioni, \(pf(h)^{(0)}=spamicity(h)\) e \(weigth(h,H)\) è il peso degli host \(h\) e \(H\). Infine l'ultima feaure quella relativa alla struttura dei vicini si ottiene:
-\begin{equation}
- nf(H)=\frac{\sum_{h\in N(H)}(sapmicity(h)\times weight(H,h))}{|N(H)|}
-\end{equation}
-dove \(N(H) \in \{inlink(H), outlink(H), outlink(outlink(H)), inlink(inlink(H)),\\ inlink(outlink(H)), outlink(inlink(H))\}\) e quindi rappresenta l'insieme delle relazioni con i nodi vicini del nodo\ \(H\) . L'algoritmo è suddiviso in quattro fasi:
+Un altro metodo che fa uso della riassegnazione delle etichette associate a ogni nodo dopo una prima fase di classificazione è descritto in \cite{Geng:2008:IWS:1367497.1367685}. Tale metodo fa uso di una strategia di riestrazione delle feature facendo delle analisi basate sui clustering dei nodi, analisi sulla propagazione e analisi basate sulla struttura del grafo dei nodi vicini. L'algoritmo è suddiviso in quattro fasi:
 \begin{itemize}
  \item vengoono estratte delle feature base per ogni nodo;
  \item viene eseguita una prima classificazione;
  \item successivamente vengono riestratte le atre feature basate sui cluster, sulla propagazione e sulla struttura dei vicini;
  \item viene rieseguita una seconda fase di classificazione;
 \end{itemize}
-Nelle prime due fasi vengono estratte le feature di base basate sul contenuto e sulla struttura dei link e viene fatta una prima classificazione; nella terza e quarta fase vengono estratte i nuovi tipi di feature e successivamente viene rieseguita la classificazione.
+Le analisi sui cluster vengono eseguite utilizzando un grafo non diretto \(G=(V,E,w)\), dove \(V\) è l'insieme degli host, \(w\) è una funzione di pesatura e \(E\) è l'insieme degli archi con peso non zero. Quindi per calcolare la feature sui cluster il grafo viene partizionato in \(k\) cluster e successivamente calcolato:
+\begin{equation}
+ cf(H)=\frac{\sum_{h\in C(H)}spamicity(H)}{|C(H)|}
+\end{equation}
+dove \(C(H)\) è il cluster al quale l'host \(H\) appartiene e la \(spamicity(h)\) è il valore di spam rilevato durante la prima classificazione.\\
+Diversamente la feature di propagazione si ottiene nel seguente modo:
+\begin{equation}
+ pf(H)^{(t)}=\sum_{h:h->H}\frac{pf(h)^{t-1}\times weight(h,H)}{\sum_{g:h->g}weight(h,g)}
+\end{equation}
+dove \(t\) è il numero di iterazioni, \(pf(h)^{(0)}=spamicity(h)\) e \(weigth(h,H)\) è il peso degli host \(h\) e \(H\).\\ 
+Infine l'ultima feaure quella relativa alla struttura dei vicini si ottiene:
+\begin{equation}
+ nf(H)=\frac{\sum_{h\in N(H)}(sapmicity(h)\times weight(H,h))}{|N(H)|}
+\end{equation}
+dove \(N(H) \in \{inlink(H), outlink(H), outlink(outlink(H)), inlink(inlink(H)),\\ inlink(outlink(H)), outlink(inlink(H))\}\) e quindi rappresenta l'insieme delle relazioni con i nodi vicini del nodo\ \(H\) .
 
-Il problema di molti algoritmi di classificazione è il riperimento di dati etichettati ovverò per avere un buon risultato nella classificazione i dati di training devono essere consistenti. Per risolvere questo problema in \cite{Geng:2009:LBS:1526709.1526920} viene proposto un algoritmo di apprendimento supervisionato per migliorare le performance di un classificatore. Tale algoritmo è basato sul tradizionale self training e sull'apprendimento dai link ovvero la dipendenza topologica, l'algoritmo è denominato \textit{Link-training}. L'algoritmo di apprendimento si può riassumere nei seguenti processi:
+Le prestazioni della fase di classificazione degli algoritmi di spam detection sono legate al quantità di dati di traning con cui il classificatore viene istruito.  le performance della classificazione, quindi, in \cite{Geng:2009:LBS:1526709.1526920} viene proposto un particolare algoritmo di apprendimento supervisionato denominato \textit{Link-training}; tale algoritmo si basa sull'apprendimento dai link ovvero la dipendenza topologica. L'algoritmo di apprendimento si può riassumere nei seguenti passi:
 \begin{itemize}
- \item Prima viene istruito un classificatore con un piccolo dataset.
+ \item La prima fase consiste nel istruire un classificatore attraverso l'uso di un piccolo dataset.
  \item Successivamente viene utilizzato il classificatore per categorizzare e assegnare un valore di spam (\textit{PS}) ai dati non etichettati; il calcolo di \textit{PS} avviene nel seguente modo:
  \begin{equation}
   PS(x)=\frac{P_{spam}(x)}{P_{spam}(x)+P_{normal}(x)}
@@ -260,7 +253,7 @@ dove \(v\) e \(h\) sono gli host, \(weight(h,v)\) è il peso dell'host \(h\) e \
 Queste fasi del processo sono cicliche per un numero stabilito di iterazioni.
 \end{itemize}
 
-Gli algoritmi di spam detection basati sul grafo che viene ottenuto dalla fase di crawling, cercano di sfruttare le caratteristiche dei grafi per ottenere delle informazioni riguardo i nodi spam. Quasi tutti i metodi descritti si basano sulla stessa intuizione dell'algoritmo di \textit{trustrank} (quella realativa all'isolazione approssimata delle pagine buone) sfruttando tale intuizione per determinare le pagine spam. Ad esempio \textit{Anti-trust rank} sfrutta tale intuizione ma non andando a manipolare i link in uscità di ogni nodo ma i link dei nodi entranti. Altri metodi mentre si basano sulla ricerca delle spam farm mentre altri ancora si focalizzano sul miglioramento dei vari algoritmi di classificazione. Oltre ai metodi e feature descitte fino adesso ci sono altri metodi che utilizzano criteri diversi dal contenuto delle pagine web e dalla struttura del grafo per determinare le pagine spam, tali metodi sono nati per andare incontro alla crescita di nuovi tipi di spam web.
+Gli algoritmi di spam detection basati sul grafo ottenuto dalla fase di crawling sfruttano le caratteristiche dei grafi per ottenere delle informazioni riguardo i nodi spam. Quasi tutti i metodi descritti si basano sulla stessa intuizione dell'algoritmo di \textit{trustrank} (quella realativa all'isolazione approssimata delle pagine buone) sfruttando tale intuizione per determinare le pagine spam. Ad esempio \textit{Anti-trust rank} sfrutta tale intuizione ma non andando a manipolare i link in uscità di ogni nodo ma i link dei nodi entranti. Altri metodi mentre si basano sulla ricerca delle spam farm mentre altri ancora si focalizzano sul miglioramento dei vari algoritmi di classificazione. Oltre alle tecniche basate su contenuto e sul grafo del web sono state implementate altre che utilizzano criteri diversi per determinare le pagine spam che non si possono identificare tramite i metodi classici; tali metodi, quindi, sono nati per andare incontro alla crescita di nuovi tipi di web spam.
 
 
 

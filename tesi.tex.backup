@@ -1,12 +1,12 @@
-\documentclass[a4pap	er,11pt,openright,oneside]{book}
+\documentclass[a4paper,11pt,openright,oneside]{book}
 \linespread{1.5}
 \usepackage{geometry}
 \geometry{a4paper,top=2.5cm,bottom=3.5cm,left=3.5cm,right=3cm,heightrounded,bindingoffset=5mm,headsep=1.5cm,includehead}
 \usepackage[font={small,it}]{caption}	
 \usepackage[utf8]{inputenc}
-\usepackage[italian]{babel}	
+\usepackage[italian]{babel} 
 \usepackage{amsmath}
-\usepackage{url}
+\usepackage[hyphens]{url}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{listings}
@@ -17,7 +17,9 @@
 \mainmatter
 \include{inizio/introduzione}
 \include{capitoli/tecnicheAntispam}
+\include{capitoli/tecnicheGrafo}
+\include{capitoli/tecnicheAltre}
 \backmatter
-\bibliographystyle{plain}
-\bibliography{biblio}
+\bibliographystyle{ieeetr}
+\bibliography{biblio,biblio2,biblio3}
 \end{document}
