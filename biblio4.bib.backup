@@ -1,0 +1,8 @@
+@online{webspam-uk2007,
+ title = {Web Spam Collections. Crawled by the Laboratory of Web Algorithmics, University of Milan, http://law.dsi.unimi.it/.},
+ note = {URLs retrieved},
+ date = {URLs retrieved 5/2014},
+ year = {2014},
+ month = {5},
+ url = { http://chato.cl/webspam/datasets/},
+}

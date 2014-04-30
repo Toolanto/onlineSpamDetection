@@ -179,4 +179,10 @@ Y.~Liu, B.~Gao, T.-Y. Liu, Y.~Zhang, Z.~Ma, S.~He, and H.~Li, ``Browserank:
   Information Retrieval}, SIGIR '08, (New York, NY, USA), pp.~451--458, ACM,
   2008.
 
+\bibitem{webspam-uk2007}
+``Web spam collections,'' 5 2007.
+\newblock http://chato.cl/webspam/datasets/ Crawled by the Laboratory of Web
+  Algorithmics, University of Milan, http://law.dsi.unimi.it/. URLs retrieved
+  05/2014.
+
 \end{thebibliography}

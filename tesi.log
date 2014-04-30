@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  28 APR 2014 11:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  30 APR 2014 18:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,7 +429,8 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
  (./tesi.aux
 (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux)
-(./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux))
+(./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux)
+(./capitoli/test.aux))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -883,41 +884,56 @@ File: immagini/altre/browser.png Graphic file (type png)
 <use immagini/altre/browser.png>
 Package pdftex.def Info: immagini/altre/browser.png used on input line 70.
 (pdftex.def)             Requested size: 284.52756pt x 126.60474pt.
- [59] [60 <./immagini/altre/browser.png (PNG copy)>]) [61] (./tesi.bbl [62
+ [59] [60 <./immagini/altre/browser.png (PNG copy)>]) [61]
+\openout2 = `capitoli/test.aux'.
+
+ (./capitoli/test.tex
+Capitolo 5.
+[62
 
 
 
-] [63] [64] [65]) [66] (./tesi.aux
-(./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux)
-(./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux)) ) 
+] [63]) [64] (./tesi.bbl [65
+
+
+
+] [66] [67] [68]
+Underfull \hbox (badness 3965) in paragraph at lines 183--187
+\OT1/cmr/m/n/10.95 w-led by the La-bo-ra-to-ry of Web Al-go-ri-th-mics, Uni-ver
+-si-ty of Mi-lan,
+ []
+
+) [69] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux
+) (./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux)
+(./capitoli/test.aux)) ) 
 Here is how much of TeX's memory you used:
- 6309 strings out of 495048
- 92244 string characters out of 3181555
- 168720 words of memory out of 3000000
- 9337 multiletter control sequences out of 15000+200000
+ 6318 strings out of 495048
+ 92388 string characters out of 3181555
+ 176050 words of memory out of 3000000
+ 9339 multiletter control sequences out of 15000+200000
  11164 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,9n,43p,1310b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (71 pages, 1664738 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
+b>
+Output written on tesi.pdf (74 pages, 1671744 bytes).
 PDF statistics:
- 336 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
+ 347 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

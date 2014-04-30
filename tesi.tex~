@@ -19,6 +19,7 @@
 \include{capitoli/tecnicheAntispam}
 \include{capitoli/tecnicheGrafo}
 \include{capitoli/tecnicheAltre}
+\include{capitoli/test}
 \backmatter
 \bibliographystyle{ieeetr}
 \bibliography{biblio,biblio2,biblio3}
