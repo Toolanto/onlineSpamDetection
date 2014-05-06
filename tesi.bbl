@@ -185,4 +185,18 @@ Y.~Liu, B.~Gao, T.-Y. Liu, Y.~Zhang, Z.~Ma, S.~He, and H.~Li, ``Browserank:
   Algorithmics, University of Milan, http://law.dsi.unimi.it/. URLs retrieved
   05/2014.
 
+\bibitem{Boldi03thewebgraph}
+P.~Boldi and S.~Vigna, ``The webgraph framework i: Compression techniques,'' in
+  {\em In Proc. of the Thirteenth International World Wide Web Conference},
+  pp.~595--601, ACM Press, 2003.
+
+\bibitem{KendallTau}
+K.~M., ``The treatment of ties in ranking problems,'' {\em Biometrika},
+  vol.~33, pp.~239--251, 1945.
+
+\bibitem{libreriaLaw}
+``Law library api.''
+\newblock http://law.di.unimi.it/software/law-docs/overview-summary.html. URL
+  retrieved 05/2014.
+
 \end{thebibliography}

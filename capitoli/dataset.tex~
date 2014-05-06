@@ -1,9 +1,6 @@
-\chapter{Test dei metodi di spam detection}
+\chapter{Dataset e strumenti utilizzati}
 \lstset{basicstyle=\small\ttfamily,keywordstyle=\color{black}\bfseries,commentstyle=\color{darkgray},stringstyle=\color{black},showstringspaces=true} 
-Nei capitoli precendenti sono stati illustrati vari metodi che di spam detection classificati basandosi sui segnali in ingresso che essi hanno bisogno per poter identificare le pagine web; quindi si hanno tre classi: metodi basati sul contenuto, metodi basati sul grafo e metodi che utilizzano segnali diversi dai primi due. Tra questi metodi ne sono stati presi in esame due: \textit{Trustrank} e \textit{Anti-trust rank}. 
-
-Si è scelto, quindi, di valutare l'efficacia degli algoritmi di \textit{Trustrank} e \textit{Anti-trust rank} se essi operassero in modo online. Più precisamente i vari test consistono nel verificare quanto questi due algoritmi di tipo offline riescano ad approssimare il loro comportamento se li facessimo operare in modo online ovvero durante la fase di crawling.
-
+Questo capitolo illustra il dataset utilizzato per l'implementazione e l'esecuzione dei test (che verranno discussi nel capitolo successivo) e i vari strumenti (come i framework e librerie) utilizzate per rendere più efficienti i vari test.
 \section{Descrizione del dataset}
 Il dataset utilizzato per gli espirementi è WEBSPAM-UK2007 \cite{webspam-uk2007} ottenuto da un crawl del dominio ``.uk'' nel maggio del 2007, grazie al supporto del ``Laboratorio di Algoritmica per il Web'' dell'Università degli Studi di Milano; è composto da un insieme di 105.896.555 pagine che fanno parte di 114.529 host. I dati di questo dataset, rappresentati degli host, sono stati etichiettati in spam o non spam per mezzo di alcuni volontari. Il dataset è composto da tre parti:
 \begin{itemize}
@@ -46,7 +43,7 @@ Quindi utilizzando queste informazioni si può convertire il file che descrive i
 
 Quindi per lo sviluppo dei test sono state utilizzate due informazioni utili derivate dal dataset: le etichette che identificano i nodi del grafo spam da quelli che sono non spam e la struttura del grafo che verrà manipolata tramite l'utilizzo del framework WebGraph \cite{Boldi03thewebgraph}. WebGraph è un framework per la compressione di enormi grafi e permette, quindi, di eseguire operazioni sul grafo in maniera molto semplice e veloce. 
 
-\section{Strumenti utilizzati per l'esecuzione dei test}
+\section{La Tau di Kendall}
 Uno degli strumenti utilizzati per il confronto di due vettori di rank (che saranno i vettori di \textit{trustrank} e  di \textit{anti-trust rank}) è la Tua di Kendall \cite{KendallTau}. Più precisamente la Tau di Kendall valuta il grado di similarità tra due vettori di rank ovvero dati due vettori \(r_i\) e \(s_i\) con \(i=0,1,...,n-1\) e \(i<j\), si dice che una coppia \((i,j)\) è:
 \begin{itemize}
  \item \textit{concordante} se \(r_i-r_j\) e \(s_i-s_j\) sono entrambe diverse da 0 e hanno lo stesso segno;
@@ -55,5 +52,18 @@ Uno degli strumenti utilizzati per il confronto di due vettori di rank (che sara
  \item \textit{s-tie} se \(s_i-s_j=0\);
  \item \textit{joint tie} se \(r_i-r_j=0\) e \(s_i-s_j=0\).
 \end{itemize}
-Allora viene definito  \(C\) come il numero delle coppie concordanti, \(D\) il numero delle coppie discordanti, \(T_r\) il numero delle coppie r-tie, \(T_s\) il numero delle coppie s-tie ,\(J\) il numero delle coppie joint tie e \(N=n(n-1)/2\). Quindi \(C+D+T_r+T_s-J = N\)
+Allora viene definito  \(C\) come il numero delle coppie concordanti, \(D\) il numero delle coppie discordanti, \(T_r\) il numero delle coppie r-tie, \(T_s\) il numero delle coppie s-tie ,\(J\) il numero delle coppie joint tie e \(N=n(n-1)/2\). Quindi \(C+D+T_r+T_s-J = N\). La Tau di Kendall può essere calcolata come:
+\begin{equation}
+ \tau = \frac{(C-D)}{[(N-T_r)(N-T_S)]^{1/2}}
+\end{equation}
+Per eseguire i test è stato scelto di usare la libreria  ``it.unimi.dsi.law'' \cite{libreriaLaw} fornita dal LAW (Laboratori di Algoritmica per il Web) dell'Università degli studi di Milano. Questa libreria contiene dei metodi che consentono di calcolare efficientemente la Tau di Kendall.
+
+\section{Il framework Webgraph}
+Per la gestione del grafo è stato usato il framework WebGraph \cite{Boldi03thewebgraph}. Questo framework permette la compressione dei grafi e di eseguire delle operazioni su di essi in maniera molto efficiente. Noi utiliziamo solo una piccola parte delle risorse che mette a disposizine WebGraph. Infatti esso incorpora:
+\begin{itemize}
+ \item un insieme di codici di compressione per la memorizzazione dei grafi;
+ \item algoritmi che permettono di accedere al grafo compresso senza ogni volta doverlo decomprimere;
+ \item algoritmi di analisi dei grafi;
+ \item insiemi di dati che si possono analizzare.
+\end{itemize}
 

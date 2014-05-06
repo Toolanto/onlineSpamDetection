@@ -5,50 +5,51 @@ A level-1 auxiliary file: inizio/introduzione.aux
 A level-1 auxiliary file: capitoli/tecnicheAntispam.aux
 A level-1 auxiliary file: capitoli/tecnicheGrafo.aux
 A level-1 auxiliary file: capitoli/tecnicheAltre.aux
+A level-1 auxiliary file: capitoli/dataset.aux
 A level-1 auxiliary file: capitoli/test.aux
 The style file: ieeetr.bst
 Database file #1: biblio.bib
 Database file #2: biblio2.bib
 Database file #3: biblio3.bib
 Database file #4: biblio4.bib
-You've used 34 entries,
+You've used 37 entries,
             1876 wiz_defined-function locations,
-            718 strings with 11256 characters,
-and the built_in function-call counts, 10684 in all, are:
-= -- 1090
-> -- 348
+            738 strings with 11686 characters,
+and the built_in function-call counts, 11441 in all, are:
+= -- 1172
+> -- 361
 < -- 2
-+ -- 129
-- -- 95
-* -- 772
-:= -- 1413
-add.period$ -- 40
-call.type$ -- 34
-change.case$ -- 32
++ -- 135
+- -- 98
+* -- 813
+:= -- 1502
+add.period$ -- 43
+call.type$ -- 37
+change.case$ -- 35
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 590
-empty$ -- 1065
-format.name$ -- 95
-if$ -- 2641
+cite$ -- 37
+duplicate$ -- 632
+empty$ -- 1150
+format.name$ -- 98
+if$ -- 2840
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 33
-newline$ -- 111
-num.names$ -- 33
-pop$ -- 118
+int.to.str$ -- 37
+missing$ -- 35
+newline$ -- 121
+num.names$ -- 35
+pop$ -- 135
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 419
+skip$ -- 452
 stack$ -- 0
-substring$ -- 796
-swap$ -- 233
+substring$ -- 856
+swap$ -- 251
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 113
-width$ -- 36
-write$ -- 375
+while$ -- 120
+width$ -- 39
+write$ -- 402

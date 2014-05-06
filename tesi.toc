@@ -24,5 +24,8 @@
 \contentsline {section}{\numberline {4.1}Rilevamento dello spam di tipo cloacking}{53}
 \contentsline {section}{\numberline {4.2}Rilevare lo spam tramite l'header HTTP}{56}
 \contentsline {section}{\numberline {4.3}Altri metodi}{57}
-\contentsline {chapter}{\numberline {5}Test dei metodi di spam detection}{62}
+\contentsline {chapter}{\numberline {5}Dataset e strumenti utilizzati}{62}
 \contentsline {section}{\numberline {5.1}Descrizione del dataset}{62}
+\contentsline {section}{\numberline {5.2}La Tau di Kendall}{65}
+\contentsline {section}{\numberline {5.3}Il framework Webgraph}{66}
+\contentsline {chapter}{\numberline {6}Test dei metodi di spam detection}{67}
