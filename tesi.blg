@@ -12,44 +12,44 @@ Database file #1: biblio.bib
 Database file #2: biblio2.bib
 Database file #3: biblio3.bib
 Database file #4: biblio4.bib
-You've used 37 entries,
+You've used 38 entries,
             1876 wiz_defined-function locations,
-            738 strings with 11686 characters,
-and the built_in function-call counts, 11441 in all, are:
-= -- 1172
-> -- 361
+            746 strings with 11868 characters,
+and the built_in function-call counts, 11809 in all, are:
+= -- 1209
+> -- 375
 < -- 2
-+ -- 135
-- -- 98
-* -- 813
-:= -- 1502
-add.period$ -- 43
-call.type$ -- 37
-change.case$ -- 35
++ -- 140
+- -- 102
+* -- 836
+:= -- 1549
+add.period$ -- 45
+call.type$ -- 38
+change.case$ -- 36
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 632
-empty$ -- 1150
-format.name$ -- 98
-if$ -- 2840
+cite$ -- 38
+duplicate$ -- 650
+empty$ -- 1186
+format.name$ -- 102
+if$ -- 2936
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 35
-newline$ -- 121
-num.names$ -- 35
-pop$ -- 135
+int.to.str$ -- 38
+missing$ -- 37
+newline$ -- 125
+num.names$ -- 36
+pop$ -- 140
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 452
+skip$ -- 466
 stack$ -- 0
-substring$ -- 856
-swap$ -- 251
+substring$ -- 884
+swap$ -- 260
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 120
-width$ -- 39
-write$ -- 402
+while$ -- 123
+width$ -- 40
+write$ -- 413

@@ -2,62 +2,23 @@
 \lstset{basicstyle=\small\ttfamily,keywordstyle=\color{black}\bfseries,commentstyle=\color{darkgray},stringstyle=\color{black},showstringspaces=true} 
 Nei capitoli precendenti sono stati illustrati vari metodi che di spam detection classificati basandosi sui segnali in ingresso che essi hanno bisogno per poter identificare le pagine web; quindi si hanno tre classi: metodi basati sul contenuto, metodi basati sul grafo e metodi che utilizzano segnali diversi dai primi due. Tra questi metodi ne sono stati presi in esame due: \textit{Trustrank} e \textit{Anti-trust rank}. 
 
-Si è scelto, quindi, di valutare l'efficacia degli algoritmi di \textit{Trustrank} e \textit{Anti-trust rank} se essi operassero in modo online. Più precisamente i vari test consistono nel verificare quanto questi due algoritmi di tipo offline riescano ad approssimare il loro comportamento se li facessimo operare in modo online ovvero durante la fase di crawling.
-
-\section{Descrizione del dataset}
-Il dataset utilizzato per gli espirementi è WEBSPAM-UK2007 \cite{webspam-uk2007} ottenuto da un crawl del dominio ``.uk'' nel maggio del 2007, grazie al supporto del ``Laboratorio di Algoritmica per il Web'' dell'Università degli Studi di Milano; è composto da un insieme di 105.896.555 pagine che fanno parte di 114.529 host. I dati di questo dataset, rappresentati degli host, sono stati etichiettati in spam o non spam per mezzo di alcuni volontari. Il dataset è composto da tre parti:
+Si è scelto, quindi, di valutare l'efficacia di due  algoritmi \textit{linked base} (\textit{Trustrank} e \textit{Anti-trust rank}) se essi operassero in modo online. Più precisamente i vari test consistono nel verificare quanto questi due algoritmi di tipo offline riescano ad approssimare il loro comportamento se li facessimo operare in modo online ovvero durante la fase di crawling. Le domande che ci poniamo eseguendo questi test su i due algoritmi di spam dection offline (\textit{Trustrank} e \textit{Anti-trus rank}) sono:
 \begin{itemize}
- \item Le etichette associate agli host divise in due gruppi. Il primo gruppo è costituito da 2/3 dell'insieme degli host valutati, è fornito per essere come dataset di traning ed è costituito da 3776 nodi etichettati come non spam, 222 nodi etichettati spam ed infine 277 nodi etichettati ``undecided'' ovvero nodi di cui la natura (spam o non spam) è in dubbio. Il secondo gruppo di etichette contiene il rimanente 1/3 dell'insieme degli host valutati, è fornito per essere utilizzato come dataset di testing ed è costituito da 1933 nodi etichettati non spam, 122 nodi etichettati spam e 149 etichettati ``undecided''.\\
- Le etichette sono associate in due fasi. Nella prima fase l'esaminatore ha a diposizione solo il contenuto della collezione e la lista degli host collegati per ogni host valutato. Nella seconda fase, invece, ha accesso all'etichette, per un nodo, assegnate da altri utenti e gli viene richiesto di rivalutare le sue valutazioni se è in disaccordo con altri. Quindi viene realizzato un file che contiene tali informazioni.\\ 
- Gli host sono identificati attraverso un \textit{id} che va da 0 a 114.528 a cui è associato l'URL corrispondente. Quindi un file specifica per ogni \textit{id} un'etichetta tra ``nonspam'',``spam'' e ``undecided'', oltre all'etichetta vengono associate le singole valutazioni effettuate dagli utenti e la media risultante delle valutazioni effettuate per quell'host tenendo conto che l'etichetta spam è uguale a 1, l'etichetta non spam è uguale a 0 e l'etichetta di ``undecided'' ha valore 0.5. Un esempio è rappresentato di seguito: 
- \begin{lstlisting}[frame=trbl,postbreak=\space, breakindent=5pt, breaklines]
-ID ETICHETTA MEDIA VALUTAZIONI
-5 nonspam 0.00000 j1:N,j2:N
-100 nonspam 0.33333 j14:N,j17:S,j7:N
-120 spam 1.00000 j18:U,j4:S
-170 undecided - j13:U,j20:U
-210 undecided 0.50000 j15:N,j16:S,j22:U
-\end{lstlisting}
-Nell'esempio vengono rappresentati 5 host; prendendo in cosiderazione l'host con \textit{id} uguale a 5 si nota subito che è stato giudicato come nodo non spam e che la media delle due votazioni è uguale a 0 visto che entrambi gli utenti hanno giudicato il nodo non spam (es. j1:N; N indica non spam, S indica spam e U indica che la natura del nodo non è definita).\\ 
-Per i test tutte queste informazioni sono superfle, infatti sono stati utilizzati solo i dati relativi alle etichette associate ai nodi in modo d'avere l'insieme dei nosi spam e l'insieme dei nodi non spam.
-
- 
- \item Il grafo definito con due differenti livelli di granularità: un è a livello di host mentre un secondo grafo è definito a livello di pagine. Il grafo a livello di host (che poi sarà quello utilizzato per eseguire i test) è formato da 114.528 nodi che rappresentano gli host mentre il secondo che è formato  105.896.555 di nodi che rappresentano le pagine web che sono connesse da circa 3.7 miliardi di archi ovvero di link tra le pagine.\\
- Il grafo degli host quindi rappresenta i link tra gli URL mappando vari link tra le pagine in differenti host in un singolo link a cui è associato un peso. Il file è composto dalla prima riga che indica il numero di host nel grafo e le successive righe che contengono gli \textit{outlink} degli host, ad esempio alla riga due verranno indicati gli \textit{outlink} del nodo 0 alla riga 3 gli \textit{outlink} del nodo 1 e cosi via. Dato che i link sono pesati la sintassi completa per ogni riga che rappressenta un nodo è:
- $$
- dest_1:nlinks_1,dest_2:nlinks_2,...,dest_k:nlinks_k
- $$
- dove \(dest\) è il nodo di arrivo del link ed è rappresentato dall'\textit{id} del nodo di destinazione mentre \(nlinks\) è il numero di link tra le pagine dei due host.
- Ad esempio di seguito è illustrato una porzione di un grafo degli host:
-\begin{lstlisting}[frame=trbl,postbreak=\space, breakindent=5pt, breaklines]
-114529
-1005:1 8306:2 9596:1 
-8107:3320 22950:4 108053:1
-24003:1
-24003:1
-...
-\end{lstlisting}
-Nella prima riga dell'esempio viene specificato che il grafo è composto da 114529 nodi. Nella seconda riga si nota che il nodo 0 ha 3 outlink, uno verso il nodo 1005, un altro link verso il nodo 9596 ed infine due link verso il nodo 8306. La terza riga indica che il nodo 1 ha 3 outlink: un link verso il nodo 8107 con un peso 3320 (quindi le pagine del nodo 1 hanno 3320 link verso le pagine del nodo8107), quattro link verso il nodo 22950 ed infine un link verso il nodo 108053. Il file quindi sarà lungo 114530 righe.\\
-%nel nostro caso non sono state usate le informazioni sui pesi degli archi si è scelto di eliminare tale informazione
-Quindi utilizzando queste informazioni si può convertire il file che descrive il grafo in  in modo da poter essere successivamente manipolato tramite il framework WebGraph \cite{Boldi03thewebgraph}.
-%si può inserire come fare la conversione
-\item Il contenuto delle pagine HTML fornito in formato WARC. ``Il formato WARC specifica un metodo per combinare molte risorse in un unico file con le relative informazioni'' (\url{http://www.digitalpreservation.gov/formats/fdd/fdd000236.shtml} il 5/5/2014).
+ \item possono questi algoritmi essere in grado di operare in modalità online?
+ \item durante l'esecuzione in modalità online, quanto riescono ad approssimare il loro comportamento offline?
+ \item è conveniente utilizzare questi algoritmi in modalità online?
 \end{itemize}
 
-Quindi per lo sviluppo dei test sono state utilizzate due informazioni utili derivate dal dataset: le etichette che identificano i nodi del grafo spam da quelli che sono non spam e la struttura del grafo che verrà manipolata tramite l'utilizzo del framework WebGraph \cite{Boldi03thewebgraph}. WebGraph è un framework per la compressione di enormi grafi e permette, quindi, di eseguire operazioni sul grafo in maniera molto semplice e veloce. 
+E' doveroso specificare che un algoritmo di spam detection lavora offline se questo viene eseguito dopo l'attività di crawling (e quindi dopo che si ha a disposizione l'intero grafo ottenuto dai collegamenti tra le pagine), mentre un algoritmo di spam detection lavora online se questo viene eseguito durante il processo di crawling e quindi riesce a determinare all'istante se una pagina deve essere considerata spam o non spam. Dal momento che si è scelto di esaminare degli algoritmi \textit{linked base}, e sapendo che questi formulano delle conclusioni sulla natura delle pagine (ovvero se sono spam o non spam) esaminando la struttura dell'intero grafo, è interessante notare come questi si comportino se il grafo su cui fare le valutazioni è incompleto.
+%altre considerazioni
+%come sarà strutturato il capitolo
 
-\section{Strumenti utilizzati per l'esecuzione dei test}
-Uno degli strumenti utilizzati per il confronto di due vettori di rank (che saranno i vettori di \textit{trustrank} e  di \textit{anti-trust rank}) è la Tua di Kendall \cite{KendallTau}. Più precisamente la Tau di Kendall valuta il grado di similarità tra due vettori di rank ovvero dati due vettori \(r_i\) e \(s_i\) con \(i=0,1,...,n-1\) e \(i<j\), si dice che una coppia \((i,j)\) è:
-\begin{itemize}
- \item \textit{concordante} se \(r_i-r_j\) e \(s_i-s_j\) sono entrambe diverse da 0 e hanno lo stesso segno;
- \item \textit{discordante} se \(r_i-r_j\) e \(s_i-s_j\) sono entrambe diverse da 0 e hanno segno opposto;
- \item \textit{r-tie} se \(r_i-r_j=0\);
- \item \textit{s-tie} se \(s_i-s_j=0\);
- \item \textit{joint tie} se \(r_i-r_j=0\) e \(s_i-s_j=0\).
-\end{itemize}
-Allora viene definito  \(C\) come il numero delle coppie concordanti, \(D\) il numero delle coppie discordanti, \(T_r\) il numero delle coppie r-tie, \(T_s\) il numero delle coppie s-tie ,\(J\) il numero delle coppie joint tie e \(N=n(n-1)/2\). Quindi \(C+D+T_r+T_s-J = N\). La Tau di Kendall può essere calcolata come:
-\begin{equation}
- \tau = \frac{(C-D)}{[(N-T_r)(N-T_S)]^{1/2}}
-\end{equation}
-Per eseguire i test è stato scelto di usare la libreria  ``it.unimi.dsi.law'' \cite{libreriaLaw} fornita dal LAW (Laboratori di Algoritmica per il Web) dell'Università degli studi di Milano. Questa libreria contiene dei metodi che consentono di calcolare efficientemente la Tau di Kendall.
+\section{Simulazione del crawler}
+Per simulare il comportamento di crawler, e quindi eseguire gli algoritmi di \textit{Trustrank} e \textit{Anti-trust rank}, abbiamo implementato una semplice visita sul grafo in ampiezza ovvero una BFS \cite{bfsCormen} (Breadth-First Search). La visita in ampiezza dato un grafo \(G=(V,E)\), dove \(V\) è l'insieme dei vertici del grafo ed \(E\) l'insieme degli archi del grafo, e un vertice \(s\) da cui far partire la visita, scopre tutti i vertici che sono raggiungibili da \(s\). La visita in ampiezza scopre tutti i vertici che si trovano a distanza \(f\) dal vertice di partenza e successivamente scopre i vertici che si trovano a una distanza successiva \(f+1\). In sostanza dato il nodo di partenza \(s\), la visita in ampiezza, scopre tutti i nodi vicini al nodo \(s\) e successivamente per ogni nodo vicino scoperto trova i vicini che non sono ancora stati visitati; questo processo viene iterato finche tutti i nodi del grafo raggiungibili da \(s\) sono visitati. 
+
+
+
+
+
+
 

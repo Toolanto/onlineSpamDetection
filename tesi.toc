@@ -29,3 +29,4 @@
 \contentsline {section}{\numberline {5.2}La Tau di Kendall}{65}
 \contentsline {section}{\numberline {5.3}Il framework Webgraph}{66}
 \contentsline {chapter}{\numberline {6}Test dei metodi di spam detection}{67}
+\contentsline {section}{\numberline {6.1}Simulazione del crawler}{68}

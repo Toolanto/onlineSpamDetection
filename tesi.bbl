@@ -199,4 +199,9 @@ K.~M., ``The treatment of ties in ranking problems,'' {\em Biometrika},
 \newblock http://law.di.unimi.it/software/law-docs/overview-summary.html. URL
   retrieved 05/2014.
 
+\bibitem{bfsCormen}
+T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein, {\em Introduzione
+  agli algoritmi e strutture dati}, pp.~497--504.
+\newblock The McGraw-Hill Companies, 3rd~ed., 2010.
+
 \end{thebibliography}
