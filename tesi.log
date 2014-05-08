@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  7 MAY 2014 19:07
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  8 MAY 2014 19:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -902,11 +902,26 @@ Capitolo 6.
 
 
 
-]) [68] (./tesi.bbl [69
+] [68] <immagini/test/trustVettore.png, id=289, 273.14645pt x 54.62929pt>
+File: immagini/test/trustVettore.png Graphic file (type png)
+
+<use immagini/test/trustVettore.png>
+Package pdftex.def Info: immagini/test/trustVettore.png used on input line 28.
+(pdftex.def)             Requested size: 273.14578pt x 54.62914pt.
+
+<immagini/test/immagineAntiTrust.png, id=290, 273.14645pt x 54.62929pt>
+File: immagini/test/immagineAntiTrust.png Graphic file (type png)
+
+<use immagini/test/immagineAntiTrust.png>
+Package pdftex.def Info: immagini/test/immagineAntiTrust.png used on input line
+ 34.
+(pdftex.def)             Requested size: 273.14578pt x 54.62914pt.
+) [69 <./immagini/test/trustVettore.png> <./immagini/test/immagineAntiTrust.png
+>] (./tesi.bbl [70
 
 
 
-] [70] [71] [72]
+] [71] [72] [73]
 Underfull \hbox (badness 3965) in paragraph at lines 183--187
 \OT1/cmr/m/n/10.95 w-led by the La-bo-ra-to-ry of Web Al-go-ri-th-mics, Uni-ver
 -si-ty of Mi-lan,
@@ -918,14 +933,14 @@ Underfull \hbox (badness 7362) in paragraph at lines 198--201
 w-docs/overview-
  []
 
-) [73] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux
+) [74] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux
 ) (./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux)
 (./capitoli/dataset.aux) (./capitoli/test.aux)) ) 
 Here is how much of TeX's memory you used:
- 6330 strings out of 495048
- 92596 string characters out of 3181555
- 176395 words of memory out of 3000000
- 9344 multiletter control sequences out of 15000+200000
+ 6343 strings out of 495048
+ 92973 string characters out of 3181555
+ 176417 words of memory out of 3000000
+ 9354 multiletter control sequences out of 15000+200000
  11164 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,9n,43p,1310b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -945,10 +960,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (78 pages, 1683504 bytes).
+Output written on tesi.pdf (79 pages, 1702321 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
- 223 compressed objects within 3 object streams
+ 365 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

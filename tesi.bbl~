@@ -1,71 +1,213 @@
 \begin{thebibliography}{10}
 
-\bibitem{Eiron:2004:RWF:988672.988714}
-Nadav Eiron, Kevin~S. McCurley, and John~A. Tomlin.
-\newblock Ranking the web frontier.
-\newblock In {\em Proceedings of the 13th International Conference on World
-  Wide Web}, WWW '04, pages 309--318, New York, NY, USA, 2004. ACM.
+\bibitem{Ntoulas:2006:DSW:1135777.1135794}
+A.~Ntoulas, M.~Najork, M.~Manasse, and D.~Fetterly, ``Detecting spam web pages
+  through content analysis,'' in {\em Proceedings of the 15th International
+  Conference on World Wide Web}, WWW '06, (New York, NY, USA), pp.~83--92, ACM,
+  2006.
 
-\bibitem{Fetterly:2004:SDS:1017074.1017077}
-Dennis Fetterly, Mark Manasse, and Marc Najork.
-\newblock Spam, damn spam, and statistics: Using statistical analysis to locate
-  spam web pages.
-\newblock In {\em Proceedings of the 7th International Workshop on the Web and
-  Databases: Colocated with ACM SIGMOD/PODS 2004}, WebDB '04, pages 1--6, New
-  York, NY, USA, 2004. ACM.
-
-\bibitem{ilprints646}
-Zoltan Gyongyi and Hector Garcia-Molina.
-\newblock Web spam taxonomy.
-\newblock Technical Report 2004-25, Stanford InfoLab, March 2004.
+\bibitem{Martinez-Romo:2009:WSI:1531914.1531920}
+J.~Martinez-Romo and L.~Araujo, ``Web spam identification through language
+  model analysis,'' in {\em Proceedings of the 5th International Workshop on
+  Adversarial Information Retrieval on the Web}, AIRWeb '09, (New York, NY,
+  USA), pp.~21--28, ACM, 2009.
 
 \bibitem{Nicholas:2005}
-Nicholas~R. Jennings.
-\newblock The global economic impact of spam.
-\newblock {\em Ferris Research}, 2005.
+N.~R. Jennings, ``The global economic impact of spam.,'' {\em Ferris Research},
+  2005.
 
 \bibitem{Nicholas:2009}
-Nicholas~R. Jennings.
-\newblock Cost of spam is flattening ��� our 2009 predictions.
-\newblock {\em Ferris Research}, 2009.
-
-\bibitem{Kleinberg:1999:ASH:324133.324140}
-Jon~M. Kleinberg.
-\newblock Authoritative sources in a hyperlinked environment.
-\newblock {\em J. ACM}, 46(5):604--632, September 1999.
-
-\bibitem{Manning:2008:IIR:1394399p117}
-Christopher~D. Manning, Prabhakar Raghavan, and Hinrich Sch\"{u}tze.
-\newblock {\em Introduction to Information Retrieval}.
-\newblock Cambridge University Press, New York, NY, USA, 2008.
-\newblock Pages 117--119.
-
-\bibitem{Manning:2008:IIR:1394399p474}
-Christopher~D. Manning, Prabhakar Raghavan, and Hinrich Sch\"{u}tze.
-\newblock {\em Introduction to Information Retrieval}.
-\newblock Cambridge University Press, New York, NY, USA, 2008.
-\newblock Pages 474--476.
-
-\bibitem{Ntoulas:2006:DSW:1135777.1135794}
-Alexandros Ntoulas, Marc Najork, Mark Manasse, and Dennis Fetterly.
-\newblock Detecting spam web pages through content analysis.
-\newblock In {\em Proceedings of the 15th International Conference on World
-  Wide Web}, WWW '06, pages 83--92, New York, NY, USA, 2006. ACM.
-
-\bibitem{ilprints422}
-Lawrence Page, Sergey Brin, Rajeev Motwani, and Terry Winograd.
-\newblock The pagerank citation ranking: Bringing order to the web.
-\newblock Technical Report 1999-66, Stanford InfoLab, November 1999.
-\newblock Previous number = SIDL-WP-1999-0120.
-
-\bibitem{Robertson:2009:PRF:1704809.1704810}
-Stephen Robertson and Hugo Zaragoza.
-\newblock The probabilistic relevance framework: Bm25 and beyond.
-\newblock {\em Found. Trends Inf. Retr.}, 3(4):333--389, April 2009.
+N.~R. Jennings, ``Cost of spam is flattening - our 2009 predictions.,'' {\em
+  Ferris Research}, 2009.
 
 \bibitem{Spirin:2012:SWS:2207243.2207252}
-Nikita Spirin and Jiawei Han.
-\newblock Survey on web spam detection: Principles and algorithms.
-\newblock {\em SIGKDD Explor. Newsl.}, 13(2):50--64, May 2012.
+N.~Spirin and J.~Han, ``Survey on web spam detection: Principles and
+  algorithms,'' {\em SIGKDD Explor. Newsl.}, vol.~13, pp.~50--64, May 2012.
+
+\bibitem{Eiron:2004:RWF:988672.988714}
+N.~Eiron, K.~S. McCurley, and J.~A. Tomlin, ``Ranking the web frontier,'' in
+  {\em Proceedings of the 13th International Conference on World Wide Web}, WWW
+  '04, (New York, NY, USA), pp.~309--318, ACM, 2004.
+
+\bibitem{Manning:2008:IIR:1394399p117}
+C.~D. Manning, P.~Raghavan, and H.~Sch\"{u}tze, {\em Introduction to
+  Information Retrieval}.
+\newblock New York, NY, USA: Cambridge University Press, 2008.
+\newblock Pages 117--119.
+
+\bibitem{Robertson:2009:PRF:1704809.1704810}
+S.~Robertson and H.~Zaragoza, ``The probabilistic relevance framework: Bm25 and
+  beyond,'' {\em Found. Trends Inf. Retr.}, vol.~3, pp.~333--389, Apr. 2009.
+
+\bibitem{ilprints422}
+L.~Page, S.~Brin, R.~Motwani, and T.~Winograd, ``The pagerank citation ranking:
+  Bringing order to the web.,'' Technical Report 1999-66, Stanford InfoLab,
+  November 1999.
+\newblock Previous number = SIDL-WP-1999-0120.
+
+\bibitem{ilprints646}
+Z.~Gyongyi and H.~Garcia-Molina, ``Web spam taxonomy,'' Technical Report
+  2004-25, Stanford InfoLab, March 2004.
+
+\bibitem{Kleinberg:1999:ASH:324133.324140}
+J.~M. Kleinberg, ``Authoritative sources in a hyperlinked environment,'' {\em
+  J. ACM}, vol.~46, pp.~604--632, Sept. 1999.
+
+\bibitem{Manning:2008:IIR:1394399p474}
+C.~D. Manning, P.~Raghavan, and H.~Sch\"{u}tze, {\em Introduction to
+  Information Retrieval}.
+\newblock New York, NY, USA: Cambridge University Press, 2008.
+\newblock Pages 474--476.
+
+\bibitem{Fetterly:2004:SDS:1017074.1017077}
+D.~Fetterly, M.~Manasse, and M.~Najork, ``Spam, damn spam, and statistics:
+  Using statistical analysis to locate spam web pages,'' in {\em Proceedings of
+  the 7th International Workshop on the Web and Databases: Colocated with ACM
+  SIGMOD/PODS 2004}, WebDB '04, (New York, NY, USA), pp.~1--6, ACM, 2004.
+
+\bibitem{Fetterly:2005:DPD:1076034.1076066}
+D.~Fetterly, M.~Manasse, and M.~Najork, ``Detecting phrase-level duplication on
+  the world wide web,'' in {\em Proceedings of the 28th Annual International
+  ACM SIGIR Conference on Research and Development in Information Retrieval},
+  SIGIR '05, (New York, NY, USA), pp.~170--177, ACM, 2005.
+
+\bibitem{Dong:2012:EDC:2457524.2457693}
+C.~Dong and B.~Zhou, ``Effectively detecting content spam on the web using
+  topical diversity measures,'' in {\em Proceedings of the The 2012
+  IEEE/WIC/ACM International Joint Conferences on Web Intelligence and
+  Intelligent Agent Technology - Volume 01}, WI-IAT '12, (Washington, DC, USA),
+  pp.~266--273, IEEE Computer Society, 2012.
+
+\bibitem{Abernethy:2008:WSI:1451983.1451994}
+J.~Abernethy, O.~Chapelle, and C.~Castillo, ``Web spam identification through
+  content and hyperlinks,'' in {\em Proceedings of the 4th International
+  Workshop on Adversarial Information Retrieval on the Web}, AIRWeb '08, (New
+  York, NY, USA), pp.~41--44, ACM, 2008.
+
+\bibitem{DBLP:conf:airweb:UrvoyLF06}
+T.~Urvoy, T.~Lavergne, and P.~Filoche, ``Tracking web spam with hidden style
+  similarity,'' in {\em AIRWeb}, pp.~25--31, 2006.
+
+\bibitem{Gyongyi:2004:CWS:1316689.1316740}
+Z.~Gy\"{o}ngyi, H.~Garcia-Molina, and J.~Pedersen, ``Combating web spam with
+  trustrank,'' in {\em Proceedings of the Thirtieth International Conference on
+  Very Large Data Bases - Volume 30}, VLDB '04, pp.~576--587, VLDB Endowment,
+  2004.
+
+\bibitem{Krishnan06webspam}
+V.~Krishnan, ``Web spam detection with anti-trust rank,'' in {\em In AIRWEB},
+  pp.~37--40, 2006.
+
+\bibitem{Wu:2006:TTU:1135777.1135792}
+B.~Wu, V.~Goel, and B.~D. Davison, ``Topical trustrank: Using topicality to
+  combat web spam,'' in {\em Proceedings of the 15th International Conference
+  on World Wide Web}, WWW '06, (New York, NY, USA), pp.~63--72, ACM, 2006.
+
+\bibitem{Caverlee:2007:CWS:1281100.1281124}
+J.~Caverlee and L.~Liu, ``Countering web spam with credibility-based link
+  analysis,'' in {\em Proceedings of the Twenty-sixth Annual ACM Symposium on
+  Principles of Distributed Computing}, PODC '07, (New York, NY, USA),
+  pp.~157--166, ACM, 2007.
+
+\bibitem{Leon-Suematsu:2011:WSD:2052138.2052339}
+Y.~I. Leon-Suematsu, K.~Inui, S.~Kurohashi, and Y.~Kidawara, ``Web spam
+  detection by exploring densely connected subgraphs,'' in {\em Proceedings of
+  the 2011 IEEE/WIC/ACM International Conferences on Web Intelligence and
+  Intelligent Agent Technology - Volume 01}, WI-IAT '11, (Washington, DC, USA),
+  pp.~124--129, IEEE Computer Society, 2011.
+
+\bibitem{Castillo:2007:KYN:1277741.1277814}
+C.~Castillo, D.~Donato, A.~Gionis, V.~Murdock, and F.~Silvestri, ``Know your
+  neighbors: Web spam detection using the web topology,'' in {\em Proceedings
+  of the 30th Annual International ACM SIGIR Conference on Research and
+  Development in Information Retrieval}, SIGIR '07, (New York, NY, USA),
+  pp.~423--430, ACM, 2007.
+
+\bibitem{Gyongyi:2006:LSD:1182635.1164166}
+Z.~Gyongyi, P.~Berkhin, H.~Garcia-Molina, and J.~Pedersen, ``Link spam
+  detection based on mass estimation,'' in {\em Proceedings of the 32Nd
+  International Conference on Very Large Data Bases}, VLDB '06, pp.~439--450,
+  VLDB Endowment, 2006.
+
+\bibitem{Wu05identifyinglink}
+B.~Wu and B.~D. Davison, ``Identifying link farm spam pages,'' in {\em
+  Proceedings of the 14th International World Wide Web Conference},
+  pp.~820--829, ACM Press, 2005.
+
+\bibitem{Cheng:2011:LWS:1935826.1935902}
+Z.~Cheng, B.~Gao, C.~Sun, Y.~Jiang, and T.-Y. Liu, ``Let web spammers expose
+  themselves,'' in {\em Proceedings of the Fourth ACM International Conference
+  on Web Search and Data Mining}, WSDM '11, (New York, NY, USA), pp.~525--534,
+  ACM, 2011.
+
+\bibitem{Gan:2007:IWS:1244408.1244412}
+Q.~Gan and T.~Suel, ``Improving web spam classifiers using link structure,'' in
+  {\em Proceedings of the 3rd International Workshop on Adversarial Information
+  Retrieval on the Web}, AIRWeb '07, (New York, NY, USA), pp.~17--20, ACM,
+  2007.
+
+\bibitem{Geng:2008:IWS:1367497.1367685}
+G.~Geng, C.~Wang, and Q.~Li, ``Improving web spam detection with re-extracted
+  features,'' in {\em Proceedings of the 17th International Conference on World
+  Wide Web}, WWW '08, (New York, NY, USA), pp.~1119--1120, ACM, 2008.
+
+\bibitem{Geng:2009:LBS:1526709.1526920}
+G.-G. Geng, Q.~Li, and X.~Zhang, ``Link based small sample learning for web
+  spam detection,'' in {\em Proceedings of the 18th International Conference on
+  World Wide Web}, WWW '09, (New York, NY, USA), pp.~1185--1186, ACM, 2009.
+
+\bibitem{Ghiam:2013cloaking}
+S.~Ghiam and A.~N. Pour, ``Detecting cloaking web spam using hash function,''
+  in {\em Computer Science and Information Technology}, vol. 1, pp.~33--40,
+  Horizon Research, 2013.
+
+\bibitem{Webb:2008:PWS:1458082.1458129}
+S.~Webb, J.~Caverlee, and C.~Pu, ``Predicting web spam with http session
+  information,'' in {\em Proceedings of the 17th ACM Conference on Information
+  and Knowledge Management}, CIKM '08, (New York, NY, USA), pp.~339--348, ACM,
+  2008.
+
+\bibitem{Liu:2008:UBO:1367497.1367645}
+Y.~Liu, M.~Zhang, S.~Ma, and L.~Ru, ``User behavior oriented web spam
+  detection,'' in {\em Proceedings of the 17th International Conference on
+  World Wide Web}, WWW '08, (New York, NY, USA), pp.~1039--1040, ACM, 2008.
+
+\bibitem{Liu:2008:BLW:1390334.1390412}
+Y.~Liu, B.~Gao, T.-Y. Liu, Y.~Zhang, Z.~Ma, S.~He, and H.~Li, ``Browserank:
+  Letting web users vote for page importance,'' in {\em Proceedings of the 31st
+  Annual International ACM SIGIR Conference on Research and Development in
+  Information Retrieval}, SIGIR '08, (New York, NY, USA), pp.~451--458, ACM,
+  2008.
+
+\bibitem{webspam-uk2007}
+``Web spam collections,'' 5 2007.
+\newblock http://chato.cl/webspam/datasets/ Crawled by the Laboratory of Web
+  Algorithmics, University of Milan, http://law.dsi.unimi.it/. URLs retrieved
+  05/2014.
+
+\bibitem{Boldi03thewebgraph}
+P.~Boldi and S.~Vigna, ``The webgraph framework i: Compression techniques,'' in
+  {\em In Proc. of the Thirteenth International World Wide Web Conference},
+  pp.~595--601, ACM Press, 2003.
+
+\bibitem{KendallTau}
+K.~M., ``The treatment of ties in ranking problems,'' {\em Biometrika},
+  vol.~33, pp.~239--251, 1945.
+
+\bibitem{libreriaLaw}
+``Law library api.''
+\newblock http://law.di.unimi.it/software/law-docs/overview-summary.html. URL
+  retrieved 05/2014.
+
+\bibitem{bfsCormen}
+T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein, {\em Introduzione
+  agli algoritmi e strutture dati}, pp.~497--504.
+\newblock The McGraw-Hill Companies, 3rd~ed., 2010.
+
+\bibitem{bfsPrinceton}
+``Breadth-first search.''
+\newblock
+  https://www.princeton.edu/~achaney/tmve/wiki100k/docs/Breadth-first_search.html.
+  URL retrieved 05/2014.
 
 \end{thebibliography}

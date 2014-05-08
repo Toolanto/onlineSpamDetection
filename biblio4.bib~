@@ -37,3 +37,8 @@ publisher = {The McGraw-Hill Companies},
 year ={2010},
 edition ={3rd}
 }
+
+@misc{bfsPrinceton,
+title = {Breadth-first search},
+note = {https://www.princeton.edu/~achaney/tmve/\\wiki100k/docs/Breadth-first\_search.html. URL retrieved 05/2014}
+}
