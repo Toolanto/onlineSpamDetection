@@ -40,5 +40,9 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Dal comportamento dell'utente al grafo.\relax }}{60}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Esempio del vettore di trustrank calcolato sull'intero grafo\relax }}{69}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Esempio del vettore di anti-trust rank calcolato sull'intero grafo\relax }}{69}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Esempio di grafo\relax }}{69}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Esempio del vettore di trustrank calcolato sull'intero grafo\relax }}{70}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Esempio del vettore di anti-trust rank calcolato sull'intero grafo\relax }}{70}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces \textit {Modo\_A}. Esempio del vettore di trustrank calcolato su una porzione di grafo.\relax }}{71}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces \textit {Modo\_A}. Esempio del vettore di anti-trust rank calcolato su una porzione di grafo.\relax }}{71}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces \textit {Modo\_B}. Esempio del vettore di trustrank calcolato su una porzione di grafo.\relax }}{71}
