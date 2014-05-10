@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  9 MAY 2014 12:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  10 MAY 2014 15:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -906,14 +906,14 @@ Capitolo 6.
 File: immagini/test/grafoComp.png Graphic file (type png)
 
 <use immagini/test/grafoComp.png>
-Package pdftex.def Info: immagini/test/grafoComp.png used on input line 28.
+Package pdftex.def Info: immagini/test/grafoComp.png used on input line 29.
 (pdftex.def)             Requested size: 273.4149pt x 136.70743pt.
 
 <immagini/test/trustVettore.png, id=290, 273.14645pt x 54.62929pt>
 File: immagini/test/trustVettore.png Graphic file (type png)
 
 <use immagini/test/trustVettore.png>
-Package pdftex.def Info: immagini/test/trustVettore.png used on input line 35.
+Package pdftex.def Info: immagini/test/trustVettore.png used on input line 36.
 (pdftex.def)             Requested size: 273.14578pt x 54.62914pt.
 
 <immagini/test/immagineAntiTrust.png, id=291, 273.14645pt x 54.62929pt>
@@ -921,37 +921,37 @@ File: immagini/test/immagineAntiTrust.png Graphic file (type png)
 
 <use immagini/test/immagineAntiTrust.png>
 Package pdftex.def Info: immagini/test/immagineAntiTrust.png used on input line
- 41.
+ 42.
 (pdftex.def)             Requested size: 273.14578pt x 54.62914pt.
 
 <immagini/test/tBFSmodoA.png, id=292, 273.14645pt x 54.62929pt>
 File: immagini/test/tBFSmodoA.png Graphic file (type png)
 
 <use immagini/test/tBFSmodoA.png>
-Package pdftex.def Info: immagini/test/tBFSmodoA.png used on input line 51.
+Package pdftex.def Info: immagini/test/tBFSmodoA.png used on input line 52.
 (pdftex.def)             Requested size: 273.14578pt x 54.62914pt.
 
 <immagini/test/aBFSmodoA.png, id=293, 273.14645pt x 54.62929pt>
 File: immagini/test/aBFSmodoA.png Graphic file (type png)
 
 <use immagini/test/aBFSmodoA.png>
-Package pdftex.def Info: immagini/test/aBFSmodoA.png used on input line 57.
+Package pdftex.def Info: immagini/test/aBFSmodoA.png used on input line 58.
 (pdftex.def)             Requested size: 273.14578pt x 54.62914pt.
 
 <immagini/test/tBFSmodoB.png, id=294, 273.14645pt x 109.25858pt>
 File: immagini/test/tBFSmodoB.png Graphic file (type png)
 
 <use immagini/test/tBFSmodoB.png>
-Package pdftex.def Info: immagini/test/tBFSmodoB.png used on input line 65.
+Package pdftex.def Info: immagini/test/tBFSmodoB.png used on input line 66.
 (pdftex.def)             Requested size: 273.14578pt x 109.2583pt.
  [69 <./immagini/test/grafoComp.png>] [70 <./immagini/test/trustVettore.png> <.
-/immagini/test/immagineAntiTrust.png>])
-[71 <./immagini/test/tBFSmodoA.png> <./immagini/test/aBFSmodoA.png> <./immagini
-/test/tBFSmodoB.png>] (./tesi.bbl [72
+/immagini/test/immagineAntiTrust.png>]
+[71 <./immagini/test/tBFSmodoA.png> <./immagini/test/aBFSmodoA.png>]) [72 <./im
+magini/test/tBFSmodoB.png>] [73] (./tesi.bbl [74
 
 
 
-] [73] [74] [75]
+] [75] [76] [77]
 Underfull \hbox (badness 3965) in paragraph at lines 183--187
 \OT1/cmr/m/n/10.95 w-led by the La-bo-ra-to-ry of Web Al-go-ri-th-mics, Uni-ver
 -si-ty of Mi-lan,
@@ -963,7 +963,7 @@ Underfull \hbox (badness 7362) in paragraph at lines 198--201
 w-docs/overview-
  []
 
-) [76] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux
+) [78] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux
 ) (./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux)
 (./capitoli/dataset.aux) (./capitoli/test.aux)) ) 
 Here is how much of TeX's memory you used:
@@ -990,10 +990,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (81 pages, 1749492 bytes).
+Output written on tesi.pdf (83 pages, 1752616 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
- 230 compressed objects within 3 object streams
+ 381 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

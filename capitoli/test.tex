@@ -21,7 +21,8 @@ Quindi anziche implementarci l'algoritmo BFS abbiamo utilizzato l'implementazion
 \section{I test}
 Come gia introdotto lo scopo dei test consiste che dato un algoritmo di spam detection che opera in modo offline valutare le sue prestazioni se operasse in modo online. Oltre tutto abbiamo scelto due algoritmi \textit{linked base} quali \textit{Trustrank} e \textit{Anti-trust rank} questo significa che l'algoritmo opererà su un grafo del web incompleto, all'inizio del crawling, fino ad arrivare ad operare sull'intero grafo alla fine del crawling.
 
-Quasi tutti i test seguono uno stesso schema; viene eseguito \textit{Trustrank} (e \textit{Anti-trust rank}) sul grafo completo, e lo indicheremo con \(t\) (\textit{Anti-trust rank} sarà indicato con \(a\)), successivamente viene eseguita la BFS (ovvero la visita in ampiezza) con nodo sorgente \(s\) e quindi si ricava la coda \(q\) dei nodi visitati a partire da \(s\); dopo di che si imposta un intervallo \(i\) il quale serve a selezionare un certo numero di nodi dalla coda \(q\) e si calcola \textit{Trustrank} (e \textit{Anti-trust rank}) sul grafo ottenuto dai  nodi selezionati da \(q\), il risultato lo indicheremo con \(\hat{t}_i\) (\textit{Anti-trust rank} sarà indicato con \(\hat{a}_i\)). Questo processo viene iterato incrementando sempre di più l'intervallo \(i\) finché non si arriva alla fine della coda \(q\) dei nodi visitati partendo dal nodo \(s\). Dopo aver calcolato \(t\) e \(\hat{t}_i\) sono due vettori si possono valutare tramite la Tau di Kendall e indicheremo con \(\tau(t,\hat{t}_i)\) la Tau di Kendall per \(t\) e \(\hat{t}_i\)  (e quindi \(\tau(a,\hat{a}_i)\) sarà la Tau di Kendall per \(a\) e \(\hat{a}_i\)). Ad esempio in figura \ref{fig:grafoComp} è rappresentato il 
+Quasi tutti i test seguono uno stesso schema; viene eseguito \textit{Trustrank} (e \textit{Anti-trust rank}) sul grafo completo, e lo indicheremo con \(t\) (\textit{Anti-trust rank} sarà indicato con \(a\)), successivamente viene eseguita la BFS (ovvero la visita in ampiezza) con nodo sorgente \(s\) e quindi si ricava la coda \(q\) dei nodi visitati a partire da \(s\); dopo di che si imposta un intervallo \(i\) il quale serve a selezionare un certo numero di nodi dalla coda \(q\) e si calcola \textit{Trustrank} (e \textit{Anti-trust rank}) sul grafo ottenuto dai  nodi selezionati da \(q\), il risultato lo indicheremo con \(\hat{t}_i\) (\textit{Anti-trust rank} sarà indicato con \(\hat{a}_i\)). Questo processo viene iterato incrementando sempre di più l'intervallo \(i\) finché non si arriva alla fine della coda \(q\) dei nodi visitati partendo dal nodo \(s\). Dopo aver calcolato \(t\) e \(\hat{t}_i\) sono due vettori si possono valutare tramite la Tau di Kendall e indicheremo con \(\tau(t,\hat{t}_i)\) la Tau 
+di Kendall per \(t\) e \(\hat{t}_i\)  (e quindi \(\tau(a,\hat{a}_i)\) sarà la Tau di Kendall per \(a\) e \(\hat{a}_i\)). Ad esempio in figura \ref{fig:grafoComp} è rappresentato il 
 grafo completo su cui verra calolato \(t\) e \(a\).
  \begin{figure}
 \centering
@@ -59,7 +60,7 @@ Il primo metodo che chiameremo \textit{Modo\_A} assegna ad ogni indice dei vetto
  \label{fig:aBFSmodoA}
 \end{figure}
 \\
-Il secondo metodo che chiameremo \textit{Modo\_B} invece di assegnare il valore 0.0 ai nodi per cui non è possibile calcolare \textit{trustrank} e \textit{anti-trust rank} elimina tali indici dal vettore.  Ad esempio in figura \ref{fig:tBFSmodoB} viene illustrato il caso in cui eseguendo la BFS dal nodo 1, i nodi 0 e 4 rimangano senza aver assegnato un valore di \textit{trustrank}. Si nota che il vettore \(hat{t}\) ha lunghezza inferiore al vettore \(t\).
+Il secondo metodo che chiameremo \textit{Modo\_B} invece di assegnare il valore 0.0 ai nodi per cui non è possibile calcolare \textit{trustrank} e \textit{anti-trust rank} elimina tali indici dal vettore.  Ad esempio in figura \ref{fig:tBFSmodoB} viene illustrato il caso in cui eseguendo la BFS dal nodo 1, i nodi 0 e 4 rimangano senza aver assegnato un valore di \textit{trustrank}. Quindi gli indici 0 e 4 del vettore \(t\) non sono inclusi nel vettore \(\hat{t}_3\) questo implica che ci deve essere una corrispondenza tra gli indice del vettore \(t\) e quelli del vettore \(\hat{t}_3\) (in figura \ref{fig:tBFSmodoB} l'indice 0 del vettore \(\hat{t}_3\) corrisponde all'indice 1 del vettore \(t\), l'indice 1 al indice 2 ed infine l'indice 2 all'indice 3).  Si inoltre nota che il vettore \(\hat{t}_3\) ha lunghezza inferiore al vettore \(t\). 
 \begin{figure}
 \centering
  \includegraphics{immagini/test/tBFSmodoB}
@@ -67,8 +68,20 @@ Il secondo metodo che chiameremo \textit{Modo\_B} invece di assegnare il valore 
  \label{fig:tBFSmodoB}
 \end{figure}
 
-parlare della fase di valutazione nei due modi
-introdure i test
+Quindi la valutazione tra il vettore di \(t\), di \textit{trustrank}, calcolato sul grafo completo e il vettore \(\hat{t}_i\), di \textit{trustrank}, calcolato su una parte del grafo può avveniere usando ho il \textit{Modo\_A} o il \textit{Modo\_B}. Nel caso della valutazione nel \textit{Modo\_B} il vettore \(t\) dovra essere ristretto alla lunghezza del vettore \(\hat{t}_i\) e quindi dovranno essere eliminati gli indici del vettore \(t\) che non sono inclusi nel vettore \(\hat{t}_i\).
+%parlare del fatto che al vettore d nel modoA bisogna togliere gli indici che non servono
+
+I test saranno, quindi, cosi strutturari:
+\begin{itemize}
+ \item Test numero 1. Si confronta \textit{trustrank} sul grafo completo con \textit{trustrank} calcolato su una porzione di grafo. Lo stesso si fa per \textit{anti-trust ran}.
+ \item Test numero 2. Si confrontano i solo nodi etichettati spam del vettore di  \textit{trustrank} sul grafo completo con  i soli nodi etichettati spam del vettore di \textit{trustrank} calcolato su una porzione di grafo. Nel caso di \textit{anti-trust rank} si  confrontano i nodi etichettati come non spam.
+ \item Test numero 3. Si calcola \textit{trustrank} sul grafo completo ottenuto eseguendo la visita partendo da un nodo \(s\) e si confronta con \textit{trustrank} eseguito a ogni passo delle visita ma si imposta un seedset diverso formato dagli ultimi \(n\) nodi della vista. Viene applicato lo stesso metodo per \textit{anti-trust rank}.
+ \item Test numero 4. Si esegue la BFS a partire dal nodo \(s\) e per ogni passo si calola la media dei valori di \textit{trustrank} dei soli nodi che sappiamo essere non spam e la media dei valori di \textit{Trustrank} dei soli nodi spam. Quindi si calcola la differenza tra le due medie. Lo stesso metodo verrà applicato per l'analisi dell'algoritmo di \textit{anti-trust rank}.
+ \end{itemize}
+
+ Dal momento che i test 1, 2 e 3 utilizzano la Tau di Kendall per calcolare la distanza tra i vettori \(t\) e \(\hat{t}_i\) allora ognuno dei test verra eseguito secondo il \textit{Modo\_A} e il \textit{Modo\_B}.
+ 
+ \section{Test 1}
 
 
 
