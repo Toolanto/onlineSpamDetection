@@ -60,7 +60,7 @@ Il primo metodo che chiameremo \textit{Modo\_A} assegna ad ogni indice dei vetto
  \label{fig:aBFSmodoA}
 \end{figure}
 \\
-Il secondo metodo che chiameremo \textit{Modo\_B} invece di assegnare il valore 0.0 ai nodi per cui non è possibile calcolare \textit{trustrank} e \textit{anti-trust rank} elimina tali indici dal vettore.  Ad esempio in figura \ref{fig:tBFSmodoB} viene illustrato il caso in cui eseguendo la BFS dal nodo 1, i nodi 0 e 4 rimangano senza aver assegnato un valore di \textit{trustrank}. Si nota che il vettore \(hat{t}\) ha lunghezza inferiore al vettore \(t\).
+Il secondo metodo che chiameremo \textit{Modo\_B} invece di assegnare il valore 0.0 ai nodi per cui non è possibile calcolare \textit{trustrank} e \textit{anti-trust rank} elimina tali indici dal vettore.  Ad esempio in figura \ref{fig:tBFSmodoB} viene illustrato il caso in cui eseguendo la BFS dal nodo 1, i nodi 0 e 4 rimangano senza aver assegnato un valore di \textit{trustrank}. Quindi gli indici 0 e 4 del vettore \(t\) non sono inclusi nel vettore \(\hat{t}_3\) questo implica che ci deve essere una corrispondenza tra gli indice del vettore \(t\) e quelli del vettore \(\hat{t}_3\) (in figura \ref{fig:tBFSmodoB} l'indice 0 del vettore \(\hat{t}_3\) corrisponde all'indice 1 del vettore \(t\), l'indice 1 al indice 2 ed infine l'indice 2 all'indice 3).  Si inoltre nota che il vettore \(\hat{t}_3\) ha lunghezza inferiore al vettore \(t\). 
 \begin{figure}
 \centering
  \includegraphics{immagini/test/tBFSmodoB}
@@ -68,8 +68,7 @@ Il secondo metodo che chiameremo \textit{Modo\_B} invece di assegnare il valore 
  \label{fig:tBFSmodoB}
 \end{figure}
 
-Quindi la valutazione tra il vettore di \(t\), di \textit{trustrank}, calcolato sul grafo completo e il vettore \(\hat{t}_i\), di \textit{trustrank}, calcolato su una parte del grafo può avveniere usando ho il \textit{Modo\_A} o il \textit{Modo\_B}. 
-parlare della fase di valutazione nei due modi
+Quindi la valutazione tra il vettore di \(t\), di \textit{trustrank}, calcolato sul grafo completo e il vettore \(\hat{t}_i\), di \textit{trustrank}, calcolato su una parte del grafo può avveniere usando ho il \textit{Modo\_A} o il \textit{Modo\_B}. Nel caso della valutazione nel \textit{Modo\_B} il vettore \(t\) dovra essere ristretto alla lunghezza del vettore \(\hat{t}_i\) e quindi dovranno essere eliminati gli indici del vettore \(t\) che non sono inclusi nel vettore \(\hat{t}_i\).
 %parlare del fatto che al vettore d nel modoA bisogna togliere gli indici che non servono
 
 I test saranno, quindi, cosi strutturari:
@@ -81,6 +80,9 @@ I test saranno, quindi, cosi strutturari:
  \end{itemize}
 
  Dal momento che i test 1, 2 e 3 utilizzano la Tau di Kendall per calcolare la distanza tra i vettori \(t\) e \(\hat{t}_i\) allora ognuno dei test verra eseguito secondo il \textit{Modo\_A} e il \textit{Modo\_B}.
+ 
+ \section{Test 1}
+ Questo test calcola la distanza tra il vettore \(t\) di \textit{trustrank} ricavato sull'intero grafo e il vettore \(\hat{t}_i\) di \textit{trustrank} ricavato a diversi passi di una visita in ampiezza con nodo sorgente \(s\). Inoltre viene eseguto lo stesso procedimento per quanto riguarda \textit{anti-trust rank}.
 
 
 

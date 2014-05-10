@@ -41,8 +41,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Esempio di grafo\relax }}{69}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Esempio del vettore di trustrank calcolato sull'intero grafo\relax }}{70}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Esempio del vettore di anti-trust rank calcolato sull'intero grafo\relax }}{70}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces \textit {Modo\_A}. Esempio del vettore di trustrank calcolato su una porzione di grafo.\relax }}{71}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces \textit {Modo\_A}. Esempio del vettore di anti-trust rank calcolato su una porzione di grafo.\relax }}{71}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces \textit {Modo\_B}. Esempio del vettore di trustrank calcolato su una porzione di grafo.\relax }}{72}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Esempio di grafo ricavato tramite una BFS a partire dal nodo 1 del grafo in figura \ref {fig:grafoComp}.\relax }}{70}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Esempio del vettore di trustrank calcolato sull'intero grafo\relax }}{70}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Esempio del vettore di anti-trust rank calcolato sull'intero grafo\relax }}{70}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces \textit {Modo\_A}. Esempio del vettore di trustrank calcolato su una porzione di grafo.\relax }}{71}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces \textit {Modo\_A}. Esempio del vettore di anti-trust rank calcolato su una porzione di grafo.\relax }}{71}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces \textit {Modo\_B}. Esempio del vettore di trustrank calcolato su una porzione di grafo.\relax }}{72}
