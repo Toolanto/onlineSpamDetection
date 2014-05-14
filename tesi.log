@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  12 MAY 2014 11:11
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  14 MAY 2014 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,11 +561,11 @@ e
  [2]
 (./tesi.lof [3
 
-] [4])
+] [4] [5])
 \tf@lof=\write4
 \openout4 = `tesi.lof'.
 
- [5] [6]
+ [6]
 \openout2 = `inizio/introduzione.aux'.
 
  (./inizio/introduzione.tex
@@ -953,46 +953,95 @@ Package pdftex.def Info: immagini/test/tBFSmodoB.png used on input line 75.
 (pdftex.def)             Requested size: 273.14578pt x 109.2583pt.
  [70 <./immagini/test/grafo3.png> <./immagini/test/trustVettore.png> <./immagin
 i/test/immagineAntiTrust.png>] [71 <./immagini/test/tBFSmodoA.png> <./immagini/
-test/aBFSmodoA.png>] [72 <./immagini/test/tBFSmodoB.png>]
-<immagini/test1/trustranktestMode0_62.jpg, id=311, 481.8pt x 481.8pt>
+test/aBFSmodoA.png>] [72 <./immagini/test/tBFSmodoB.png>] [73]
+<immagini/test1/trustranktestMode0_62.jpg, id=315, 481.8pt x 481.8pt>
 File: immagini/test1/trustranktestMode0_62.jpg Graphic file (type jpg)
 
 <use immagini/test1/trustranktestMode0_62.jpg>
 Package pdftex.def Info: immagini/test1/trustranktestMode0_62.jpg used on input
- line 97.
-(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
- [73]
+ line 105.
+(pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
+
 <immagini/test1/trustranktestMode0_112.jpg, id=316, 481.8pt x 481.8pt>
 File: immagini/test1/trustranktestMode0_112.jpg Graphic file (type jpg)
 
 <use immagini/test1/trustranktestMode0_112.jpg>
 Package pdftex.def Info: immagini/test1/trustranktestMode0_112.jpg used on inpu
-t line 106.
-(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
- [74 <./immagini/test1/trustranktestMode0_62.jpg>]
-<immagini/test1/antiTrustrankTestMode0_62.jpg, id=320, 481.8pt x 481.8pt>
+t line 109.
+(pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
+
+
+LaTeX Warning: Float too large for page by 18.14932pt on input line 112.
+
+[74] [75 <./immagini/test1/trustranktestMode0_62.jpg> <./immagini/test1/trustra
+nktestMode0_112.jpg>]
+<immagini/test1/antiTrustrankTestMode0_62.jpg, id=323, 481.8pt x 481.8pt>
 File: immagini/test1/antiTrustrankTestMode0_62.jpg Graphic file (type jpg)
 
 <use immagini/test1/antiTrustrankTestMode0_62.jpg>
 Package pdftex.def Info: immagini/test1/antiTrustrankTestMode0_62.jpg used on i
-nput line 112.
-(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
+nput line 120.
+(pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test1/antiTrustrankTestMode0_112.jpg, id=321, 481.8pt x 481.8pt>
+<immagini/test1/antiTrustrankTestMode0_112.jpg, id=324, 481.8pt x 481.8pt>
 File: immagini/test1/antiTrustrankTestMode0_112.jpg Graphic file (type jpg)
 
 <use immagini/test1/antiTrustrankTestMode0_112.jpg>
 Package pdftex.def Info: immagini/test1/antiTrustrankTestMode0_112.jpg used on 
-input line 118.
-(pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
-) [75 <./immagini/test1/trustranktestMode0_112.jpg>] [76 <./immagini/test1/anti
-TrustrankTestMode0_62.jpg>]
-[77 <./immagini/test1/antiTrustrankTestMode0_112.jpg>] (./tesi.bbl [78
+input line 124.
+(pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
+
+
+LaTeX Warning: Float too large for page by 18.14932pt on input line 127.
+
+<immagini/test1/trustranktestMode1_62.jpg, id=325, 481.8pt x 481.8pt>
+File: immagini/test1/trustranktestMode1_62.jpg Graphic file (type jpg)
+
+<use immagini/test1/trustranktestMode1_62.jpg>
+Package pdftex.def Info: immagini/test1/trustranktestMode1_62.jpg used on input
+ line 138.
+(pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
+
+<immagini/test1/trustranktestMode1_112.jpg, id=326, 481.8pt x 481.8pt>
+File: immagini/test1/trustranktestMode1_112.jpg Graphic file (type jpg)
+
+<use immagini/test1/trustranktestMode1_112.jpg>
+Package pdftex.def Info: immagini/test1/trustranktestMode1_112.jpg used on inpu
+t line 142.
+(pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
+
+
+LaTeX Warning: Float too large for page by 18.14932pt on input line 145.
+
+[76] [77 <./immagini/test1/antiTrustrankTestMode0_62.jpg> <./immagini/test1/ant
+iTrustrankTestMode0_112.jpg>]
+<immagini/test1/antiTrustrankTestMode1_62.jpg, id=333, 481.8pt x 481.8pt>
+File: immagini/test1/antiTrustrankTestMode1_62.jpg Graphic file (type jpg)
+
+<use immagini/test1/antiTrustrankTestMode1_62.jpg>
+Package pdftex.def Info: immagini/test1/antiTrustrankTestMode1_62.jpg used on i
+nput line 151.
+(pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
+
+<immagini/test1/antiTrustrankTestMode1_112.jpg, id=334, 481.8pt x 481.8pt>
+File: immagini/test1/antiTrustrankTestMode1_112.jpg Graphic file (type jpg)
+
+<use immagini/test1/antiTrustrankTestMode1_112.jpg>
+Package pdftex.def Info: immagini/test1/antiTrustrankTestMode1_112.jpg used on 
+input line 155.
+(pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
+
+
+LaTeX Warning: Float too large for page by 18.14932pt on input line 158.
+
+) [78] [79 <./immagini/test1/trustranktestMode1_62.jpg> <./immagini/test1/trust
+ranktestMode1_112.jpg>] [80 <./immagini/test1/antiTrustrankTestMode1_62.jpg> <.
+/immagini/test1/antiTrustrankTestMode1_112.jpg>] (./tesi.bbl [81
 
 
 
-]
-[79] [80] [81]
+] [82] [83]
+[84]
 Underfull \hbox (badness 3965) in paragraph at lines 183--187
 \OT1/cmr/m/n/10.95 w-led by the La-bo-ra-to-ry of Web Al-go-ri-th-mics, Uni-ver
 -si-ty of Mi-lan,
@@ -1004,17 +1053,17 @@ Underfull \hbox (badness 7362) in paragraph at lines 198--201
 w-docs/overview-
  []
 
-) [82] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux
+) [85] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux
 ) (./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux)
 (./capitoli/dataset.aux) (./capitoli/test.aux)) ) 
 Here is how much of TeX's memory you used:
- 6400 strings out of 495048
- 94735 string characters out of 3181555
- 176519 words of memory out of 3000000
- 9400 multiletter control sequences out of 15000+200000
+ 6424 strings out of 495048
+ 95703 string characters out of 3181555
+ 176567 words of memory out of 3000000
+ 9420 multiletter control sequences out of 15000+200000
  11164 words of font info for 40 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,43p,2124b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,43p,1310b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1
@@ -1031,10 +1080,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (88 pages, 1819786 bytes).
+Output written on tesi.pdf (91 pages, 1884955 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
+ 416 PDF objects out of 1000 (max. 8388607)
+ 252 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 

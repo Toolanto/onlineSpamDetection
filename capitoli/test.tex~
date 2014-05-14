@@ -91,35 +91,71 @@ I test saranno, quindi, cosi strutturari:
  Dal momento che i test 1, 2 e 3 utilizzano la Tau di Kendall per calcolare la distanza tra i vettori \(t\) e \(\hat{t}_i\) allora ognuno dei test verra eseguito secondo il \textit{Modo\_A} e il \textit{Modo\_B}.
  
  \section{Test 1}
- Questo test calcola la distanza tra il vettore \(t\) di \textit{trustrank} ricavato sull'intero grafo e il vettore \(\hat{t}_i\) di \textit{trustrank} calcolato sul grafo ricavato dai nodi visitati lungo una visita in ampiezza con nodo sorgente \(s\). Inoltre viene eseguto lo stesso procedimento per quanto riguarda \textit{anti-trust rank} ovvero si calcolano le distanze tra il vettore di \(a\) di \textit{anti-trust rank} ottenuto dal grafo completo e il vettore \(\hat{a}_i\)  caloato sul grafo ricavato dai nodi visitati lungo  un visita in ampiezza con nodo sorgente \(s\). Dal dataset sono impostati come nodo sorgente della BFS due nodi: il nodo 62 etichettato come non spam e il nodo 112 etichettato come spam. In figura \ref{fig:test1trustModoA62} è illustrato il grafico risultante della Tau di Kendall , calcolata usando il \textit{Modo\_A}, tra \(t\) e \(\hat{t}_i\) dove la visita in ampiezza ha come nodo sorgente il nodo 62, allo stesso modo in figura \ref{fig:test1trustModoA112} è illustrato il grafico risultante tra la Tau di Kendall, calcolata usando il \textit{Modo\_A}, di \(t\) e \(\hat{t}_i\) calcolato sul grafo ottenuto lungo una visita in ampiezza con nodo sorgente 112. Quello che si nota è che quando la visita è nella fase iniziale e quindi il grafo risultante è costituito da pochi nodi rispetto al grafo completo, il valore della Tau di Kendall è prossimo allo 0 ma questo valore cresce in modo proporzionale al numero di nodi visitati lungo la BFS fino ad arrivare a circa il valore massimo ovvero 1. Inoltre l'andamento del grafico mostra che quando si arriva a meta dei nodi visitati la Tau di Kendall è uguale a circa 0.5 e questo implica che gia dopo aver visitato la metà dei nodi del grafo si può utilizzare \textit{trustrank} in modo online ed avere un il vettore risultatnte molto simile al vettore di \textit{trustrank} calcolato sul grafo completo ovvero la distanza tra i due vettori è breve. Tale distanza sarà sempre più breve quanto più la visita in ampiezza, e quindi il crawler, visiterà le pagine.
- \begin{figure}
+ Questo test calcola la distanza tra il vettore \(t\) di \textit{trustrank} ricavato sull'intero grafo e il vettore \(\hat{t}_i\) di \textit{trustrank} calcolato sul grafo ricavato dai nodi visitati lungo una visita in ampiezza con nodo sorgente \(s\). Inoltre viene eseguto lo stesso procedimento per quanto riguarda \textit{anti-trust rank} ovvero si calcolano le distanze tra il vettore di \(a\) di \textit{anti-trust rank} ottenuto dal grafo completo e il vettore \(\hat{a}_i\)  caloato sul grafo ricavato dai nodi visitati lungo  un visita in ampiezza con nodo sorgente \(s\). Dal dataset sono impostati come nodo sorgente della BFS due nodi: il nodo 62 etichettato come non spam e il nodo 112 etichettato come spam. Inoltre per il calcolo di \textit{trustrank} sull'intero grafo viene utilizzato come seedset l'insieme di pagine del dataset WEBSPAM-UK2007 etichettate come non spam mentre per il calcolo di \textit{trustrank} sul grafo ottenuto dai nodi visitati durante la BFS il seedset sarà formato dalle pagine 
+visitate che sono etichettate come non spam nel dataset WEBSPAM-UK2007. Per il calolo di \textit{anti-trust rank} sull'intero grafo, invece, il seedset sarà composto dalle pagine etichettate come spam nel dataset WEBSPAM-UK2007 mentre il seedset di \textit{anti-trust rank} calcolato sul grafo ottenuto dai nodi visitati dalla BFS sarà formato dai soli nodi visitati che sono etichettati come spam.
+ \subsection{Modo\_A}
+
+ In figura \ref{fig:test1trustModoA62} è illustrato il grafico risultante della Tau di Kendall , calcolata usando il \textit{Modo\_A}, tra \(t\) e \(\hat{t}_i\) dove la visita in ampiezza ha come nodo sorgente il nodo 62, allo stesso modo in figura \ref{fig:test1trustModoA112} è illustrato il grafico risultante tra la Tau di Kendall, calcolata usando il \textit{Modo\_A}, di \(t\) e \(\hat{t}_i\) calcolato sul grafo ottenuto lungo una visita in ampiezza con nodo sorgente 112. Sull'asse delle ascisse è rappresentato il numero di nodi che sono stati visitati attraverso la BFS e quindi il numero di nodi del grafo su cui è stato calcolato \(\hat{t}_i\) dove \(i\) è appunto il numero di nodi presi in considerazione, mentre sull'asse delle ordinate è rappresentato il valore della Tau di Kendall tra il vettore \(t\) e \(\hat{t}_i\).
+ %parlare dell'intervallo con cui vengono incrementati i nodi?
+ 
+ Quello che si nota è che quando la visita è nella fase iniziale e quindi il grafo risultante è costituito da pochi nodi rispetto al grafo completo, il valore della Tau di Kendall è prossimo allo 0 ma questo valore cresce in modo proporzionale al numero di nodi visitati lungo la BFS fino ad arrivare a circa il valore massimo ovvero 1. Inoltre l'andamento del grafico mostra che quando si arriva a meta dei nodi visitati la Tau di Kendall è uguale a circa 0.5 e questo implica che gia dopo aver visitato la metà dei nodi del grafo si può utilizzare \textit{trustrank} in modo online ed avere un il vettore risultatnte molto simile al vettore di \textit{trustrank} calcolato sul grafo completo ovvero la distanza tra i due vettori è breve. Tale distanza sarà sempre più breve quanto più la visita in ampiezza, e quindi il crawler, visiterà le pagine.
+
+  \begin{figure}
 \centering
- \includegraphics[width=10cm]{immagini/test1/trustranktestMode0_62}
+ \includegraphics[height=9cm]{immagini/test1/trustranktestMode0_62}
  \caption{Test numero 1 (trustrank, 62). Calcolo della distanza dei vettori, usando il Modo\_A, tra trustrank calcolato sull'intero grafo e trustrank calcolato sul grafo ricavato dai nodi visitati lungo una BFS partendo dal nodo 62.}
  \label{fig:test1trustModoA62}
-\end{figure}
-
-Quanto descritto per la fase di testing di \textit{trustrank} vale per \textit{anti-trust rank}. In figura \ref{fig:test1antitrustModoA62} è illustrato il grafico risultante della Tau di Kendall tra il vettore di \textit{anti-trust rank} calcolato sull'intero grafo e il vettore di \textit{anti-trust rank} calcolato sul grafo ottento dai nodi visitati attraverso la BFS con nodo sorgente 62, mentre in figura \ref{fig:test1antitrustModoA112} il nodo sorgente della BFS è 112. Anche questi due grafici mostrano che quanto più la visita BFS cresce tanto più i vettori \(a\) e \(\hat{a}_i\) sono simili.
-
- \begin{figure}
 \centering
- \includegraphics[width=10cm]{immagini/test1/trustranktestMode0_112}
+ \includegraphics[height=9cm]{immagini/test1/trustranktestMode0_112}
  \caption{Test numero 1 (trustrank, 112). Calcolo della distanza dei vettori, usando il Modo\_A, tra trustrank calcolato sull'intero grafo e trustrank calcolato sul grafo ricavato dai nodi visitati lungo una BFS partendo dal nodo 112.}
  \label{fig:test1trustModoA112}
 \end{figure}
+ 
+Quanto descritto per la fase di testing di \textit{trustrank} vale per \textit{anti-trust rank}. In figura \ref{fig:test1antitrustModoA62} è illustrato il grafico risultante della Tau di Kendall , cacolata usando il \textit{Modo\_A}, tra il vettore di \textit{anti-trust rank} calcolato sull'intero grafo e il vettore di \textit{anti-trust rank} calcolato sul grafo ottento dai nodi visitati attraverso la BFS con nodo sorgente 62, mentre in figura \ref{fig:test1antitrustModoA112} il nodo sorgente della BFS è 112. Anche questi due grafici mostrano che quanto più la visita BFS cresce tanto più i vettori \(a\) e \(\hat{a}_i\) sono simili. Quindi la distanza tra il vettore \(a\) e \(\hat{a}_i\) è minore tanto più la visita entra in profondità del grafo.
+
+Quindi il comportamento di \textit{trustrank} e \textit{anti-trust rank} in modalità online è fortemente dipendende dalla proporzione di grafo che si sta esaminando. 
+  
  \begin{figure}
 \centering
- \includegraphics[width=8cm]{immagini/test1/antiTrustrankTestMode0_62}
+ \includegraphics[height=9cm]{immagini/test1/antiTrustrankTestMode0_62}
  \caption{Test numero 1 (anti-trust rank, 62). Calcolo della distanza dei vettori, usando il Modo\_A, tra anit-trust rank calcolato sull'intero grafo e anti-trust rank calcolato sul grafo ricavato dai nodi visitati lungo una BFS parteneo dal nodo 62.}
  \label{fig:test1antitrustModoA62}
-\end{figure}
- \begin{figure}
 \centering
- \includegraphics[width=8cm]{immagini/test1/antiTrustrankTestMode0_112}
+ \includegraphics[height=9cm]{immagini/test1/antiTrustrankTestMode0_112}
  \caption{Test numero 1 (anti-trust rank, 112). Calcolo della distanza dei vettori, usando il Modo\_A, tra anit-trust rank calcolato sull'intero grafo e anti-trust rank calcolato sul grafo ricavato dai nodi visitati lungo una BFS parteneo dal nodo 112.}
  \label{fig:test1antitrustModoA112}
 \end{figure}
 
+\subsection{Modo\_B}
+I risultati ottenuti fino adesso non sono completamente veritieri in quanto nel \textit{Modo\_A} alcuni indici del  vettore \(\hat{t}_i\) e alcuni indici del vettore \(\hat{a}_i\) potrebbero aver assegnato il valore 0.0 nel caso in cui questi non siano stati visitati dalla BFS. Quindi si evince che la Tau di Kendall sarà influenzata da tale meccanismo ed ecco perché è si è scelto di gestire i valori dei due vettori \(\hat{t}_i\) e \(\hat{a}_i\) attraverso il \textit{Modo\_B}.
+
+In figura \ref{fig:test1trustModoB62} e in figura \ref{fig:test1trustModoB112} sono rappresentati rispettivamente i grafici delle Tau di Kendall gestite tramite il \textit{Modo\_B}, per il cacolo delle distanze tra il vettore \(t\) calcolato sull'intero grafo e il vettore \(\hat{t}_i\) calcolato sul grafo ottenuto dai nodi visitati lungo una visita in ampiezza con nodo sorgente nel primo caso 62 e nel secondo 112.  Anche in questo caso sull'asse delle ascisse è rappresentato il numero di nodi che sono stati visitati attraverso la BFS e quindi il numero di nodi del grafo su cui viene calcolato \(\hat{a}_i\) dove \(i\) è appunto il numero di nodi presi in considerazione, mentre sull'asse delle ordinate è rappresentato il valore della Tau di Kendall tra il vettore \(t\) e \(\hat{t}_i\).
+La Tau di Kendall si comporta differentemente dai risultati ottenuti nel \textit{Modo\_A} (in particolare figura \ref{fig:test1trustModoA62} e \ref{fig:test1trustModoA112}): il valore di Tau di Kendall uguale ad 1 si ha quando la BFS ha visitato il solo nodo di partenza, dal momento che il vettore \(t\) ha un solo indice e il vettore \(\hat{t}_1\) ha un solo indice il confronto con la Tau di Kendall ritorna un valore uguale ad 1. Dopo aver visitato il primo nodo l'andamento del grafico segue quello visto nel \textit{Modo\_A} dove all'aumentare dei nodi visitati della BFS il i vettore \(t\) e \(\hat{t}_i\) sono sempre meno distanti. Si nota inoltre che usando il \textit{Modo\_B} i valori dell Tau di Kendall (escludendo il caso della visit di un unico nodo) in entrambi i grafici \ref{fig:test1trustModoB62} e \ref{fig:test1trustModoB112} incominciano intorno a 0.7 per pochi nodi visitati e si arriva ad avere valore uguale a circa 1 alla fine della visita differentemente dal \textit{Modo\_A} dove il valore della 
+Tau di Kendall cresce da 0 a circa 1. Il motovo di tale comportamento risiede nel modo con cui vengono trattati i vettori nei due modi: \textit{Modo\_A} e \textit{Modo\_B}. Più precisamente mentre nel \textit{Modo\_A} agli indici, del vettore \(\hat{t}_i\) e \(\hat{a}_i\), che non sono stati visitati dalla BFS è assegnato il valore 0.0 e la lunghezza del vettore \(\hat{t}_i\) e del vettore \(\hat{a}_i\) è uguale al numero dei nodi dell'intero grafo nel \textit{Modo\_B} i vettori \(\hat{t}_i\) e \(\hat{a}_i\) sono ridimensionati ai soli nodi visitati dalla BFS questo implica che anche i vettori \(t\) e \(a\), ottenuti dall'elaborazione dell'intero grafo, vengano ridimensionati alla stessa lunghezza considerando i soli nodi visitati dalla BFS. Quindi mentre nel primo caso i due vettori per cui viene calcolata la Tau di Kendall sono distanti tra loro all'inizio della BFS in quanto avranno molti valori dicordanti in quanto ai vettori \(\hat{t}_i\) e \(\hat{a}_i\) vengono asseganti dei valori non veritieri (il 
+valore 0.0) ai nodi non ancora visitati nel secondo metodo il confronto è fatto solo tra i valori dei nodi del grafo temporaneo ottenuto dalla BFS e il valori dei nodi del grafo completo che sono inclusi nel grafo temporano. 
+ \begin{figure}
+\centering
+ \includegraphics[height=9cm]{immagini/test1/trustranktestMode1_62}
+ \caption{Test numero 1 (trustrank, 62). Calcolo della distanza dei vettori, usando il Modo\_B, tra trustrank calcolato sull'intero grafo e trustrank calcolato sul grafo ricavato dai nodi visitati lungo una BFS partendo dal nodo 62.}
+ \label{fig:test1trustModoB62}
+\centering
+ \includegraphics[height=9cm]{immagini/test1/trustranktestMode1_112}
+ \caption{Test numero 1 (trustrank, 112). Calcolo della distanza dei vettori, usando il Modo\_B, tra trustrank calcolato sull'intero grafo e trustrank calcolato sul grafo ricavato dai nodi visitati lungo una BFS partendo dal nodo 112.}
+ \label{fig:test1trustModoB112}
+\end{figure}
+
+Eseguendo lo stesso test per valutare la distanza tra il vettore \(a\) di \textit{anti-trust rank} calcolato sull'intero grafo e il vettore \(\hat{a}_i\) calcolato sul grafo ottenuto dai nodi visitati durante una visita in ampiezza si nota che i risultati sono presocchè uguali ai precedenti due test. In particolare in figura \ref{fig:test1antitrustModoB62} è rappresentato il grafico della Tau di Kendall che mette a confronto il vettore \(a\) con il vettore \(\hat{a}_i\) dove la BFS ha come nodo sorgente 62 mentre in figura \ref{fig:test1antitrustModoB112} è rappresentato il grafico della Tau di Kendall che mette a confronto il vettore \(a\) con il vettore \(\hat{a}_i\) dove la BFS ha nodo sorgente 112. Rispetto al test di \textit{trustrank} usando \textit{anti-trust rank} si nota che i grafici (senza considerare il primo valore per lo stesso motivo dei due test precedenti) hanno un andamento quasi logaritmico dove si ha come valore iniziale di Tau di Kendall 0.75 e come utlimi valori (stazionari) 0.95.
+
+ \begin{figure}
+\centering
+ \includegraphics[height=9cm]{immagini/test1/antiTrustrankTestMode1_62}
+ \caption{Test numero 1 (anti-trust rank, 62). Calcolo della distanza dei vettori, usando il Modo\_B, tra anit-trust rank calcolato sull'intero grafo e anti-trust rank calcolato sul grafo ricavato dai nodi visitati lungo una BFS parteneo dal nodo 62.}
+ \label{fig:test1antitrustModoB62}
+\centering
+ \includegraphics[height=9cm]{immagini/test1/antiTrustrankTestMode1_112}
+ \caption{Test numero 1 (anti-trust rank, 112). Calcolo della distanza dei vettori, usando il Modo\_B, tra anit-trust rank calcolato sull'intero grafo e anti-trust rank calcolato sul grafo ricavato dai nodi visitati lungo una BFS parteneo dal nodo 112.}
+ \label{fig:test1antitrustModoB112}
+\end{figure}
 
 
 

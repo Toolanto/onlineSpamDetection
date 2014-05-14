@@ -32,3 +32,5 @@
 \contentsline {section}{\numberline {6.1}Simulazione del crawler}{68}
 \contentsline {section}{\numberline {6.2}I test}{69}
 \contentsline {section}{\numberline {6.3}Test 1}{73}
+\contentsline {subsection}{\numberline {6.3.1}Modo\_A}{74}
+\contentsline {subsection}{\numberline {6.3.2}Modo\_B}{76}
