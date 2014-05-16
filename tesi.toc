@@ -34,3 +34,6 @@
 \contentsline {section}{\numberline {6.3}Test 1}{73}
 \contentsline {subsection}{\numberline {6.3.1}Modo\_A}{74}
 \contentsline {subsection}{\numberline {6.3.2}Modo\_B}{76}
+\contentsline {section}{\numberline {6.4}Test 2}{81}
+\contentsline {subsection}{\numberline {6.4.1}Modo\_A}{83}
+\contentsline {subsection}{\numberline {6.4.2}Modo\_B}{84}
