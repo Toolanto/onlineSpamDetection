@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  19 MAY 2014 12:21
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  19 MAY 2014 15:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1124,7 +1124,7 @@ File: immagini/test2/antiTrustraktGoodNodesTestMode1_62.jpg Graphic file (type
 jpg)
  <use immagini/test2/antiTrustraktGoodNodesTestMode1_62.jpg>
 Package pdftex.def Info: immagini/test2/antiTrustraktGoodNodesTestMode1_62.jpg 
-used on input line 233.
+used on input line 234.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 <immagini/test2/antiTrustraktGoodNodesTestMode1_112.jpg, id=373, 481.8pt x 481.
@@ -1133,46 +1133,46 @@ File: immagini/test2/antiTrustraktGoodNodesTestMode1_112.jpg Graphic file (type
  jpg)
  <use immagini/test2/antiTrustraktGoodNodesTestMode1_112.jpg>
 Package pdftex.def Info: immagini/test2/antiTrustraktGoodNodesTestMode1_112.jpg
- used on input line 237.
+ used on input line 238.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 
-LaTeX Warning: Float too large for page by 54.14932pt on input line 240.
+LaTeX Warning: Float too large for page by 54.14932pt on input line 241.
 
 [85] [86 <./immagini/test2/antiTrustraktGoodNodesTestMode0_62.jpg> <./immagini/
 test2/antiTrustraktGoodNodesTestMode0_112.jpg>] [87 <./immagini/test2/trustrank
 BadNodesTestMode1_62.jpg> <./immagini/test2/trustrankBadNodesTestMode1_112.jpg>
 ] [88] [89 <./immagini/test2/antiTrustraktGoodNodesTestMode1_62.jpg> <./immagin
-i/test2/antiTrustraktGoodNodesTestMode1_112.jpg>] [90]
-<immagini/test3/coplotTrustAnti_Mode0_62_set3776.jpg, id=393, 481.8pt x 481.8pt
+i/test2/antiTrustraktGoodNodesTestMode1_112.jpg>] [90] [91]
+<immagini/test3/coplotTrustAnti_Mode0_62_set3776.jpg, id=396, 481.8pt x 481.8pt
 >
 File: immagini/test3/coplotTrustAnti_Mode0_62_set3776.jpg Graphic file (type jp
 g)
  <use immagini/test3/coplotTrustAnti_Mode0_62_set3776.jpg>
 Package pdftex.def Info: immagini/test3/coplotTrustAnti_Mode0_62_set3776.jpg us
-ed on input line 253.
+ed on input line 259.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test3/coplotTrustAnti_alpha0005_Mode0_62_set3776.jpg, id=394, 481.8pt
+<immagini/test3/coplotTrustAnti_alpha0005_Mode0_62_set3776.jpg, id=397, 481.8pt
  x 481.8pt>
 File: immagini/test3/coplotTrustAnti_alpha0005_Mode0_62_set3776.jpg Graphic fil
 e (type jpg)
 
 <use immagini/test3/coplotTrustAnti_alpha0005_Mode0_62_set3776.jpg>
 Package pdftex.def Info: immagini/test3/coplotTrustAnti_alpha0005_Mode0_62_set3
-776.jpg used on input line 257.
+776.jpg used on input line 263.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 
-LaTeX Warning: Float too large for page by 54.14932pt on input line 260.
+LaTeX Warning: Float too large for page by 54.14932pt on input line 266.
 
-) [91] [92 <./immagini/test3/coplotTrustAnti_Mode0_62_set3776.jpg> <./immagini/
-test3/coplotTrustAnti_alpha0005_Mode0_62_set3776.jpg>] (./tesi.bbl [93
+) [92] [93 <./immagini/test3/coplotTrustAnti_Mode0_62_set3776.jpg> <./immagini/
+test3/coplotTrustAnti_alpha0005_Mode0_62_set3776.jpg>] (./tesi.bbl [94
 
 
 
 ]
-[94] [95] [96]
+[95] [96] [97]
 Underfull \hbox (badness 3965) in paragraph at lines 183--187
 \OT1/cmr/m/n/10.95 w-led by the La-bo-ra-to-ry of Web Al-go-ri-th-mics, Uni-ver
 -si-ty of Mi-lan,
@@ -1184,7 +1184,7 @@ Underfull \hbox (badness 7362) in paragraph at lines 198--201
 w-docs/overview-
  []
 
-) [97] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux
+) [98] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux
 ) (./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux)
 (./capitoli/dataset.aux) (./capitoli/test.aux)) ) 
 Here is how much of TeX's memory you used:
@@ -1194,7 +1194,7 @@ Here is how much of TeX's memory you used:
  9482 multiletter control sequences out of 15000+200000
  11618 words of font info for 42 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,43p,1354b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,43p,2096b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1
@@ -1212,10 +1212,10 @@ nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (105 pages, 2094643 bytes).
+Output written on tesi.pdf (106 pages, 2098610 bytes).
 PDF statistics:
- 476 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
+ 479 PDF objects out of 1000 (max. 8388607)
+ 287 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  311 words of extra memory for PDF output out of 10000 (max. 10000000)
 

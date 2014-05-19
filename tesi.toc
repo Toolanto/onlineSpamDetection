@@ -39,3 +39,4 @@
 \contentsline {subsection}{\numberline {6.4.2}Modo\_B}{85}
 \contentsline {section}{\numberline {6.5}Test 3}{90}
 \contentsline {subsection}{\numberline {6.5.1}Modo\_A}{91}
+\contentsline {subsection}{\numberline {6.5.2}Modo\_B}{92}
