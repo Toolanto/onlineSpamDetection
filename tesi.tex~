@@ -10,7 +10,6 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{listings}
-\usepackage{onlyamsmath}
 \begin{document}
 \frontmatter
 \tableofcontents
