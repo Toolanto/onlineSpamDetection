@@ -200,28 +200,53 @@ Questo test è molto simile al \textit{test numero 3} dove, però, il fattore di
 Il fattore \(\alpha\) impostato ad un valore molto vicino allo 0 aumenta la probabilità che \textit{trustrank} o \textit{anti-trust rank} scelgano di privileggiare la distribuzione descritta dal vettore di preferenza invece di seguire un semplice camminata sul grafo (per maggiori chiarimenti si consiglia di leggere il paragrafo \ref{sub:esogeno} dove è descritto \textit{Pagerank}).
 \begin{figure}
  \centering
- \includegraphics[height=9cm]{immagini/test3/coplotTrustAnti_Mode1_set3776_62_alpha0005}
-  \caption{Test numero 3 . In rosso, calcolo della Tau di Kendall tra il vettore $t_v$ e il vettore $\hat{t}_i$, dove $\alpha$ è impostato a 0.005. In verde calcolo della Tau di Kendall tra il vettore $a_v$ e il vettore $\hat{a}_i$, dove $\alpha$ è impostato a 0.005.}
- \label{fig:test3coplotTrustAntiModeB620005}
+ \includegraphics[height=9cm]{immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005}
+  \caption{Test numero 4 . In rosso, calcolo della Tau di Kendall tra il vettore $t_v$ e il vettore $\hat{t}_i$, dove $\alpha$ è impostato a 0.005. In verde calcolo della Tau di Kendall tra il vettore $a_v$ e il vettore $\hat{a}_i$, dove $\alpha$ è impostato a 0.005.}
+ \label{fig:test4coplotTrustAntiModeB620005}
 \end{figure}
 
-In figura \ref{fig:test3coplotTrustAntiModeB620005} è illustrato il grafico della Tau di Kendall \(T_{t62}\) tra \(t_v\) e \(\hat{t}_i\) (in rosso)  e della Tau di Kendall \(T_{a62}\) tra \(a_v\) e \(\hat{a}_i\) (in verde). Sull'asse delle ascisse è rappresentato il numero di nodi visitati tramite la visita \(v_2\) mentre sull'asse delle ordinate il valore delle Tau di Kendall \(T_{t62}\) e \(T_{a62}\). Come si nota dal grafico dopo la \(T_{t62}\) tende a crescere regolarmente fino a circa 109570 dopo dopodiché quando la visita \(v_2\) incontra i primi nodi \(S\) allora \(\hat{t}_i\) tende ad avere valori sempre più simili a \(t_v\) fino ad arrivare a 1 quando tutti i nodi in \(S\) sono stati visitati tramite \(v_2\) e quindi \(\hat{t_i}\) avra come seedset l'insieme \(S\). Differentemente \(T_{a62}\) risente maggiormente del fatto che \(a_v\) e \(\hat{a}_i\) sia stato calcolato con un fattore di attenuazione uguale a 0.005, infatti il grafico mostra come quanto più la visita in ampiezza \(v_2\) entra in 
+In figura \ref{fig:test4coplotTrustAntiModeB620005} è illustrato il grafico della Tau di Kendall \(T_{t62}\) tra \(t_v\) e \(\hat{t}_i\) (in rosso)  e della Tau di Kendall \(T_{a62}\) tra \(a_v\) e \(\hat{a}_i\) (in verde). Sull'asse delle ascisse è rappresentato il numero di nodi visitati tramite la visita \(v_2\) mentre sull'asse delle ordinate il valore delle Tau di Kendall \(T_{t62}\) e \(T_{a62}\). Come si nota dal grafico dopo la \(T_{t62}\) tende a crescere regolarmente fino a circa 109570 dopo dopodiché quando la visita \(v_2\) incontra i primi nodi \(S\) allora \(\hat{t}_i\) tende ad avere valori sempre più simili a \(t_v\) fino ad arrivare a 1 quando tutti i nodi in \(S\) sono stati visitati tramite \(v_2\) e quindi \(\hat{t_i}\) avra come seedset l'insieme \(S\). Differentemente \(T_{a62}\) risente maggiormente del fatto che \(a_v\) e \(\hat{a}_i\) sia stato calcolato con un fattore di attenuazione uguale a 0.005, infatti il grafico mostra come quanto più la visita in ampiezza \(v_2\) entra in 
 profondità i due vettori \(a_v\) e \(\hat{a}_i\) siano sempre più distanti e solo dopo che \(v_2\) incomincia ad incontrare i nodi \(S\) e il seedset con cui \(\hat{a}_i\) viene calcolato è rimpiazzato dai nodi visitati in \(S\), la Tau di Kendall \(T_{a62}\) incomincia a crescere fino ad arrivare a 1 quando tutti i nodi  in \(S\) sono stati visitati.
 
 %inserire raggionamento perchè si ottengono i risultati nel test3 e test4, forse è dovuto al fatto che antitrustrank è calcolato sul grafo trasposto
 
 \section{Test 5}
-Questo test consiste nel calcolare, ad ogni passo di una visita in ampiezza  con nodo sorgente \(s\), \textit{trustrank} \(\hat{t}_i\) sul grafo temporaneo ottenuto dai nodi visitati sull'intero grafo e dopodiché calcolare la media dei valori di \textit{trustrank} dei nodi etichettati non spam e la media dei valori di \textit{trustrank} dei nodi etichettati spam ed infine ottenere la differenza tra le due medie \(Diff_t\). Questa differenza verra calcolata per ogni intervallo di nodi visitati tramite la visita in ampiezza. Lo stesso test è applicato per analizzare \textit{anti-trust rank} perciò ad ogni intervallo di nodi visitato  dalla visita in ampiezza con nodo sorgente \(s\) viene calcolata la differenza tra le medie \(Diff_a\) dei valori di \textit{anti-trust rank}  \(\hat{a}_i\), calcolato sul grafo temporaneo ottenuto dai nodi della visita, dei nodi etichettati non spam e i nodi etichettati spam.
+Questo test consiste nel calcolare, ad ogni passo di una visita in ampiezza  con nodo sorgente \(s\), \textit{trustrank} \(\hat{t}_i\) sul grafo temporaneo ottenuto dai nodi visitati sull'intero grafo e dopodiché calcolare la media \(Mb_t\) dei valori di \textit{trustrank} dei nodi etichettati non spam e la media \(Ms_t\) dei valori di \textit{trustrank} dei nodi etichettati spam ed infine ottenere la differenza tra le due medie \(Diff_t\). Quindi:
+\begin{equation}
+ Diff_t = Mb_t-Ms_t
+\end{equation}
+Questa differenza verra calcolata per ogni intervallo di nodi visitati tramite la visita in ampiezza. Lo stesso test è applicato per analizzare \textit{anti-trust rank} perciò ad ogni intervallo di nodi visitato  dalla visita in ampiezza con nodo sorgente \(s\) viene calcolato il vettore \(\hat{a}_i\)  di \textit{anti-trust rank}  calcolato sul grafo temporaneo ottenuto dai nodi della visitala differenza e succesvamente vien calcolata la diffenreza \(Diff_a\) tra le media \(Mb_a\) dei valori di \textit{anti-trust rank} dei nodi non spam ,e la media \(Ms_a\) dei valori di \textit{anti-trust rank} dei nodi etichettati spam. Quindi:
+\begin{equation}
+ Diff_a=Mb_a-Ms_a
+\end{equation}
+
+
+In figura \ref{fig:test5trust62} e in figura \ref{fig:test5trust112} sono illustrate rispettivamente le differenze \(Diff_t\) la prima calcolata attreso una visita in ampiezza con nodo sorgete 62 mentre la seconda la visita in ampiezza ha nodo sorgente 112. Il risultato dei grafici è un po' inaspettato in quanto all'inzio della visita la differenza delle medie dei valori di \textit{trustrank} tra i nodi non spam e i nodi spam, calcolati sul grafo temporaneo, ha un valore più alto rispetto alla differenza delle medie dei valori di \textit{trustrnk} tra i nodi non spam e i nodi spam, calcolati sul grafo temporaneo che si ottiene ai successivi passi della visita in ampiezza. Questo significa che la distanza tra i valori di \textit{trustrank} tra i nodi non spam e spam tende ad essere meno marcata quando \textit{trustrank} viene calcolato sul grafo temporaneo composto da quasi tutti i nodi dell'intero grafo (infatti la curva tende a decrescerre).
+Ma il comportamento che ci si aspettava, e che i grafici smentiscono, è che al momento del calcolo sul grafo ottenuto ai primi passi della visita i valori di \textit{trustrank} dei nodi non spam e spam avrebbero dovuto essere abbastanza vicini e quindi la diffenza tra la media \(Mb_t\) dei valori di \textit{trustrank} dei nodi non spam con la media \(Ms_t\) dei valori di \textit{trustrank} dei nodi spam dovrebbe essere abbastanza piccola. Ma verso la fine della visita, e quindi quando il grafo temporaneo è composto dalla maggior parte dei nodi dell'intero grafo, i valori di \textit{trustrank} dei nodi non spam e nodi spam dovrebbero essere molto distanti ovvero i nodi non spam dovrebbero avere avuto valori più alti di \textit{trustrank} (dal momento che \textit{trustrank} calcola un valore per ogni nodo di garazia che non si spam) rispetto ai nodi spam e la differenza tra la media \(Mb_t\) dei valori di \textit{trustrank} dei nodi non spam con la media \(Ms_t\) dei valori di \textit{trustrank} dei nodi spam dovrebbe essere molto grande in quanto \(Diff_t = Mb_t-Ms_t\) e \(Mb_t >> Ms_t\) e quindi il grafico sarebbe dovuto essere crescente.
+ 
+\begin{figure}
+ \centering
+ \includegraphics[height=9cm]{immagini/test5/averageTest_trust_62}
+  \caption{Test 5 (trustrank,62). Differenza tra le medie dei valori di trustrank, calcolati sul grafo temporaneo ottenuto ad ogni intervallo di nodi visitati tramite la visita in ampiezza con nodo sorgente 62, dei nodi non spam e nodi spam.}
+ \label{fig:test5trust62}
+  \centering
+ \includegraphics[height=9cm]{immagini/test5/averageTest_trust_112}
+  \caption{Test 5 (trustrank,112). Differenza tra le medie dei valori di trustrank, calcolati sul grafo temporaneo ottenuto ad ogni intervallo di nodi visitati tramite la visita in ampiezza con nodo sorgente 112, dei nodi non spam e nodi spam.}
+ \label{fig:test5trust112}
+\end{figure}
+
+In figura \ref{fig:test5antitrust62} e in figura \ref{fig:test5antitrust112} sono illustrati i grafici relativi alla differenza tra la differenza \(Diff_a\) tra le media \(Mb_a\) dei valori di \textit{anti-trust rank}, calcolati sul grafo temporaneo ottenuto ad ogni intervallo di nodi visitati tramite un visita in ampiezza, dei nodi non spam ,e la media \(Ms_a\) dei valori di \textit{anti-trust rank}, calcolati sul grafo temporaneo ottenuto ad ogni intervallo di nodi visitati tramite un visita in ampiezza, dei nodi etichettati spam. Nel primo grafico il nodo sorgente della visita in ampiezza è 62 nel secondo è 112. Anche in questo caso i risultati illustrati nei due grafici disapprovano le nostre attese in quanto il valore di \(Diff_a\) aumenta con l'aumentare dei nodi del grafo temporaneo su cui viene calcolato \(\hat{a}_i\). Tale risutato indica che il calcolo di \(\hat{a}_i\) sul grafo temporaneo ottenuto ai primi passi della visita (e quindi con pochi nodi) discrimina più fortemente i nodi non spam da quelli spam, in quanto la differenza \(Diff_a\) è molto piccola, rispetto al calcolo di \(\hat{a}_i\) sul grafo temporaneo ottenuto al termine della visita (e quidi quando rispecchia quasi totalemnte il grafo completo) dove i valori di \(\hat{a}_i\) sono meno distanti tra i nodi non spam e spam, in quanto la differenza \(Diff_a\) è molto più grande.\\
+Differentemente da quanto descritto per \textit{trustrank} nel caso di \textit{anti-trust rank} ci si aspetta (ma i grafici smentiscono) che \(\hat{a}_i\) calcolato all'inzio della visita restituisca dei valori per i nodi non spam e non spam molto vicini e, quindi \(Diff_a\) sarebbe dovuta essere molto piccola prossima a 0, mentre  \(\hat{a}_i\) calcolato verso la fine della visita restituisca dei valori per i nodi non spam molto piccoli (perché \textit{anti-trust rank} indica il punteggio di spam di un nodo differentemente da \textit{trustrank} che indica il punteggio di garanzia un nodo sia non spam) e per i nodi spam dei valori molto alti e quindi \(Diff_a\) sarebbe dovuta essere negativa in quanto \( Diff_a=Mb_a-Ms_a\) e \(Mb_a << Ms_a\). Quindi i grafici in figura \ref{fig:test5antitrust62} e in figura \ref{fig:test5antitrust112} avrebbero dovuto avere una curva decrescente aniche crescente. 
 
 \begin{figure}
  \centering
- \includegraphics[height=9cm]{immagini/test4/averageTest_trust_62}
-  \caption{Test 4 (trustrank,62). Differenza tra le medie dei valori di trustrank, calcolati sul grafo temporaneo ottenuto ad ogni intervallo di nodi visitati tramite la visita in ampiezza con nodo sorgente 62, dei nodi non spam e nodi spam.}
- \label{fig:test4trust62}
+ \includegraphics[height=9cm]{immagini/test5/averageTest_antitrust_62}
+  \caption{Test 5 (anti-trust rank,62). Differenza tra le medie dei valori di antit-rust rank, calcolati sul grafo temporaneo ottenuto ad ogni intervallo di nodi visitati tramite la visita in ampiezza con nodo sorgente 62, dei nodi non spam e nodi spam.}
+ \label{fig:test5antitrust62}
   \centering
- \includegraphics[height=9cm]{immagini/test4/averageTest_trust_112}
-  \caption{Test 4 (trustrank,112). Differenza tra le medie dei valori di trustrank, calcolati sul grafo temporaneo ottenuto ad ogni intervallo di nodi visitati tramite la visita in ampiezza con nodo sorgente 112, dei nodi non spam e nodi spam.}
- \label{fig:test4trust62}
+ \includegraphics[height=9cm]{immagini/test5/averageTest_antitrust_112}
+  \caption{Test 5 (anti-trust rank,112). Differenza tra le medie dei valori di anti-trust rank, calcolati sul grafo temporaneo ottenuto ad ogni intervallo di nodi visitati tramite la visita in ampiezza con nodo sorgente 112, dei nodi non spam e nodi spam.}
+ \label{fig:test5antitrust112}
 \end{figure}
  
 

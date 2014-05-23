@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  22 MAY 2014 16:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  23 MAY 2014 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1068,42 +1068,63 @@ Package pdftex.def Info: immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg us
 ed on input line 191.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
  [84] [85 <./immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg>]
-<immagini/test3/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg, id=368, 481.8pt
+<immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg, id=368, 481.8pt
  x 481.8pt>
-File: immagini/test3/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg Graphic fil
+File: immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg Graphic fil
 e (type jpg)
 
-<use immagini/test3/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg>
-Package pdftex.def Info: immagini/test3/coplotTrustAnti_Mode1_set3776_62_alpha0
+<use immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg>
+Package pdftex.def Info: immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0
 005.jpg used on input line 203.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
  [86]
-[87 <./immagini/test3/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg>]
-<immagini/test4/averageTest_trust_62.jpg, id=375, 481.8pt x 481.8pt>
-File: immagini/test4/averageTest_trust_62.jpg Graphic file (type jpg)
+[87 <./immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg>] [88]
+<immagini/test5/averageTest_trust_62.jpg, id=378, 481.8pt x 481.8pt>
+File: immagini/test5/averageTest_trust_62.jpg Graphic file (type jpg)
 
-<use immagini/test4/averageTest_trust_62.jpg>
-Package pdftex.def Info: immagini/test4/averageTest_trust_62.jpg used on input 
-line 218.
+<use immagini/test5/averageTest_trust_62.jpg>
+Package pdftex.def Info: immagini/test5/averageTest_trust_62.jpg used on input 
+line 229.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test4/averageTest_trust_112.jpg, id=376, 481.8pt x 481.8pt>
-File: immagini/test4/averageTest_trust_112.jpg Graphic file (type jpg)
+<immagini/test5/averageTest_trust_112.jpg, id=379, 481.8pt x 481.8pt>
+File: immagini/test5/averageTest_trust_112.jpg Graphic file (type jpg)
 
-<use immagini/test4/averageTest_trust_112.jpg>
-Package pdftex.def Info: immagini/test4/averageTest_trust_112.jpg used on input
- line 222.
+<use immagini/test5/averageTest_trust_112.jpg>
+Package pdftex.def Info: immagini/test5/averageTest_trust_112.jpg used on input
+ line 233.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 
-LaTeX Warning: Float too large for page by 18.14932pt on input line 225.
+LaTeX Warning: Float too large for page by 18.14932pt on input line 236.
 
-) [88] [89 <./immagini/test4/averageTest_trust_62.jpg> <./immagini/test4/averag
-eTest_trust_112.jpg>] (./tesi.bbl [90
+[89] [90 <./immagini/test5/averageTest_trust_62.jpg> <./immagini/test5/averageT
+est_trust_112.jpg>]
+<immagini/test5/averageTest_antitrust_62.jpg, id=387, 481.8pt x 481.8pt>
+File: immagini/test5/averageTest_antitrust_62.jpg Graphic file (type jpg)
+
+<use immagini/test5/averageTest_antitrust_62.jpg>
+Package pdftex.def Info: immagini/test5/averageTest_antitrust_62.jpg used on in
+put line 243.
+(pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
+
+<immagini/test5/averageTest_antitrust_112.jpg, id=388, 481.8pt x 481.8pt>
+File: immagini/test5/averageTest_antitrust_112.jpg Graphic file (type jpg)
+
+<use immagini/test5/averageTest_antitrust_112.jpg>
+Package pdftex.def Info: immagini/test5/averageTest_antitrust_112.jpg used on i
+nput line 247.
+(pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
+
+
+LaTeX Warning: Float too large for page by 18.14932pt on input line 250.
+
+) [91] [92 <./immagini/test5/averageTest_antitrust_62.jpg> <./immagini/test5/av
+erageTest_antitrust_112.jpg>] (./tesi.bbl [93
 
 
 
-] [91] [92] [93]
+] [94] [95] [96]
 Underfull \hbox (badness 3965) in paragraph at lines 183--187
 \OT1/cmr/m/n/10.95 w-led by the La-bo-ra-to-ry of Web Al-go-ri-th-mics, Uni-ver
 -si-ty of Mi-lan,
@@ -1115,17 +1136,17 @@ Underfull \hbox (badness 7362) in paragraph at lines 198--201
 w-docs/overview-
  []
 
-) [94] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux
+) [97] (./tesi.aux (./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux
 ) (./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux)
 (./capitoli/dataset.aux) (./capitoli/test.aux)) ) 
 Here is how much of TeX's memory you used:
- 6466 strings out of 495048
- 97459 string characters out of 3181555
- 176651 words of memory out of 3000000
- 9453 multiletter control sequences out of 15000+200000
+ 6479 strings out of 495048
+ 97962 string characters out of 3181555
+ 176675 words of memory out of 3000000
+ 9463 multiletter control sequences out of 15000+200000
  11618 words of font info for 42 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,43p,1310b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,43p,1439b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1
@@ -1143,10 +1164,10 @@ nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (101 pages, 2018421 bytes).
+Output written on tesi.pdf (104 pages, 2051703 bytes).
 PDF statistics:
- 457 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
+ 469 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 281 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 
