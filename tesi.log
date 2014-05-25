@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  24 MAY 2014 19:24
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  25 MAY 2014 18:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -893,7 +893,13 @@ Capitolo 5.
 
 
 
-] [63] [64] [65]) [66]
+] [63] [64]
+Overfull \hbox (4.71103pt too wide) in paragraph at lines 41--42
+\OT1/cmr/m/n/10.95 un uni-co fi-le con le re-la-ti-ve in-for-ma-zio-ni'' ($\OT1
+/cmtt/m/n/10.95 http : / / www . digitalpreservation .
+ []
+
+[65]) [66]
 \openout2 = `capitoli/test.aux'.
 
  (./capitoli/test.tex
@@ -908,14 +914,14 @@ File: immagini/test/grafoComp.png Graphic file (type png)
 <use immagini/test/grafoComp.png>
 Package pdftex.def Info: immagini/test/grafoComp.png used on input line 26.
 (pdftex.def)             Requested size: 273.4149pt x 136.70743pt.
-
-<immagini/test/grafo3.png, id=299, 170.88474pt x 136.70778pt>
+ [69 <./immagini/test/grafoComp.png>]
+<immagini/test/grafo3.png, id=302, 170.88474pt x 136.70778pt>
 File: immagini/test/grafo3.png Graphic file (type png)
 
 <use immagini/test/grafo3.png>
 Package pdftex.def Info: immagini/test/grafo3.png used on input line 36.
 (pdftex.def)             Requested size: 170.88431pt x 136.70743pt.
- [69 <./immagini/test/grafoComp.png>]
+
 <immagini/test/trustVettore.png, id=303, 273.14645pt x 54.62929pt>
 File: immagini/test/trustVettore.png Graphic file (type png)
 
@@ -951,8 +957,8 @@ File: immagini/test/aBFSmodoA.png Graphic file (type png)
 <use immagini/test/aBFSmodoA.png>
 Package pdftex.def Info: immagini/test/aBFSmodoA.png used on input line 75.
 (pdftex.def)             Requested size: 273.14578pt x 54.62914pt.
- [70 <./immagini/test/grafo3.png> <./immagini/test/trustVettore.png> <./immagin
-i/test/immagineAntiTrust.png>] [71] [72 <./immagini/test/tBFSmodoB.png> <./imma
+ [70 <./immagini/test/grafo3.png> <./immagini/test/trustVettore.png>] [71 <./im
+magini/test/immagineAntiTrust.png>] [72 <./immagini/test/tBFSmodoB.png> <./imma
 gini/test/tBFSmodoA.png> <./immagini/test/aBFSmodoA.png>] [73]
 <immagini/test1/trustranktestMode1_62.jpg, id=321, 481.8pt x 481.8pt>
 File: immagini/test1/trustranktestMode1_62.jpg Graphic file (type jpg)
@@ -1058,8 +1064,8 @@ LaTeX Warning: Float too large for page by 54.14932pt on input line 169.
 [80] [81 <./immagini/test2/trustrankBadNodesTestMode1_62.jpg> <./immagini/test2
 /trustrankBadNodesTestMode1_112.jpg>] [82 <./immagini/test2/antiTrustraktGoodNo
 desTestMode1_62.jpg> <./immagini/test2/antiTrustraktGoodNodesTestMode1_112.jpg>
-] [83]
-<immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg, id=363, 481.8pt x 481.8pt
+] [83] [84]
+<immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg, id=366, 481.8pt x 481.8pt
 >
 File: immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg Graphic file (type jp
 g)
@@ -1067,8 +1073,8 @@ g)
 Package pdftex.def Info: immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg us
 ed on input line 191.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
- [84] [85 <./immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg>]
-<immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg, id=371, 481.8pt
+ [85] [86 <./immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg>]
+<immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg, id=374, 481.8pt
  x 481.8pt>
 File: immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg Graphic fil
 e (type jpg)
@@ -1077,9 +1083,9 @@ e (type jpg)
 Package pdftex.def Info: immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0
 005.jpg used on input line 203.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
- [86]
-[87 <./immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg>]
-<immagini/test5/averageTest_trust_62.jpg, id=378, 481.8pt x 481.8pt>
+ [87]
+[88 <./immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg>]
+<immagini/test5/averageTest_trust_62.jpg, id=381, 481.8pt x 481.8pt>
 File: immagini/test5/averageTest_trust_62.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_trust_62.jpg>
@@ -1087,7 +1093,7 @@ Package pdftex.def Info: immagini/test5/averageTest_trust_62.jpg used on input
 line 226.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test5/averageTest_trust_112.jpg, id=379, 481.8pt x 481.8pt>
+<immagini/test5/averageTest_trust_112.jpg, id=382, 481.8pt x 481.8pt>
 File: immagini/test5/averageTest_trust_112.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_trust_112.jpg>
@@ -1098,7 +1104,7 @@ Package pdftex.def Info: immagini/test5/averageTest_trust_112.jpg used on input
 
 LaTeX Warning: Float too large for page by 18.14932pt on input line 233.
 
-<immagini/test5/averageTest_antitrust_62.jpg, id=380, 481.8pt x 481.8pt>
+<immagini/test5/averageTest_antitrust_62.jpg, id=383, 481.8pt x 481.8pt>
 File: immagini/test5/averageTest_antitrust_62.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_antitrust_62.jpg>
@@ -1106,7 +1112,7 @@ Package pdftex.def Info: immagini/test5/averageTest_antitrust_62.jpg used on in
 put line 240.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test5/averageTest_antitrust_112.jpg, id=381, 481.8pt x 481.8pt>
+<immagini/test5/averageTest_antitrust_112.jpg, id=384, 481.8pt x 481.8pt>
 File: immagini/test5/averageTest_antitrust_112.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_antitrust_112.jpg>
@@ -1117,58 +1123,58 @@ nput line 244.
 
 LaTeX Warning: Float too large for page by 18.14932pt on input line 247.
 
-[88] [89 <./immagini/test5/averageTest_trust_62.jpg> <./immagini/test5/averageT
-est_trust_112.jpg>] [90] [91 <./immagini/test5/averageTest_antitrust_62.jpg> <.
+[89] [90 <./immagini/test5/averageTest_trust_62.jpg> <./immagini/test5/averageT
+est_trust_112.jpg>] [91] [92 <./immagini/test5/averageTest_antitrust_62.jpg> <.
 /immagini/test5/averageTest_antitrust_112.jpg>]
-<immagini/test6/averageCompleteTest_trust_62.jpg, id=395, 481.8pt x 481.8pt>
+<immagini/test6/averageCompleteTest_trust_62.jpg, id=399, 481.8pt x 481.8pt>
 File: immagini/test6/averageCompleteTest_trust_62.jpg Graphic file (type jpg)
 
 <use immagini/test6/averageCompleteTest_trust_62.jpg>
 Package pdftex.def Info: immagini/test6/averageCompleteTest_trust_62.jpg used o
-n input line 257.
+n input line 258.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test6/averageCompleteTest_trust_112.jpg, id=396, 481.8pt x 481.8pt>
+<immagini/test6/averageCompleteTest_trust_112.jpg, id=400, 481.8pt x 481.8pt>
 File: immagini/test6/averageCompleteTest_trust_112.jpg Graphic file (type jpg)
 
 <use immagini/test6/averageCompleteTest_trust_112.jpg>
 Package pdftex.def Info: immagini/test6/averageCompleteTest_trust_112.jpg used 
-on input line 261.
+on input line 262.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 
-LaTeX Warning: Float too large for page by 18.14932pt on input line 264.
+LaTeX Warning: Float too large for page by 18.14932pt on input line 265.
 
-[92] [93 <./immagini/test6/averageCompleteTest_trust_62.jpg> <./immagini/test6/
+[93] [94 <./immagini/test6/averageCompleteTest_trust_62.jpg> <./immagini/test6/
 averageCompleteTest_trust_112.jpg>]
-<immagini/test6/averageCompleteTest_antitrust_62.jpg, id=404, 481.8pt x 481.8pt
+<immagini/test6/averageCompleteTest_antitrust_62.jpg, id=407, 481.8pt x 481.8pt
 >
 File: immagini/test6/averageCompleteTest_antitrust_62.jpg Graphic file (type jp
 g)
  <use immagini/test6/averageCompleteTest_antitrust_62.jpg>
 Package pdftex.def Info: immagini/test6/averageCompleteTest_antitrust_62.jpg us
-ed on input line 270.
+ed on input line 273.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test6/averageCompleteTest_antitrust_112.jpg, id=405, 481.8pt x 481.8p
+<immagini/test6/averageCompleteTest_antitrust_112.jpg, id=408, 481.8pt x 481.8p
 t>
 File: immagini/test6/averageCompleteTest_antitrust_112.jpg Graphic file (type j
 pg)
  <use immagini/test6/averageCompleteTest_antitrust_112.jpg>
 Package pdftex.def Info: immagini/test6/averageCompleteTest_antitrust_112.jpg u
-sed on input line 274.
+sed on input line 277.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 
-LaTeX Warning: Float too large for page by 18.14932pt on input line 277.
+LaTeX Warning: Float too large for page by 18.14932pt on input line 280.
 
-) [94] [95 <./immagini/test6/averageCompleteTest_antitrust_62.jpg> <./immagini/
-test6/averageCompleteTest_antitrust_112.jpg>] (./tesi.bbl [96
+) [95] [96 <./immagini/test6/averageCompleteTest_antitrust_62.jpg> <./immagini/
+test6/averageCompleteTest_antitrust_112.jpg>] (./tesi.bbl [97
 
 
 
-] [97] [98]
-[99]
+] [98] [99]
+[100]
 Underfull \hbox (badness 3965) in paragraph at lines 183--187
 \OT1/cmr/m/n/10.95 w-led by the La-bo-ra-to-ry of Web Al-go-ri-th-mics, Uni-ver
 -si-ty of Mi-lan,
@@ -1180,14 +1186,14 @@ Underfull \hbox (badness 7362) in paragraph at lines 198--201
 w-docs/overview-
  []
 
-) [100] (./tesi.aux (./inizio/introduzione.aux)
+) [101] (./tesi.aux (./inizio/introduzione.aux)
 (./capitoli/tecnicheAntispam.aux) (./capitoli/tecnicheGrafo.aux)
 (./capitoli/tecnicheAltre.aux) (./capitoli/dataset.aux) (./capitoli/test.aux)) 
 ) 
 Here is how much of TeX's memory you used:
  6504 strings out of 495048
  99065 string characters out of 3181555
- 176723 words of memory out of 3000000
+ 177723 words of memory out of 3000000
  9483 multiletter control sequences out of 15000+200000
  11618 words of font info for 42 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1208,10 +1214,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (108 pages, 2116009 bytes).
+Output written on tesi.pdf (109 pages, 2116611 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
+ 490 PDF objects out of 1000 (max. 8388607)
+ 295 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  311 words of extra memory for PDF output out of 10000 (max. 10000000)
 

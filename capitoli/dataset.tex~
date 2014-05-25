@@ -1,12 +1,12 @@
 \chapter{Dataset e strumenti utilizzati}
 \lstset{basicstyle=\small\ttfamily,keywordstyle=\color{black}\bfseries,commentstyle=\color{darkgray},stringstyle=\color{black},showstringspaces=true} 
-Questo capitolo illustra il dataset utilizzato per l'implementazione e l'esecuzione dei test (che verranno discussi nel capitolo successivo) e i vari strumenti (come i framework e librerie) utilizzate per rendere più efficienti i vari test.
+Questo capitolo illustra il dataset utilizzato per l'implementazione e l'esecuzione dei test,  discussi nel capitolo successivo, e gli strumenti (tra cui framework e librerie) utilizzate per rendere più efficienti i vari test.
 \section{Descrizione del dataset}
-Il dataset utilizzato per gli espirementi è WEBSPAM-UK2007 \cite{webspam-uk2007} ottenuto da un crawl del dominio ``.uk'' nel maggio del 2007, grazie al supporto del ``Laboratorio di Algoritmica per il Web'' dell'Università degli Studi di Milano; è composto da un insieme di 105.896.555 pagine che fanno parte di 114.529 host. I dati di questo dataset, rappresentati degli host, sono stati etichiettati in spam o non spam per mezzo di alcuni volontari. Il dataset è composto da tre parti:
+Il dataset utilizzato per gli espirementi è WEBSPAM-UK2007 \cite{webspam-uk2007} ottenuto da un crawl del dominio ``.uk'' nel maggio del 2007 tramite il supporto del ``Laboratorio di Algoritmica per il Web'' dell'Università degli Studi di Milano; è composto da un insieme di 105.896.555 pagine che fanno parte di 114.529 host. Gli host del dataset, per mezzo del supporto  di alcuni volontari,  sono stati etichiettati in due classi: nodi spam e nodi non spam . Il dataset è composto da tre parti:
 \begin{itemize}
- \item Le etichette associate agli host divise in due gruppi. Il primo gruppo è costituito da 2/3 dell'insieme degli host valutati, è fornito per essere come dataset di traning ed è costituito da 3776 nodi etichettati come non spam, 222 nodi etichettati spam ed infine 277 nodi etichettati ``undecided'' ovvero nodi di cui la natura (spam o non spam) è in dubbio. Il secondo gruppo di etichette contiene il rimanente 1/3 dell'insieme degli host valutati, è fornito per essere utilizzato come dataset di testing ed è costituito da 1933 nodi etichettati non spam, 122 nodi etichettati spam e 149 etichettati ``undecided''.\\
- Le etichette sono associate in due fasi. Nella prima fase l'esaminatore ha a diposizione solo il contenuto della collezione e la lista degli host collegati per ogni host valutato. Nella seconda fase, invece, ha accesso all'etichette, per un nodo, assegnate da altri utenti e gli viene richiesto di rivalutare le sue valutazioni se è in disaccordo con altri. Quindi viene realizzato un file che contiene tali informazioni.\\ 
- Gli host sono identificati attraverso un \textit{id} che va da 0 a 114.528 a cui è associato l'URL corrispondente. Quindi un file specifica per ogni \textit{id} un'etichetta tra ``nonspam'',``spam'' e ``undecided'', oltre all'etichetta vengono associate le singole valutazioni effettuate dagli utenti e la media risultante delle valutazioni effettuate per quell'host tenendo conto che l'etichetta spam è uguale a 1, l'etichetta non spam è uguale a 0 e l'etichetta di ``undecided'' ha valore 0.5. Un esempio è rappresentato di seguito: 
+ \item La prima parte contien le etichette associate agli host (divise in due gruppi). Il primo gruppo è costituito da 2/3 dell'insieme degli host valutati, ed è pensato stato pensato per essere utilizzato come dataset di traning. Questo primo gruppo è costituito da 3776 nodi etichettati come non spam, 222 nodi etichettati spam ed infine 277 nodi etichettati ``undecided'' ovvero nodi di cui la natura (spam o non spam) è in dubbio. Il secondo gruppo di etichette costituito dal rimanente 1/3 dell'insieme degli host valutati, è stato pensato per essere utilizzato come dataset di testing. Il secondo gruopo è costituito da 1933 nodi etichettati non spam, 122 nodi etichettati spam e 149 etichettati ``undecided''.\\
+ L'assegnazione di un'etichetta ad un host avviene in due fasi. Nella prima fase l'utente valutatore ha a disposizione il contenuto della collezione e la lista degli host collegati per ogni host valutato. Nella seconda fase, invece, all'utente valutatore vengono fornite l'etichette  assegnate da altri utenti ad un host e gli viene chiesto di rivalutare le sue valutazioni se è in disaccordo con altri. Quindi viene realizzato un file che contiene tali informazioni.\\ 
+ Gli host sono identificati attraverso un \textit{id} che va da 0 a 114.528 a cui è associato l'URL corrispondente. Quindi un file specifica, per ogni host valutato, il suo \textit{id}  e l'etichetta associata tra ``nonspam'',``spam'' e ``undecided'', oltre all'etichetta vengono associate le singole valutazioni effettuate dagli utenti e la media risultante delle valutazioni effettuate per quell'host tenendo conto che l'etichetta spam è uguale a 1, l'etichetta non spam è uguale a 0 e l'etichetta di ``undecided'' ha valore 0.5. Un esempio è rappresentato di seguito: 
  \begin{lstlisting}[frame=trbl,postbreak=\space, breakindent=5pt, breaklines]
 ID ETICHETTA MEDIA VALUTAZIONI
 5 nonspam 0.00000 j1:N,j2:N
@@ -15,12 +15,12 @@ ID ETICHETTA MEDIA VALUTAZIONI
 170 undecided - j13:U,j20:U
 210 undecided 0.50000 j15:N,j16:S,j22:U
 \end{lstlisting}
-Nell'esempio vengono rappresentati 5 host; prendendo in cosiderazione l'host con \textit{id} uguale a 5 si nota subito che è stato giudicato come nodo non spam e che la media delle due votazioni è uguale a 0 visto che entrambi gli utenti hanno giudicato il nodo non spam (es. j1:N; N indica non spam, S indica spam e U indica che la natura del nodo non è definita).\\ 
-Per i test tutte queste informazioni sono superfle, infatti sono stati utilizzati solo i dati relativi alle etichette associate ai nodi in modo d'avere l'insieme dei nosi spam e l'insieme dei nodi non spam.
+Nell'esempio vengono rappresentati 5 host; prendendo in cosiderazione l'host con \textit{id} uguale a 5 si nota subito che è stato giudicato come nodo non spam e che la media delle due votazioni è uguale a 0 visto che entrambi gli utenti hanno giudicato il nodo non spam (es. j1:N; \(N\) indica non spam, \(S\) indica spam e \(U\) indica che la natura del nodo non è definita).\\ 
+Comunque per i test da eseguire tutte queste informazioni sono superflue, e dal momento che avevamo solo il bisogno di sapere quali nodi fossero spam e quali non spam sono stati utilizzati solo i dati relativi alle etichette associate ai nodi del primo gruppo.
 
  
- \item Il grafo definito con due differenti livelli di granularità: un è a livello di host mentre un secondo grafo è definito a livello di pagine. Il grafo a livello di host (che poi sarà quello utilizzato per eseguire i test) è formato da 114.528 nodi che rappresentano gli host mentre il secondo che è formato  105.896.555 di nodi che rappresentano le pagine web che sono connesse da circa 3.7 miliardi di archi ovvero di link tra le pagine.\\
- Il grafo degli host quindi rappresenta i link tra gli URL mappando vari link tra le pagine in differenti host in un singolo link a cui è associato un peso. Il file è composto dalla prima riga che indica il numero di host nel grafo e le successive righe che contengono gli \textit{outlink} degli host, ad esempio alla riga due verranno indicati gli \textit{outlink} del nodo 0 alla riga 3 gli \textit{outlink} del nodo 1 e cosi via. Dato che i link sono pesati la sintassi completa per ogni riga che rappressenta un nodo è:
+ \item La seconda parte contiene il grafo definito con due differenti livelli di granularità. Quindi ci sono due grafi uno definito a livello di host mentre un secondo grafo è definito a livello di pagina. Il grafo a livello di host (che poi sarà quello utilizzato per eseguire i test) è formato da 114.528 nodi (rappresentanti gli host) mentre il secondo è formato  105.896.555 di nodi (rappresentanti le pagine web)  connessi da circa 3.7 miliardi di archi (ovvero i link tra le pagine). Il grafo degli host gestisce i link mutipli tra gli URL aggregando i vari link tra le pagine di differenti host in un singolo link a cui è associato un peso.\\
+ Il file che descrive il grafo a livello di host ha una particolare sintassi: la prima riga indica il numero di host nel grafo mentre le successive righe contengono gli \textit{outlink} degli host, ad esempio alla riga due verranno indicati gli \textit{outlink} del nodo 0 alla riga tre gli \textit{outlink} del nodo 1 e cosi via. Dato che i link sono pesati la sintassi completa per ogni riga che rappressenta un nodo è:
  $$
  dest_1:nlinks_1,dest_2:nlinks_2,...,dest_k:nlinks_k
  $$
@@ -28,23 +28,23 @@ Per i test tutte queste informazioni sono superfle, infatti sono stati utilizzat
  Ad esempio di seguito è illustrato una porzione di un grafo degli host:
 \begin{lstlisting}[frame=trbl,postbreak=\space, breakindent=5pt, breaklines]
 114529
-1005:1 8306:2 9596:1 
+1005:1 8306:1 9596:1 
 8107:3320 22950:4 108053:1
 24003:1
 24003:1
 ...
 \end{lstlisting}
-Nella prima riga dell'esempio viene specificato che il grafo è composto da 114529 nodi. Nella seconda riga si nota che il nodo 0 ha 3 outlink, uno verso il nodo 1005, un altro link verso il nodo 9596 ed infine due link verso il nodo 8306. La terza riga indica che il nodo 1 ha 3 outlink: un link verso il nodo 8107 con un peso 3320 (quindi le pagine del nodo 1 hanno 3320 link verso le pagine del nodo8107), quattro link verso il nodo 22950 ed infine un link verso il nodo 108053. Il file quindi sarà lungo 114530 righe.\\
+Nella prima riga dell'esempio viene specificato che il grafo è composto da 114529 nodi. Nella seconda riga si nota che il nodo 0 ha 3 outlink, uno verso il nodo 1005, un altro link verso il nodo 9596 ed infine un link verso il nodo 8306. La terza riga indica che il nodo 1 ha 3 outlink: un link verso il nodo 8107 con un peso 3320 (quindi le pagine del nodo 1 hanno 3320 link verso le pagine del nodo 8107), un link verso il nodo 22950 con peso 4 ed infine un link verso il nodo 108053. Il file quindi sarà lungo 114530 righe.\\
 %nel nostro caso non sono state usate le informazioni sui pesi degli archi si è scelto di eliminare tale informazione
 Quindi utilizzando queste informazioni si può convertire il file che descrive il grafo in  in modo da poter essere successivamente manipolato tramite il framework WebGraph \cite{Boldi03thewebgraph}.
 %si può inserire come fare la conversione
-\item Il contenuto delle pagine HTML fornito in formato WARC. ``Il formato WARC specifica un metodo per combinare molte risorse in un unico file con le relative informazioni'' (\url{http://www.digitalpreservation.gov/formats/fdd/fdd000236.shtml} il 5/5/2014).
+\item La terza parte contiene il contenuto delle pagine HTML fornito in formato WARC. ``Il formato WARC specifica un metodo per combinare molte risorse in un unico file con le relative informazioni'' (\url{http://www.digitalpreservation.gov/formats/fdd/fdd000236.shtml} il 5/5/2014).
 \end{itemize}
 
 Quindi per lo sviluppo dei test sono state utilizzate due informazioni utili derivate dal dataset: le etichette che identificano i nodi del grafo spam da quelli che sono non spam e la struttura del grafo che verrà manipolata tramite l'utilizzo del framework WebGraph \cite{Boldi03thewebgraph}. WebGraph è un framework per la compressione di enormi grafi e permette, quindi, di eseguire operazioni sul grafo in maniera molto semplice e veloce. 
 
 \section{La Tau di Kendall}
-Uno degli strumenti utilizzati per il confronto di due vettori di rank (che saranno i vettori di \textit{trustrank} e  di \textit{anti-trust rank}) è la Tua di Kendall \cite{KendallTau}. Più precisamente la Tau di Kendall valuta il grado di similarità tra due vettori di rank ovvero dati due vettori \(r_i\) e \(s_i\) con \(i=0,1,...,n-1\) e \(i<j\), si dice che una coppia \((i,j)\) è:
+Alcuni test che sono stati implementati hanno come obbiettivo il calcolo della distanza tra due vettori e quindi per tale motivo è stata utilizzata la Tau di Kendall \cite{KendallTau}. Più precisamente la Tau di Kendall valuta il grado di similarità tra due vettori ovvero dati due vettori \(r_i\) e \(s_i\) con \(i=0,1,...,n-1\) e \(i<j\), si dice che una coppia \((i,j)\) è:
 \begin{itemize}
  \item \textit{concordante} se \(r_i-r_j\) e \(s_i-s_j\) sono entrambe diverse da 0 e hanno lo stesso segno;
  \item \textit{discordante} se \(r_i-r_j\) e \(s_i-s_j\) sono entrambe diverse da 0 e hanno segno opposto;
@@ -66,4 +66,5 @@ Per la gestione del grafo è stato usato il framework WebGraph \cite{Boldi03thew
  \item algoritmi di analisi dei grafi;
  \item insiemi di dati che si possono analizzare.
 \end{itemize}
+Dal momento che i nostri test vanno ad esaminare delle proprietà di alcuni algoritmi sui grafi, questo framework rende le operazioni molto efficienti.
 
