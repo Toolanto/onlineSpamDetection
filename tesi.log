@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  27 MAY 2014 15:53
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  27 MAY 2014 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1088,7 +1088,7 @@ File: immagini/test5/averageTest_trust_62.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_trust_62.jpg>
 Package pdftex.def Info: immagini/test5/averageTest_trust_62.jpg used on input 
-line 239.
+line 240.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 <immagini/test5/averageTest_trust_112.jpg, id=386, 481.8pt x 481.8pt>
@@ -1096,40 +1096,46 @@ File: immagini/test5/averageTest_trust_112.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_trust_112.jpg>
 Package pdftex.def Info: immagini/test5/averageTest_trust_112.jpg used on input
- line 243.
+ line 244.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 
-LaTeX Warning: Float too large for page by 18.14932pt on input line 246.
+LaTeX Warning: Float too large for page by 18.14932pt on input line 247.
 
-<immagini/test5/averageTest_antitrust_62.jpg, id=387, 481.8pt x 481.8pt>
+[90] [91 <./immagini/test5/averageTest_trust_62.jpg> <./immagini/test5/averageT
+est_trust_112.jpg>]
+<immagini/test5/averageTest_antitrust_62.jpg, id=393, 481.8pt x 481.8pt>
 File: immagini/test5/averageTest_antitrust_62.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_antitrust_62.jpg>
 Package pdftex.def Info: immagini/test5/averageTest_antitrust_62.jpg used on in
-put line 253.
+put line 257.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test5/averageTest_antitrust_112.jpg, id=388, 481.8pt x 481.8pt>
+<immagini/test5/averageTest_antitrust_112.jpg, id=394, 481.8pt x 481.8pt>
 File: immagini/test5/averageTest_antitrust_112.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_antitrust_112.jpg>
 Package pdftex.def Info: immagini/test5/averageTest_antitrust_112.jpg used on i
-nput line 257.
+nput line 261.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 
-LaTeX Warning: Float too large for page by 18.14932pt on input line 260.
+LaTeX Warning: Float too large for page by 18.14932pt on input line 264.
 
-[90] [91 <./immagini/test5/averageTest_trust_62.jpg> <./immagini/test5/averageT
-est_trust_112.jpg>] [92] [93 <./immagini/test5/averageTest_antitrust_62.jpg> <.
-/immagini/test5/averageTest_antitrust_112.jpg>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
+
+ []
+
+[92] [93 <./immagini/test5/averageTest_antitrust_62.jpg> <./immagini/test5/aver
+ageTest_antitrust_112.jpg>]
 <immagini/test6/averageCompleteTest_trust_62.jpg, id=402, 481.8pt x 481.8pt>
 File: immagini/test6/averageCompleteTest_trust_62.jpg Graphic file (type jpg)
 
 <use immagini/test6/averageCompleteTest_trust_62.jpg>
 Package pdftex.def Info: immagini/test6/averageCompleteTest_trust_62.jpg used o
-n input line 271.
+n input line 275.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 <immagini/test6/averageCompleteTest_trust_112.jpg, id=403, 481.8pt x 481.8pt>
@@ -1137,42 +1143,42 @@ File: immagini/test6/averageCompleteTest_trust_112.jpg Graphic file (type jpg)
 
 <use immagini/test6/averageCompleteTest_trust_112.jpg>
 Package pdftex.def Info: immagini/test6/averageCompleteTest_trust_112.jpg used 
-on input line 275.
+on input line 279.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 
-LaTeX Warning: Float too large for page by 18.14932pt on input line 278.
+LaTeX Warning: Float too large for page by 18.14932pt on input line 282.
 
-[94] [95 <./immagini/test6/averageCompleteTest_trust_62.jpg> <./immagini/test6/
-averageCompleteTest_trust_112.jpg>]
-<immagini/test6/averageCompleteTest_antitrust_62.jpg, id=411, 481.8pt x 481.8pt
+
+<immagini/test6/averageCompleteTest_antitrust_62.jpg, id=404, 481.8pt x 481.8pt
 >
 File: immagini/test6/averageCompleteTest_antitrust_62.jpg Graphic file (type jp
 g)
  <use immagini/test6/averageCompleteTest_antitrust_62.jpg>
 Package pdftex.def Info: immagini/test6/averageCompleteTest_antitrust_62.jpg us
-ed on input line 286.
+ed on input line 285.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test6/averageCompleteTest_antitrust_112.jpg, id=412, 481.8pt x 481.8p
+<immagini/test6/averageCompleteTest_antitrust_112.jpg, id=405, 481.8pt x 481.8p
 t>
 File: immagini/test6/averageCompleteTest_antitrust_112.jpg Graphic file (type j
 pg)
  <use immagini/test6/averageCompleteTest_antitrust_112.jpg>
 Package pdftex.def Info: immagini/test6/averageCompleteTest_antitrust_112.jpg u
-sed on input line 290.
+sed on input line 289.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
 
-LaTeX Warning: Float too large for page by 18.14932pt on input line 293.
+LaTeX Warning: Float too large for page by 18.14932pt on input line 292.
 
-) [96] [97 <./immagini/test6/averageCompleteTest_antitrust_62.jpg> <./immagini/
-test6/averageCompleteTest_antitrust_112.jpg>] (./tesi.bbl [98
+[94] [95 <./immagini/test6/averageCompleteTest_trust_62.jpg> <./immagini/test6/
+averageCompleteTest_trust_112.jpg>] [96 <./immagini/test6/averageCompleteTest_a
+ntitrust_62.jpg> <./immagini/test6/averageCompleteTest_antitrust_112.jpg>])
+[97] (./tesi.bbl [98
 
 
 
-] [99] [100]
-[101]
+] [99] [100] [101]
 Underfull \hbox (badness 3965) in paragraph at lines 183--187
 \OT1/cmr/m/n/10.95 w-led by the La-bo-ra-to-ry of Web Al-go-ri-th-mics, Uni-ver
 -si-ty of Mi-lan,
@@ -1212,7 +1218,7 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on tesi.pdf (110 pages, 2122335 bytes).
+Output written on tesi.pdf (110 pages, 2122708 bytes).
 PDF statistics:
  493 PDF objects out of 1000 (max. 8388607)
  297 compressed objects within 3 object streams
