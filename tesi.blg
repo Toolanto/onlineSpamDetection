@@ -1,12 +1,14 @@
 This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tesi.aux
+A level-1 auxiliary file: inizio/frontespizio.aux
 A level-1 auxiliary file: inizio/introduzione.aux
 A level-1 auxiliary file: capitoli/tecnicheAntispam.aux
 A level-1 auxiliary file: capitoli/tecnicheGrafo.aux
 A level-1 auxiliary file: capitoli/tecnicheAltre.aux
 A level-1 auxiliary file: capitoli/dataset.aux
 A level-1 auxiliary file: capitoli/test.aux
+A level-1 auxiliary file: capitoli/conclusioni.aux
 The style file: ieeetr.bst
 Database file #1: biblio.bib
 Database file #2: biblio2.bib
@@ -14,7 +16,7 @@ Database file #3: biblio3.bib
 Database file #4: biblio4.bib
 You've used 38 entries,
             1876 wiz_defined-function locations,
-            746 strings with 11868 characters,
+            748 strings with 11915 characters,
 and the built_in function-call counts, 11809 in all, are:
 = -- 1209
 > -- 375

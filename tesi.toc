@@ -37,3 +37,4 @@
 \contentsline {section}{\numberline {6.6}Test 4}{88}
 \contentsline {section}{\numberline {6.7}Test 5}{90}
 \contentsline {section}{\numberline {6.8}Test 6}{94}
+\contentsline {chapter}{\numberline {7}Conclusioni}{98}
