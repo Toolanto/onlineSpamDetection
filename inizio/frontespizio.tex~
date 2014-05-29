@@ -1,9 +1,9 @@
 \begin{titlepage}
 \begin{center}
 
- \includegraphics{immagini/marchio}
+{{\Large{{\BF UNIVERSIT\`A DEGLI STUDI DI MILANO}}}}
 \rule[0.1cm]{13cm}{0.6mm}
-{\Large Facoltà di Scienze e Tecnologie\\
+{\bf Facoltà di Scienze e Tecnologie\\
 Corso di Laurea Magistrale in Informatica per la Comunicazione}
 \end{center}
 \vspace{15mm}
@@ -12,8 +12,6 @@ Corso di Laurea Magistrale in Informatica per la Comunicazione}
 {\LARGE{\bf TECNICHE ONLINE PER L'INDIVIDUAZIONE DI SPAM IN UN WEB CRAWLER}}\\
 \vspace{3mm}
 \end{center}
-  
-
 
 \vspace{40mm}
 \par
