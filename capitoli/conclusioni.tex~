@@ -8,4 +8,4 @@ Quindi sono state studiate varie tecniche di spam detection presenti in letterat
  \item tecniche basate sul grafo del web;
  \item tecnhiche che usano segnali differenti dalle prime due. 
 \end{itemize}
-Le prime utilizzano il conteuto di una pagina web \(p\) per determinare se la pagina \(p\) è spam oppure non spam; le seconde utilizzano il grafo delle pagine web, ricavato dai link tra le pagine, per determinare se la pagina è spam o non spam; infine le ultime tecniche usano diversi tipi di segnali per identificare la natura di una pagina web \(p\) ad esempio analizzando il comportamento dell'utente davanti ad una pagina spam e una non spam.
+Le prime utilizzano il conteuto di una pagina web \(p\) per determinare se la pagina \(p\) è spam oppure non spam; le seconde utilizzano il grafo delle pagine web, ricavato dai link tra le pagine, per determinare se la pagina è spam o non spam; infine le ultime tecniche usano diversi tipi di segnali per identificare la natura di una pagina web \(p\)
