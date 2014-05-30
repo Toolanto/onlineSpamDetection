@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  29 MAY 2014 18:56
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  30 MAY 2014 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,7 +428,7 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
  (./tesi.aux
-(./inizio/frontespizio.aux) (./inizio/introduzione.aux)
+(./inizio/frontespizio.aux) (./paginaBianca.aux) (./inizio/introduzione.aux)
 (./capitoli/tecnicheAntispam.aux) (./capitoli/tecnicheGrafo.aux)
 (./capitoli/tecnicheAltre.aux) (./capitoli/dataset.aux) (./capitoli/test.aux)
 (./capitoli/conclusioni.aux))
@@ -563,15 +563,22 @@ Overfull \hbox (30.31993pt too wide) in paragraph at lines 18--32
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./tesi.toc [1
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+\openout2 = `paginaBianca.aux'.
+
+ (./paginaBianca.tex
+[1
+
+
+
+]) (./tesi.toc [1
 
 
 ])
 \tf@toc=\write3
 \openout3 = `tesi.toc'.
 
-
-[2] (./tesi.lof [3
+ [2] (./tesi.lof [3
 
 ] [4] [5] [6])
 \tf@lof=\write4
@@ -580,7 +587,8 @@ Overfull \hbox (30.31993pt too wide) in paragraph at lines 18--32
  [7] [8]
 \openout2 = `inizio/introduzione.aux'.
 
- (./inizio/introduzione.tex
+
+(./inizio/introduzione.tex
 Capitolo 1.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -594,7 +602,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 
 ] [2] [3] [4]
 [5] [6]
-<immagini/tassonomiaTecnicheBoost.png, id=61, 411.86884pt x 341.00214pt>
+<immagini/tassonomiaTecnicheBoost.png, id=64, 411.86884pt x 341.00214pt>
 File: immagini/tassonomiaTecnicheBoost.png Graphic file (type png)
 
 <use immagini/tassonomiaTecnicheBoost.png>
@@ -602,21 +610,21 @@ Package pdftex.def Info: immagini/tassonomiaTecnicheBoost.png used on input lin
 e 101.
 (pdftex.def)             Requested size: 341.43306pt x 282.69868pt.
  [7] [8 <./immagini/tassonomiaTecnicheBoost.png (PNG copy)>]
-<immagini/tipologiaPagine.png, id=69, 577.48457pt x 309.34262pt>
+<immagini/tipologiaPagine.png, id=72, 577.48457pt x 309.34262pt>
 File: immagini/tipologiaPagine.png Graphic file (type png)
 
 <use immagini/tipologiaPagine.png>
 Package pdftex.def Info: immagini/tipologiaPagine.png used on input line 135.
 (pdftex.def)             Requested size: 284.52756pt x 152.41467pt.
  [9] [10 <./immagini/tipologiaPagine.png (PNG copy)>] <immagini/spamfarm.png, i
-d=77, 441.16122pt x 199.84225pt>
+d=80, 441.16122pt x 199.84225pt>
 File: immagini/spamfarm.png Graphic file (type png)
 
 <use immagini/spamfarm.png>
 Package pdftex.def Info: immagini/spamfarm.png used on input line 151.
 (pdftex.def)             Requested size: 284.52756pt x 128.88963pt.
 
-<immagini/tassonomiaHiding.png, id=78, 519.97653pt x 266.41907pt>
+<immagini/tassonomiaHiding.png, id=81, 519.97653pt x 266.41907pt>
 File: immagini/tassonomiaHiding.png Graphic file (type png)
 
 <use immagini/tassonomiaHiding.png>
@@ -633,7 +641,7 @@ Capitolo 2.
 
 
 
-] <immagini/fetterly/fetterly1.png, id=91, 597.81236pt x 361.35pt>
+] <immagini/fetterly/fetterly1.png, id=94, 597.81236pt x 361.35pt>
 File: immagini/fetterly/fetterly1.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly1.png>
@@ -641,7 +649,7 @@ Package pdftex.def Info: immagini/fetterly/fetterly1.png used on input line 21.
 
 (pdftex.def)             Requested size: 341.43306pt x 206.39069pt.
 
-<immagini/fetterly/fetterly2.png, id=92, 606.05368pt x 368.95737pt>
+<immagini/fetterly/fetterly2.png, id=95, 606.05368pt x 368.95737pt>
 File: immagini/fetterly/fetterly2.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly2.png>
@@ -649,7 +657,7 @@ Package pdftex.def Info: immagini/fetterly/fetterly2.png used on input line 24.
 
 (pdftex.def)             Requested size: 341.43306pt x 207.86453pt.
  [15]
-<immagini/fetterly/fetterly3.png, id=96, 670.505pt x 453.695pt>
+<immagini/fetterly/fetterly3.png, id=100, 670.505pt x 453.695pt>
 File: immagini/fetterly/fetterly3.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly3.png>
@@ -657,7 +665,7 @@ Package pdftex.def Info: immagini/fetterly/fetterly3.png used on input line 32.
 
 (pdftex.def)             Requested size: 341.43306pt x 231.02832pt.
 
-<immagini/fetterly/fetterly4.png, id=97, 669.50125pt x 445.665pt>
+<immagini/fetterly/fetterly4.png, id=101, 669.50125pt x 445.665pt>
 File: immagini/fetterly/fetterly4.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly4.png>
@@ -665,7 +673,7 @@ Package pdftex.def Info: immagini/fetterly/fetterly4.png used on input line 40.
 
 (pdftex.def)             Requested size: 341.43306pt x 227.28613pt.
 
-<immagini/fetterly/fetterly9.png, id=98, 656.4525pt x 469.755pt>
+<immagini/fetterly/fetterly9.png, id=102, 656.4525pt x 469.755pt>
 File: immagini/fetterly/fetterly9.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly9.png>
@@ -673,7 +681,7 @@ Package pdftex.def Info: immagini/fetterly/fetterly9.png used on input line 47.
 
 (pdftex.def)             Requested size: 341.43306pt x 244.33134pt.
 
-<immagini/fetterly/fetterly5.png, id=99, 661.47125pt x 454.69875pt>
+<immagini/fetterly/fetterly5.png, id=103, 661.47125pt x 454.69875pt>
 File: immagini/fetterly/fetterly5.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly5.png>
@@ -683,7 +691,7 @@ Package pdftex.def Info: immagini/fetterly/fetterly5.png used on input line 56.
  [16] [17 <./immagini/fetterly/fetterly1.png (PNG copy)> <./immagini/fetterly/f
 etterly2.png (PNG copy)>] [18 <./immagini/fetterly/fetterly3.png (PNG copy)> <.
 /immagini/fetterly/fetterly4.png (PNG copy)>] <immagini/fetterly/fetterly6.png,
- id=110, 669.50125pt x 458.71375pt>
+ id=113, 669.50125pt x 458.71375pt>
 File: immagini/fetterly/fetterly6.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly6.png>
@@ -691,7 +699,7 @@ Package pdftex.def Info: immagini/fetterly/fetterly6.png used on input line 65.
 
 (pdftex.def)             Requested size: 341.43306pt x 233.94092pt.
  [19 <./immagini/fetterly/fetterly9.png (PNG copy)>]
-<immagini/fetterly/fetterly7.png, id=114, 685.56125pt x 464.73625pt>
+<immagini/fetterly/fetterly7.png, id=117, 685.56125pt x 464.73625pt>
 File: immagini/fetterly/fetterly7.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly7.png>
@@ -699,7 +707,7 @@ Package pdftex.def Info: immagini/fetterly/fetterly7.png used on input line 73.
 
 (pdftex.def)             Requested size: 341.43306pt x 231.45985pt.
 
-<immagini/fetterly/fetterly8.png, id=115, 662.475pt x 459.7175pt>
+<immagini/fetterly/fetterly8.png, id=118, 662.475pt x 459.7175pt>
 File: immagini/fetterly/fetterly8.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly8.png>
@@ -708,7 +716,7 @@ Package pdftex.def Info: immagini/fetterly/fetterly8.png used on input line 82.
 (pdftex.def)             Requested size: 341.43306pt x 236.92902pt.
  [20 <./immagini/fetterly/fetterly5.png (PNG copy)>] [21 <./immagini/fetterly/f
 etterly6.png> <./immagini/fetterly/fetterly7.png>] <immagini/fetterly/fetterly1
-3.png, id=122, 499.8675pt x 425.59pt>
+3.png, id=126, 499.8675pt x 425.59pt>
 File: immagini/fetterly/fetterly13.png Graphic file (type png)
 
 <use immagini/fetterly/fetterly13.png>
@@ -717,7 +725,7 @@ Package pdftex.def Info: immagini/fetterly/fetterly13.png used on input line 94
 (pdftex.def)             Requested size: 227.62204pt x 193.79959pt.
  [22 <./immagini/fetterly/fetterly8.png (PNG copy)>] [23 <./immagini/fetterly/f
 etterly13.png (PNG copy)>]
-<immagini/martinez/martinez1.png, id=130, 901.3675pt x 319.1925pt>
+<immagini/martinez/martinez1.png, id=133, 901.3675pt x 319.1925pt>
 File: immagini/martinez/martinez1.png Graphic file (type png)
 
 <use immagini/martinez/martinez1.png>
@@ -725,7 +733,7 @@ Package pdftex.def Info: immagini/martinez/martinez1.png used on input line 116
 .
 (pdftex.def)             Requested size: 341.43306pt x 120.90964pt.
  [24]
-<immagini/martinez/martinez2.png, id=135, 867.24pt x 338.26375pt>
+<immagini/martinez/martinez2.png, id=138, 867.24pt x 338.26375pt>
 File: immagini/martinez/martinez2.png Graphic file (type png)
 
 <use immagini/martinez/martinez2.png>
@@ -733,7 +741,7 @@ Package pdftex.def Info: immagini/martinez/martinez2.png used on input line 124
 .
 (pdftex.def)             Requested size: 341.43306pt x 133.17656pt.
 
-<immagini/martinez/martinez3.png, id=136, 887.315pt x 339.2675pt>
+<immagini/martinez/martinez3.png, id=139, 887.315pt x 339.2675pt>
 File: immagini/martinez/martinez3.png Graphic file (type png)
 
 <use immagini/martinez/martinez3.png>
@@ -741,7 +749,7 @@ Package pdftex.def Info: immagini/martinez/martinez3.png used on input line 132
 .
 (pdftex.def)             Requested size: 341.43306pt x 130.54332pt.
  [25 <./immagini/martinez/martinez1.png (PNG copy)>]
-<immagini/martinez/martinez4.png, id=140, 872.25874pt x 338.26375pt>
+<immagini/martinez/martinez4.png, id=143, 872.25874pt x 338.26375pt>
 File: immagini/martinez/martinez4.png Graphic file (type png)
 
 <use immagini/martinez/martinez4.png>
@@ -749,7 +757,7 @@ Package pdftex.def Info: immagini/martinez/martinez4.png used on input line 140
 .
 (pdftex.def)             Requested size: 341.43306pt x 132.4075pt.
 
-<immagini/martinez/martinez5.png, id=141, 888.31876pt x 328.22626pt>
+<immagini/martinez/martinez5.png, id=144, 888.31876pt x 328.22626pt>
 File: immagini/martinez/martinez5.png Graphic file (type png)
 
 <use immagini/martinez/martinez5.png>
@@ -758,7 +766,7 @@ Package pdftex.def Info: immagini/martinez/martinez5.png used on input line 148
 (pdftex.def)             Requested size: 341.43306pt x 126.15463pt.
  [26 <./immagini/martinez/martinez2.png (PNG copy)> <./immagini/martinez/martin
 ez3.png (PNG copy)>]
-<immagini/martinez/martinez6.png, id=145, 885.3075pt x 319.1925pt>
+<immagini/martinez/martinez6.png, id=148, 885.3075pt x 319.1925pt>
 File: immagini/martinez/martinez6.png Graphic file (type png)
 
 <use immagini/martinez/martinez6.png>
@@ -766,7 +774,7 @@ Package pdftex.def Info: immagini/martinez/martinez6.png used on input line 156
 .
 (pdftex.def)             Requested size: 341.43306pt x 123.10135pt.
 
-<immagini/martinez/martinez7.png, id=146, 873.2625pt x 322.20375pt>
+<immagini/martinez/martinez7.png, id=149, 873.2625pt x 322.20375pt>
 File: immagini/martinez/martinez7.png Graphic file (type png)
 
 <use immagini/martinez/martinez7.png>
@@ -775,7 +783,7 @@ Package pdftex.def Info: immagini/martinez/martinez7.png used on input line 164
 (pdftex.def)             Requested size: 341.43306pt x 125.9736pt.
  [27 <./immagini/martinez/martinez4.png (PNG copy)> <./immagini/martinez/martin
 ez5.png (PNG copy)>]
-<immagini/martinez/martinez8.png, id=150, 893.3375pt x 335.2525pt>
+<immagini/martinez/martinez8.png, id=154, 893.3375pt x 335.2525pt>
 File: immagini/martinez/martinez8.png Graphic file (type png)
 
 <use immagini/martinez/martinez8.png>
@@ -784,14 +792,14 @@ Package pdftex.def Info: immagini/martinez/martinez8.png used on input line 172
 (pdftex.def)             Requested size: 341.43306pt x 128.13391pt.
  [28 <./immagini/martinez/martinez6.png (PNG copy)> <./immagini/martinez/martin
 ez7.png (PNG copy)>]
-<immagini/zhou/immagine1.png, id=155, 554.07pt x 289.08pt>
+<immagini/zhou/immagine1.png, id=158, 554.07pt x 289.08pt>
 File: immagini/zhou/immagine1.png Graphic file (type png)
 
 <use immagini/zhou/immagine1.png>
 Package pdftex.def Info: immagini/zhou/immagine1.png used on input line 188.
 (pdftex.def)             Requested size: 284.52756pt x 148.44778pt.
  [29 <./immagini/martinez/martinez8.png (PNG copy)>] <immagini/zhou/immagine2.p
-ng, id=159, 544.0325pt x 411.5375pt>
+ng, id=162, 544.0325pt x 411.5375pt>
 File: immagini/zhou/immagine2.png Graphic file (type png)
 
 <use immagini/zhou/immagine2.png>
@@ -799,14 +807,14 @@ Package pdftex.def Info: immagini/zhou/immagine2.png used on input line 200.
 (pdftex.def)             Requested size: 284.52756pt x 215.24408pt.
  [30 <./immagini/zhou/immagine1.png (PNG copy)>] [31 <./immagini/zhou/immagine2
 .png (PNG copy)>]
-<immagini/zhou/immagine3.png, id=168, 681.54625pt x 475.7775pt>
+<immagini/zhou/immagine3.png, id=171, 681.54625pt x 475.7775pt>
 File: immagini/zhou/immagine3.png Graphic file (type png)
 
 <use immagini/zhou/immagine3.png>
 Package pdftex.def Info: immagini/zhou/immagine3.png used on input line 218.
 (pdftex.def)             Requested size: 284.52756pt x 198.62732pt.
 
-<immagini/zhou/immagine4.png, id=169, 665.48625pt x 457.71pt>
+<immagini/zhou/immagine4.png, id=172, 665.48625pt x 457.71pt>
 File: immagini/zhou/immagine4.png Graphic file (type png)
 
 <use immagini/zhou/immagine4.png>
@@ -823,7 +831,7 @@ Capitolo 3.
 
 
 
-] [36] <immagini/trustrank/trustrank.png, id=186, 399.4925pt x 575.14874pt>
+] [36] <immagini/trustrank/trustrank.png, id=189, 399.4925pt x 575.14874pt>
 File: immagini/trustrank/trustrank.png Graphic file (type png)
 
 <use immagini/trustrank/trustrank.png>
@@ -831,14 +839,14 @@ Package pdftex.def Info: immagini/trustrank/trustrank.png used on input line 55
 .
 (pdftex.def)             Requested size: 227.62204pt x 327.70654pt.
  [37 <./immagini/trustrank/trustrank.png (PNG copy)>] [38] [39] [40]
-<immagini/sub/sub.png, id=200, 984.67876pt x 569.12625pt>
+<immagini/sub/sub.png, id=203, 984.67876pt x 569.12625pt>
 File: immagini/sub/sub.png Graphic file (type png)
 
 <use immagini/sub/sub.png>
 Package pdftex.def Info: immagini/sub/sub.png used on input line 119.
 (pdftex.def)             Requested size: 344.59764pt x 199.16928pt.
  [41] [42 <./immagini/sub/sub.png>] [43] [44]
-<immagini/linkfarm/linkfarm.png, id=217, 635.37375pt x 331.2375pt>
+<immagini/linkfarm/linkfarm.png, id=220, 635.37375pt x 331.2375pt>
 File: immagini/linkfarm/linkfarm.png Graphic file (type png)
 
 <use immagini/linkfarm/linkfarm.png>
@@ -846,21 +854,21 @@ Package pdftex.def Info: immagini/linkfarm/linkfarm.png used on input line 174.
 
 (pdftex.def)             Requested size: 227.62204pt x 118.66415pt.
  [45] [46 <./immagini/linkfarm/linkfarm.png>] <immagini/gan/immagine1.png, id=2
-26, 343.2825pt x 212.795pt>
+29, 343.2825pt x 212.795pt>
 File: immagini/gan/immagine1.png Graphic file (type png)
 
 <use immagini/gan/immagine1.png>
 Package pdftex.def Info: immagini/gan/immagine1.png used on input line 195.
 (pdftex.def)             Requested size: 284.52756pt x 176.37302pt.
 
-<immagini/gan/immagine2.png, id=227, 367.3725pt x 221.82875pt>
+<immagini/gan/immagine2.png, id=230, 367.3725pt x 221.82875pt>
 File: immagini/gan/immagine2.png Graphic file (type png)
 
 <use immagini/gan/immagine2.png>
 Package pdftex.def Info: immagini/gan/immagine2.png used on input line 202.
 (pdftex.def)             Requested size: 284.52756pt x 171.81732pt.
 
-<immagini/gan/immagine3.png, id=228, 372.39125pt x 204.765pt>
+<immagini/gan/immagine3.png, id=231, 372.39125pt x 204.765pt>
 File: immagini/gan/immagine3.png Graphic file (type png)
 
 <use immagini/gan/immagine3.png>
@@ -876,21 +884,21 @@ Capitolo 4.
 
 
 
-] [54] [55] <immagini/altre/webb.png, id=257, 811.03pt x 587.19376pt>
+] [54] [55] <immagini/altre/webb.png, id=260, 811.03pt x 587.19376pt>
 File: immagini/altre/webb.png Graphic file (type png)
 
 <use immagini/altre/webb.png>
 Package pdftex.def Info: immagini/altre/webb.png used on input line 30.
 (pdftex.def)             Requested size: 284.52756pt x 206.00471pt.
  [56] [57 <./immagini/altre/webb.png (PNG copy)>]
-<immagini/altre/seov.png, id=264, 772.8875pt x 440.64626pt>
+<immagini/altre/seov.png, id=268, 772.8875pt x 440.64626pt>
 File: immagini/altre/seov.png Graphic file (type png)
 
 <use immagini/altre/seov.png>
 Package pdftex.def Info: immagini/altre/seov.png used on input line 46.
 (pdftex.def)             Requested size: 284.52756pt x 162.21626pt.
  [58 <./immagini/altre/seov.png (PNG copy)>]
-<immagini/altre/browser.png, id=269, 1039.885pt x 462.72874pt>
+<immagini/altre/browser.png, id=272, 1039.885pt x 462.72874pt>
 File: immagini/altre/browser.png Graphic file (type png)
 
 <use immagini/altre/browser.png>
@@ -920,28 +928,28 @@ Capitolo 6.
 
 
 
-] [68] <immagini/test/grafoComp.png, id=301, 273.41557pt x 136.70778pt>
+] [68] <immagini/test/grafoComp.png, id=304, 273.41557pt x 136.70778pt>
 File: immagini/test/grafoComp.png Graphic file (type png)
 
 <use immagini/test/grafoComp.png>
 Package pdftex.def Info: immagini/test/grafoComp.png used on input line 26.
 (pdftex.def)             Requested size: 273.4149pt x 136.70743pt.
  [69 <./immagini/test/grafoComp.png>]
-<immagini/test/grafo3.png, id=305, 170.88474pt x 136.70778pt>
+<immagini/test/grafo3.png, id=309, 170.88474pt x 136.70778pt>
 File: immagini/test/grafo3.png Graphic file (type png)
 
 <use immagini/test/grafo3.png>
 Package pdftex.def Info: immagini/test/grafo3.png used on input line 36.
 (pdftex.def)             Requested size: 170.88431pt x 136.70743pt.
 
-<immagini/test/trustVettore.png, id=306, 273.14645pt x 54.62929pt>
+<immagini/test/trustVettore.png, id=310, 273.14645pt x 54.62929pt>
 File: immagini/test/trustVettore.png Graphic file (type png)
 
 <use immagini/test/trustVettore.png>
 Package pdftex.def Info: immagini/test/trustVettore.png used on input line 45.
 (pdftex.def)             Requested size: 273.14578pt x 54.62914pt.
 
-<immagini/test/immagineAntiTrust.png, id=307, 273.14645pt x 54.62929pt>
+<immagini/test/immagineAntiTrust.png, id=311, 273.14645pt x 54.62929pt>
 File: immagini/test/immagineAntiTrust.png Graphic file (type png)
 
 <use immagini/test/immagineAntiTrust.png>
@@ -949,7 +957,7 @@ Package pdftex.def Info: immagini/test/immagineAntiTrust.png used on input line
  51.
 (pdftex.def)             Requested size: 273.14578pt x 54.62914pt.
 
-<immagini/test/tBFSmodoB.png, id=308, 273.14645pt x 109.25858pt>
+<immagini/test/tBFSmodoB.png, id=312, 273.14645pt x 109.25858pt>
 File: immagini/test/tBFSmodoB.png Graphic file (type png)
 
 <use immagini/test/tBFSmodoB.png>
@@ -957,14 +965,14 @@ Package pdftex.def Info: immagini/test/tBFSmodoB.png used on input line 62.
 (pdftex.def)             Requested size: 273.14578pt x 109.2583pt.
  [70 <./immagini/test/grafo3.png> <./immagini/test/trustVettore.png>] [71 <./im
 magini/test/immagineAntiTrust.png>]
-<immagini/test/tBFSmodoA.png, id=316, 273.14645pt x 54.62929pt>
+<immagini/test/tBFSmodoA.png, id=319, 273.14645pt x 54.62929pt>
 File: immagini/test/tBFSmodoA.png Graphic file (type png)
 
 <use immagini/test/tBFSmodoA.png>
 Package pdftex.def Info: immagini/test/tBFSmodoA.png used on input line 70.
 (pdftex.def)             Requested size: 273.14578pt x 54.62914pt.
 
-<immagini/test/aBFSmodoA.png, id=317, 273.14645pt x 54.62929pt>
+<immagini/test/aBFSmodoA.png, id=320, 273.14645pt x 54.62929pt>
 File: immagini/test/aBFSmodoA.png Graphic file (type png)
 
 <use immagini/test/aBFSmodoA.png>
@@ -972,7 +980,7 @@ Package pdftex.def Info: immagini/test/aBFSmodoA.png used on input line 76.
 (pdftex.def)             Requested size: 273.14578pt x 54.62914pt.
  [72 <./immagini/test/tBFSmodoB.png> <./immagini/test/tBFSmodoA.png> <./immagin
 i/test/aBFSmodoA.png>] [73] [74] [75]
-<immagini/test1/trustranktestMode1_62.jpg, id=330, 481.8pt x 481.8pt>
+<immagini/test1/trustranktestMode1_62.jpg, id=334, 481.8pt x 481.8pt>
 File: immagini/test1/trustranktestMode1_62.jpg Graphic file (type jpg)
 
 <use immagini/test1/trustranktestMode1_62.jpg>
@@ -980,7 +988,7 @@ Package pdftex.def Info: immagini/test1/trustranktestMode1_62.jpg used on input
  line 108.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test1/trustranktestMode1_112.jpg, id=331, 481.8pt x 481.8pt>
+<immagini/test1/trustranktestMode1_112.jpg, id=335, 481.8pt x 481.8pt>
 File: immagini/test1/trustranktestMode1_112.jpg Graphic file (type jpg)
 
 <use immagini/test1/trustranktestMode1_112.jpg>
@@ -991,7 +999,7 @@ t line 112.
 
 LaTeX Warning: Float too large for page by 18.14932pt on input line 115.
 
-<immagini/test1/antiTrustrankTestMode1_62.jpg, id=332, 481.8pt x 481.8pt>
+<immagini/test1/antiTrustrankTestMode1_62.jpg, id=336, 481.8pt x 481.8pt>
 File: immagini/test1/antiTrustrankTestMode1_62.jpg Graphic file (type jpg)
 
 <use immagini/test1/antiTrustrankTestMode1_62.jpg>
@@ -999,7 +1007,7 @@ Package pdftex.def Info: immagini/test1/antiTrustrankTestMode1_62.jpg used on i
 nput line 119.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test1/antiTrustrankTestMode1_112.jpg, id=333, 481.8pt x 481.8pt>
+<immagini/test1/antiTrustrankTestMode1_112.jpg, id=337, 481.8pt x 481.8pt>
 File: immagini/test1/antiTrustrankTestMode1_112.jpg Graphic file (type jpg)
 
 <use immagini/test1/antiTrustrankTestMode1_112.jpg>
@@ -1010,7 +1018,7 @@ input line 123.
 
 LaTeX Warning: Float too large for page by 18.14932pt on input line 126.
 
-<immagini/test1/coplotTrustAnti_62.jpg, id=334, 481.8pt x 481.8pt>
+<immagini/test1/coplotTrustAnti_62.jpg, id=338, 481.8pt x 481.8pt>
 File: immagini/test1/coplotTrustAnti_62.jpg Graphic file (type jpg)
 
 <use immagini/test1/coplotTrustAnti_62.jpg>
@@ -1018,7 +1026,7 @@ Package pdftex.def Info: immagini/test1/coplotTrustAnti_62.jpg used on input li
 ne 133.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test1/coplotTrustAnti_112.jpg, id=335, 481.8pt x 481.8pt>
+<immagini/test1/coplotTrustAnti_112.jpg, id=339, 481.8pt x 481.8pt>
 File: immagini/test1/coplotTrustAnti_112.jpg Graphic file (type jpg)
 
 <use immagini/test1/coplotTrustAnti_112.jpg>
@@ -1029,7 +1037,7 @@ ine 137.
 anktestMode1_112.jpg>] [78 <./immagini/test1/antiTrustrankTestMode1_62.jpg> <./
 immagini/test1/antiTrustrankTestMode1_112.jpg>] [79 <./immagini/test1/coplotTru
 stAnti_62.jpg> <./immagini/test1/coplotTrustAnti_112.jpg>] [80]
-<immagini/test2/trustrankBadNodesTestMode1_62.jpg, id=352, 481.8pt x 481.8pt>
+<immagini/test2/trustrankBadNodesTestMode1_62.jpg, id=355, 481.8pt x 481.8pt>
 File: immagini/test2/trustrankBadNodesTestMode1_62.jpg Graphic file (type jpg)
 
 <use immagini/test2/trustrankBadNodesTestMode1_62.jpg>
@@ -1037,7 +1045,7 @@ Package pdftex.def Info: immagini/test2/trustrankBadNodesTestMode1_62.jpg used
 on input line 159.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test2/trustrankBadNodesTestMode1_112.jpg, id=353, 481.8pt x 481.8pt>
+<immagini/test2/trustrankBadNodesTestMode1_112.jpg, id=356, 481.8pt x 481.8pt>
 File: immagini/test2/trustrankBadNodesTestMode1_112.jpg Graphic file (type jpg)
 
 
@@ -1050,7 +1058,7 @@ Package pdftex.def Info: immagini/test2/trustrankBadNodesTestMode1_112.jpg used
 LaTeX Warning: Float too large for page by 18.14932pt on input line 166.
 
 
-<immagini/test2/antiTrustraktGoodNodesTestMode1_62.jpg, id=354, 481.8pt x 481.8
+<immagini/test2/antiTrustraktGoodNodesTestMode1_62.jpg, id=357, 481.8pt x 481.8
 pt>
 File: immagini/test2/antiTrustraktGoodNodesTestMode1_62.jpg Graphic file (type 
 jpg)
@@ -1059,7 +1067,7 @@ Package pdftex.def Info: immagini/test2/antiTrustraktGoodNodesTestMode1_62.jpg
 used on input line 173.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test2/antiTrustraktGoodNodesTestMode1_112.jpg, id=355, 481.8pt x 481.
+<immagini/test2/antiTrustraktGoodNodesTestMode1_112.jpg, id=358, 481.8pt x 481.
 8pt>
 File: immagini/test2/antiTrustraktGoodNodesTestMode1_112.jpg Graphic file (type
  jpg)
@@ -1075,7 +1083,7 @@ LaTeX Warning: Float too large for page by 54.14932pt on input line 180.
 /trustrankBadNodesTestMode1_112.jpg>] [83 <./immagini/test2/antiTrustraktGoodNo
 desTestMode1_62.jpg> <./immagini/test2/antiTrustraktGoodNodesTestMode1_112.jpg>
 ] [84]
-<immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg, id=369, 481.8pt x 481.8pt
+<immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg, id=372, 481.8pt x 481.8pt
 >
 File: immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg Graphic file (type jp
 g)
@@ -1084,7 +1092,7 @@ Package pdftex.def Info: immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg us
 ed on input line 198.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
  [85] [86 <./immagini/test3/coplotTrustAnti_Mode1_set3776_62.jpg>] [87]
-<immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg, id=380, 481.8pt
+<immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg, id=384, 481.8pt
  x 481.8pt>
 File: immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg Graphic fil
 e (type jpg)
@@ -1095,7 +1103,7 @@ Package pdftex.def Info: immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
  [88]
 [89 <./immagini/test4/coplotTrustAnti_Mode1_set3776_62_alpha0005.jpg>]
-<immagini/test5/averageTest_trust_62.jpg, id=388, 481.8pt x 481.8pt>
+<immagini/test5/averageTest_trust_62.jpg, id=391, 481.8pt x 481.8pt>
 File: immagini/test5/averageTest_trust_62.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_trust_62.jpg>
@@ -1103,7 +1111,7 @@ Package pdftex.def Info: immagini/test5/averageTest_trust_62.jpg used on input
 line 242.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test5/averageTest_trust_112.jpg, id=389, 481.8pt x 481.8pt>
+<immagini/test5/averageTest_trust_112.jpg, id=392, 481.8pt x 481.8pt>
 File: immagini/test5/averageTest_trust_112.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_trust_112.jpg>
@@ -1116,7 +1124,7 @@ LaTeX Warning: Float too large for page by 18.14932pt on input line 249.
 
 [90] [91 <./immagini/test5/averageTest_trust_62.jpg> <./immagini/test5/averageT
 est_trust_112.jpg>]
-<immagini/test5/averageTest_antitrust_62.jpg, id=397, 481.8pt x 481.8pt>
+<immagini/test5/averageTest_antitrust_62.jpg, id=400, 481.8pt x 481.8pt>
 File: immagini/test5/averageTest_antitrust_62.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_antitrust_62.jpg>
@@ -1124,7 +1132,7 @@ Package pdftex.def Info: immagini/test5/averageTest_antitrust_62.jpg used on in
 put line 261.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test5/averageTest_antitrust_112.jpg, id=398, 481.8pt x 481.8pt>
+<immagini/test5/averageTest_antitrust_112.jpg, id=401, 481.8pt x 481.8pt>
 File: immagini/test5/averageTest_antitrust_112.jpg Graphic file (type jpg)
 
 <use immagini/test5/averageTest_antitrust_112.jpg>
@@ -1142,7 +1150,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 270--272
 
 [92] [93 <./immagini/test5/averageTest_antitrust_62.jpg> <./immagini/test5/aver
 ageTest_antitrust_112.jpg>]
-<immagini/test6/averageCompleteTest_trust_62.jpg, id=405, 481.8pt x 481.8pt>
+<immagini/test6/averageCompleteTest_trust_62.jpg, id=409, 481.8pt x 481.8pt>
 File: immagini/test6/averageCompleteTest_trust_62.jpg Graphic file (type jpg)
 
 <use immagini/test6/averageCompleteTest_trust_62.jpg>
@@ -1150,7 +1158,7 @@ Package pdftex.def Info: immagini/test6/averageCompleteTest_trust_62.jpg used o
 n input line 279.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test6/averageCompleteTest_trust_112.jpg, id=406, 481.8pt x 481.8pt>
+<immagini/test6/averageCompleteTest_trust_112.jpg, id=410, 481.8pt x 481.8pt>
 File: immagini/test6/averageCompleteTest_trust_112.jpg Graphic file (type jpg)
 
 <use immagini/test6/averageCompleteTest_trust_112.jpg>
@@ -1162,7 +1170,7 @@ on input line 283.
 LaTeX Warning: Float too large for page by 18.14932pt on input line 286.
 
 
-<immagini/test6/averageCompleteTest_antitrust_62.jpg, id=407, 481.8pt x 481.8pt
+<immagini/test6/averageCompleteTest_antitrust_62.jpg, id=411, 481.8pt x 481.8pt
 >
 File: immagini/test6/averageCompleteTest_antitrust_62.jpg Graphic file (type jp
 g)
@@ -1171,7 +1179,7 @@ Package pdftex.def Info: immagini/test6/averageCompleteTest_antitrust_62.jpg us
 ed on input line 289.
 (pdftex.def)             Requested size: 256.0806pt x 256.0748pt.
 
-<immagini/test6/averageCompleteTest_antitrust_112.jpg, id=408, 481.8pt x 481.8p
+<immagini/test6/averageCompleteTest_antitrust_112.jpg, id=412, 481.8pt x 481.8p
 t>
 File: immagini/test6/averageCompleteTest_antitrust_112.jpg Graphic file (type j
 pg)
@@ -1191,15 +1199,15 @@ ntitrust_62.jpg> <./immagini/test6/averageCompleteTest_antitrust_112.jpg>])
 
  (./capitoli/conclusioni.tex
 Capitolo 7.
-) [98
+[98
 
 
 
-] (./tesi.bbl [99
+] [99]) [100] (./tesi.bbl [101
 
 
 
-] [100] [101] [102]
+] [102] [103] [104]
 Underfull \hbox (badness 3965) in paragraph at lines 183--187
 \OT1/cmr/m/n/10.95 w-led by the La-bo-ra-to-ry of Web Al-go-ri-th-mics, Uni-ver
 -si-ty of Mi-lan,
@@ -1211,39 +1219,39 @@ Underfull \hbox (badness 7362) in paragraph at lines 198--201
 w-docs/overview-
  []
 
-) [103] (./tesi.aux (./inizio/frontespizio.aux) (./inizio/introduzione.aux)
-(./capitoli/tecnicheAntispam.aux) (./capitoli/tecnicheGrafo.aux)
-(./capitoli/tecnicheAltre.aux) (./capitoli/dataset.aux) (./capitoli/test.aux)
-(./capitoli/conclusioni.aux)) ) 
+) [105] (./tesi.aux (./inizio/frontespizio.aux) (./paginaBianca.aux)
+(./inizio/introduzione.aux) (./capitoli/tecnicheAntispam.aux)
+(./capitoli/tecnicheGrafo.aux) (./capitoli/tecnicheAltre.aux)
+(./capitoli/dataset.aux) (./capitoli/test.aux) (./capitoli/conclusioni.aux)) ) 
 Here is how much of TeX's memory you used:
- 6522 strings out of 495048
- 99452 string characters out of 3181555
- 177372 words of memory out of 3000000
- 9487 multiletter control sequences out of 15000+200000
+ 6530 strings out of 495048
+ 99581 string characters out of 3181555
+ 177697 words of memory out of 3000000
+ 9488 multiletter control sequences out of 15000+200000
  12224 words of font info for 44 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,9n,43p,1466b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra
-/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
-b>
-Output written on tesi.pdf (112 pages, 2128913 bytes).
+<
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on tesi.pdf (115 pages, 2132867 bytes).
 PDF statistics:
- 500 PDF objects out of 1000 (max. 8388607)
- 301 compressed objects within 4 object streams
+ 510 PDF objects out of 1000 (max. 8388607)
+ 308 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  311 words of extra memory for PDF output out of 10000 (max. 10000000)
 
