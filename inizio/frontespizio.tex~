@@ -1,7 +1,7 @@
 \begin{titlepage}
 \begin{center}
 
-{{\Large{{\BF UNIVERSIT\`A DEGLI STUDI DI MILANO}}}}
+{{\Large{{\bf UNIVERSIT\`A DEGLI STUDI DI MILANO}}}}
 \rule[0.1cm]{13cm}{0.6mm}
 {\bf Facoltà di Scienze e Tecnologie\\
 Corso di Laurea Magistrale in Informatica per la Comunicazione}
@@ -28,7 +28,7 @@ Chiar.mo Prof. Sebastiano VIGNA}}
 Antonio LUCA\\
 matr. n. 809465}}
 \end{minipage}
-\vspace{20mm}
+\vspace{40mm}
 \begin{center}
 {\large{\bf %inserire il numero della sessione in cui ci si laurea
 Anno Accademico\\ 2013 - 2014 }}%inserire l'anno accademico a cui si è iscritti
