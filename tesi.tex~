@@ -12,17 +12,17 @@
 \usepackage{listings}
 \begin{document}
 \frontmatter
-\include{inizio/frontespizio}
-\include{paginaBianca}
-\tableofcontents
-\listoffigures
+% \include{inizio/frontespizio}
+% \include{paginaBianca}
+% \tableofcontents
+% \listoffigures
 \mainmatter
-\include{inizio/introduzione}
-\include{capitoli/tecnicheAntispam}
-\include{capitoli/tecnicheGrafo}
-\include{capitoli/tecnicheAltre}
-\include{capitoli/dataset}
-\include{capitoli/test}
+% \include{inizio/introduzione}
+% \include{capitoli/tecnicheAntispam}
+% \include{capitoli/tecnicheGrafo}
+% \include{capitoli/tecnicheAltre}
+% \include{capitoli/dataset}
+% \include{capitoli/test}
 \include{capitoli/conclusioni}
 \backmatter
 \bibliographystyle{ieeetr}
