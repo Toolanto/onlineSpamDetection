@@ -21,8 +21,8 @@
 \contentsline {section}{\numberline {3.3}Link dai forum}{46}
 \contentsline {section}{\numberline {3.4}Metodi per migliorare la classificazione}{47}
 \contentsline {chapter}{\numberline {4}Tecniche che fanno uso di altri segnali}{53}
-\contentsline {section}{\numberline {4.1}Rilevamento dello spam di tipo cloacking}{53}
-\contentsline {section}{\numberline {4.2}Rilevare lo spam tramite l'header HTTP}{56}
+\contentsline {section}{\numberline {4.1}Rilevamento dello spam di tipo cloaking}{53}
+\contentsline {section}{\numberline {4.2}Rilevare lo spam tramite gli header HTTP}{56}
 \contentsline {section}{\numberline {4.3}Altri metodi}{57}
 \contentsline {chapter}{\numberline {5}Dataset e strumenti utilizzati}{62}
 \contentsline {section}{\numberline {5.1}Descrizione del dataset}{62}
