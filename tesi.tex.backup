@@ -1,4 +1,4 @@
-\documentclass[a4pap	er,11pt,openright,oneside]{book}
+\documentclass[a4paper,11pt,openright,oneside]{book}
 \linespread{1.5}
 \usepackage{geometry}
 \geometry{a4paper,top=2.5cm,bottom=3.5cm,left=3.5cm,right=3cm,heightrounded,bindingoffset=5mm,headsep=1.5cm,includehead}
@@ -12,6 +12,8 @@
 \usepackage{listings}
 \begin{document}
 \frontmatter
+\include{inizio/frontespizio}
+\include{paginaBianca}
 \tableofcontents
 \listoffigures
 \mainmatter
@@ -21,6 +23,7 @@
 \include{capitoli/tecnicheAltre}
 \include{capitoli/dataset}
 \include{capitoli/test}
+\include{capitoli/conclusioni}
 \backmatter
 \bibliographystyle{ieeetr}
 \bibliography{biblio,biblio2,biblio3,biblio4}
