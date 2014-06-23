@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  18 JUN 2014 09:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.6)  23 JUN 2014 11:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -434,25 +434,25 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 (./capitoli/dataset.aux) (./capitoli/test.aux) (./capitoli/conclusioni.aux))
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 13.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 20.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/lgrcmr.fd
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    ... okay on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -614,28 +614,28 @@ File: immagini/tassonomiaTecnicheBoost.png Graphic file (type png)
 
 <use immagini/tassonomiaTecnicheBoost.png>
 Package pdftex.def Info: immagini/tassonomiaTecnicheBoost.png used on input lin
-e 101.
+e 100.
 (pdftex.def)             Requested size: 341.43306pt x 282.69868pt.
  [7] [8 <./immagini/tassonomiaTecnicheBoost.png (PNG copy)>]
 <immagini/tipologiaPagine.png, id=76, 577.48457pt x 309.34262pt>
 File: immagini/tipologiaPagine.png Graphic file (type png)
 
 <use immagini/tipologiaPagine.png>
-Package pdftex.def Info: immagini/tipologiaPagine.png used on input line 135.
+Package pdftex.def Info: immagini/tipologiaPagine.png used on input line 134.
 (pdftex.def)             Requested size: 284.52756pt x 152.41467pt.
  [9] [10 <./immagini/tipologiaPagine.png (PNG copy)>] <immagini/spamfarm.png, i
 d=83, 441.16122pt x 199.84225pt>
 File: immagini/spamfarm.png Graphic file (type png)
 
 <use immagini/spamfarm.png>
-Package pdftex.def Info: immagini/spamfarm.png used on input line 151.
+Package pdftex.def Info: immagini/spamfarm.png used on input line 150.
 (pdftex.def)             Requested size: 284.52756pt x 128.88963pt.
 
 <immagini/tassonomiaHiding.png, id=84, 519.97653pt x 266.41907pt>
 File: immagini/tassonomiaHiding.png Graphic file (type png)
 
 <use immagini/tassonomiaHiding.png>
-Package pdftex.def Info: immagini/tassonomiaHiding.png used on input line 160.
+Package pdftex.def Info: immagini/tassonomiaHiding.png used on input line 159.
 (pdftex.def)             Requested size: 284.52756pt x 145.78293pt.
  [11 <./immagini/spamfarm.png (PNG copy)>]
 [12 <./immagini/tassonomiaHiding.png (PNG copy)>]) [13]
@@ -895,21 +895,21 @@ Capitolo 4.
 File: immagini/altre/webb.png Graphic file (type png)
 
 <use immagini/altre/webb.png>
-Package pdftex.def Info: immagini/altre/webb.png used on input line 29.
+Package pdftex.def Info: immagini/altre/webb.png used on input line 30.
 (pdftex.def)             Requested size: 284.52756pt x 206.00471pt.
  [56] [57 <./immagini/altre/webb.png (PNG copy)>]
 <immagini/altre/seov.png, id=271, 772.8875pt x 440.64626pt>
 File: immagini/altre/seov.png Graphic file (type png)
 
 <use immagini/altre/seov.png>
-Package pdftex.def Info: immagini/altre/seov.png used on input line 45.
+Package pdftex.def Info: immagini/altre/seov.png used on input line 46.
 (pdftex.def)             Requested size: 284.52756pt x 162.21626pt.
  [58 <./immagini/altre/seov.png (PNG copy)>]
 <immagini/altre/browser.png, id=275, 1039.885pt x 462.72874pt>
 File: immagini/altre/browser.png Graphic file (type png)
 
 <use immagini/altre/browser.png>
-Package pdftex.def Info: immagini/altre/browser.png used on input line 69.
+Package pdftex.def Info: immagini/altre/browser.png used on input line 70.
 (pdftex.def)             Requested size: 284.52756pt x 126.60474pt.
  [59] [60 <./immagini/altre/browser.png (PNG copy)>]) [61]
 \openout2 = `capitoli/dataset.aux'.
@@ -1233,7 +1233,7 @@ Here is how much of TeX's memory you used:
  9489 multiletter control sequences out of 15000+200000
  12224 words of font info for 44 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,43p,1487b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,43p,1441b,1122s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
@@ -1251,7 +1251,7 @@ msfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b>
-Output written on tesi.pdf (117 pages, 2134753 bytes).
+Output written on tesi.pdf (117 pages, 2135004 bytes).
 PDF statistics:
  516 PDF objects out of 1000 (max. 8388607)
  312 compressed objects within 4 object streams
